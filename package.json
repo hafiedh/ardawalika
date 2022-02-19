@@ -1,0 +1,13 @@
+{
+  "name": "ardawalika",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.com/ajisetiaji101/ardawalika.git",
+  "author": "AJI SETIAJI <ajisetiaji101@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.16.2"
+  }
+}
