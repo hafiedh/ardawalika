@@ -72,8 +72,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       hooks: {
-        beforeCreate(user) {
-          user.password = encode(user.password);
+        beforeCreate: async (user, options) => {
+          const { password } = user;
+          const hashPassword = await encode(password);
+          user.password = hashPassword;
         },
         beforeBulkUpdate(user) {
           if (

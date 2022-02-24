@@ -31,12 +31,10 @@ class UserController {
 
       const token = sign({ email, username, id: result.id });
 
-      const url = `http://localhost:3000/users/verification/${token}`;
-      await sendEmail(email, url);
-
       res.status(201).json({
         status: 201,
-        message: "We have sent you an verification link through email",
+        message: "Register success",
+        token,
       });
     } catch (err) {
       next(err);
