@@ -43,8 +43,48 @@
   }
 
   #logo {
-    //flex: 2 1 10rem;
+    flex: 2 1 10rem;
     font-family: "Pattaya";
     font-size: 3rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    //display: none;
+    //background-color: lightpink;
+    flex: 1 1 0rem;
+  }
+
+  ul {
+    flex: 1 1 0rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .button {
+    display: flex;
+    flex: 1 1 0rem;
+    justify-content: center;
+    align-items: center;
   }
 }
