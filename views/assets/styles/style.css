@@ -165,7 +165,7 @@ a {
   }
 }
 
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 710px) {
   .button {
     display: -webkit-box;
     display: -ms-flexbox;
