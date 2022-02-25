@@ -1,0 +1,51 @@
+footer {
+  background-color: $footer-background;
+  color: $footer-color;
+  font-family: "Montserrat", sans-serif;
+
+  .footer-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    min-height: 30vh;
+  }
+  .footer-ardawalika {
+    @include flex(center, flex-start, column);
+    flex: 1 1 60rem;
+    h3 {
+      font-weight: bold;
+      font-family: "Pattaya";
+      margin: 1rem 0rem;
+      font-family: "Montserrat", sans-serif;
+    }
+    h4 {
+      margin: 1rem 0rem;
+    }
+  }
+
+  .footer-logo {
+    flex-wrap: wrap;
+    ul {
+      display: flex;
+      list-style: none;
+      flex: 1 1 40rem;
+      justify-content: space-between;
+      align-items: center;
+      color: gray;
+    }
+    li {
+      margin: 0rem 0.5rem;
+    }
+  }
+
+  .footer-menu {
+    // x, y
+    @include flex(space-evenly, center, row);
+    flex-wrap: wrap;
+    flex: 1 1 40rem;
+    h4 {
+      margin: 1.2rem 0rem;
+    }
+  }
+}

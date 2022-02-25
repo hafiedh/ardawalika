@@ -1,0 +1,262 @@
+// nav {
+//   min-height: 10vh;
+//   margin: 2rem 0rem 3rem 0rem;
+//   a {
+//     text-decoration: none;
+//     color: #070504;
+//   }
+//   a:hover {
+//     text-decoration: none;
+//     color: #070504;
+//   }
+//   h3 {
+//     font-family: "Montserrat";
+//     cursor: pointer;
+//     a {
+//       font-size: $header3;
+//     }
+//   }
+//   .signup {
+//     border: none;
+//     padding: 0.5rem 1.5rem;
+//     border-radius: 2.5rem;
+//     background-color: #070504;
+//     color: white;
+//     transition: background 0.5s ease-in-out; /* the property that is going to be changed from from button to button:hover*/
+//     /*animation: cloudAnimation 2s infinite; */
+//   }
+//   .signup:hover {
+//     background: #9ac2a9;
+//     color: white;
+//   }
+
+//   .nav-ul {
+//     @include flex(center, center, row);
+//     li {
+//       margin: 0rem 1.5rem;
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+.main {
+  //background-color: #e7e8ec;
+  flex-wrap: wrap;
+  h2 {
+    font-weight: bold;
+  }
+}
+
+.main-left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  //flex-wrap: wrap;
+  p {
+    margin: 2rem 0rem;
+  }
+  button {
+    border: none;
+    padding: 0.8rem 2.8rem;
+    border-radius: 2.5rem;
+    background-color: #070504;
+    color: white;
+    max-width: 45%;
+    margin: 1rem 0rem;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out; /* the property that is going to be changed from from button to button:hover*/
+    /*animation: cloudAnimation 2s infinite; */
+  }
+
+  button:hover {
+    background: #9ac2a9;
+  }
+  .left-card {
+    @include flex(space-around, flex-start, row);
+    margin: 2rem 2rem 2rem 0rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    box-shadow: #50505017 0 6px 9px 0;
+    min-height: 23vh;
+    transition: transform 0.5s;
+    background-color: #e8f8ef;
+    .img {
+      height: auto;
+      min-height: 100%;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+    }
+    img {
+      border-radius: 2rem;
+      padding: 1rem;
+      max-width: 100%;
+      max-height: auto;
+      position: relative;
+      vertical-align: middle;
+      left: 50%;
+      transform: translate(-50%);
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+    }
+    p {
+      padding-right: 0.5rem;
+      padding: 0rem 5rem 0rem 0.5rem;
+      margin: none;
+      font-size: 1.9rem;
+    }
+  }
+
+  .left-card:hover {
+    transform: scale(1.1);
+    box-shadow: #00000017 0 6px 9px 0;
+    //background: #9ac2a9;
+  }
+
+  .cards {
+    //background-color: lightgray;
+    @include flex(space-around, flex-start, row);
+  }
+}
+
+.main-right {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  img {
+    max-width: 70%;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.info {
+  @include flex(space-around, center, row);
+  min-height: 25vh;
+  margin: 5rem 0rem;
+  background-color: #070504;
+  color: white;
+  text-align: center;
+  width: calc(100vw - 20px);
+  margin-left: calc(-50vw + 50% + 10px);
+}
+
+.menu {
+  margin-top: 8rem;
+  min-height: 70vh;
+  h3 {
+    margin-bottom: 4rem;
+  }
+  .menu-cards {
+    @include flex(center, center, row);
+  }
+}
+.menu-card {
+  width: 20%;
+  height: auto;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  background-color: #fefefe;
+  margin: 0rem 2rem 10rem 2rem;
+  // @include flex(center, center, column);
+  border-radius: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-top: 2rem;
+  transition: transform 0.5s;
+  text-align: center;
+  cursor: pointer;
+  img {
+    margin: 0rem 0rem 2rem 0rem;
+    border-radius: 2rem;
+    max-width: 100%;
+    max-height: auto;
+    position: relative;
+    vertical-align: middle;
+    left: 50%;
+    transform: translate(-50%);
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+  }
+  .menu-text {
+    min-height: 15vh;
+    p {
+      text-align: center;
+    }
+    h4 {
+      font-weight: bold;
+    }
+  }
+}
+
+.menu-center:hover {
+  transform: scale(1.1);
+}
+
+.signup {
+  margin-bottom: 8rem;
+  img {
+    max-width: 90%;
+    object-fit: cover;
+    border-radius: 2rem;
+    // @include flex(flex-start, flex-start, row);
+  }
+  input[type="submit"] {
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2.5rem;
+    background-color: $black;
+    color: white;
+    margin-top: 2rem;
+    width: 100%;
+    transition: background 0.5s ease-in-out; /* the property that is going to be changed from from button to button:hover*/
+    /*animation: cloudAnimation 2s infinite; */
+  }
+  input[type="submit"]:hover {
+    background: #9ac2a9;
+  }
+  .signup-text {
+    @include flex(center, center, column);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $black;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: $black;
+}
+
+.post {
+  min-height: 45vh;
+  min-width: 90vh;
+  @include flex(center, center, row);
+  .text {
+    padding: 0rem 2rem;
+    h4 {
+      font-weight: bold;
+    }
+    p {
+      margin: 1rem 0rem;
+    }
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    img {
+      max-width: 100%;
+      position: relative;
+      vertical-align: middle;
+      left: 50%;
+      transform: translate(-50%);
+      object-fit: cover;
+    }
+  }
+}
