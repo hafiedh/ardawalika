@@ -25,4 +25,15 @@ function sendEmail(email, url) {
   });
 }
 
-module.exports = { sendEmail };
+function sendEmailResetPassword(email, url) {
+  const options = {
+    from: "'Ardawalika' <no-reply@gmail.com>",
+    to: email,
+    subject: "Verification Email",
+    html: `<h1>Reset Your Password</h1><a href="${url}" target="_blank">Click this</a>`,
+  };
+
+  transporter.sendMail(options);
+}
+
+module.exports = { sendEmail, sendEmailResetPassword };

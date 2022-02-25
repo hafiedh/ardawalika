@@ -2,7 +2,7 @@ const { User } = require("../models");
 const { Op } = require("sequelize");
 const { sign, verify } = require("../helpers/jwt");
 const { decode } = require("../helpers/bcrypt");
-const { sendEmail } = require("../helpers/nodemailer");
+const { sendEmail, sendEmailResetPassword } = require("../helpers/nodemailer");
 
 class UserController {
   static async register(req, res, next) {
@@ -58,6 +58,72 @@ class UserController {
       });
     } catch (err) {
       next(err);
+    }
+  }
+
+  static async sendLinkforChangePassword(req, res, next) {
+    try {
+      const email = req.body.email;
+
+      const user = await User.findOne({
+        where: { email: email },
+      });
+
+      if (user) {
+        const token = sign({ email, username: user.username, id: user.id });
+        const url = `http://localhost:3000/users/forgotpassword/${token}`;
+        sendEmailResetPassword(email, url);
+        res.status(200).json({
+          status: 200,
+          message: "Success",
+        });
+      } else {
+        throw { status: 400, message: "Email not found" };
+      }
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async resetPasswordForm(req, res, next) {
+    try {
+      const { accessToken } = req.params;
+      const payload = verify(accessToken);
+      res.send(
+        "Use this link as new password and confirm password form. Don't tell to others about your AccessKey"
+      );
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async forgotPassword(req, res, next) {
+    try {
+      const { accessToken } = req.params;
+      const payload = verify(accessToken);
+
+      const newPassword = {
+        password: req.body.newpassword,
+      };
+
+      const options = {
+        where: {
+          email: payload.email,
+        },
+      };
+
+      const result = await User.update(newPassword, options);
+
+      if (result) {
+        res.status(200).json({
+          status: 200,
+          message: result,
+        });
+      } else {
+        throw { status: 400, message: "Change password failed" };
+      }
+    } catch (error) {
+      next(error);
     }
   }
 
