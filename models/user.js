@@ -77,12 +77,14 @@ module.exports = (sequelize, DataTypes) => {
           const hashPassword = await encode(password);
           user.password = hashPassword;
         },
-        beforeBulkUpdate(user) {
+        beforeBulkUpdate: async (user) => {
           if (
             user.attributes.password &&
-            user.attributes.password.length < 25
+            user.attributes.password.length < 25 &&
+            user.attributes.password.length > 8
           ) {
-            user.attributes.password = encode(user.attributes.password);
+            const hashPassword = await encode(user.attributes.password);
+            user.attributes.password = hashPassword;
           }
         },
       },
