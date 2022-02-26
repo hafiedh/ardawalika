@@ -1,0 +1,57 @@
+.home-top {
+  // y, x
+  @include flex(flex-start, center, column);
+  background: url("/img/img1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  color: $header-color;
+  text-align: center;
+  .logo {
+    font-family: "Pattaya";
+    margin: 5rem 0rem 0.5rem 0rem;
+  }
+}
+
+.home-cards {
+  // y, x
+  @include flex(space-around, center, row);
+  width: 80%;
+  margin: auto;
+  min-height: 50vh;
+  flex-wrap: wrap;
+  //background-color: lightgoldenrodyellow;
+  .kartu-1 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+      url("/img/tes3.jpg");
+  }
+  .kartu-2 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+      url("/img/tes4.jpg");
+  }
+  .kartu-3 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+      url("/img/tes11.jpg");
+  }
+  .kartu {
+    text-align: left;
+    min-height: 60vh;
+    margin-top: -30rem;
+    padding: 0rem 5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+    @include flex(flex-end, flex-start, column);
+    flex-wrap: wrap;
+    p {
+      color: white;
+      padding: 0rem 5rem;
+      margin-left: -6rem;
+    }
+  }
+}
