@@ -196,7 +196,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("/img/img1.jpg");
+  background: url("../img/img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -214,8 +214,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -223,26 +224,26 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  min-height: 50vh;
+  min-height: 40vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .home-cards .kartu-1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("/img/tes3.jpg");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/img/tes3.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("../img/tes3.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("../img/tes3.jpg");
 }
 
 .home-cards .kartu-2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("/img/tes4.jpg");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/img/tes4.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("../img/tes4.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("../img/tes4.jpg");
 }
 
 .home-cards .kartu-3 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("/img/tes11.jpg");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/img/tes11.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("../img/tes11.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("../img/tes11.jpg");
 }
 
 .home-cards .kartu {
@@ -257,6 +258,7 @@ a {
   width: 100%;
   max-width: 25rem;
   height: auto;
+  margin-right: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,6 +280,168 @@ a {
   color: white;
   padding: 0rem 5rem;
   margin-left: -6rem;
+}
+
+.hasil {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hasil .hasil-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hasil .hasil-1 {
+  background: url("../img//tes1.png");
+}
+
+.hasil .hasil-2 {
+  background: url("../img/tes2.jpg");
+}
+
+.hasil .hasil-3 {
+  background: url("../img/img1.jpg");
+}
+
+.hasil .hasil-4 {
+  background: url("../img//img2.jpg");
+}
+
+.hasil .hasil-5 {
+  background: url("../img//tes.jpg");
+}
+
+.hasil .hasil-6 {
+  background: url("../img/tes10.jpg");
+}
+
+.hasil .kartu {
+  text-align: left;
+  min-height: 60vh;
+  padding: 0rem 5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  margin: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.hasil .kartu:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.hasil h3 {
+  margin-bottom: 2.5rem;
+}
+
+.testimoni {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.testimoni h3 {
+  margin-bottom: 4.5rem;
+}
+
+.testimoni .testimoni-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 50vh;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 9rem;
+}
+
+.testimoni .kartu {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 45rem;
+          flex: 1 1 45rem;
+  min-height: 40vh;
+  margin: 0rem 1.3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #faaca8;
+  background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+  color: #070504;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.testimoni .kartu:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.testimoni p {
+  padding: 1rem 4rem;
+  text-align: justify;
 }
 
 .main {

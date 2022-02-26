@@ -1,7 +1,7 @@
 .home-top {
   // y, x
   @include flex(flex-start, center, column);
-  background: url("/img/img1.jpg");
+  background: url("../img/img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -16,23 +16,23 @@
 
 .home-cards {
   // y, x
-  @include flex(space-around, center, row);
-  width: 80%;
+  @include flex(space-evenly, center, row);
+  width: 90%;
   margin: auto;
-  min-height: 50vh;
+  min-height: 40vh;
   flex-wrap: wrap;
   //background-color: lightgoldenrodyellow;
   .kartu-1 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
-      url("/img/tes3.jpg");
+      url("../img/tes3.jpg");
   }
   .kartu-2 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
-      url("/img/tes4.jpg");
+      url("../img/tes4.jpg");
   }
   .kartu-3 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
-      url("/img/tes11.jpg");
+      url("../img/tes11.jpg");
   }
   .kartu {
     text-align: left;
@@ -46,6 +46,7 @@
     width: 100%;
     max-width: 25rem;
     height: auto;
+    margin-right: 1rem;
     @include flex(flex-end, flex-start, column);
     flex-wrap: wrap;
     p {
@@ -53,5 +54,100 @@
       padding: 0rem 5rem;
       margin-left: -6rem;
     }
+  }
+}
+
+// HASIL SECTION //
+.hasil {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5rem;
+  @include flex(space-around, space-around, column);
+
+  .hasil-cards {
+    @include flex(space-around, space-around, row);
+    flex-wrap: wrap;
+  }
+  .hasil-1 {
+    background: url("../img//tes1.png");
+  }
+  .hasil-2 {
+    background: url("../img/tes2.jpg");
+  }
+  .hasil-3 {
+    background: url("../img/img1.jpg");
+  }
+  .hasil-4 {
+    background: url("../img//img2.jpg");
+  }
+  .hasil-5 {
+    background: url("../img//tes.jpg");
+  }
+  .hasil-6 {
+    background: url("../img/tes10.jpg");
+  }
+  .kartu {
+    text-align: left;
+    min-height: 60vh;
+    padding: 0rem 5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    margin: 2rem;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+  .kartu:hover {
+    transform: scale(1.1);
+  }
+
+  h3 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+// TESTIMONI SECTION //
+.testimoni {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5rem;
+  h3 {
+    margin-bottom: 4.5rem;
+  }
+  .testimoni-cards {
+    @include flex(center, center, row);
+    min-height: 50vh;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 9rem;
+  }
+  .kartu {
+    text-align: center;
+    flex: 1 1 45rem;
+    min-height: 40vh;
+    margin: 0rem 1.3rem;
+    //margin: 2rem 2rem 0rem 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 4rem;
+    @include flex(center, center, row);
+    background-color: #faaca8;
+    background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+    color: $black;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+  .kartu:hover {
+    transform: scale(1.1);
+  }
+  p {
+    padding: 1rem 4rem;
+    text-align: justify;
   }
 }
