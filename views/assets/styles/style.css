@@ -119,9 +119,9 @@ a {
 }
 
 .main-head #logo {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 10rem;
-          flex: 2 1 10rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0rem;
+          flex: 1 1 0rem;
   font-family: "Pattaya";
   font-size: 3rem;
   -ms-flex-wrap: wrap;
