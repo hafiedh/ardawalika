@@ -9,5 +9,6 @@ router.get("/", (req, res) => {
 
 router.post("/register", UserController.register);
 router.post("/login", UserController.login);
+router.put("/updateData/:accessToken", UserController.updateData)
 
 module.exports = router;

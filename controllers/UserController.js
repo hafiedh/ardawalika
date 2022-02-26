@@ -82,6 +82,48 @@ class UserController {
       next(err);
     }
   }
+
+  static async updateData(req, res, next) {
+
+    try{
+      const { accessToken } = req.params;
+      const payload = verify(accessToken);
+      const {
+        username,
+        email,
+        fullname,
+        phonenumbber,
+        address
+      } = req.body
+
+      const updateData = {
+        username,
+        email,
+        fullname,
+        phonenumbber,
+        address
+      }
+
+      const options = {
+        where:{
+          id: payload.id
+        }
+      }
+
+      const result = await User.update(updateData, options);
+
+      if (result){
+        res.status(200).json({
+          status: 200,
+          message: "Update data success"
+        })
+      }else{
+        throw { status: 400, message: "Failed to update data" }
+      }
+    }catch(err){
+      next(err)
+    }
+  }
 }
 
 module.exports = UserController;
