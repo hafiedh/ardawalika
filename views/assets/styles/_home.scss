@@ -61,7 +61,7 @@
 .hasil {
   width: 90%;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   @include flex(space-around, space-around, column);
 
   .hasil-cards {
@@ -69,7 +69,7 @@
     flex-wrap: wrap;
   }
   .hasil-1 {
-    background: url("../img//tes1.png");
+    background: url("../img/tes1.png");
   }
   .hasil-2 {
     background: url("../img/tes2.jpg");
@@ -108,7 +108,7 @@
   }
 
   h3 {
-    margin: 5rem 0rem 2.5rem 0rem;
+    margin: 0rem 0rem 2.5rem 0rem;
   }
 }
 
@@ -116,7 +116,7 @@
 .testimoni {
   width: 90%;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   h3 {
     margin-bottom: 4.5rem;
   }
@@ -159,6 +159,14 @@
     .kartu {
       flex: 1 1 30rem;
       background-color: lightblue;
+    }
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .hasil {
+    h3 {
+      margin: 5rem 0rem 2.5rem 0rem;
     }
   }
 }

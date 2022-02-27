@@ -285,7 +285,7 @@ a {
 .hasil {
   width: 90%;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,7 +318,7 @@ a {
 }
 
 .hasil .hasil-1 {
-  background: url("../img//tes1.png");
+  background: url("../img/tes1.png");
 }
 
 .hasil .hasil-2 {
@@ -368,13 +368,13 @@ a {
 }
 
 .hasil h3 {
-  margin: 5rem 0rem 2.5rem 0rem;
+  margin: 0rem 0rem 2.5rem 0rem;
 }
 
 .testimoni {
   width: 90%;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .testimoni h3 {
@@ -450,6 +450,12 @@ a {
         -ms-flex: 1 1 30rem;
             flex: 1 1 30rem;
     background-color: lightblue;
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .hasil h3 {
+    margin: 5rem 0rem 2.5rem 0rem;
   }
 }
 
