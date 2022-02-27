@@ -137,7 +137,8 @@
     margin-bottom: 4rem;
     @include flex(center, center, row);
     background-color: #faaca8;
-    background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+    background-image: linear-gradient(19deg, #f3d8ae 0%, #fac4c6 100%);
+    //background-image: linear-gradient(135deg, #fad7a1 10%, #fcb7b9 100%);
     color: $black;
     cursor: pointer;
     transition: transform 0.5s;
@@ -149,5 +150,15 @@
   p {
     padding: 1rem 4rem;
     text-align: justify;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .testimoni-cards {
+    //background-color: #f3d8ae;
+    .kartu {
+      flex: 1 1 30rem;
+      background-color: lightblue;
+    }
   }
 }

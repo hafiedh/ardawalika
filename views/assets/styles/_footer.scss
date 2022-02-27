@@ -63,12 +63,13 @@ a:hover {
       @include flex(center, center, column);
     }
   }
-  .footer-menu {
-    visibility: hidden;
-    min-height: 1vh;
+  .footer-menu-right,
+  .footer-menu-left {
+    //visibility: none;
+    display: none;
   }
   .footer-container {
-    max-height: 5vh;
+    max-height: 4vh;
     //background-color: lightpink;
   }
   .footer-ardawalika {
