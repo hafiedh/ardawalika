@@ -186,9 +186,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -196,27 +196,64 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("../img/img1.jpg");
+  background: url("/img/img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 70vh;
+  min-height: 90vh;
   color: #293845;
   text-align: center;
 }
 
 .home-top .logo {
   font-family: "Pattaya";
-  margin: 5rem 0rem 0.5rem 0rem;
-}
-
-.home-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5rem 0rem 0.5rem 0rem;
+}
+
+.paket {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.paket h3 {
+  margin: 4.5rem 0rem;
+  text-align: center;
+  font-family: "Pattaya";
+}
+
+.paket .paket-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -224,62 +261,79 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 90%;
-  margin: auto;
-  min-height: 40vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.home-cards .kartu-1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("../img/tes3.jpg");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("../img/tes3.jpg");
-}
-
-.home-cards .kartu-2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("../img/tes4.jpg");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("../img/tes4.jpg");
-}
-
-.home-cards .kartu-3 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url("../img/tes11.jpg");
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("../img/tes11.jpg");
-}
-
-.home-cards .kartu {
-  text-align: left;
-  min-height: 60vh;
-  margin-top: -30rem;
-  padding: 0rem 5rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 0.5rem;
-  width: 100%;
-  max-width: 25rem;
+.paket .kartu {
+  text-align: center;
+  margin: 0rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+          box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+  width: 20%;
   height: auto;
-  margin-right: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.paket .kartu img {
+  max-width: 100%;
+  max-height: auto;
+  position: relative;
+  vertical-align: middle;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  height: 15rem;
+  width: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.paket .kartu:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.paket .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  min-height: 33vh;
 }
 
-.home-cards .kartu p {
+.paket .container button {
+  border: none;
+  padding: 0.2rem 1.5rem;
+  border-radius: 0.2rem;
+  background-color: #6558f5;
   color: white;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.paket .container h4 {
+  margin-top: 2.5rem;
   padding: 0rem 5rem;
-  margin-left: -6rem;
+  text-align: center;
+  font-weight: 400;
 }
 
 .hasil {
@@ -300,6 +354,12 @@ a {
           flex-direction: column;
 }
 
+.hasil h3 {
+  margin: 0rem 0rem 2.5rem 0rem;
+  text-align: center;
+  font-family: "Pattaya";
+}
+
 .hasil .hasil-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,27 +378,27 @@ a {
 }
 
 .hasil .hasil-1 {
-  background: url("../img/tes1.png");
+  background: url("/img/tes1.png");
 }
 
 .hasil .hasil-2 {
-  background: url("../img/tes2.jpg");
+  background: url("/img/tes2.jpg");
 }
 
 .hasil .hasil-3 {
-  background: url("../img/img1.jpg");
+  background: url("/img/img1.jpg");
 }
 
 .hasil .hasil-4 {
-  background: url("../img//img2.jpg");
+  background: url("/img/img2.jpg");
 }
 
 .hasil .hasil-5 {
-  background: url("../img//tes.jpg");
+  background: url("/img/tes.jpg");
 }
 
 .hasil .hasil-6 {
-  background: url("../img/tes10.jpg");
+  background: url("/img/tes10.jpg");
 }
 
 .hasil .kartu {
@@ -367,18 +427,28 @@ a {
           transform: scale(1.1);
 }
 
-.hasil h3 {
-  margin: 0rem 0rem 2.5rem 0rem;
-}
-
 .testimoni {
   width: 90%;
   margin: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .testimoni h3 {
-  margin-bottom: 4.5rem;
+  margin: 4.5rem 0rem;
+  text-align: center;
+  font-family: "Pattaya";
 }
 
 .testimoni .testimoni-cards {
@@ -388,50 +458,49 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: 50vh;
-  align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 9rem;
+  width: 100%;
+  /*whatever size you want your container*/
 }
 
 .testimoni .kartu {
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 45rem;
-          flex: 1 1 45rem;
-  min-height: 40vh;
-  margin: 0rem 1.3rem;
-  border-radius: 0.5rem;
+  margin: 0rem 3rem;
+  border-radius: 1rem;
   margin-bottom: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: #faaca8;
-  background-image: linear-gradient(19deg, #f3d8ae 0%, #fac4c6 100%);
-  color: #070504;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+          box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+  width: 35%;
+  height: auto;
+  overflow: hidden;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.testimoni .kartu .circle {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 6rem auto 0;
+}
+
+.testimoni .kartu .circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .testimoni .kartu:hover {
@@ -439,9 +508,33 @@ a {
           transform: scale(1.1);
 }
 
-.testimoni p {
-  padding: 1rem 4rem;
+.testimoni .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 33vh;
+}
+
+.testimoni .container h4 {
+  margin-top: 2.5rem;
+  padding: 0rem 5rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.testimoni .container p {
   text-align: justify;
+  margin: 0rem 2rem 2rem 2rem;
 }
 
 @media screen and (max-width: 762px) {
@@ -449,7 +542,14 @@ a {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 30rem;
             flex: 1 1 30rem;
-    background-color: lightblue;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .paket .kartu {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20rem;
+            flex: 1 1 20rem;
   }
 }
 
