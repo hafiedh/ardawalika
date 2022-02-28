@@ -27,13 +27,15 @@ class UserController {
         address,
         role,
       });
+    
       if (!result) throw { status: 400, message: "Register failed" };
 
-      const token = sign({ email, username, id: result.id });
-
+      const token = sign({ email, fullname, id: result.id });
+      const url = `http://localhost:3000/users/verify/${token}`;
+      sendEmail(email, fullname, url);
       res.status(201).json({
         status: 201,
-        message: "Register success",
+        message: `Register success, Sent a verification email to ${email}`,
         token,
       });
     } catch (err) {
@@ -138,7 +140,7 @@ class UserController {
           where: {
             id: payload.id,
             email: payload.email,
-            username: payload.username,
+            fullname: payload.fullname,
           },
         }
       );

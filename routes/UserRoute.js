@@ -10,4 +10,6 @@ router.get("/", (req, res) => {
 router.post("/register", UserController.register);
 router.post("/login", UserController.login);
 
+router.get("/verify/:accessToken", UserController.verification)
+
 module.exports = router;
