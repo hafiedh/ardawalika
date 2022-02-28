@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    // user: "<Email Ardawalika>",
-    // pass: "<Password Ardawalika>",
+    user: process.env.CLIENT_EMAIL,
+    pass: process.env.CLIENT_PASSWORD,
   },
 });
 
@@ -36,4 +36,20 @@ function sendEmailResetPassword(email, url) {
   transporter.sendMail(options);
 }
 
-module.exports = { sendEmail, sendEmailResetPassword };
+function sendEmailForgotPassword(email, newPassword) {
+  const options = {
+    from: "'Ardawalika' <no-reply@gmail.com>",
+    to: email,
+    subject: "Reset Password",
+    text: "Your new password is " + newPassword,
+  };
+  transporter.sendMail(options, (err, info) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Success");
+    }
+  });
+}
+
+module.exports = { sendEmail, sendEmailResetPassword, sendEmailForgotPassword };

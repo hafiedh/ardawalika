@@ -2,7 +2,12 @@ const { User } = require("../models");
 const { Op } = require("sequelize");
 const { sign, verify } = require("../helpers/jwt");
 const { decode } = require("../helpers/bcrypt");
-const { sendEmail, sendEmailResetPassword } = require("../helpers/nodemailer");
+const {
+  sendEmail,
+  sendEmailResetPassword,
+  sendEmailForgotPassword,
+} = require("../helpers/nodemailer");
+const generator = require("generate-password");
 
 class UserController {
   static async register(req, res, next) {
@@ -31,10 +36,11 @@ class UserController {
 
       const token = sign({ email, username, id: result.id });
 
+      const url = `http://localhost:3000/users/verification/${token}`;
+      sendEmail(email, url);
       res.status(201).json({
         status: 201,
-        message: "Register success",
-        token,
+        message: "We have sent you an verification link through email",
       });
     } catch (err) {
       next(err);
@@ -51,6 +57,7 @@ class UserController {
       const isMatch = await decode(password, user.password);
       if (!isMatch) throw { status: 400, message: "Wrong Email or Password" };
       const token = sign({ email, username: user.username, id: user.id });
+
       res.status(200).json({
         status: 200,
         message: "Login success",
@@ -99,29 +106,26 @@ class UserController {
 
   static async forgotPassword(req, res, next) {
     try {
-      const { accessToken } = req.params;
-      const payload = verify(accessToken);
-
-      const newPassword = {
-        password: req.body.newpassword,
-      };
-
-      const options = {
-        where: {
-          email: payload.email,
-        },
-      };
-
-      const result = await User.update(newPassword, options);
-
-      if (result) {
-        res.status(200).json({
-          status: 200,
-          message: result,
-        });
-      } else {
-        throw { status: 400, message: "Change password failed" };
+      const { email } = req.body;
+      const user = await User.findOne({
+        where: { email },
+      });
+      if (!user) {
+        throw {
+          name: "authentication",
+          message: "Email doesnt exist",
+        };
       }
+      const newPassword = generator.generate({
+        length: 10,
+        numbers: true,
+      });
+      await User.update({ password: newPassword }, { where: { email } });
+      sendEmailForgotPassword(email, newPassword);
+      res.status(200).json({
+        status: 200,
+        message: "Your new password has been sent to your email",
+      });
     } catch (error) {
       next(error);
     }
@@ -142,6 +146,7 @@ class UserController {
           },
         }
       );
+
       res.status(200).json({ status: 200, message: "Your account is active" });
     } catch (err) {
       console.log(err);

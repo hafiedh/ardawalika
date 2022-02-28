@@ -1,39 +1,13 @@
-const passport = require("passport");
-const { User } = require("../models");
-const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const { OAuth2Client } = require("google-auth-library");
+const client = new OAuth2Client(process.env.CLIENT_ID);
 
-passport.serializeUser(function (user, done) {
-  done(null, user);
-});
+async function fetchGoogleUser(idToken) {
+  const ticket = await client.verifyIdToken({
+    idToken,
+    audience: process.env.CLIENT_ID,
+  });
 
-passport.deserializeUser(function (user, done) {
-  done(null, user);
-});
+  return ticket.getPayload();
+}
 
-passport.use(
-  new GoogleStrategy(
-    {
-      clientID: "868113271559-ec5iaif5jnal38vbas8gbr67n1kqhevn.apps.googleusercontent.com",
-      clientSecret: "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",
-      callbackURL: "http://localhost:3000/auth/google/callback",
-    },
-    function (accessToken, refreshToken, profile, done) {
-      try {
-        User.findOne({
-          where: {
-            email: profile._json.email,
-          },
-        }).then(function (e) {
-          console.log(e);
-          if (e) {
-            return done(null, profile._json, { message: "done" });
-          } else {
-            return done(null, false, { message: "gagal Login" });
-          }
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  )
-);
+module.exports = fetchGoogleUser;
