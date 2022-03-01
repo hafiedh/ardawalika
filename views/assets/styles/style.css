@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
@@ -23,11 +23,11 @@ label,
 input,
 a,
 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
 }
 
 h3 {
@@ -147,7 +147,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .button {
+  .navbar-masuk {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0rem;
             flex: 1 1 0rem;
@@ -160,13 +160,13 @@ a {
 }
 
 @media screen and (max-width: 850px) {
-  .button {
+  .navbar-masuk {
     display: none;
   }
 }
 
 @media screen and (max-width: 710px) {
-  .button {
+  .navbar-masuk {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -431,6 +431,7 @@ a {
   width: 90%;
   margin: auto;
   margin-bottom: 8rem;
+  min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,6 +664,7 @@ li {
           filter: drop-shadow(0 0 10px #0003);
   -webkit-perspective: 100px;
           perspective: 100px;
+  min-height: 70vh;
 }
 
 .carousel__viewport {
@@ -834,6 +836,110 @@ li {
 @media screen and (max-width: 624px) {
   .hasil h3 {
     margin: 5rem 0rem 2.5rem 0rem;
+  }
+}
+
+.dokumentasi {
+  min-height: 70vh;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dokumentasi .dokumentasi-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+          box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+  margin: 4rem 0rem;
+  min-height: 50vh;
+}
+
+.dokumentasi .dokumentasi-card .img1 {
+  background-image: url("/img/pic1.jpg");
+}
+
+.dokumentasi .dokumentasi-card .img2 {
+  background-image: url("/img/pic2.jpg");
+}
+
+.dokumentasi .dokumentasi-card .img3 {
+  background-image: url("/img/pic3.jpg");
+}
+
+.dokumentasi .dokumentasi-card .img4 {
+  background-image: url("/img/pic4.jpg");
+}
+
+.dokumentasi .dokumentasi-card .img5 {
+  background-image: url("/img/pic5.jpg");
+}
+
+.dokumentasi .dokumentasi-card .dokumentasi-card-img {
+  width: 100%;
+  max-width: 33rem;
+  height: 33rem;
+  padding: 0rem 5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.8rem;
+  margin-top: -8rem;
+  margin-right: 4.5rem;
+  margin-left: 4.5rem;
+  cursor: pointer;
+}
+
+.dokumentasi .dokumentasi-card .dokumentasi-card-txt {
+  padding: 5rem;
+}
+
+.dokumentasi .dokumentasi-card .dokumentasi-card-txt h2 {
+  color: #2561ed;
+}
+
+.dokumentasi .dokumentasi-card .dokumentasi-card-txt h4 {
+  color: #a7c9fd;
+}
+
+.dokumentasi .dokumentasi-card .dokumentasi-card-txt p {
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 722px) {
+  #dokumentasi-img1,
+  #dokumentasi-img2,
+  #dokumentasi-img3,
+  #dokumentasi-img4,
+  #dokumentasi-img5 {
+    margin: 2rem;
   }
 }
 

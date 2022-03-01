@@ -63,7 +63,7 @@
     justify-content: center;
     align-items: center;
   }
-  .button {
+  .navbar-masuk {
     //display: none;
     //background-color: lightpink;
     flex: 1 1 0rem;
@@ -75,13 +75,13 @@
 }
 
 @media screen and (max-width: 850px) {
-  .button {
+  .navbar-masuk {
     display: none;
   }
 }
 
 @media screen and (max-width: 710px) {
-  .button {
+  .navbar-masuk {
     display: flex;
     flex: 1 1 0rem;
     justify-content: center;
