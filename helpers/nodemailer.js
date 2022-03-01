@@ -1,23 +1,23 @@
 const nodemailer = require("nodemailer");
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: "gmail",
   auth: {
-      user: 'ardawalikatest@gmail.com',
-      pass: 'ardawalika1234'
-  }
+    user: process.env.CLIENT_EMAIL,
+    pass: process.env.CLIENT_PASSWORD,
+  },
 });
 
-function sendEmail(email,fullname, url) {
+function sendEmail(email, fullname, url) {
   const options = {
     from: "ardawalikatest@gmail.com",
     to: email,
     subject: "Verification Email",
-    html : `<h1>Email Confirmation</h1>
+    html: `<h1>Email Confirmation</h1>
     <h2>Hello ${fullname}</h2>
     <p>Please confirm your email by clicking on the following link</p>
     <a href=${url}> Click here</a>
-    </div>`
+    </div>`,
   };
 
   transporter.sendMail(options, (err, info) => {
@@ -40,4 +40,20 @@ function sendEmailResetPassword(email, url) {
   transporter.sendMail(options);
 }
 
-module.exports = { sendEmail, sendEmailResetPassword };
+function sendEmailForgotPassword(email, newPassword) {
+  const options = {
+    from: "'Ardawalika' <no-reply@gmail.com>",
+    to: email,
+    subject: "Reset Password",
+    text: "Your new password is " + newPassword,
+  };
+  transporter.sendMail(options, (err, info) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Success");
+    }
+  });
+}
+
+module.exports = { sendEmail, sendEmailResetPassword, sendEmailForgotPassword };
