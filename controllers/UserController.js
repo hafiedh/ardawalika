@@ -2,7 +2,13 @@ const { User } = require("../models");
 const { Op } = require("sequelize");
 const { sign, verify } = require("../helpers/jwt");
 const { decode } = require("../helpers/bcrypt");
-const { sendEmail, sendEmailResetPassword } = require("../helpers/nodemailer");
+const {
+  sendEmail,
+  sendEmailResetPassword,
+  sendEmailForgotPassword,
+} = require("../helpers/nodemailer");
+const generator = require("generate-password");
+const fetchGoogleUser = require("../helpers/googleAuth");
 
 class UserController {
   static async register(req, res, next) {
@@ -27,7 +33,7 @@ class UserController {
         address,
         role,
       });
-    
+
       if (!result) throw { status: 400, message: "Register failed" };
 
       const token = sign({ email, fullname, id: result.id });
@@ -53,6 +59,7 @@ class UserController {
       const isMatch = await decode(password, user.password);
       if (!isMatch) throw { status: 400, message: "Wrong Email or Password" };
       const token = sign({ email, username: user.username, id: user.id });
+
       res.status(200).json({
         status: 200,
         message: "Login success",
@@ -60,6 +67,37 @@ class UserController {
       });
     } catch (err) {
       next(err);
+    }
+  }
+
+  static async googleLogin(req, res, next) {
+    try {
+      let idToken = req.body.idToken;
+      let payload = await fetchGoogleUser(idToken);
+      let { email, name } = payload;
+      const user = await User.findOrCreate({
+        where: {
+          email,
+        },
+        defaults: {
+          usename: name,
+          password: "12345678",
+          role: "user",
+        },
+      });
+      const access_token = sign({
+        email,
+        username: user[0].username,
+        id: user[0].id,
+      });
+      req.headers.access_token = token;
+      res.status(200).json({
+        access_token,
+        usename: user[0].username,
+        userId: user[0].id,
+      });
+    } catch (error) {
+      next(error);
     }
   }
 
@@ -101,29 +139,26 @@ class UserController {
 
   static async forgotPassword(req, res, next) {
     try {
-      const { accessToken } = req.params;
-      const payload = verify(accessToken);
-
-      const newPassword = {
-        password: req.body.newpassword,
-      };
-
-      const options = {
-        where: {
-          email: payload.email,
-        },
-      };
-
-      const result = await User.update(newPassword, options);
-
-      if (result) {
-        res.status(200).json({
-          status: 200,
-          message: result,
-        });
-      } else {
-        throw { status: 400, message: "Change password failed" };
+      const { email } = req.body;
+      const user = await User.findOne({
+        where: { email },
+      });
+      if (!user) {
+        throw {
+          name: "authentication",
+          message: "Email doesnt exist",
+        };
       }
+      const newPassword = generator.generate({
+        length: 10,
+        numbers: true,
+      });
+      await User.update({ password: newPassword }, { where: { email } });
+      sendEmailForgotPassword(email, newPassword);
+      res.status(200).json({
+        status: 200,
+        message: "Your new password has been sent to your email",
+      });
     } catch (error) {
       next(error);
     }
@@ -144,6 +179,7 @@ class UserController {
           },
         }
       );
+
       res.status(200).json({ status: 200, message: "Your account is active" });
     } catch (err) {
       console.log(err);

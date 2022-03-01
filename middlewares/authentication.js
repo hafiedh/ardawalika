@@ -21,3 +21,5 @@ async function authentication(req, res, next) {
     next(err);
   }
 }
+
+module.exports = authentication;
