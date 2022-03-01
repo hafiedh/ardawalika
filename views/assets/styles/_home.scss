@@ -148,6 +148,7 @@
   width: 90%;
   margin: auto;
   margin-bottom: 8rem;
+  min-height: 70vh;
   @include flex(space-around, space-evenly, column);
 
   h3 {
@@ -287,6 +288,8 @@ li {
   padding-top: 45%;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
+  //background-color: lavender;
+  min-height: 70vh;
 }
 
 .carousel__viewport {
