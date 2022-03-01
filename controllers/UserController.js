@@ -8,6 +8,7 @@ const {
   sendEmailForgotPassword,
 } = require("../helpers/nodemailer");
 const generator = require("generate-password");
+const fetchGoogleUser = require("../helpers/googleAuth");
 
 class UserController {
   static async register(req, res, next) {
@@ -65,6 +66,37 @@ class UserController {
       });
     } catch (err) {
       next(err);
+    }
+  }
+
+  static async googleLogin(req, res, next) {
+    try {
+      let idToken = req.body.idToken;
+      let payload = await fetchGoogleUser(idToken);
+      let { email, name } = payload;
+      const user = await User.findOrCreate({
+        where: {
+          email,
+        },
+        defaults: {
+          usename: name,
+          password: "12345678",
+          role: "user",
+        },
+      });
+      const access_token = sign({
+        email,
+        username: user[0].username,
+        id: user[0].id,
+      });
+      req.headers.access_token = token;
+      res.status(200).json({
+        access_token,
+        usename: user[0].username,
+        userId: user[0].id,
+      });
+    } catch (error) {
+      next(error);
     }
   }
 
