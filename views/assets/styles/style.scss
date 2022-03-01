@@ -1,0 +1,25 @@
+$header1: 5.5rem;
+$header2: 4.5rem;
+$header3: 3rem;
+$header4: 2rem;
+$text: 2rem;
+$black: #070504;
+$header-color: #293845;
+$header-background: #dfe6ed;
+$button-background: #6558f5;
+$footer-color: #303f4b;
+$footer-background: #dfe6ed;
+//$background-color: #154353;
+
+$gray-text: #2c2c2c;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@import "global";
+@import "header";
+@import "home";
+@import "footer";

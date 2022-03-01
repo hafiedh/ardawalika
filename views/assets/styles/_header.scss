@@ -1,0 +1,90 @@
+.main-head {
+  background: $header-background;
+  color: $header-color;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+
+  nav {
+    display: flex;
+    min-height: 10vh;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+
+    ul {
+      display: flex;
+      list-style: none;
+      flex: 1 1 80rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    li {
+      margin: 0rem 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $header-color;
+    }
+
+    button {
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      background-color: $button-background;
+      color: white;
+      font-weight: 500;
+    }
+  }
+
+  #logo {
+    flex: 1 1 0rem;
+    font-family: "Pattaya";
+    font-size: 3rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    //display: none;
+    //background-color: lightpink;
+    flex: 1 1 0rem;
+  }
+
+  ul {
+    flex: 1 1 0rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .button {
+    display: flex;
+    flex: 1 1 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
