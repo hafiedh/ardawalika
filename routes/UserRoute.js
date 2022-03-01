@@ -12,5 +12,6 @@ router.post("/login", UserController.login);
 router.post("/forgot-password", UserController.forgotPassword);
 router.use(authentication);
 router.get("/verify/:accessToken", UserController.verification);
+router.put("/updateData/:accessToken", UserController.updateData);
 
 module.exports = router;
