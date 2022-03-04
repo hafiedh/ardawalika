@@ -1,3 +1,7 @@
+.dokumentasi-filler {
+  min-height: 15vh;
+}
+
 .dokumentasi {
   min-height: 70vh;
   width: 90%;
@@ -13,6 +17,7 @@
     box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
     margin: 4rem 0rem;
     min-height: 50vh;
+    text-align: justify;
 
     .img1 {
       background-image: url("/img/pic1.jpg");
@@ -32,7 +37,7 @@
 
     .dokumentasi-card-img {
       width: 100%;
-      max-width: 33rem;
+      max-width: 35rem;
       height: 33rem;
       padding: 0rem 5rem;
       background-repeat: no-repeat;
@@ -57,6 +62,12 @@
         margin-bottom: 3rem;
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dokumentasi-filler {
+    min-height: 30vh;
   }
 }
 
