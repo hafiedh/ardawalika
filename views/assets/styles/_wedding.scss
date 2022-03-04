@@ -36,14 +36,14 @@
     margin-inline: auto;
     padding-right: 4rem;
     h1 {
-      font-size: 42px;
+      font-size: 35px;
       font-weight: 700;
     }
     p {
       font-weight: 400;
       margin-top: 1em;
       line-height: 1.5;
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   &__img {
@@ -59,7 +59,7 @@
   margin: 6.6rem auto 2.9rem;
   &__title {
     font-weight: 700;
-    font-size: 56px;
+    font-size: 40px;
     line-height: 1em;
   }
   &__subtitle {
@@ -199,16 +199,16 @@
     }
   }
   // SERVICES SECTION / 670-1000 / DONE
-  // .service {
-  //   &__title {
-  //     font-size: 3.5rem;
-  //   }
-  // }
+  .service {
+    &__title {
+      font-size: 56px;
+    }
+  }
   // ITEM ICON SECTION / 670-1000 / DONE
   .item {
     &__box {
       flex-direction: row;
-      flex-basis: 49%;
+      flex-basis: 45%;
       gap: 1.3em;
     }
     &__text {
