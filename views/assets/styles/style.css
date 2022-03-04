@@ -1106,7 +1106,7 @@ a:hover {
   padding: 0;
 }
 
-.wrapper {
+.wrapperwed {
   font-family: 'Inter', sans-serif;
   width: 90%;
   margin: 0 auto;
@@ -1114,10 +1114,10 @@ a:hover {
   max-width: 1200px;
 }
 
-.hero {
+.herowed {
   font-family: 'Inter', sans-serif;
   position: relative;
-  background-image: url("/img/wed_hero.png");
+  background-image: url("/img/wed_hero1.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -1131,7 +1131,7 @@ a:hover {
           flex-direction: row;
 }
 
-.hero__text {
+.herowed__text {
   position: absolute;
   bottom: 5%;
   left: 5%;
@@ -1140,46 +1140,46 @@ a:hover {
   padding-right: 4rem;
 }
 
-.hero__text h1 {
+.herowed__text h1 {
   font-size: 35px;
   font-weight: 700;
 }
 
-.hero__text p {
+.herowed__text p {
   font-weight: 400;
   margin-top: 1em;
   line-height: 1.5;
   font-size: 18px;
 }
 
-.hero__img {
+.herowed__img {
   display: none;
 }
 
-.service {
+.servicewed {
   font-family: 'Inter', sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
 }
 
-.service__title {
+.servicewed__title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1em;
 }
 
-.service__subtitle {
-  font-size: 18px;
+.servicewed__subtitle {
+  font-size: 16px;
   text-align: center;
   font-style: italic;
 }
 
-.grey {
+.greywed {
   background-color: #f5f6f7;
 }
 
-.item {
+.itemwed {
   font-family: 'Inter', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1197,7 +1197,7 @@ a:hover {
           align-items: center;
 }
 
-.item__box {
+.itemwed__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1217,11 +1217,11 @@ a:hover {
           align-items: center;
 }
 
-.item__image {
+.itemwed__image {
   height: 48px;
 }
 
-.item__text {
+.itemwed__text {
   text-align: center;
   width: 85%;
   font-size: 16px;
@@ -1369,19 +1369,22 @@ a:hover {
 }
 
 @media (min-width: 670px) {
-  .hero {
+  .herowed {
     height: 60vh;
   }
-  .hero__text {
+  .herowed__text {
     width: 80%;
   }
-  .hero p {
+  .herowed p {
     font-size: 24px;
   }
-  .service__title {
+  .servicewed__title {
     font-size: 56px;
   }
-  .item__box {
+  .servicewed__subtitle {
+    font-size: 18px;
+  }
+  .itemwed__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1390,7 +1393,7 @@ a:hover {
         flex-basis: 45%;
     gap: 1.3em;
   }
-  .item__text {
+  .itemwed__text {
     text-align: left;
   }
   .wedding__flex {
@@ -1406,9 +1409,6 @@ a:hover {
   .wedding__card {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
-  }
-  .wedding__title {
-    font-size: 24px;
   }
   .wedding__box2 {
     text-align: left;
@@ -1431,20 +1431,20 @@ a:hover {
 }
 
 @media (min-width: 1000px) {
-  .hero {
+  .herowed {
     height: 90vh;
   }
-  .hero__text {
+  .herowed__text {
     z-index: 1;
     width: 100%;
     bottom: 20%;
     width: 90vh;
     padding-bottom: 50px;
   }
-  .hero__text p {
+  .herowed__text p {
     font-size: 28px;
   }
-  .hero__img {
+  .herowed__img {
     z-index: 0;
     position: absolute;
     display: inline;
@@ -1454,14 +1454,14 @@ a:hover {
     right: 0;
     width: 45vw;
   }
-  .hero__img img {
+  .herowed__img img {
     display: block;
     max-width: 100%;
   }
-  .item {
+  .itemwed {
     padding: 3em;
   }
-  .item__box {
+  .itemwed__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1470,25 +1470,21 @@ a:hover {
         flex-basis: 32%;
     gap: 1.3em;
   }
-  .item__text {
+  .itemwed__text {
     text-align: left;
   }
-}
-
-.wedding__title {
-  font-size: 32px;
-}
-
-.wedding__star {
-  font-size: 30px;
-}
-
-.wedding__price {
-  font-size: 28px;
-}
-
-.wedding__button {
-  padding: 1.4rem 8rem;
+  .wedding__title {
+    font-size: 32px;
+  }
+  .wedding__star {
+    font-size: 30px;
+  }
+  .wedding__price {
+    font-size: 28px;
+  }
+  .wedding__button {
+    padding: 1.4rem 8rem;
+  }
 }
 
 *,
@@ -1500,7 +1496,7 @@ a:hover {
   padding: 0;
 }
 
-.wrapper {
+.wrapperkor {
   font-family: 'Inter', sans-serif;
   width: 90%;
   margin: 0 auto;
@@ -1508,7 +1504,400 @@ a:hover {
   max-width: 1200px;
 }
 
-.hero {
+.herokor {
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  background-image: url("/img/kor_hero1.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.herokor__text {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #ffffff;
+  margin-inline: auto;
+  padding-right: 4rem;
+}
+
+.herokor__text h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.herokor__text p {
+  font-weight: 400;
+  margin-top: 1em;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.herokor__img {
+  display: none;
+}
+
+.servicekor {
+  font-family: 'Inter', sans-serif;
+  color: #0f1d40;
+  text-align: center;
+  margin: 6.6rem auto 2.9rem;
+}
+
+.servicekor__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1em;
+}
+
+.servicekor__subtitle {
+  font-size: 16px;
+  text-align: center;
+  font-style: italic;
+}
+
+.greykor {
+  background-color: #f5f6f7;
+}
+
+.itemkor {
+  font-family: 'Inter', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #f5f6f7;
+  padding: 46px 0;
+  gap: 1.2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.itemkor__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.2em;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.itemkor__image {
+  height: 48px;
+}
+
+.itemkor__text {
+  text-align: center;
+  width: 85%;
+  font-size: 16px;
+}
+
+.korporasi {
+  font-family: 'Inter', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.8rem;
+  margin-top: 9rem;
+  margin-bottom: 20rem;
+}
+
+.korporasi__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.korporasi__card {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 16px;
+  -webkit-box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+          box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+}
+
+.korporasi__image {
+  width: 100%;
+  height: 45vh;
+  border-radius: 16px 16px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.korporasi__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding: 2.2em;
+}
+
+.korporasi__box1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.korporasi__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1081e8;
+}
+
+.korporasi__star {
+  color: #ffc806;
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+
+.korporasi__box2 {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.korporasi__box3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.korporasi__price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.korporasi__button {
+  background-color: #1081e8;
+  padding: 0.9em;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.korporasi__button a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+@media (min-width: 670px) {
+  .herokor {
+    height: 60vh;
+  }
+  .herokor__text {
+    width: 80%;
+  }
+  .herokor p {
+    font-size: 24px;
+  }
+  .servicekor__title {
+    font-size: 56px;
+  }
+  .servicekor__subtitle {
+    font-size: 18px;
+  }
+  .itemkor__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    gap: 1.3em;
+  }
+  .itemkor__text {
+    text-align: left;
+  }
+  .korporasi__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 4rem;
+  }
+  .korporasi__card {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+  .korporasi__title {
+    font-size: 24px;
+  }
+  .korporasi__box2 {
+    text-align: left;
+  }
+  .korporasi__box3 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .korporasi__button {
+    padding: 1rem 4.75rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .herokor {
+    height: 90vh;
+  }
+  .herokor__text {
+    z-index: 1;
+    width: 100%;
+    bottom: 20%;
+    width: 90vh;
+    padding-bottom: 50px;
+  }
+  .herokor__text p {
+    font-size: 28px;
+  }
+  .herokor__img {
+    z-index: 0;
+    position: absolute;
+    display: inline;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    right: 0;
+    width: 45vw;
+  }
+  .herokor__img img {
+    display: block;
+    max-width: 100%;
+  }
+  .itemkor {
+    padding: 3em;
+  }
+  .itemkor__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+    gap: 1.3em;
+  }
+  .itemkor__text {
+    text-align: left;
+  }
+  .korporasi__title {
+    font-size: 32px;
+  }
+  .korporasi__star {
+    font-size: 30px;
+  }
+  .korporasi__price {
+    font-size: 28px;
+  }
+  .korporasi__button {
+    padding: 1.4rem 8rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapperkel {
+  font-family: 'Inter', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+.herokel {
   font-family: 'Inter', sans-serif;
   position: relative;
   background-image: url("/img/kel_hero1.png");
@@ -1525,7 +1914,7 @@ a:hover {
           flex-direction: row;
 }
 
-.hero__text {
+.herokel__text {
   position: absolute;
   bottom: 5%;
   left: 5%;
@@ -1534,46 +1923,46 @@ a:hover {
   padding-right: 4rem;
 }
 
-.hero__text h1 {
+.herokel__text h1 {
   font-size: 35px;
   font-weight: 700;
 }
 
-.hero__text p {
+.herokel__text p {
   font-weight: 400;
   margin-top: 1em;
   line-height: 1.5;
   font-size: 18px;
 }
 
-.hero__img {
+.herokel__img {
   display: none;
 }
 
-.service {
+.servicekel {
   font-family: 'Inter', sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
 }
 
-.service__title {
+.servicekel__title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1em;
 }
 
-.service__subtitle {
-  font-size: 18px;
+.servicekel__subtitle {
+  font-size: 16px;
   text-align: center;
   font-style: italic;
 }
 
-.grey {
+.greykel {
   background-color: #f5f6f7;
 }
 
-.item {
+.itemkel {
   font-family: 'Inter', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1591,7 +1980,7 @@ a:hover {
           align-items: center;
 }
 
-.item__box {
+.itemkel__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1611,17 +2000,17 @@ a:hover {
           align-items: center;
 }
 
-.item__image {
+.itemkel__image {
   height: 48px;
 }
 
-.item__text {
+.itemkel__text {
   text-align: center;
   width: 85%;
   font-size: 16px;
 }
 
-.wedding {
+.keluarga {
   font-family: 'Inter', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1641,7 +2030,7 @@ a:hover {
   margin-bottom: 20rem;
 }
 
-.wedding__flex {
+.keluarga__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1660,7 +2049,7 @@ a:hover {
           align-items: center;
 }
 
-.wedding__card {
+.keluarga__card {
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1680,7 +2069,7 @@ a:hover {
           box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
 }
 
-.wedding__image {
+.keluarga__image {
   width: 100%;
   height: 45vh;
   border-radius: 16px 16px 0 0;
@@ -1688,7 +2077,7 @@ a:hover {
      object-fit: cover;
 }
 
-.wedding__content {
+.keluarga__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1700,7 +2089,7 @@ a:hover {
   padding: 2.2em;
 }
 
-.wedding__box1 {
+.keluarga__box1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1713,26 +2102,26 @@ a:hover {
           justify-content: space-between;
 }
 
-.wedding__title {
+.keluarga__title {
   font-size: 24px;
   font-weight: bold;
   color: #1081e8;
 }
 
-.wedding__star {
+.keluarga__star {
   color: #ffc806;
   font-size: 24px;
   letter-spacing: 4px;
 }
 
-.wedding__box2 {
+.keluarga__box2 {
   font-size: 16px;
   text-align: center;
   line-height: 1.5;
   font-weight: 500;
 }
 
-.wedding__box3 {
+.keluarga__box3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1744,38 +2133,41 @@ a:hover {
   gap: 1rem;
 }
 
-.wedding__price {
+.keluarga__price {
   font-size: 20px;
   font-weight: bold;
 }
 
-.wedding__button {
+.keluarga__button {
   background-color: #1081e8;
   padding: 0.9em;
   text-align: center;
   border-radius: 8px;
 }
 
-.wedding__button a {
+.keluarga__button a {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
 }
 
 @media (min-width: 670px) {
-  .hero {
+  .herokel {
     height: 60vh;
   }
-  .hero__text {
+  .herokel__text {
     width: 80%;
   }
-  .hero p {
+  .herokel p {
     font-size: 24px;
   }
-  .service__title {
+  .servicekel__title {
     font-size: 56px;
   }
-  .item__box {
+  .servicekel__subtitle {
+    font-size: 18px;
+  }
+  .itemkel__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1784,10 +2176,10 @@ a:hover {
         flex-basis: 45%;
     gap: 1.3em;
   }
-  .item__text {
+  .itemkel__text {
     text-align: left;
   }
-  .wedding__flex {
+  .keluarga__flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1797,17 +2189,17 @@ a:hover {
             flex-direction: row;
     gap: 4rem;
   }
-  .wedding__card {
+  .keluarga__card {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
   }
-  .wedding__title {
+  .keluarga__title {
     font-size: 24px;
   }
-  .wedding__box2 {
+  .keluarga__box2 {
     text-align: left;
   }
-  .wedding__box3 {
+  .keluarga__box3 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1819,26 +2211,26 @@ a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .wedding__button {
+  .keluarga__button {
     padding: 1rem 4.75rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .hero {
+  .herokel {
     height: 90vh;
   }
-  .hero__text {
+  .herokel__text {
     z-index: 1;
     width: 100%;
     bottom: 20%;
     width: 90vh;
     padding-bottom: 50px;
   }
-  .hero__text p {
+  .herokel__text p {
     font-size: 28px;
   }
-  .hero__img {
+  .herokel__img {
     z-index: 0;
     position: absolute;
     display: inline;
@@ -1848,14 +2240,14 @@ a:hover {
     right: 0;
     width: 45vw;
   }
-  .hero__img img {
+  .herokel__img img {
     display: block;
     max-width: 100%;
   }
-  .item {
+  .itemkel {
     padding: 3em;
   }
-  .item__box {
+  .itemkel__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1864,418 +2256,20 @@ a:hover {
         flex-basis: 32%;
     gap: 1.3em;
   }
-  .item__text {
+  .itemkel__text {
     text-align: left;
   }
-}
-
-.wedding__title {
-  font-size: 32px;
-}
-
-.wedding__star {
-  font-size: 30px;
-}
-
-.wedding__price {
-  font-size: 28px;
-}
-
-.wedding__button {
-  padding: 1.4rem 8rem;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  font-family: 'Inter', sans-serif;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1200px;
-}
-
-.hero {
-  font-family: 'Inter', sans-serif;
-  position: relative;
-  background-image: url("/img/kel_hero1.png");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.hero__text {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  color: #ffffff;
-  margin-inline: auto;
-  padding-right: 4rem;
-}
-
-.hero__text h1 {
-  font-size: 35px;
-  font-weight: 700;
-}
-
-.hero__text p {
-  font-weight: 400;
-  margin-top: 1em;
-  line-height: 1.5;
-  font-size: 18px;
-}
-
-.hero__img {
-  display: none;
-}
-
-.service {
-  font-family: 'Inter', sans-serif;
-  color: #0f1d40;
-  text-align: center;
-  margin: 6.6rem auto 2.9rem;
-}
-
-.service__title {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 1em;
-}
-
-.service__subtitle {
-  font-size: 18px;
-  text-align: center;
-  font-style: italic;
-}
-
-.grey {
-  background-color: #f5f6f7;
-}
-
-.item {
-  font-family: 'Inter', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #f5f6f7;
-  padding: 46px 0;
-  gap: 1.2em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.item__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.2em;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  padding: 1em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.item__image {
-  height: 48px;
-}
-
-.item__text {
-  text-align: center;
-  width: 85%;
-  font-size: 16px;
-}
-
-.wedding {
-  font-family: 'Inter', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.8rem;
-  margin-top: 9rem;
-  margin-bottom: 20rem;
-}
-
-.wedding__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 3rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wedding__card {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 16px;
-  -webkit-box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
-          box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
-}
-
-.wedding__image {
-  width: 100%;
-  height: 45vh;
-  border-radius: 16px 16px 0 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.wedding__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 16px;
-  padding: 2.2em;
-}
-
-.wedding__box1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.wedding__title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1081e8;
-}
-
-.wedding__star {
-  color: #ffc806;
-  font-size: 24px;
-  letter-spacing: 4px;
-}
-
-.wedding__box2 {
-  font-size: 16px;
-  text-align: center;
-  line-height: 1.5;
-  font-weight: 500;
-}
-
-.wedding__box3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  gap: 1rem;
-}
-
-.wedding__price {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.wedding__button {
-  background-color: #1081e8;
-  padding: 0.9em;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.wedding__button a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-@media (min-width: 670px) {
-  .hero {
-    height: 60vh;
+  .keluarga__title {
+    font-size: 32px;
   }
-  .hero__text {
-    width: 80%;
+  .keluarga__star {
+    font-size: 30px;
   }
-  .hero p {
-    font-size: 24px;
-  }
-  .service__title {
-    font-size: 56px;
-  }
-  .item__box {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    gap: 1.3em;
-  }
-  .item__text {
-    text-align: left;
-  }
-  .wedding__flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 4rem;
-  }
-  .wedding__card {
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
-  }
-  .wedding__title {
-    font-size: 24px;
-  }
-  .wedding__box2 {
-    text-align: left;
-  }
-  .wedding__box3 {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .wedding__button {
-    padding: 1rem 4.75rem;
-  }
-}
-
-@media (min-width: 1000px) {
-  .hero {
-    height: 90vh;
-  }
-  .hero__text {
-    z-index: 1;
-    width: 100%;
-    bottom: 20%;
-    width: 90vh;
-    padding-bottom: 50px;
-  }
-  .hero__text p {
+  .keluarga__price {
     font-size: 28px;
   }
-  .hero__img {
-    z-index: 0;
-    position: absolute;
-    display: inline;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    right: 0;
-    width: 45vw;
+  .keluarga__button {
+    padding: 1.4rem 8rem;
   }
-  .hero__img img {
-    display: block;
-    max-width: 100%;
-  }
-  .item {
-    padding: 3em;
-  }
-  .item__box {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
-    gap: 1.3em;
-  }
-  .item__text {
-    text-align: left;
-  }
-}
-
-.wedding__title {
-  font-size: 32px;
-}
-
-.wedding__star {
-  font-size: 30px;
-}
-
-.wedding__price {
-  font-size: 28px;
-}
-
-.wedding__button {
-  padding: 1.4rem 8rem;
 }
 /*# sourceMappingURL=style.css.map */

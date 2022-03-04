@@ -9,7 +9,7 @@
 }
 
 /////////////////////////////////////////////////////
-.wrapper {
+.wrapperkel {
   font-family: 'Inter', sans-serif;
   width: 90%;
   margin: 0 auto;
@@ -18,7 +18,7 @@
 }
 
 // HERO SECTION / 0-670 / DONE
-.hero {
+.herokel {
   font-family: 'Inter', sans-serif;
   position: relative;
   background-image: url('/img/kel_hero1.png');
@@ -52,28 +52,28 @@
 }
 
 // SERVICES SECTION / 0-670 / DONE
-.service {
+.servicekel {
   font-family: 'Inter', sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
   &__title {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 1em;
   }
   &__subtitle {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     font-style: italic;
   }
 }
 
 //ITEM SECTION / 0-670 / DONE
-.grey {
+.greykel {
   background-color: #f5f6f7;
 }
-.item {
+.itemkel {
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -101,8 +101,8 @@
   }
 }
 
-// WEDDING CARD SECTION / 0-670 / DONE
-.wedding {
+// KORPORASI CARD SECTION / 0-670 / DONE
+.keluarga {
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
@@ -189,7 +189,7 @@
 // ================= MEDIA QUERY 640 =================
 @media (min-width: 670px) {
   // HERO SECTION / 670-1000 / DONE
-  .hero {
+  .herokel {
     height: 60vh;
     &__text {
       width: 80%;
@@ -199,13 +199,16 @@
     }
   }
   // SERVICES SECTION / 670-1000 / DONE
-  .service {
+  .servicekel {
     &__title {
       font-size: 56px;
     }
+    &__subtitle {
+      font-size: 18px;
+    }
   }
   // ITEM ICON SECTION / 670-1000 / DONE
-  .item {
+  .itemkel {
     &__box {
       flex-direction: row;
       flex-basis: 45%;
@@ -215,8 +218,8 @@
       text-align: left;
     }
   }
-  // WEDDING CARD SECTION / 670-1000 / DONE
-  .wedding {
+  // KORPORASI CARD SECTION / 670-1000 / DONE
+  .keluarga {
     &__flex {
       display: flex;
       flex-direction: row;
@@ -245,7 +248,7 @@
 // ================= MEDIA QUERY 1000 ================
 @media (min-width: 1000px) {
   // HERO SECTION / 1000 - ~ / DONE
-  .hero {
+  .herokel {
     height: 90vh;
     &__text {
       z-index: 1;
@@ -270,9 +273,8 @@
       }
     }
   }
-
   // ICON ITEM SECTION / 1000 - ~ / DONE
-  .item {
+  .itemkel {
     padding: 3em;
     &__box {
       flex-direction: row;
@@ -283,20 +285,19 @@
       text-align: left;
     }
   }
-}
-
-// WEDDING CARD SECTION / 1000 - ~ / DONE
-.wedding {
-  &__title {
-    font-size: 32px;
-  }
-  &__star {
-    font-size: 30px;
-  }
-  &__price {
-    font-size: 28px;
-  }
-  &__button {
-    padding: 1.4rem 8rem;
+  // KORPORASI CARD SECTION / 1000 - ~ / DONE
+  .keluarga {
+    &__title {
+      font-size: 32px;
+    }
+    &__star {
+      font-size: 30px;
+    }
+    &__price {
+      font-size: 28px;
+    }
+    &__button {
+      padding: 1.4rem 8rem;
+    }
   }
 }
