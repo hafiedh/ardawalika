@@ -10,8 +10,9 @@ router.get("/", (req, res) => {
 router.post("/register", UserController.register);
 router.post("/login", UserController.login);
 router.post("/forgot-password", UserController.forgotPassword);
-router.use(authentication);
+router.post("/login-google", UserController.googleLogin);
 router.get("/verify/:accessToken", UserController.verification);
+router.use(authentication);
 router.put("/updateData/:accessToken", UserController.updateData);
 
 module.exports = router;
