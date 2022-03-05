@@ -21,4 +21,16 @@ router.get("/wedding", (req, res) => {
     console.log("wedding")
 })
 
+//KORPORASI ROUTES
+router.get("/korporasi", (req, res) => {
+    res.render("korporasi")
+    console.log("korporasi")
+})
+
+//KELUARGA ROUTES
+router.get("/keluarga", (req, res) => {
+    res.render("keluarga")
+    console.log("keluarga")
+})
+
 module.exports = router;
