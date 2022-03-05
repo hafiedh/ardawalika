@@ -44,14 +44,7 @@
 <script>
 
     $(document).ready(function () {
-        // Transition effect for navbar 
         $(window).scroll(function () {
-            // checks if window is scrolled more than 500px, adds/removes solid class
-            // if ($(this).scrollTop() > 150) {
-            //     $('.main-head').attr('id', 'solid');;
-            // } else {
-            //     $('#solid').removeAttr('id');
-            // }
             if ($(this).scrollTop() > 150) {
                 $('.main-head').addClass("solid");
                 $(".main-head ul").attr("id", "main-head-ul")
@@ -61,6 +54,72 @@
             }
         });
     });
+
+    const dekorasi = document.querySelector(".dekorasi");
+        const rias = document.querySelector(".rias")
+        const katering = document.querySelector(".katering")
+        const dokumentasi = document.querySelector(".documentation")
+        const hiburan = document.querySelector(".hiburan")
+        const mc = document.querySelector(".mc")
+
+        const dekorasiDetail = document.querySelector(".paket-detail-dekorasi");
+        const riasDetail = document.querySelector(".paket-detail-rias")
+        const kateringDetail = document.querySelector(".paket-detail-katering")
+        const dokumentasiDetail = document.querySelector(".paket-detail-documentation")
+        const hiburanDetail = document.querySelector(".paket-detail-hiburan")
+        const mcDetail = document.querySelector(".paket-detail-mc")
+        const btn = document.querySelector("#toggle")
+
+        dekorasi.onclick = () => {
+            console.log("yaa")
+            if (dekorasiDetail.style.display !== "none") {
+                dekorasiDetail.style.display = "none"
+            } else {
+                dekorasiDetail.style.display = "block"
+            }
+        }
+
+        rias.onclick = () => {
+            if (riasDetail.style.display !== "none") {
+                riasDetail.style.display = "none"
+            } else {
+                riasDetail.style.display = "block"
+            }
+        }
+
+        katering.onclick = () => {
+            console.log("yaa")
+            if (kateringDetail.style.display !== "none") {
+                kateringDetail.style.display = "none"
+            } else {
+                kateringDetail.style.display = "block"
+            }
+        }
+
+        dokumentasi.onclick = () => {
+            console.log("yaa")
+            if (dokumentasiDetail.style.display !== "none") {
+                dokumentasiDetail.style.display = "none"
+            } else {
+                dokumentasiDetail.style.display = "block"
+            }
+        }
+
+        hiburan.onclick = () => {
+            if (hiburanDetail.style.display !== "none") {
+                hiburanDetail.style.display = "none"
+            } else {
+                hiburanDetail.style.display = "block"
+            }
+        }
+
+        mc.onclick = () => {
+            if (mcDetail.style.display !== "none") {
+                mcDetail.style.display = "none"
+            } else {
+                mcDetail.style.display = "block"
+            }
+        }
 
 </script>
 </body>
