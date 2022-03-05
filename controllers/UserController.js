@@ -262,6 +262,7 @@ class UserController {
       next(err);
     }
   }
+  static async imgkit(req, res, next) {}
 }
 
 module.exports = UserController;

@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -77,10 +77,10 @@ a {
   width: 95%;
   margin: auto;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .main-head nav ul {
@@ -89,16 +89,16 @@ a {
   display: flex;
   list-style: none;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 80rem;
-          flex: 1 1 80rem;
+  -ms-flex: 1 1 80rem;
+  flex: 1 1 80rem;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .main-head nav li {
@@ -127,7 +127,7 @@ a {
   font-family: "MuseoModerno", cursive;
   font-size: 3rem;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   color: white;
 }
 
@@ -150,15 +150,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .solid {
@@ -191,42 +191,42 @@ a {
   }
   #logo {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 0rem;
-            flex: 1 1 0rem;
+    -ms-flex: 1 1 0rem;
+    flex: 1 1 0rem;
     padding: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .navbar-masuk {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 0rem;
-            flex: 1 1 0rem;
+    -ms-flex: 1 1 0rem;
+    flex: 1 1 0rem;
   }
   ul {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 0rem;
-            flex: 1 1 0rem;
+    -ms-flex: 1 1 0rem;
+    flex: 1 1 0rem;
   }
   #main-head-general h1 {
     -webkit-box-flex: 2;
-        -ms-flex: 2 1 10rem;
-            flex: 2 1 10rem;
+    -ms-flex: 2 1 10rem;
+    flex: 2 1 10rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -242,14 +242,14 @@ a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 0rem;
-            flex: 1 1 0rem;
+    -ms-flex: 1 1 0rem;
+    flex: 1 1 0rem;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -267,15 +267,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 120vh;
   color: #293845;
   text-align: center;
@@ -301,21 +301,21 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .home-top .home-txt .home-txt-p {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 60rem;
-          flex: 1 1 60rem;
+  -ms-flex: 1 1 60rem;
+  flex: 1 1 60rem;
 }
 
 .home-top .home-txt .home-txt-bubbles {
@@ -323,20 +323,20 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30rem;
-          flex: 1 1 30rem;
+  -ms-flex: 1 1 30rem;
+  flex: 1 1 30rem;
   width: 30%;
   margin-left: 1.5rem;
   padding-right: 8rem;
@@ -347,7 +347,7 @@ a {
   padding: 8px 15px;
   border: 1px solid #ffffff;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 100px;
 }
 
@@ -359,14 +359,14 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .paket .paket-txt {
@@ -374,14 +374,14 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin: 2rem 0rem;
 }
 
@@ -389,28 +389,28 @@ a {
   margin: 4.5rem 0rem;
   text-align: left;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+  -ms-flex: 1 1 50rem;
+  flex: 1 1 50rem;
   font-weight: 700;
 }
 
 .paket .paket-txt p {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+  -ms-flex: 1 1 50rem;
+  flex: 1 1 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   text-align: right;
   color: #959cab;
   padding: 0rem 4rem;
@@ -421,17 +421,17 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .paket .paket-cards .kartu {
@@ -439,28 +439,28 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin: 0rem 1.2rem;
   border-radius: 0.8rem;
   margin-bottom: 4rem;
   cursor: pointer;
   -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
-          box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
   height: auto;
   overflow: hidden;
   width: 100%;
   height: 75vh;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30rem;
-          flex: 1 1 30rem;
+  -ms-flex: 1 1 30rem;
+  flex: 1 1 30rem;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
@@ -477,22 +477,58 @@ a {
 
 .paket .paket-cards .kartu:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .paket #paket-korporat {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(15, 29, 64, 0.9)), color-stop(58.66%, rgba(15, 29, 64, 0))), url("/img/paket-corporate.png");
-  background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 58.66%), url("/img/paket-corporate.png");
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(15, 29, 64, 0.9)),
+      color-stop(58.66%, rgba(15, 29, 64, 0))
+    ),
+    url("/img/paket-corporate.png");
+  background: linear-gradient(
+      0deg,
+      rgba(15, 29, 64, 0.9) 0%,
+      rgba(15, 29, 64, 0) 58.66%
+    ),
+    url("/img/paket-corporate.png");
 }
 
 .paket #paket-pernikahan {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(15, 29, 64, 0.9)), color-stop(58.66%, rgba(15, 29, 64, 0))), url("/img/paket-wedding.jpg");
-  background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 58.66%), url("/img/paket-wedding.jpg");
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(15, 29, 64, 0.9)),
+      color-stop(58.66%, rgba(15, 29, 64, 0))
+    ),
+    url("/img/paket-wedding.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(15, 29, 64, 0.9) 0%,
+      rgba(15, 29, 64, 0) 58.66%
+    ),
+    url("/img/paket-wedding.jpg");
 }
 
 .paket #paket-keluarga {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(15, 29, 64, 0.9)), color-stop(58.66%, rgba(15, 29, 64, 0))), url("/img/paket-keluarga.jpg");
-  background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 58.66%), url("/img/paket-keluarga.jpg");
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(15, 29, 64, 0.9)),
+      color-stop(58.66%, rgba(15, 29, 64, 0))
+    ),
+    url("/img/paket-keluarga.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(15, 29, 64, 0.9) 0%,
+      rgba(15, 29, 64, 0) 58.66%
+    ),
+    url("/img/paket-keluarga.jpg");
 }
 
 .paket #paket-korporat,
@@ -512,15 +548,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
   margin: auto;
   min-height: 110vh;
@@ -538,8 +574,8 @@ a {
 
 .keunggulan-container .keunggulan-left {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+  -ms-flex: 1 1 50rem;
+  flex: 1 1 50rem;
   margin-top: 8rem;
   margin-left: 10rem;
   padding-right: 8rem;
@@ -556,24 +592,24 @@ a {
 
 .keunggulan-container .keunggulan-right {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 70rem;
-          flex: 1 1 70rem;
+  -ms-flex: 1 1 70rem;
+  flex: 1 1 70rem;
   background-color: #f5f6f7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: space-evenly;
-      -ms-flex-align: space-evenly;
-          align-items: space-evenly;
+  -ms-flex-align: space-evenly;
+  align-items: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .keunggulan-container .keunggulan-right .keunggulan-right-container {
@@ -581,15 +617,15 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin: 1rem 0rem;
   margin-left: 8rem;
 }
@@ -624,14 +660,14 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: space-around;
-      -ms-flex-align: space-around;
-          align-items: space-around;
+  -ms-flex-align: space-around;
+  align-items: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .hasil h3 {
@@ -645,16 +681,16 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: space-around;
-      -ms-flex-align: space-around;
-          align-items: space-around;
+  -ms-flex-align: space-around;
+  align-items: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .hasil .hasil-1 {
@@ -682,17 +718,25 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background: -webkit-gradient(linear, left bottom, left top, from(#0f1d40), color-stop(58.66%, rgba(15, 29, 64, 0.5))), url("/img/pic6.png");
-  background: linear-gradient(0deg, #0f1d40 0%, rgba(15, 29, 64, 0.5) 58.66%), url("/img/pic6.png");
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#0f1d40),
+      color-stop(58.66%, rgba(15, 29, 64, 0.5))
+    ),
+    url("/img/pic6.png");
+  background: linear-gradient(0deg, #0f1d40 0%, rgba(15, 29, 64, 0.5) 58.66%),
+    url("/img/pic6.png");
 }
 
 .hasil .hasil-6 p {
@@ -710,7 +754,7 @@ a {
   height: auto;
   margin: 1rem;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
@@ -720,7 +764,7 @@ a {
 
 .hasil .kartu:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .testimoni {
@@ -731,14 +775,14 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: space-evenly;
-      -ms-flex-align: space-evenly;
-          align-items: space-evenly;
+  -ms-flex-align: space-evenly;
+  align-items: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: #0f2851;
   min-height: 10vh;
 }
@@ -755,17 +799,17 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   /*whatever size you want your container*/
 }
@@ -776,7 +820,7 @@ a {
   border-radius: 1rem;
   margin-bottom: 0rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
-          box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
   width: 35%;
   height: auto;
   overflow: hidden;
@@ -801,12 +845,12 @@ a {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .testimoni .kartu:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .testimoni .container {
@@ -831,7 +875,7 @@ a {
   height: auto;
   padding: 0rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-bottom: 3rem;
 }
 
@@ -958,7 +1002,7 @@ li {
   position: relative;
   padding-top: 45%;
   -webkit-perspective: 100px;
-          perspective: 100px;
+  perspective: 100px;
   width: 90%;
   margin: auto;
 }
@@ -976,14 +1020,14 @@ li {
   counter-reset: item;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 .carousel__slide {
   position: relative;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
   width: 100%;
   counter-increment: item;
 }
@@ -1008,31 +1052,31 @@ li {
 @media (hover: hover) {
   .carousel__snapper {
     -webkit-animation-name: tonext, snap;
-            animation-name: tonext, snap;
+    animation-name: tonext, snap;
     -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
+    animation-timing-function: ease;
     -webkit-animation-duration: 4s;
-            animation-duration: 4s;
+    animation-duration: 4s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
   }
   .carousel__slide:last-child .carousel__snapper {
     -webkit-animation-name: tostart, snap;
-            animation-name: tostart, snap;
+    animation-name: tostart, snap;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .carousel__snapper {
     -webkit-animation-name: none;
-            animation-name: none;
+    animation-name: none;
   }
 }
 
 .carousel:hover .carousel__snapper,
 .carousel:focus-within .carousel__snapper {
   -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
 }
 
 .carousel__navigation {
@@ -1058,7 +1102,7 @@ li {
   width: 4rem;
   height: 4rem;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   border-radius: 50%;
   font-size: 0;
   outline: 0;
@@ -1103,17 +1147,17 @@ li {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .home-txt-p {
     margin-bottom: 3rem;
@@ -1136,7 +1180,7 @@ li {
     width: 4rem;
     height: 4rem;
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     border-radius: 50%;
     font-size: 0;
     outline: 0;
@@ -1146,31 +1190,31 @@ li {
 @media screen and (max-width: 762px) {
   .testimoni-cards .kartu {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 30rem;
-            flex: 1 1 30rem;
+    -ms-flex: 1 1 30rem;
+    flex: 1 1 30rem;
   }
 }
 
 @media screen and (max-width: 762px) {
   .paket .kartu {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 20rem;
-            flex: 1 1 20rem;
+    -ms-flex: 1 1 20rem;
+    flex: 1 1 20rem;
   }
   .home-txt-bubbles {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -1224,17 +1268,17 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .dokumentasi .dokumentasi-card {
@@ -1242,17 +1286,17 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
-          box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+  box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
   margin: 4rem 0rem;
   min-height: 50vh;
   text-align: justify;
@@ -1336,20 +1380,20 @@ footer .footer-container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 85%;
   margin: auto;
   min-height: 15vh;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 footer .brand,
@@ -1377,28 +1421,28 @@ footer .footer-logo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 footer .footer-logo ul {
   list-style: none;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: gray;
 }
 
@@ -1442,15 +1486,15 @@ footer p {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -1458,7 +1502,7 @@ footer p {
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -1488,8 +1532,8 @@ footer p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .herowed__text {
@@ -1551,16 +1595,16 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: #f5f6f7;
   padding: 46px 0;
   gap: 1.2em;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .itemwed__box {
@@ -1569,18 +1613,18 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 1.2em;
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   padding: 1em;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .itemwed__image {
@@ -1600,14 +1644,14 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1.8rem;
   margin-top: 9rem;
   margin-bottom: 20rem;
@@ -1618,18 +1662,18 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 3rem;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .wedding__card {
@@ -1639,17 +1683,17 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 16px;
   -webkit-box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
-          box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+  box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
 }
 
 .wedding__image {
@@ -1657,7 +1701,7 @@ footer p {
   height: 45vh;
   border-radius: 16px 16px 0 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .wedding__content {
@@ -1666,8 +1710,8 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 16px;
   padding: 2.2em;
 }
@@ -1678,11 +1722,11 @@ footer p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .wedding__title {
@@ -1710,8 +1754,8 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   gap: 1rem;
 }
@@ -1753,10 +1797,10 @@ footer p {
   .itemwed__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
+    flex-basis: 45%;
     gap: 1.3em;
   }
   .itemwed__text {
@@ -1768,13 +1812,13 @@ footer p {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     gap: 4rem;
   }
   .wedding__card {
     -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
+    flex-basis: 48%;
   }
   .wedding__box2 {
     text-align: left;
@@ -1782,14 +1826,14 @@ footer p {
   .wedding__box3 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .wedding__button {
     padding: 1rem 4.75rem;
@@ -1815,8 +1859,8 @@ footer p {
     position: absolute;
     display: inline;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     right: 0;
     width: 45vw;
   }
@@ -1830,10 +1874,10 @@ footer p {
   .itemwed__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
+    flex-basis: 32%;
     gap: 1.3em;
   }
   .itemwed__text {
@@ -1863,7 +1907,7 @@ footer p {
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -1893,8 +1937,8 @@ footer p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .herokor__text {
@@ -1956,16 +2000,16 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: #f5f6f7;
   padding: 46px 0;
   gap: 1.2em;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .itemkor__box {
@@ -1974,18 +2018,18 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 1.2em;
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   padding: 1em;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .itemkor__image {
@@ -2005,14 +2049,14 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1.8rem;
   margin-top: 9rem;
   margin-bottom: 20rem;
@@ -2023,18 +2067,18 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 3rem;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .korporasi__card {
@@ -2044,17 +2088,17 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 16px;
   -webkit-box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
-          box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+  box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
 }
 
 .korporasi__image {
@@ -2062,7 +2106,7 @@ footer p {
   height: 45vh;
   border-radius: 16px 16px 0 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .korporasi__content {
@@ -2071,8 +2115,8 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 16px;
   padding: 2.2em;
 }
@@ -2083,11 +2127,11 @@ footer p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .korporasi__title {
@@ -2115,8 +2159,8 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   gap: 1rem;
 }
@@ -2158,10 +2202,10 @@ footer p {
   .itemkor__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
+    flex-basis: 45%;
     gap: 1.3em;
   }
   .itemkor__text {
@@ -2173,13 +2217,13 @@ footer p {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     gap: 4rem;
   }
   .korporasi__card {
     -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
+    flex-basis: 48%;
   }
   .korporasi__title {
     font-size: 24px;
@@ -2190,14 +2234,14 @@ footer p {
   .korporasi__box3 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .korporasi__button {
     padding: 1rem 4.75rem;
@@ -2223,8 +2267,8 @@ footer p {
     position: absolute;
     display: inline;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     right: 0;
     width: 45vw;
   }
@@ -2238,10 +2282,10 @@ footer p {
   .itemkor__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
+    flex-basis: 32%;
     gap: 1.3em;
   }
   .itemkor__text {
@@ -2271,7 +2315,7 @@ footer p {
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -2301,8 +2345,8 @@ footer p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .herokel__text {
@@ -2359,16 +2403,16 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: #f5f6f7;
   padding: 46px 0;
   gap: 1.2em;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .itemkel__box {
@@ -2377,18 +2421,18 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 1.2em;
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   padding: 1em;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .itemkel__image {
@@ -2408,14 +2452,14 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1.8rem;
   margin-top: 9rem;
   margin-bottom: 20rem;
@@ -2426,18 +2470,18 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 3rem;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .keluarga__card {
@@ -2447,17 +2491,17 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 16px;
   -webkit-box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
-          box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
+  box-shadow: 4px 4px 36px rgba(0, 0, 0, 0.18);
 }
 
 .keluarga__image {
@@ -2465,7 +2509,7 @@ footer p {
   height: 45vh;
   border-radius: 16px 16px 0 0;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .keluarga__content {
@@ -2474,8 +2518,8 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 16px;
   padding: 2.2em;
 }
@@ -2486,11 +2530,11 @@ footer p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .keluarga__title {
@@ -2518,8 +2562,8 @@ footer p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   gap: 1rem;
 }
@@ -2561,10 +2605,10 @@ footer p {
   .itemkel__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
+    flex-basis: 45%;
     gap: 1.3em;
   }
   .itemkel__text {
@@ -2576,13 +2620,13 @@ footer p {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     gap: 4rem;
   }
   .keluarga__card {
     -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
+    flex-basis: 48%;
   }
   .keluarga__title {
     font-size: 24px;
@@ -2593,14 +2637,14 @@ footer p {
   .keluarga__box3 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .keluarga__button {
     padding: 1rem 4.75rem;
@@ -2626,8 +2670,8 @@ footer p {
     position: absolute;
     display: inline;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     right: 0;
     width: 45vw;
   }
@@ -2641,10 +2685,10 @@ footer p {
   .itemkel__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-preferred-size: 32%;
-        flex-basis: 32%;
+    flex-basis: 32%;
     gap: 1.3em;
   }
   .itemkel__text {
@@ -2698,23 +2742,23 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   cursor: pointer;
   text-align: center;
 }
 
 .order .box-options .detail-paket {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+  -ms-flex: 1 1 50rem;
+  flex: 1 1 50rem;
   margin-top: -1.9rem;
   margin-left: -3.3rem;
   padding-left: 2rem;
@@ -2723,8 +2767,8 @@ footer p {
 
 .order .box-options .kustomisasi {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+  -ms-flex: 1 1 50rem;
+  flex: 1 1 50rem;
   margin-top: -2rem;
   margin-right: -3.3rem;
   background-color: white;
@@ -2822,17 +2866,17 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .box-detail-paket .galeri-gambar img {
@@ -2840,7 +2884,7 @@ footer p {
   width: 30rem;
   height: 20rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 1rem 0.5rem;
   border-radius: 0.8rem;
 }
@@ -2850,15 +2894,15 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 50vh;
 }
 
@@ -2873,25 +2917,25 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   border-radius: 0.8rem;
 }
 
 .detail-paket-choices .info-keterangan h4 {
   margin-left: 3rem;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
+  -ms-flex: 1 1 50rem;
+  flex: 1 1 50rem;
 }
 
 .detail-paket-choices .info-keterangan .sect {
@@ -2899,18 +2943,18 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 10rem;
-          flex: 1 1 10rem;
+  -ms-flex: 1 1 10rem;
+  flex: 1 1 10rem;
 }
 
 .detail-paket-choices .info-keterangan .sect img {
@@ -2940,23 +2984,23 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .detail-paket-right .detail-paket-biaya h4 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 10rem;
-          flex: 1 1 10rem;
+  -ms-flex: 1 1 10rem;
+  flex: 1 1 10rem;
   margin: 1rem 0.5rem 1rem 4rem;
 }
 
@@ -2965,19 +3009,19 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   color: #0b2589;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 21rem;
-          flex: 1 1 21rem;
+  -ms-flex: 1 1 21rem;
+  flex: 1 1 21rem;
 }
 
 .detail-paket-right .detail-paket-biaya .sect h4 {
@@ -2989,17 +3033,17 @@ footer p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .detail-paket-right .kustom-pesan .btn-kustomisasi {
