@@ -1,102 +1,234 @@
-.home-top {
-  // y, x
-  @include flex(center, center, column);
-  background: url("/img/img1.jpg");
+.home {
+  background: url("/img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 90vh;
+  width: 100%;
+  height: 120vh;
+}
+
+.home-top {
+  // y, x
+  @include flex(center, flex-start, column);
+  //background-color: lightblue;
+  min-height: 120vh;
   color: $header-color;
   text-align: center;
+  width: 87%;
+  margin: auto;
   .logo {
-    font-family: "Pattaya";
-    @include flex(center, center, column);
-    margin: 5rem 0rem 0.5rem 0rem;
+    font-family: "MuseoModerno", cursive;
+    //margin: 5rem 0rem 0.5rem 0rem;
+    margin: 13rem 0rem 2rem 0rem;
+    font-size: 13rem;
+    color: white;
+    font-weight: 500;
+  }
+  p {
+    //background-color: lavender;
+    text-align: left;
+    color: white;
+  }
+  .home-txt {
+    @include flex(flex-end, flex-start, row);
+    .home-txt-p {
+      flex: 1 1 60rem;
+      // margin-right: 8rem;
+    }
+    .home-txt-bubbles {
+      @include flex(flex-end, flex-end, row);
+      flex-wrap: wrap;
+      flex: 1 1 30rem;
+      width: 30%;
+      margin-left: 1.5rem;
+      padding-right: 8rem;
+      //margin-right: 10rem;
+      //background-color: lightslategray;
+      //padding: 0rem 10rem;
+      p {
+        //background-color: lightskyblue;
+        margin: 0.3rem 0.3rem;
+        padding: 8px 15px;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 100px;
+      }
+    }
   }
 }
 
 // PAKET SECTION //
 .paket {
-  width: 90%;
+  width: 95%;
   margin: auto;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
   @include flex(space-around, space-between, column);
   //background-color: lavender;
 
-  h3 {
-    margin: 4.5rem 0rem;
-    text-align: center;
-    font-family: "Pattaya";
+  .paket-txt {
+    @include flex(space-around, space-between, row);
+    margin: 2rem 0rem;
+    h3 {
+      margin: 4.5rem 0rem;
+      text-align: left;
+      flex: 1 1 50rem;
+      //background-color: lavender;
+      font-weight: 700;
+    }
+    p {
+      flex: 1 1 50rem;
+      //background-color: lightpink;
+      @include flex(center, center, row);
+      text-align: right;
+      color: #959cab;
+      padding: 0rem 4rem;
+    }
   }
 
   .paket-cards {
-    @include flex(center, center, row);
+    @include flex(space-between, center, row);
     flex-wrap: wrap;
-  }
 
-  .kartu {
-    text-align: center;
-    margin: 0rem 2rem;
-    border-radius: 1rem;
-    margin-bottom: 4rem;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
-    width: 25%;
-    height: auto;
-    overflow: hidden;
+    .kartu {
+      @include flex(flex-start, flex-end, row);
+      margin: 0rem 1.2rem;
+      border-radius: 0.8rem;
+      margin-bottom: 4rem;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+      height: auto;
+      overflow: hidden;
+      width: 100%;
+      height: 75vh;
+      flex: 1 1 30rem;
+      cursor: pointer;
+      transition: transform 0.5s;
 
-    img {
-      max-width: 100%;
-      max-height: auto;
-      position: relative;
-      vertical-align: middle;
-      left: 50%;
-      transform: translate(-50%);
-      height: 18rem;
-      width: 15rem;
-      object-fit: cover;
+      h3 {
+        color: white;
+        //background-color: lavender;
+        text-align: left;
+        margin: 1rem 0rem 1.5rem 1.5rem;
+        margin-right: 20rem;
+      }
     }
-
-    cursor: pointer;
-    transition: transform 0.5s;
-  }
-
-  .kartu:hover {
-    transform: scale(1.1);
-  }
-
-  .container {
-    @include flex(space-between, center, column);
-    //background-color: lavender;
-    min-height: 33vh;
-    button {
-      border: none;
-      padding: 0.2rem 1.5rem;
-      border-radius: 0.2rem;
-      background-color: $button-background;
-      color: white;
-      font-weight: 500;
-      margin-bottom: 3rem;
+    .kartu:hover {
+      transform: scale(1.1);
     }
-    h4 {
+  }
+
+  #paket-korporat {
+    background: linear-gradient(
+        0deg,
+        rgba(15, 29, 64, 0.9) 0%,
+        rgba(15, 29, 64, 0) 58.66%
+      ),
+      url("/img/paket-corporate.png");
+  }
+
+  #paket-pernikahan {
+    background: linear-gradient(
+        0deg,
+        rgba(15, 29, 64, 0.9) 0%,
+        rgba(15, 29, 64, 0) 58.66%
+      ),
+      url("/img/paket-wedding.jpg");
+  }
+
+  #paket-keluarga {
+    background: linear-gradient(
+        0deg,
+        rgba(15, 29, 64, 0.9) 0%,
+        rgba(15, 29, 64, 0) 58.66%
+      ),
+      url("/img/paket-keluarga.jpg");
+  }
+
+  #paket-korporat,
+  #paket-pernikahan,
+  #paket-keluarga {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// KEUNGGULAN SECTION //
+.keunggulan {
+  width: 100%;
+  //background-color: lavender;
+}
+.keunggulan-container {
+  @include flex(center, stretch, row);
+  width: 100%;
+  margin: auto;
+  min-height: 110vh;
+  //margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 5rem 0rem;
+  //flex-wrap: wrap;
+  p {
+    color: #525c76;
+  }
+  h3 {
+    font-size: $medium;
+  }
+
+  .keunggulan-left {
+    flex: 1 1 50rem;
+    margin-top: 8rem;
+    //margin: 2rem 2rem 0rem 2rem;
+    margin-left: 10rem;
+    padding-right: 8rem;
+    h1 {
+      color: $keunggulan-number;
       margin-top: 2.5rem;
-      padding: 0rem 5rem;
-      text-align: center;
-      font-weight: 400;
     }
+    h3 {
+      font-weight: 700;
+    }
+  }
+  .keunggulan-right {
+    flex: 1 1 70rem;
+    background-color: $keunggulan-right;
+    @include flex(flex-start, space-evenly, column);
+    flex-wrap: wrap;
+
+    .keunggulan-right-container {
+      @include flex(flex-end, flex-start, row);
+      margin: 1rem 0rem;
+      margin-left: 8rem;
+      img {
+        min-height: 1rem;
+        max-width: 3.5rem;
+      }
+    }
+  }
+  .keunggulan-right-txt {
+    margin-left: 2rem;
+    h3 {
+      font-size: $medium;
+      font-weight: 600;
+    }
+    p {
+      padding-right: 23rem;
+    }
+  }
+  #top {
+    margin-top: 8rem;
   }
 }
 
 // HASIL SECTION //
 .hasil {
-  width: 90%;
+  width: 95%;
   margin: auto;
   margin-bottom: 6rem;
   @include flex(space-around, space-around, column);
   h3 {
     margin: 0rem 0rem 2.5rem 0rem;
     text-align: center;
-    font-family: "Pattaya";
+    font-weight: 700;
   }
 
   .hasil-cards {
@@ -104,35 +236,42 @@
     flex-wrap: wrap;
   }
   .hasil-1 {
-    background: url("/img/tes1.png");
+    background: url("/img/pic1.jpg");
   }
   .hasil-2 {
-    background: url("/img/tes2.jpg");
+    background: url("/img/pic2.jpg");
   }
   .hasil-3 {
-    background: url("/img/img1.jpg");
+    background: url("/img/pic3.jpg");
   }
   .hasil-4 {
-    background: url("/img/img2.jpg");
+    background: url("/img/pic4.jpg");
   }
   .hasil-5 {
-    background: url("/img/tes.jpg");
+    background: url("/img/pic5.jpg");
   }
   .hasil-6 {
-    background: url("/img/tes10.jpg");
+    @include flex(center, center, row);
+    p {
+      color: white;
+    }
+    background: linear-gradient(
+        0deg,
+        rgba(15, 29, 64, 1) 0%,
+        rgba(15, 29, 64, 0.5) 58.66%
+      ),
+      url("/img/pic6.png");
   }
   .kartu {
-    text-align: left;
-    min-height: 60vh;
-    padding: 0rem 5rem;
+    min-height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     width: 100%;
-    max-width: 30rem;
+    max-width: 38rem;
     height: auto;
-    margin: 2rem;
+    margin: 1rem;
     flex-wrap: wrap;
     cursor: pointer;
     transition: transform 0.5s;
@@ -145,16 +284,20 @@
 
 // TESTIMONI SECTION//
 .testimoni {
-  width: 90%;
+  width: 100%;
   margin: auto;
-  margin-bottom: 8rem;
-  min-height: 70vh;
+  margin-bottom: 0rem;
   @include flex(space-around, space-evenly, column);
+  //background-color: lavender;
+  background-color: #0f2851;
+  min-height: 10vh;
 
   h3 {
-    margin: 4.5rem 0rem;
+    margin: 5.5rem 0rem 0rem 0rem;
     text-align: center;
-    font-family: "Pattaya";
+    font-weight: 700;
+    color: white;
+    //font-family: "Pattaya";
   }
 
   .testimoni-cards {
@@ -164,23 +307,26 @@
   }
 
   .kartu {
+    //background-color: lightcyan;
     text-align: center;
-    margin: 0rem 3rem;
+    margin: 0rem 1.5rem;
     border-radius: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
     box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
     width: 35%;
     height: auto;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
+    min-height: 50vh;
+    background-color: white;
 
     .circle {
-      width: 15rem;
-      height: 15rem;
+      width: 11rem;
+      height: 11rem;
       overflow: hidden;
       border-radius: 100%;
-      margin: 6rem auto 0;
+      margin: 4rem auto 0;
       img {
         width: 100%;
         height: 100%;
@@ -194,17 +340,28 @@
   }
 
   .container {
-    @include flex(space-between, center, column);
+    // @include flex(center, center, column);
     min-height: 33vh;
     h4 {
-      margin-top: 2.5rem;
+      //margin-top: 2.5rem;
       padding: 0rem 5rem;
+      margin: 1rem 1rem 0.5rem 1rem;
       text-align: center;
       font-weight: 400;
+      color: #0f2851;
     }
     p {
       text-align: justify;
-      margin: 0rem 2rem 2rem 2rem;
+      margin: 0rem 2rem 3.5rem 2rem;
+    }
+    img {
+      max-width: 30%;
+      height: auto;
+      padding: 0rem;
+      // height: 15%;
+      object-fit: cover;
+      //background-color: lightpink;
+      margin-bottom: 3rem;
     }
   }
 }
@@ -286,10 +443,12 @@ li {
 .carousel {
   position: relative;
   padding-top: 45%;
-  filter: drop-shadow(0 0 10px #0003);
+  //filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
   //background-color: lavender;
-  min-height: 70vh;
+  width: 90%;
+  margin: auto;
+  //max-height: 20vh;
 }
 
 .carousel__viewport {
@@ -309,13 +468,13 @@ li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  // background-color: #f99;
+  //background-color: #f99;
   counter-increment: item;
 }
 
 .carousel__slide:before {
   content: counter(item);
-  position: absolute;
+  //position: absolute;
   top: 50%;
   left: 50%;
   //transform: translate3d(-50%, -40%, 70px);
@@ -369,17 +528,17 @@ li {
   display: inline-block;
 }
 
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
+// .carousel__navigation-button {
+//   display: inline-block;
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   background-color: #333;
+//   background-clip: content-box;
+//   border: 0.25rem solid transparent;
+//   border-radius: 50%;
+//   font-size: 0;
+//   transition: transform 0.1s;
+// }
 
 .carousel::before,
 .carousel::after,
@@ -395,6 +554,10 @@ li {
   font-size: 0;
   outline: 0;
 }
+
+// .carousel__prev {
+//   margin-left: 4rem;
+// }
 
 .carousel::before,
 .carousel__prev {
@@ -430,6 +593,40 @@ li {
 }
 
 // MEDIA QUERY //
+@media screen and (max-width: 910px) {
+  .home-txt {
+    //background-color: lavender;
+    @include flex(center, center, row);
+    flex-wrap: wrap;
+  }
+
+  .home-txt-p {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  #logo-home {
+    font-size: 8rem;
+    margin-top: 25rem;
+    text-align: center;
+  }
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 23.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+}
+
 @media screen and (max-width: 762px) {
   .testimoni-cards {
     //background-color: #f3d8ae;
@@ -445,12 +642,50 @@ li {
       flex: 1 1 20rem;
     }
   }
+  .home-txt-bubbles {
+    @include flex(center, center, row);
+  }
 }
 
 @media screen and (max-width: 624px) {
   .hasil {
     h3 {
       margin: 5rem 0rem 2.5rem 0rem;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #logo-home {
+    font-size: 8rem;
+    margin-top: 25rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .home,
+  .home-top {
+    min-height: 135vh;
+  }
+}
+
+@media screen and (max-width: 918px) {
+  .keunggulan-right-container {
+    //background-color: lavender;
+    .keunggulan-right-txt {
+      padding-right: 5rem;
+      p {
+        padding-right: 0rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 721px) {
+  .paket {
+    .kartu {
+      max-height: 50vh;
     }
   }
 }

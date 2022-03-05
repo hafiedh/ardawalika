@@ -4,31 +4,37 @@ footer {
   font-family: "Montserrat", sans-serif;
 
   .footer-container {
+    @include flex(space-between, flex-start, row);
     width: 85%;
     margin: auto;
-    display: flex;
-    flex-direction: row;
-    min-height: 25vh;
+    min-height: 15vh;
     flex-wrap: wrap;
   }
-  .footer-ardawalika {
-    @include flex(center, flex-start, column);
-    flex: 1 1 60rem;
-    flex-wrap: wrap;
-    h3 {
-      font-weight: bold;
-      font-family: "Pattaya";
-      margin: 2rem 0rem 1rem 0rem;
-    }
-    h4 {
-      margin: 1rem 0rem;
+
+  .brand,
+  .layanan-kami,
+  .tentang-kami,
+  .alamat {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .temukan {
+    margin-top: 3rem;
+  }
+  .footer-brand {
+    font-family: "MuseoModerno", cursive;
+  }
+
+  .footer-title {
+    a {
+      font-weight: 700;
     }
   }
 
   .footer-logo {
-    flex-wrap: wrap;
+    @include flex(flex-start, center, row); // flex-wrap: wrap;
     ul {
-      display: flex;
       list-style: none;
       flex: 1 1 40rem;
       justify-content: space-between;
@@ -38,39 +44,56 @@ footer {
     li {
       margin: 0rem 0.5rem 2rem 0.5rem;
     }
-  }
-
-  .footer-menu {
-    // x, y
-    @include flex(space-evenly, center, row);
-    flex-wrap: wrap;
-    flex: 1 1 40rem;
-    h4 {
-      margin: 1.2rem 0rem;
+    img {
+      color: black;
     }
   }
-}
 
-a:hover {
-  text-decoration: none;
-  color: $footer-color;
-}
+  li {
+    margin: 1rem 0rem;
+  }
 
-@media screen and (max-width: 850px) {
-  footer {
+  a {
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $footer-color;
+  }
+
+  p {
+    padding: 0rem;
+    width: 85%;
+    margin: auto;
     text-align: center;
-    .footer-ardawalika {
-      @include flex(center, center, column);
-    }
+    padding-bottom: 1rem;
+    color: $copyright;
   }
-  .footer-menu-right,
-  .footer-menu-left {
+}
+
+// .footer-menu {
+//   // x, y
+//   @include flex(space-evenly, center, row);
+//   flex-wrap: wrap;
+//   flex: 1 1 40rem;
+//   h4 {
+//     margin: 1.2rem 0rem;
+//   }
+// }
+
+@media screen and (max-width: 670px) {
+  footer {
+    // text-align: center;
+    // .footer-ardawalika {
+    //   @include flex(center, center, column);
+    // }
+  }
+
+  .layanan-kami,
+  .tentang-kami {
     //visibility: none;
     display: none;
-  }
-  .footer-container {
-    max-height: 4vh;
-    //background-color: lightpink;
   }
   .footer-ardawalika {
     @include flex(center, center, column);
