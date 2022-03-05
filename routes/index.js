@@ -10,26 +10,33 @@ router.get("/", (req, res) => {
     console.log("index")
 })
 
+// DOKUMENTASI ROUTES //
 router.get("/dokumentasi", (req, res) => {
     res.render("dokumentasi")
     console.log("dokumentasi")
 })
 
-//WEDDING ROUTES
+// WEDDING ROUTES //
 router.get("/wedding", (req, res) => {
     res.render("wedding")
     console.log("wedding")
 })
 
-//KORPORASI ROUTES
+// KORPORASI ROUTES //
 router.get("/korporasi", (req, res) => {
     res.render("korporasi")
     console.log("korporasi")
 })
 
-//KELUARGA ROUTES
+// KELUARGA ROUTES //
 router.get("/keluarga", (req, res) => {
     res.render("keluarga")
+    console.log("keluarga")
+})
+
+// ORDER ROUTES //
+router.get("/order", (req, res) => {
+    res.render("order")
     console.log("keluarga")
 })
 
