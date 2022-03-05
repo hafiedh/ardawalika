@@ -285,7 +285,7 @@ a {
 
 .home-top .logo {
   font-family: "MuseoModerno", cursive;
-  margin: 18rem 0rem 2rem 0rem;
+  margin: 13rem 0rem 2rem 0rem;
   font-size: 13rem;
   color: white;
   font-weight: 500;
@@ -1463,8 +1463,12 @@ footer p {
   padding: 0;
 }
 
+.wedding-filler {
+  min-height: 15vh;
+}
+
 .wrapperwed {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   width: 90%;
   margin: 0 auto;
   padding: 0;
@@ -1472,7 +1476,7 @@ footer p {
 }
 
 .herowed {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
   background-image: url("/img/wed_hero1.png");
   background-size: cover;
@@ -1491,6 +1495,7 @@ footer p {
 .herowed__text {
   position: absolute;
   bottom: 5%;
+  top: 10%;
   left: 5%;
   color: #ffffff;
   margin-inline: auto;
@@ -1500,21 +1505,25 @@ footer p {
 .herowed__text h1 {
   font-size: 35px;
   font-weight: 700;
+  margin-top: 7rem;
 }
 
 .herowed__text p {
   font-weight: 400;
   margin-top: 1em;
   line-height: 1.5;
-  font-size: 18px;
 }
 
 .herowed__img {
   display: none;
 }
 
+.herowed #herowed__p {
+  font-size: 1.7rem;
+}
+
 .servicewed {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
@@ -1537,7 +1546,7 @@ footer p {
 }
 
 .itemwed {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1585,7 +1594,7 @@ footer p {
 }
 
 .wedding {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1844,6 +1853,12 @@ footer p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .wedding-filler {
+    min-height: 26vh;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -1853,8 +1868,12 @@ footer p {
   padding: 0;
 }
 
+.korporasi-filler {
+  min-height: 15vh;
+}
+
 .wrapperkor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   width: 90%;
   margin: 0 auto;
   padding: 0;
@@ -1862,7 +1881,7 @@ footer p {
 }
 
 .herokor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
   background-image: url("/img/kor_hero1.png");
   background-size: cover;
@@ -1881,6 +1900,7 @@ footer p {
 .herokor__text {
   position: absolute;
   bottom: 5%;
+  top: 10%;
   left: 5%;
   color: #ffffff;
   margin-inline: auto;
@@ -1894,7 +1914,7 @@ footer p {
 
 .herokor__text p {
   font-weight: 400;
-  margin-top: 1em;
+  margin-top: 2em;
   line-height: 1.5;
   font-size: 18px;
 }
@@ -1903,8 +1923,12 @@ footer p {
   display: none;
 }
 
+.herokor #herokor__p {
+  font-size: 2rem;
+}
+
 .servicekor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
@@ -1927,7 +1951,7 @@ footer p {
 }
 
 .itemkor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1975,7 +1999,7 @@ footer p {
 }
 
 .korporasi {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2237,6 +2261,12 @@ footer p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .korporasi-filler {
+    min-height: 26vh;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -2246,8 +2276,12 @@ footer p {
   padding: 0;
 }
 
+.keluarga-filler {
+  min-height: 15vh;
+}
+
 .wrapperkel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   width: 90%;
   margin: 0 auto;
   padding: 0;
@@ -2255,7 +2289,7 @@ footer p {
 }
 
 .herokel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
   background-image: url("/img/kel_hero1.png");
   background-size: cover;
@@ -2297,7 +2331,7 @@ footer p {
 }
 
 .servicekel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
@@ -2320,7 +2354,7 @@ footer p {
 }
 
 .itemkel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2368,7 +2402,7 @@ footer p {
 }
 
 .keluarga {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2627,6 +2661,12 @@ footer p {
   }
   .keluarga__button {
     padding: 1.4rem 8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keluarga-filler {
+    min-height: 26vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
