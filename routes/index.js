@@ -15,4 +15,10 @@ router.get("/dokumentasi", (req, res) => {
     console.log("dokumentasi")
 })
 
+//WEDDING ROUTES
+router.get("/wedding", (req, res) => {
+    res.render("wedding")
+    console.log("wedding")
+})
+
 module.exports = router;

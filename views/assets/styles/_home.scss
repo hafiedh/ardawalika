@@ -4,14 +4,14 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 130vh;
+  height: 120vh;
 }
 
 .home-top {
   // y, x
   @include flex(center, flex-start, column);
   //background-color: lightblue;
-  min-height: 130vh;
+  min-height: 120vh;
   color: $header-color;
   text-align: center;
   width: 87%;
@@ -19,7 +19,7 @@
   .logo {
     font-family: "MuseoModerno", cursive;
     //margin: 5rem 0rem 0.5rem 0rem;
-    margin: 20rem 0rem 2rem 0rem;
+    margin: 18rem 0rem 2rem 0rem;
     font-size: 13rem;
     color: white;
     font-weight: 500;
@@ -284,17 +284,20 @@
 
 // TESTIMONI SECTION//
 .testimoni {
-  width: 90%;
+  width: 100%;
   margin: auto;
-  margin-bottom: 8rem;
+  margin-bottom: 0rem;
   @include flex(space-around, space-evenly, column);
   //background-color: lavender;
-  min-height: 70vh;
+  background-color: #0f2851;
+  min-height: 10vh;
 
   h3 {
-    margin: 4.5rem 0rem;
+    margin: 5.5rem 0rem 0rem 0rem;
     text-align: center;
-    font-family: "Pattaya";
+    font-weight: 700;
+    color: white;
+    //font-family: "Pattaya";
   }
 
   .testimoni-cards {
@@ -308,20 +311,22 @@
     text-align: center;
     margin: 0rem 3rem;
     border-radius: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
     box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
     width: 35%;
     height: auto;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
+    min-height: 50vh;
+    background-color: white;
 
     .circle {
-      width: 15rem;
-      height: 15rem;
+      width: 11rem;
+      height: 11rem;
       overflow: hidden;
       border-radius: 100%;
-      margin: 6rem auto 0;
+      margin: 4rem auto 0;
       img {
         width: 100%;
         height: 100%;
@@ -335,17 +340,28 @@
   }
 
   .container {
-    @include flex(center, center, column);
+    // @include flex(center, center, column);
     min-height: 33vh;
     h4 {
       //margin-top: 2.5rem;
       padding: 0rem 5rem;
+      margin: 1rem 1rem 0.5rem 1rem;
       text-align: center;
       font-weight: 400;
+      color: #0f2851;
     }
     p {
       text-align: justify;
-      margin: 0rem 2rem 2rem 2rem;
+      margin: 0rem 2rem 3.5rem 2rem;
+    }
+    img {
+      max-width: 30%;
+      height: auto;
+      padding: 0rem;
+      // height: 15%;
+      object-fit: cover;
+      //background-color: lightpink;
+      margin-bottom: 3rem;
     }
   }
 }
@@ -427,8 +443,12 @@ li {
 .carousel {
   position: relative;
   padding-top: 45%;
-  filter: drop-shadow(0 0 10px #0003);
+  //filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
+  //background-color: lavender;
+  width: 90%;
+  margin: auto;
+  //max-height: 20vh;
 }
 
 .carousel__viewport {
@@ -448,13 +468,13 @@ li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  // background-color: #f99;
+  //background-color: #f99;
   counter-increment: item;
 }
 
 .carousel__slide:before {
   content: counter(item);
-  position: absolute;
+  //position: absolute;
   top: 50%;
   left: 50%;
   //transform: translate3d(-50%, -40%, 70px);
@@ -508,17 +528,17 @@ li {
   display: inline-block;
 }
 
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
+// .carousel__navigation-button {
+//   display: inline-block;
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   background-color: #333;
+//   background-clip: content-box;
+//   border: 0.25rem solid transparent;
+//   border-radius: 50%;
+//   font-size: 0;
+//   transition: transform 0.1s;
+// }
 
 .carousel::before,
 .carousel::after,
@@ -534,6 +554,10 @@ li {
   font-size: 0;
   outline: 0;
 }
+
+// .carousel__prev {
+//   margin-left: 4rem;
+// }
 
 .carousel::before,
 .carousel__prev {
@@ -583,6 +607,28 @@ li {
   .home-txt-bubbles {
     //min-height: 20vh;
     //background-color: lavender;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  #logo-home {
+    font-size: 8rem;
+    margin-top: 25rem;
+    text-align: center;
+  }
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 23.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
   }
 }
 
@@ -637,6 +683,14 @@ li {
       p {
         padding-right: 0rem;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 721px) {
+  .paket {
+    .kartu {
+      max-height: 50vh;
     }
   }
 }
