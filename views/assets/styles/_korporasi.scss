@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 *,
 *::before,
@@ -8,9 +8,13 @@
   padding: 0;
 }
 
+.korporasi-filler {
+  min-height: 15vh;
+}
+
 /////////////////////////////////////////////////////
 .wrapperkor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   width: 90%;
   margin: 0 auto;
   padding: 0;
@@ -19,9 +23,9 @@
 
 // HERO SECTION / 0-670 / DONE
 .herokor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
-  background-image: url('/img/kor_hero1.png');
+  background-image: url("/img/kor_hero1.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -31,6 +35,7 @@
   &__text {
     position: absolute;
     bottom: 5%;
+    top: 10%;
     left: 5%;
     color: #ffffff;
     margin-inline: auto;
@@ -41,7 +46,7 @@
     }
     p {
       font-weight: 400;
-      margin-top: 1em;
+      margin-top: 2em;
       line-height: 1.5;
       font-size: 18px;
     }
@@ -49,11 +54,14 @@
   &__img {
     display: none;
   }
+  #herokor__p {
+    font-size: 2rem;
+  }
 }
 
 // SERVICES SECTION / 0-670 / DONE
 .servicekor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
@@ -74,7 +82,7 @@
   background-color: #f5f6f7;
 }
 .itemkor {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-wrap: wrap;
   background-color: #f5f6f7;
@@ -103,7 +111,7 @@
 
 // WEDDING CARD SECTION / 0-670 / DONE
 .korporasi {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,5 +308,11 @@
     &__button {
       padding: 1.4rem 8rem;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .korporasi-filler {
+    min-height: 26vh;
   }
 }

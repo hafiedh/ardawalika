@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 *,
 *::before,
@@ -8,9 +8,13 @@
   padding: 0;
 }
 
+.keluarga-filler {
+  min-height: 15vh;
+}
+
 /////////////////////////////////////////////////////
 .wrapperkel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   width: 90%;
   margin: 0 auto;
   padding: 0;
@@ -19,9 +23,9 @@
 
 // HERO SECTION / 0-670 / DONE
 .herokel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
-  background-image: url('/img/kel_hero1.png');
+  background-image: url("/img/kel_hero1.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -53,7 +57,7 @@
 
 // SERVICES SECTION / 0-670 / DONE
 .servicekel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
@@ -74,7 +78,7 @@
   background-color: #f5f6f7;
 }
 .itemkel {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-wrap: wrap;
   background-color: #f5f6f7;
@@ -103,7 +107,7 @@
 
 // KORPORASI CARD SECTION / 0-670 / DONE
 .keluarga {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -299,5 +303,11 @@
     &__button {
       padding: 1.4rem 8rem;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keluarga-filler {
+    min-height: 26vh;
   }
 }
