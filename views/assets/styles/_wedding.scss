@@ -9,7 +9,7 @@
 }
 
 /////////////////////////////////////////////////////
-.wrapper {
+.wrapperwed {
   font-family: 'Inter', sans-serif;
   width: 90%;
   margin: 0 auto;
@@ -18,10 +18,10 @@
 }
 
 // HERO SECTION / 0-670 / DONE
-.hero {
+.herowed {
   font-family: 'Inter', sans-serif;
   position: relative;
-  background-image: url('/img/wed_hero.png');
+  background-image: url('/img/wed_hero1.png');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -36,14 +36,14 @@
     margin-inline: auto;
     padding-right: 4rem;
     h1 {
-      font-size: 42px;
+      font-size: 35px;
       font-weight: 700;
     }
     p {
       font-weight: 400;
       margin-top: 1em;
       line-height: 1.5;
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   &__img {
@@ -52,28 +52,28 @@
 }
 
 // SERVICES SECTION / 0-670 / DONE
-.service {
+.servicewed {
   font-family: 'Inter', sans-serif;
   color: #0f1d40;
   text-align: center;
   margin: 6.6rem auto 2.9rem;
   &__title {
     font-weight: 700;
-    font-size: 56px;
+    font-size: 32px;
     line-height: 1em;
   }
   &__subtitle {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     font-style: italic;
   }
 }
 
 //ITEM SECTION / 0-670 / DONE
-.grey {
+.greywed {
   background-color: #f5f6f7;
 }
-.item {
+.itemwed {
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -189,7 +189,7 @@
 // ================= MEDIA QUERY 640 =================
 @media (min-width: 670px) {
   // HERO SECTION / 670-1000 / DONE
-  .hero {
+  .herowed {
     height: 60vh;
     &__text {
       width: 80%;
@@ -199,16 +199,19 @@
     }
   }
   // SERVICES SECTION / 670-1000 / DONE
-  // .service {
-  //   &__title {
-  //     font-size: 3.5rem;
-  //   }
-  // }
+  .servicewed {
+    &__title {
+      font-size: 56px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
   // ITEM ICON SECTION / 670-1000 / DONE
-  .item {
+  .itemwed {
     &__box {
       flex-direction: row;
-      flex-basis: 49%;
+      flex-basis: 45%;
       gap: 1.3em;
     }
     &__text {
@@ -225,9 +228,9 @@
     &__card {
       flex-basis: 48%;
     }
-    &__title {
-      font-size: 24px;
-    }
+    // &__title {
+    //   font-size: 24px;
+    // }
     &__box2 {
       text-align: left;
     }
@@ -245,7 +248,7 @@
 // ================= MEDIA QUERY 1000 ================
 @media (min-width: 1000px) {
   // HERO SECTION / 1000 - ~ / DONE
-  .hero {
+  .herowed {
     height: 90vh;
     &__text {
       z-index: 1;
@@ -272,7 +275,7 @@
   }
 
   // ICON ITEM SECTION / 1000 - ~ / DONE
-  .item {
+  .itemwed {
     padding: 3em;
     &__box {
       flex-direction: row;
@@ -283,20 +286,19 @@
       text-align: left;
     }
   }
-}
-
-// WEDDING CARD SECTION / 1000 - ~ / DONE
-.wedding {
-  &__title {
-    font-size: 32px;
-  }
-  &__star {
-    font-size: 30px;
-  }
-  &__price {
-    font-size: 28px;
-  }
-  &__button {
-    padding: 1.4rem 8rem;
+  // WEDDING CARD SECTION / 1000 - ~ / DONE
+  .wedding {
+    &__title {
+      font-size: 32px;
+    }
+    &__star {
+      font-size: 30px;
+    }
+    &__price {
+      font-size: 28px;
+    }
+    &__button {
+      padding: 1.4rem 8rem;
+    }
   }
 }
