@@ -23,7 +23,7 @@
         detailPaket.addEventListener("click", createActiveLeft)
         kustomisasi.addEventListener("click", createActiveRight)
 
-        
+
         function createActiveLeft() {
             console.log("tes create id")
             boxOptions.setAttribute("id", "active-left")
@@ -119,4 +119,7 @@
                     $('#main-head-ul').removeAttr('id');
                 }
             });
+
+            createActiveLeft()
+            console.log("tessssssssss")
         });
