@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -2667,6 +2672,692 @@ footer p {
 @media screen and (max-width: 768px) {
   .keluarga-filler {
     min-height: 26vh;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapperlog {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'inter', sans-serif;
+  background-color: #6eb9ff;
+}
+
+.login {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 85%;
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 44px 38px;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+          box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+}
+
+.login__header {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.login__email > input,
+.login__pass > input {
+  font-size: 14px;
+  color: #000000;
+  height: 42px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  margin: 0 auto 16px;
+  padding-inline: 12px;
+  display: block;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.login__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__box > input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d1d1d6;
+}
+
+.login__box > span {
+  color: #000000;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.login__button > input {
+  width: 100%;
+  margin-top: 16px;
+  height: 3.125rem;
+  padding-left: 0;
+  background: #1081e8;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  height: 42px;
+}
+
+.login__forgot {
+  color: #000000;
+  margin-top: 24px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.login__forgot > a {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login__forgot > a:hover {
+  color: #1081e8;
+}
+
+.login__line {
+  height: 1px;
+  width: 100%;
+  background-color: #b2b7c2;
+  margin: 16px auto;
+  opacity: 0.7;
+}
+
+.login__sign {
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+}
+
+.login__sign > a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+}
+
+.login__sign > a:hover {
+  color: #1081e8;
+}
+
+.login__google > a {
+  margin-top: 16px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+  gap: 1em;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #b2b7c2;
+  border-radius: 6px;
+  color: #b2b7c2;
+  background-color: #ffffff;
+}
+
+.login__google > a:hover {
+  background-color: #1081e8;
+  color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .login__header {
+    font-size: 22px;
+  }
+  .login__email > input,
+  .login__pass > input,
+  .login__google > a {
+    height: 36px;
+  }
+  .login__box > input {
+    width: 16px;
+    height: 16px;
+  }
+  .login__box > span, .login__sign, .login__forgot,
+  .login__forgot > a,
+  .login__sign > a,
+  .login__button > input,
+  .login__google > a {
+    font-size: 12px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapperlog {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'inter', sans-serif;
+  background-color: #6eb9ff;
+}
+
+.register {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 85%;
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 44px 38px;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+          box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+}
+
+.register__header {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.register__name > input,
+.register__email > input,
+.register__pass > input {
+  font-size: 14px;
+  color: #000000;
+  height: 42px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  margin: 0 auto 16px;
+  padding-inline: 12px;
+  display: block;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.register__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register__box > input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d1d1d6;
+}
+
+.register__box > span {
+  color: #000000;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.register__button > input {
+  width: 100%;
+  margin-top: 16px;
+  height: 3.125rem;
+  padding-left: 0;
+  background: #1081e8;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  height: 42px;
+}
+
+.register__forgot {
+  color: #000000;
+  margin-top: 24px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.register__forgot > a {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.register__forgot > a:hover {
+  color: #1081e8;
+}
+
+.register__line {
+  height: 1px;
+  width: 100%;
+  background-color: #b2b7c2;
+  margin: 16px auto;
+  opacity: 0.7;
+}
+
+.register__sign {
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+}
+
+.register__sign > a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+}
+
+.register__sign > a:hover {
+  color: #1081e8;
+}
+
+.register__google > a {
+  margin-top: 16px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+  gap: 1em;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #b2b7c2;
+  border-radius: 6px;
+  color: #b2b7c2;
+  background-color: #ffffff;
+}
+
+.register__google > a:hover {
+  background-color: #1081e8;
+  color: #ffffff;
+}
+
+.register__google > :nth-child(1) {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .register__header {
+    font-size: 22px;
+  }
+  .register__name > input,
+  .register__email > input,
+  .register__pass > input,
+  .register__google > a {
+    height: 36px;
+  }
+  .register__box > input {
+    width: 16px;
+    height: 16px;
+  }
+  .register__box > span, .register__sign, .register__forgot,
+  .register__forgot > a,
+  .register__sign > a,
+  .register__button > input,
+  .register__google > a,
+  .register__google > :nth-child(1) {
+    font-size: 12px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapperres {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'inter', sans-serif;
+  background-color: #6eb9ff;
+}
+
+.reset {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 85%;
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 44px 38px;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+          box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+}
+
+.reset__header {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.reset__text {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.reset__email > input {
+  font-family: 'inter', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  height: 42px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  margin: 0 auto 16px;
+  padding-inline: 12px;
+  display: block;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.reset__button > input {
+  font-family: 'inter', sans-serif;
+  width: 100%;
+  height: 3.125rem;
+  padding-left: 0;
+  background: #1081e8;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  height: 42px;
+}
+
+@media (max-width: 500px) {
+  .reset__header {
+    font-size: 22px;
+  }
+  .reset__email > input {
+    height: 36px;
+  }
+  .reset__button > input {
+    font-size: 12px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapperres {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'inter', sans-serif;
+  background-color: #6eb9ff;
+}
+
+.reset {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 85%;
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 44px 38px;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+          box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+}
+
+.reset__header {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.reset__text {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.reset__email > input {
+  font-family: 'inter', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  height: 42px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  margin: 0 auto 16px;
+  padding-inline: 12px;
+  display: block;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.reset__button > input {
+  font-family: 'inter', sans-serif;
+  width: 100%;
+  height: 3.125rem;
+  padding-left: 0;
+  background: #1081e8;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  height: 42px;
+}
+
+@media (max-width: 500px) {
+  .reset__header {
+    font-size: 22px;
+  }
+  .reset__email > input {
+    height: 36px;
+  }
+  .reset__button > input {
+    font-size: 12px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapperdone {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'inter', sans-serif;
+  background-color: #6eb9ff;
+}
+
+.done {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 85%;
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 44px 38px;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+          box-shadow: 5px 5px 10px rgba(0, 103, 199, 0.158);
+}
+
+.done__key {
+  width: 100%;
+  margin-top: -30px;
+}
+
+.done__header {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.done__text {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.done__login {
+  font-family: 'inter', sans-serif;
+  width: 100%;
+  height: 42px;
+  padding-left: 0;
+  background: #1081e8;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.done__login > a {
+  font-family: 'inter', sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .reset__header {
+    font-size: 22px;
+  }
+  .reset__email > input {
+    height: 36px;
+  }
+  .reset__login > a {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */
