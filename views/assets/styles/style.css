@@ -2413,7 +2413,6 @@ footer p {
   }
 }
 
-<<<<<<< HEAD
 .order-filler {
   min-height: 15vh;
 }
@@ -2562,7 +2561,6 @@ footer p {
 
 .box-detail-paket .galeri-gambar {
   margin: auto;
-=======
 *,
 *::before,
 *::after {
@@ -2708,7 +2706,6 @@ footer p {
 .login__google > a {
   margin-top: 16px;
   text-decoration: none;
->>>>>>> origin/develop
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

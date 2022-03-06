@@ -34,6 +34,12 @@ router.get("/keluarga", (req, res) => {
     console.log("keluarga")
 })
 
+// ORDER ROUTES //
+router.get("/order", (req, res) => {
+    res.render("order")
+    console.log("order")
+})
+
 //LOGIN ROUTES
 router.get("/login", (req, res) => {
     res.render("login")
