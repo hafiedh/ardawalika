@@ -1,3 +1,21 @@
+        // SCRIPT FOR THE LANDING PAGE'S NAVBAR //
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                console.log("aaaaaaaaaaaaaaaaa")
+                if ($(this).scrollTop() > 150) {
+                    $('.main-head').addClass("solid");
+                    $(".main-head ul").attr("id", "main-head-ul")
+                } else {
+                    $('.main-head').removeClass("solid");
+                    $('#main-head-ul').removeAttr('id');
+                }
+            });
+
+            
+            createActiveLeft()
+            console.log("tessssssssss")
+        });
+
         // SCRIPT TO SHOW DETAIL PAKET //
         const detailPaket = document.querySelector(".detail-paket")
         const kustomisasi = document.querySelector(".kustomisasi")
@@ -108,18 +126,4 @@
         }
 
 
-        // SCRIPT FOR THE LANDING PAGE'S NAVBAR //
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 150) {
-                    $('.main-head').addClass("solid");
-                    $(".main-head ul").attr("id", "main-head-ul")
-                } else {
-                    $('.main-head').removeClass("solid");
-                    $('#main-head-ul').removeAttr('id');
-                }
-            });
-
-            createActiveLeft()
-            console.log("tessssssssss")
-        });
+   
