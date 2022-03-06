@@ -28,7 +28,7 @@
         const btn = document.querySelector("#toggle")
 
         dekorasi.onclick = () => {
-            console.log("yaa")
+            console.log("helooooo")
             if (dekorasiDetail.style.display !== "block") {
                 dekorasiDetail.style.display = "block"
             } else {
