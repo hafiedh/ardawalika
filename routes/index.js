@@ -34,10 +34,34 @@ router.get("/keluarga", (req, res) => {
     console.log("keluarga")
 })
 
-// ORDER ROUTES //
-router.get("/order", (req, res) => {
-    res.render("order")
-    console.log("keluarga")
+//LOGIN ROUTES
+router.get("/login", (req, res) => {
+    res.render("login")
+    console.log("login")
+})
+
+//REGISTER ROUTES
+router.get("/register", (req, res) => {
+    res.render("register")
+    console.log("register")
+})
+
+//RESET EMAIL ROUTES
+router.get("/resetemail", (req, res) => {
+    res.render("resetemail")
+    console.log("resetemail")
+})
+
+//RESET PASSWORD ROUTES
+router.get("/resetpass", (req, res) => {
+    res.render("resetpass")
+    console.log("resetpass")
+})
+
+//PASSWORD TELAH DIUBAH ROUTES
+router.get("/resetdone", (req, res) => {
+    res.render("resetdone")
+    console.log("resetdone")
 })
 
 module.exports = router;
