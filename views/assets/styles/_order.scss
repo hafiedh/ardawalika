@@ -133,7 +133,7 @@
     @include flex(center, center, row);
     flex-wrap: wrap;
     img {
-      float: left;
+      //float: left;
       width: 30rem;
       height: 20rem;
       object-fit: cover;
@@ -251,11 +251,6 @@
       font-size: 1.5rem;
       margin: 0.5rem 0rem 0.5rem 4rem;
     }
-  }
-  .btn-kustomisasi,
-  .btn-pesan {
-    width: 100%;
-    background-color: lavender;
   }
 }
 
