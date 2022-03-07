@@ -479,6 +479,7 @@ a {
   color: white;
   text-align: left;
   margin: 1rem 0rem 1.5rem 1.5rem;
+  font-weight: bold;
   margin-right: 20rem;
 }
 
@@ -964,6 +965,7 @@ a {
   width: 90%;
   margin: auto;
   margin-top: 2rem;
+  margin-bottom: 10rem;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1054,6 +1056,14 @@ a {
   margin-bottom: 3rem;
 }
 
+.dokumentasi .showDoc {
+  color: #2561ed;
+  font-weight: 500;
+  margin: -1rem 0rem 3rem 0rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
 @media screen and (max-width: 768px) {
   .dokumentasi-filler {
     min-height: 30vh;
@@ -1071,8 +1081,8 @@ a {
 }
 
 footer {
-  background-color: #dfe6ed;
-  color: #303f4b;
+  background-color: #f5f6f7;
+  color: #0f1d40;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1114,7 +1124,9 @@ footer .footer-brand {
 }
 
 footer .footer-title a {
-  font-weight: 700;
+  font-weight: bold;
+  color: #1081e8;
+  font-size: 1.7rem;
 }
 
 footer .footer-logo {
@@ -1160,12 +1172,12 @@ footer li {
 }
 
 footer a {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 footer a:hover {
   text-decoration: none;
-  color: #303f4b;
+  color: #0f1d40;
 }
 
 footer p {
@@ -1175,6 +1187,10 @@ footer p {
   text-align: center;
   padding: 2rem 0 3rem;
   color: #070504;
+}
+
+footer h3 {
+  color: #1081e8;
 }
 
 @media screen and (max-width: 670px) {
@@ -3237,6 +3253,8 @@ Attribution required
   }
 }
 
+<<<<<<< HEAD
+=======
 :root {
   --clr-primary: #1081e8;
   --clr-yellow: #ffc806;
@@ -3463,6 +3481,7 @@ p {
   border-top-left-radius: 0;
 }
 
+>>>>>>> origin/develop
 *,
 *::before,
 *::after {
