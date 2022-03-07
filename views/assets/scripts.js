@@ -1,3 +1,36 @@
+        // QUERY SELECTOR //
+        const detailPaket = document.querySelector(".detail-paket")
+        const kustomisasi = document.querySelector(".kustomisasi")
+        const boxOptions = document.querySelector(".box-options")
+        const boxDetailPaket = document.querySelector(".box-detail-paket")
+        const boxKustomisasi = document.querySelector(".box-kustomisasi")
+        
+        const dekorasi = document.querySelector(".dekorasi");
+        const rias = document.querySelector(".rias")
+        const katering = document.querySelector(".katering")
+        const dokumentasi = document.querySelector(".documentation")
+        const hiburan = document.querySelector(".hiburan")
+        const mc = document.querySelector(".mc")
+
+        const dekorasiDetail = document.querySelector(".paket-detail-dekorasi");
+        const riasDetail = document.querySelector(".paket-detail-rias")
+        const kateringDetail = document.querySelector(".paket-detail-katering")
+        const dokumentasiDetail = document.querySelector(".paket-detail-documentation")
+        const hiburanDetail = document.querySelector(".paket-detail-hiburan")
+        const mcDetail = document.querySelector(".paket-detail-mc")
+        const showAll = document.querySelector(".showDoc")
+
+        const below = document.querySelector(".below")
+        const selengkapnya = document.querySelector("#selengkapnya")
+        const tanggal = document.querySelector(".tanggal")
+        
+        showAll.addEventListener("click", showDocumentation)
+        detailPaket.addEventListener("click", createActiveLeft)
+        kustomisasi.addEventListener("click", createActiveRight)
+
+        boxKustomisasi.style.display = "none"
+                
+
         // SCRIPT FOR THE LANDING PAGE'S NAVBAR //
         $(document).ready(function () {
             $(window).scroll(function () {
@@ -12,32 +45,27 @@
             });
 
             
-            createActiveLeft()
-            console.log("tessssssssss")
+            // createActiveLeft()
+            // console.log("tessssssssss")
         });
+        
+        // SCRIPT TO SHOW ALL DOCUMENTATIONS //
+        function showDocumentation() {
+            console.log("aaaaaaaaa")
+
+            if(below.style.display == "none"){
+                below.style.display = "inline"
+                showAll.innerHTML = "Read More"
+                selengkapnya.style.display = "none"
+            } else {
+                 below.style.display = "none"
+                showAll.style.display = "none"
+                selengkapnya.style.display = "inline"
+            }
+        }
+
 
         // SCRIPT TO SHOW DETAIL PAKET //
-        const detailPaket = document.querySelector(".detail-paket")
-        const kustomisasi = document.querySelector(".kustomisasi")
-        const boxOptions = document.querySelector(".box-options")
-        
-        const boxDetailPaket = document.querySelector(".box-detail-paket")
-        const boxKustomisasi = document.querySelector(".box-kustomisasi")
-
-        const dekorasi = document.querySelector(".dekorasi");
-        const rias = document.querySelector(".rias")
-        const katering = document.querySelector(".katering")
-        const dokumentasi = document.querySelector(".documentation")
-        const hiburan = document.querySelector(".hiburan")
-        const mc = document.querySelector(".mc")
-
-        const dekorasiDetail = document.querySelector(".paket-detail-dekorasi");
-        const riasDetail = document.querySelector(".paket-detail-rias")
-        const kateringDetail = document.querySelector(".paket-detail-katering")
-        const dokumentasiDetail = document.querySelector(".paket-detail-documentation")
-        const hiburanDetail = document.querySelector(".paket-detail-hiburan")
-        const mcDetail = document.querySelector(".paket-detail-mc")
-
         detailPaket.addEventListener("click", createActiveLeft)
         kustomisasi.addEventListener("click", createActiveRight)
 
@@ -125,5 +153,6 @@
             }
         }
 
+        
 
    
