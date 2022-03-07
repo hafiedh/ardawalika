@@ -70,4 +70,10 @@ router.get("/resetdone", (req, res) => {
     console.log("resetdone")
 })
 
+//ABOUT US
+router.get("/aboutus", (req, res) => {
+    res.render("aboutus")
+    console.log("aboutus")
+})
+
 module.exports = router;

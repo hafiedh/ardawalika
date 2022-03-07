@@ -4,6 +4,7 @@
   color: $header-color;
   z-index: 10;
   width: 100%;
+  box-shadow: 1px 1px 10px $header-color;
 
   nav {
     display: flex;

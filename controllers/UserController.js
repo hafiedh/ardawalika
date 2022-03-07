@@ -39,7 +39,7 @@ class UserController {
 
       if (!result) throw { status: 400, message: "Register failed" };
 
-      const token = sign({ email, fullname, id: result.id });
+      const token = sign({ email, fullname, id: result.id, role });
       const url = `http://localhost:3000/users/verify/${token}`;
       sendEmail(email, fullname, url);
       res.status(201).json({
@@ -61,7 +61,12 @@ class UserController {
       if (!user) throw { status: 404, message: "User not found" };
       const isMatch = await decode(password, user.password);
       if (!isMatch) throw { status: 400, message: "Wrong Email or Password" };
-      const token = sign({ email, username: user.username, id: user.id });
+      const token = sign({
+        email,
+        username: user.username,
+        id: user.id,
+        role: user.role,
+      });
 
       res.status(200).json({
         status: 200,
@@ -194,7 +199,7 @@ class UserController {
     try {
       const { accessToken } = req.params;
       const payload = verify(accessToken);
-      const { username, email, fullname, phonenumbber, address } = req.body;
+      const { username, fullname, phonenumbber, address } = req.body;
 
       // image update
       // find old image from database
@@ -262,7 +267,6 @@ class UserController {
       next(err);
     }
   }
-  static async imgkit(req, res, next) {}
 }
 
 module.exports = UserController;
