@@ -5,12 +5,13 @@
                 if ($(this).scrollTop() > 150) {
                     $('.main-head').addClass("solid");
                     $(".main-head ul").attr("id", "main-head-ul")
+                    $('.main-head').css({"box-shadow": "1px 1px 10px #293845"});
                 } else {
                     $('.main-head').removeClass("solid");
                     $('#main-head-ul').removeAttr('id');
+                    $('.main-head').css({"box-shadow": "none"});
                 }
             });
-
             
             createActiveLeft()
             console.log("tessssssssss")

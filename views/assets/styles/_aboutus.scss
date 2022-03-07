@@ -1,0 +1,205 @@
+:root {
+  // Color
+  --clr-primary: #1081e8;
+  --clr-yellow: #ffc806;
+  --clr-grey: #d1d1d1;
+  --clr-lightgrey: #f5f6f7;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  // Font Family
+  --ff-primary: "Inter", sans-serif;
+}
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-primary);
+}
+
+.hero {
+  position: relative;
+  background-image: url(../img/hero_aboutus.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+
+  &__text {
+    top: 40vh;
+    left: 50vh;
+    position: absolute;
+    transform: translateX(200px);
+    font-size: 48px;
+    color: white;
+  }
+}
+
+.wrapper {
+  width: 92.5%;
+  margin-inline: auto;
+  max-width: 1440px;
+
+  .about-ardawalika {
+    margin-top: 100px;
+    text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 42px;
+    }
+
+    &__description {
+      margin: 20px 150px 0 150px;
+      line-height: 1.5;
+      font-size: 26px;
+    }
+  }
+
+  .short-introduction {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 90px 0 90px 0;
+    background: linear-gradient(180deg, #155cb4 50%, #6794cb 100%);
+    color: var(--clr-white);
+    border-radius: 15px;
+
+    &__box {
+      width: 250px;
+      border: 1px solid var(--clr-white);
+      border-radius: 10px;
+      padding: 60px 30px 60px 30px;
+      margin: 0 35px 0 35px;
+    }
+
+    &__total {
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    &__separator {
+      border: none;
+      background-color: var(--clr-white);
+      width: 90px;
+      height: 2px;
+      margin-left: 4.9rem;
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 18px;
+    }
+  }
+
+  .team-introduction {
+    display: flex;
+    margin-top: 100px;
+
+    &__image-caption {
+      width: 100%;
+    }
+
+    &__image {
+      width: 667px;
+    }
+
+    &__caption {
+      font-size: 36px;
+      text-align: right;
+      color: var(--clr-primary);
+    }
+
+    &__description {
+      display: flex;
+      font-size: 28px;
+      line-height: 1.5;
+      margin: 110px 0 0 25px;
+    }
+  }
+
+  .faq {
+    width: 1115px;
+    margin: 70px auto 100px;
+
+    &__title {
+      font-size: 42px;
+      margin-bottom: 25px;
+      color: var(--clr-primary);
+    }
+
+    &__accordion-item {
+      margin: 25px 0;
+    }
+
+    &__question {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.1rem;
+      width: 100%;
+      background: var(--clr-lightgrey);
+      border-radius: 7.5px;
+      color: var(--clr-black);
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__question.active {
+      color: var(--clr-primary);
+      transition: all 0.3s ease-in-out;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &__question.active i {
+      color: var(--clr-primary);
+      transform: rotate(180deg);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__arrow {
+      transition: transform 0.3s ease-in;
+    }
+
+    &__answer {
+      font-family: var(--ff-primary);
+      font-size: 16px;
+      padding: 0 1.1rem;
+      background-color: var(--clr-lightgrey);
+      border-radius: 7.5px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      line-height: 1.5;
+    }
+
+    &__answer.active {
+      max-height: 10rem;
+      padding: 1.1rem;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}
