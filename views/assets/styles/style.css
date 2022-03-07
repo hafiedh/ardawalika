@@ -477,6 +477,7 @@ a {
   color: white;
   text-align: left;
   margin: 1rem 0rem 1.5rem 1.5rem;
+  font-weight: bold;
   margin-right: 20rem;
 }
 
@@ -962,6 +963,7 @@ a {
   width: 90%;
   margin: auto;
   margin-top: 2rem;
+  margin-bottom: 10rem;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1052,14 +1054,6 @@ a {
   margin-bottom: 3rem;
 }
 
-.dokumentasi #selengkapnya {
-  display: none;
-}
-
-.dokumentasi #selengkapnya .dokumentasi-card {
-  margin: 5rem 0rem 9rem 0rem;
-}
-
 .dokumentasi .showDoc {
   color: #2561ed;
   font-weight: 500;
@@ -1085,8 +1079,8 @@ a {
 }
 
 footer {
-  background-color: #dfe6ed;
-  color: #303f4b;
+  background-color: #f5f6f7;
+  color: #0f1d40;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1128,7 +1122,9 @@ footer .footer-brand {
 }
 
 footer .footer-title a {
-  font-weight: 700;
+  font-weight: bold;
+  color: #1081e8;
+  font-size: 1.7rem;
 }
 
 footer .footer-logo {
@@ -1174,12 +1170,12 @@ footer li {
 }
 
 footer a {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 footer a:hover {
   text-decoration: none;
-  color: #303f4b;
+  color: #0f1d40;
 }
 
 footer p {
@@ -1189,6 +1185,10 @@ footer p {
   text-align: center;
   padding-bottom: 1rem;
   color: #a4a9b6;
+}
+
+footer h3 {
+  color: #1081e8;
 }
 
 @media screen and (max-width: 670px) {
