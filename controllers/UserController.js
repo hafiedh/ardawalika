@@ -67,12 +67,7 @@ class UserController {
         id: user.id,
         role: user.role,
       });
-
-      res.status(200).json({
-        status: 200,
-        message: "Login success",
-        token,
-      });
+      res.render("index");
     } catch (err) {
       next(err);
     }
