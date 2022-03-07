@@ -7,7 +7,6 @@ $navbar-txt: 2rem;
 $medium: 3rem;
 
 $black: #070504;
-$copyright: #a4a9b6;
 $header-color: #293845;
 $header-button: #1081e8;
 $button-background: #6558f5;
@@ -36,6 +35,7 @@ $gray-text: #2c2c2c;
 @import "keluarga";
 @import "order";
 @import "carousel";
+@import "aboutus";
 @import "login";
 @import "register";
 @import "resetemail";
