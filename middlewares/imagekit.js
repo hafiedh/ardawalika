@@ -20,6 +20,8 @@ function imgKit(req, res, next) {
     })
       .then((data) => {
         req.body.image = data.data.url;
+        console.log(req.body.image);
+        next();
       })
       .catch((err) => {
         next({
