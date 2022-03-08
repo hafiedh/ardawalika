@@ -28,7 +28,9 @@ footer {
 
   .footer-title {
     a {
-      font-weight: 700;
+      font-weight: bold;
+      color: $lightblue;
+      font-size: 1.7rem;
     }
   }
 
@@ -54,7 +56,7 @@ footer {
   }
 
   a {
-    font-weight: 500;
+    font-weight: 600;
   }
 
   a:hover {
@@ -69,6 +71,9 @@ footer {
     text-align: center;
     padding: 2rem 0 3rem;
     color: $black;
+  }
+  h3 {
+    color: $lightblue;
   }
 }
 
