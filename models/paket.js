@@ -9,10 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Paket.belongsTo(models.Category, { foreignKey: "category_id" });
       Paket.belongsTo(models.Dekorasi, { foreignKey: "dekorasi_id" });
+      Paket.belongsTo(models.Catering, { foreignKey: "catering_id" });
       Paket.belongsTo(models.Rias, { foreignKey: "rias_id" });
-      Paket.belongsTo(models.Catering, { foreignKey: "category_id" });
+      Paket.belongsTo(models.Category, { foreignKey: "category_id" });
+      Paket.belongsTo(models.Dokumentasi, { foreignKey: "dokumentasi_id" });
+      Paket.belongsTo(models.Entertainment, {
+        foreignKey: "entertainment_id",
+      });
       Paket.hasMany(models.Order, { foreignKey: "paket_id" });
     }
   }
@@ -23,6 +27,9 @@ module.exports = (sequelize, DataTypes) => {
       dekorasi_id: DataTypes.INTEGER,
       catering_id: DataTypes.INTEGER,
       rias_id: DataTypes.INTEGER,
+      category_id: DataTypes.INTEGER,
+      dokumentasi_id: DataTypes.INTEGER,
+      entertainment_id: DataTypes.INTEGER,
     },
     {
       sequelize,
