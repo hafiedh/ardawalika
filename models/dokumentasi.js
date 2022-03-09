@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Dokumentasi.init(
     {
       name_dokumentasi: DataTypes.STRING,
-      harga_dokumentasi: DataTypes.STRING,
+      harga_dokumentasi: DataTypes.INTEGER,
       keterangan_dokumentasi: DataTypes.STRING,
     },
     {

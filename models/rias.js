@@ -9,14 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Rias.hasMany(models.Paket, { foreignKey: "id" });
-      Rias.hasMany(models.Order, { foreignKey: "id" });
+      Rias.hasMany(models.Paket, { foreignKey: "rias_id" });
+      Rias.hasMany(models.Order, { foreignKey: "rias_id" });
     }
   }
   Rias.init(
     {
       name_rias: DataTypes.STRING,
-      harga_rias: DataTypes.STRING,
+      harga_rias: DataTypes.INTEGER,
       keterangan_rias: DataTypes.STRING,
     },
     {

@@ -7,12 +7,26 @@ module.exports = {
       "Caterings",
       [
         {
-          name_catering: "Paket 1",
-          harga_catering: "5000000",
-          keterangan_catering: "500 porsi",
+          name_catering: "Sederhana",
+          harga_catering: 2500000,
+          keterangan_catering: "Nasi Putih, Sop Kimlo",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name_catering: "Standar",
+          harga_catering: 3000000,
+          keterangan_catering: "Nasi Putih, Sop Kimlo, Sop Ayam",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name_catering: "Mewah",
+          harga_catering: 4000000,
+          keterangan_catering: "Nasi Putih, Sop Kimlo, Sop Ayam ,Asinan",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }
        
       ],
       {}

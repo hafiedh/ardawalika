@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       harga_dokumentasi: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
       },
       keterangan_dokumentasi: {
         type: Sequelize.STRING,
