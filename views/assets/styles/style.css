@@ -1132,6 +1132,7 @@ a {
 
 .dokumentasi-paket__keterangan__details table {
   width: 100%;
+  margin-top: 1rem;
 }
 
 .dokumentasi-paket__keterangan__details table td,
