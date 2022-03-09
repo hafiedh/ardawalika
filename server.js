@@ -3,7 +3,6 @@ const app = express();
 const port = 3000;
 const cors = require("cors");
 const router = require("./routes/index");
-const FileUpload = require("express-fileupload");
 const bodyParser = require("body-parser");
 
 app.use(cors());
@@ -12,7 +11,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(FileUpload());
 app.use(router);
 
 app.listen(port, () => {

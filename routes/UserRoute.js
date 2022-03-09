@@ -15,7 +15,12 @@ router.post("/forgot-password", UserController.forgotPassword);
 router.post("/login-google", UserController.googleLogin);
 router.get("/verify/:accessToken", UserController.verification);
 router.use(authentication);
-router.put("/updateData/:accessToken", UserController.updateData);
-router.post("/upload-image", updateDataUser, uploadImage, imgKit);
+router.post(
+  "/upload-image",
+  updateDataUser,
+  uploadImage,
+  imgKit,
+  UserController.updateUserPhoto
+);
 
 module.exports = router;

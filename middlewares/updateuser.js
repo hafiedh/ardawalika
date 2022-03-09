@@ -21,10 +21,6 @@ async function updateDataUser(req, res, next) {
       }
     );
     if (update[0] === 0) throw { status: 404, message: "User not found" };
-    res.status(200).json({
-      status: 200,
-      message: "Update success",
-    });
     next();
   } catch (err) {
     next(err);

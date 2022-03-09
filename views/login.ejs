@@ -19,13 +19,18 @@
         </div>
 
         <!-- EMAIL INPUT -->
-        <form action="#">
+        <form action="/users/login" method="post">
           <div class="login__email">
-            <input type="text" placeholder="Email" required />
+            <input type="text" placeholder="Email" name="email" required />
             <div class="login__icon"></div>
           </div>
           <div class="login__pass">
-            <input type="password" placeholder="Kata Sandi" required />
+            <input
+              type="password"
+              placeholder="Kata Sandi"
+              name="password"
+              required
+            />
             <div class="login__icon"></div>
           </div>
 
@@ -43,14 +48,16 @@
         <!-- LUPA PASSWORD -->
         <div class="login__forgot">
           lupa kata sandi?
-          <a href="#">Klik disini</a>
+          <a href="resetpass">Klik disini</a>
         </div>
 
         <!-- BREAK LINE -->
         <div class="login__line"></div>
 
         <!-- TIDAK PUNYA AKUN  -->
-        <div class="login__sign">Belum Punya Akun? <a href="#">Daftar disini</a></div>
+        <div class="login__sign">
+          Belum Punya Akun? <a href="#">Daftar disini</a>
+        </div>
         <div class="login__google">
           <!-- GOOGLE LOGIN-->
           <a href="#">
