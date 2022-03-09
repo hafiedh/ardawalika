@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Rias.init(
     {
       name_rias: DataTypes.STRING,
-      harga_rias: DataTypes.STRING,
+      harga_rias: DataTypes.INTEGER,
       keterangan_rias: DataTypes.STRING,
     },
     {

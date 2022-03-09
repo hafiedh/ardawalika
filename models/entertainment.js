@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Entertainment.init(
     {
       name_entertainment: DataTypes.STRING,
-      harga_entertainment: DataTypes.STRING,
+      harga_entertainment: DataTypes.INTEGER,
       keterangan_entertainment: DataTypes.STRING,
     },
     {

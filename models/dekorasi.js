@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
   Dekorasi.init(
     {
       name_dekorasi: DataTypes.STRING,
-      harga_dekorasi: DataTypes.STRING,
+      harga_dekorasi: DataTypes.INTEGER,
       keterangan_dekorasi: DataTypes.STRING,
-      id_paket: DataTypes.INTEGER,
+     
     },
     {
       sequelize,
