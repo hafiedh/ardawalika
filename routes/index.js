@@ -76,4 +76,10 @@ router.get("/aboutus", (req, res) => {
     console.log("aboutus")
 })
 
+// TES DETAIL DOKUMENTASI //
+router.get("/dokumentasi-detail", (req, res) => {
+    res.render("dokumentasi_detail")
+    console.log("dokumentasi-detail")
+})
+
 module.exports = router;

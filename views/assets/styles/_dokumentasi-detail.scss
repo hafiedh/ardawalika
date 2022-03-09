@@ -1,0 +1,97 @@
+.dokumentasi-paket {
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  p {
+    color: #656e85;
+    font-weight: 500;
+  }
+
+  &__keterangan {
+    @include flex(space-between, center, row);
+    margin: 1rem 0rem 2rem 0rem;
+    &__nama {
+      //background-color: lavender;
+      flex: 1 1 50rem;
+      h3 {
+        padding: 0rem 15rem 0rem 0rem;
+        font-weight: bold;
+      }
+    }
+    &__details {
+      //background-color: lightgray;
+      flex: 1 1 50rem;
+      h3 {
+        font-size: $medium;
+        font-weight: 600;
+      }
+      table {
+        width: 100%;
+        td,
+        th {
+          padding: 0.5rem 2rem 0.5rem 0rem;
+          font-size: 1.2rem;
+        }
+        th {
+          font-weight: 700;
+        }
+        td {
+          font-weight: 600;
+          color: #656e85;
+        }
+      }
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    min-height: 100vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 1rem 1rem;
+      //background-color: lavender;
+    }
+  }
+
+  &__gallery2 {
+    display: grid;
+    min-height: 100vh;
+    margin-bottom: 5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 1rem 1rem;
+    }
+  }
+}
+
+.gallery1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+.gallery3 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.gallery4 {
+  grid-row: 1/3;
+}
+.gallery5 {
+  grid-column: 1/3;
+}
+.gallery7 {
+  grid-column: 2/3;
+}
+
+@media screen and (max-width: 842px) {
+  .dokumentasi-paket__gallery {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    img {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  }
+}

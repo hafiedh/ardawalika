@@ -7,11 +7,8 @@ $navbar-txt: 2rem;
 $medium: 3rem;
 
 $black: #070504;
-<<<<<<< HEAD
 $lightblue: #1081e8;
 $copyright: #a4a9b6;
-=======
->>>>>>> origin/develop
 $header-color: #293845;
 $header-button: #1081e8;
 $button-background: #6558f5;
@@ -34,16 +31,14 @@ $gray-text: #2c2c2c;
 @import "header";
 @import "home";
 @import "dokumentasi";
+@import "dokumentasi-detail";
 @import "footer";
 @import "wedding";
 @import "korporasi";
 @import "keluarga";
 @import "order";
 @import "carousel";
-<<<<<<< HEAD
-=======
 @import "aboutus";
->>>>>>> origin/develop
 @import "login";
 @import "register";
 @import "resetemail";
