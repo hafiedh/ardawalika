@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const errorHandler = require("../middlewares/errorHandler");
 const UserRouter = require("./UserRoute");
+const ProductRouter = require("./ProductRoute");
 
 router.use("/users", UserRouter);
+router.use("/products", ProductRouter);
 router.use(errorHandler);
 
 router.get("/", (req, res) => {
