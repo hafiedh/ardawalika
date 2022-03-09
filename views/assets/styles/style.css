@@ -72,8 +72,6 @@ a {
   color: #293845;
   z-index: 10;
   width: 100%;
-  -webkit-box-shadow: 1px 1px 10px #293845;
-          box-shadow: 1px 1px 10px #293845;
 }
 
 .main-head nav {
@@ -2588,7 +2586,7 @@ footer h3 {
   margin-bottom: 3rem;
   color: #0f1d40;
   padding: 2rem;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .order h3 {
@@ -2653,7 +2651,7 @@ footer h3 {
   border-left: 3px solid #0f1d40;
   border-bottom: 3px solid #0f1d40;
   padding: 1rem 3rem;
-  min-height: 210vh;
+  min-height: 100vh;
 }
 
 .order .help {
@@ -2929,6 +2927,250 @@ footer h3 {
   border-radius: 0.8rem;
 }
 
+.box-kustomisasi h4 {
+  font-weight: 700;
+  margin: 1rem 0rem;
+}
+
+.box-kustomisasi .kustomisasi-deskripsi {
+  margin: 3rem 0rem 2rem 0rem;
+}
+
+.box-kustomisasi .kustomisasi-deskripsi p {
+  font-weight: 400;
+}
+
+.box-kustomisasi .kustomisasi-choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 50vh;
+}
+
+.box-kustomisasi .kustomisasi-choices .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0rem 0rem 1.3rem 0rem;
+  cursor: pointer;
+}
+
+.box-kustomisasi .kustomisasi-choices .info-keterangan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #f5f6f7;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+  border-radius: 0.8rem;
+}
+
+.box-kustomisasi .kustomisasi-choices .info-keterangan img {
+  margin: 1rem 3rem;
+}
+
+.box-kustomisasi .kustomisasi-choices .info-keterangan h4 {
+  margin-left: 3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+}
+
+.box-kustomisasi .kustomisasi-choices .sect {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1rem;
+          flex: 1 1 1rem;
+}
+
+.box-kustomisasi .kustomisasi-choices .sect h4 {
+  font-weight: 400;
+  color: #0b2589;
+}
+
+.box-kustomisasi .kustomisasi-choices #kustomisasi-rias {
+  border-radius: 0.8rem;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.box-kustomisasi .kustomisasi-choices #kustomisasi-rias li {
+  border: 1px solid #979797;
+  padding: 10px 23px 10px 32px;
+  font-weight: 500;
+}
+
+.box-kustomisasi .kustomisasi-choices #kustomisasi-rias li:nth-child(1) {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.box-kustomisasi .kustomisasi-choices #kustomisasi-rias li:nth-child(4) {
+  border-radius: 0px 0px 8px 8px;
+}
+
+.box-kustomisasi .kustomisasi-choices .kustomisasi-detail {
+  margin: 0rem 23rem 2rem 0rem;
+  background-color: #f5f6f7;
+  border-radius: 0.8rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+  display: none;
+}
+
+.box-kustomisasi .kustomisasi-choices .kustomisasi-detail ul {
+  margin-left: 7rem;
+  padding: 1rem 0rem;
+}
+
+.box-kustomisasi .kustomisasi-choices .sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0rem 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1rem;
+          flex: 1 1 1rem;
+}
+
+.box-kustomisasi .kustomisasi-right {
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+
+.box-kustomisasi .kustomisasi-right .kustomisasi-biaya {
+  background-color: #f5f6f7;
+  margin: 1rem 0rem 2rem 1rem;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box-kustomisasi .kustomisasi-right .kustomisasi-biaya h4 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+  margin: 1rem 0.5rem 1rem 4rem;
+}
+
+.box-kustomisasi .kustomisasi-right .kustomisasi-biaya .sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #0b2589;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 21rem;
+          flex: 1 1 21rem;
+}
+
+.box-kustomisasi .kustomisasi-right .kustomisasi-biaya .sect h4 {
+  font-size: 1.8rem;
+}
+
+.box-kustomisasi .kustomisasi-right .kustom-pesan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box-kustomisasi .kustomisasi-right .kustom-pesan .btn-kustomisasi {
+  margin: 0rem 0rem 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid #1081e8;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+  font-size: 1.3rem;
+  color: #1081e8;
+  font-weight: 600;
+}
+
+.box-kustomisasi .kustomisasi-right .kustom-pesan .btn-pesan {
+  background-color: #1081e8;
+  margin: 0rem 0rem 0.5rem 1rem;
+  font-size: 1.3rem;
+  border: none;
+  padding: 1.3rem 3.5rem;
+  color: white;
+  border-radius: 0.8rem;
+}
+
 @media screen and (max-width: 719px) {
   .detail-paket-biaya h4 {
     font-size: 1.8rem;
@@ -2946,6 +3188,12 @@ footer h3 {
 @media screen and (max-width: 768px) {
   .order-filler {
     min-height: 23vh;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .box-kustomisasi .info-keterangan img {
+    display: none;
   }
 }
 
