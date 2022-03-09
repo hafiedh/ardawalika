@@ -9,7 +9,7 @@
   margin-bottom: 3rem;
   color: #0f1d40;
   padding: 2rem;
-  min-height: 100vh;
+  min-height: 90vh;
   h3 {
     font-weight: 700;
   }
@@ -52,7 +52,7 @@
     border-left: 3px solid #0f1d40;
     border-bottom: 3px solid #0f1d40;
     padding: 1rem 3rem;
-    min-height: 210vh;
+    min-height: 100vh;
   }
   .help {
     margin: 12rem 1rem 2rem 0rem;
@@ -235,6 +235,145 @@
   }
 }
 
+// SECTION KUSTOMISASI //
+.box-kustomisasi {
+  h4 {
+    font-weight: 700;
+    margin: 1rem 0rem;
+  }
+  .kustomisasi-deskripsi {
+    margin: 3rem 0rem 2rem 0rem;
+    p {
+      font-weight: 400;
+    }
+  }
+
+  .kustomisasi-choices {
+    @include flex(flex-start, space-between, column);
+    min-height: 50vh;
+
+    .info {
+      //background-color: #f5f6f7;
+      @include flex(space-between, flex-start, row);
+      margin: 0rem 0rem 1.3rem 0rem;
+      cursor: pointer;
+    }
+
+    .info-keterangan {
+      @include flex(space-between, flex-start, row);
+      background-color: #f5f6f7;
+      flex-wrap: wrap;
+      flex: 1 1 50rem;
+      border-radius: 0.8rem;
+      img {
+        margin: 1rem 3rem;
+      }
+      h4 {
+        margin-left: 3rem;
+        flex: 1 1 50rem;
+      }
+    }
+
+    .sect {
+      //background-color: lightpink;
+      flex: 1 1 1rem;
+      h4 {
+        font-weight: 400;
+        color: #0b2589;
+      }
+    }
+
+    #kustomisasi-rias {
+      //background-color: lavender;
+      border-radius: 0.8rem;
+      margin: 0rem;
+      padding: 0rem;
+      li {
+        border: 1px solid #979797;
+        padding: 10px 23px 10px 32px;
+        font-weight: 500;
+      }
+      li:nth-child(1) {
+        border-radius: 8px 8px 0px 0px;
+      }
+      li:nth-child(4) {
+        border-radius: 0px 0px 8px 8px;
+      }
+    }
+    .kustomisasi-detail {
+      margin: 0rem 23rem 2rem 0rem;
+      background-color: #f5f6f7;
+      border-radius: 0.8rem;
+      flex: 1 1 50rem;
+      display: none;
+      ul {
+        margin-left: 7rem;
+        padding: 1rem 0rem;
+      }
+      //min-height: 10vh;
+    }
+    .sect {
+      @include flex(space-between, flex-start, row);
+      margin: 0rem 2rem;
+      flex: 1 1 1rem;
+      //@include flex(center, center, row);
+      //background-color: lightpink;
+    }
+  }
+
+  .kustomisasi-right {
+    width: 50%;
+    margin: 0 0 0 auto;
+
+    .kustomisasi-biaya {
+      background-color: #f5f6f7;
+      margin: 1rem 0rem 2rem 1rem;
+      border-radius: 0.8rem;
+      @include flex(space-between, flex-start, row);
+      flex-wrap: wrap;
+      h4 {
+        flex: 1 1 10rem;
+        //background-color: lightpink;
+        margin: 1rem 0.5rem 1rem 4rem;
+      }
+      .sect {
+        @include flex(flex-start, flex-end, row);
+        color: #0b2589;
+        flex: 1 1 21rem;
+        h4 {
+          font-size: 1.8rem;
+        }
+        //background-color: lightblue;
+      }
+    }
+
+    .kustom-pesan {
+      @include flex(flex-end, flex-end, row);
+      //background-color: lavender;
+      flex-wrap: wrap;
+      .btn-kustomisasi {
+        margin: 0rem 0rem 0.5rem 1rem;
+        background-color: white;
+        border: 1px solid #1081e8;
+        padding: 1.2rem 2.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.3rem;
+        color: #1081e8;
+        font-weight: 600;
+      }
+      .btn-pesan {
+        background-color: #1081e8;
+        margin: 0rem 0rem 0.5rem 1rem;
+        font-size: 1.3rem;
+        border: none;
+        padding: 1.3rem 3.5rem;
+        color: white;
+        border-radius: 0.8rem;
+      }
+    }
+  }
+}
+
 // MEDIA QUERY //
 @media screen and (max-width: 719px) {
   .detail-paket-biaya {
@@ -257,5 +396,15 @@
 @media screen and (max-width: 768px) {
   .order-filler {
     min-height: 23vh;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .box-kustomisasi {
+    .info-keterangan {
+      img {
+        display: none;
+      }
+    }
   }
 }
