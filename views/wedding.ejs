@@ -1,15 +1,17 @@
 <%- include('./partials/navbar-general'); %>
 <!-- HERO SECTION -->
 <section class="wedding-filler"></section>
-<section class="herowed">
+<% dataCategory.forEach(e => { %>
+<section class="herowed" style="background-image: url('<%= e.img_carousel %>')">
   <div class="herowed__text">
-    <h1>Ciptakan Moment Indah untuk Memulai Lembaran Hidup Baru</h1>
-    <p id="herowed__p">Membantu kamu dan pasangan untuk mewujudkan pernikahan impianmu menjadi nyata. Karena memori manis disetiap prosesnya menjadi awal yang indah untuk kamu dan pasangan mengarungi bahtera rumah tangga.</p>
+    <h1><%= e.judul_category %></h1>
+    <p id="herowed__p"><%= e.ket_category %></p>
   </div>
   <div class="herowed__img">
-    <img src="./img/wed_hero2.png" alt="hero2" />
+    <img src="<%= e.img_carousels %> " alt="hero2" />
   </div>
 </section>
+<% }) %>
 
 <!-- SERVICES SECTION-->
 <div class="wrapperwed">
@@ -24,39 +26,39 @@
   <div class="wrapperwed">
     <section class="itemwed">
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-1.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-1.svg" />
         <p class="itemwed__text">Perancangan konsep dan tema pernikahan</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-2.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-2.svg" />
         <p class="itemwed__text">Pembuatan rundown acara dari pembukaan hingga penutup.</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-3.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-3.svg" />
         <p class="itemwed__text">Technical meeting secara berkala dengan vendor.</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-4.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-4.svg" />
         <p class="itemwed__text">Pendamping keseluruhan vendor - vendor acara</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-5.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-5.svg" />
         <p class="itemwed__text">Mengatur teknikal meeting dengan pihak keluarga</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-6.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-6.svg" />
         <p class="itemwed__text">Mengorganisir jalannya acara pernikahan</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-7.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-7.svg" />
         <p class="itemwed__text">Mengatur jadwal penjemputan pengantin pria ke wanita</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-8.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-8.svg" />
         <p class="itemwed__text">Morning call di pagi hari kepada pengantin</p>
       </div>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./img/wed_icon-9.svg" />
+        <img class="itemwed__image" src="./assets/img/wed_icon-9.svg" />
         <p class="itemwed__text">Menyimpan dan mengirimkan hantaran, kado, dan mahar</p>
       </div>
     </section>
@@ -65,28 +67,32 @@
 
 <!--SERVICE SECTION-->
 <section class="servicewed">
-  <h1 class="servicewed__title">Paket Wedding</h1>
+  <% dataCategory.forEach(e => { %>
+  <h1 class="servicewed__title">Paket <%= e.name %></h1>
+  <% }) %>
 </section>
 
 <!-- CARD WEDDING SECTION -->
 <div class="wrapperwed">
   <section class="wedding">
     <div class="wedding__flex">
+      <% data.forEach(e => { %>
       <div class="wedding__card">
-        <img class="wedding__image" src="./img/wed_card1.png" alt="bronze" />
+        <img class="wedding__image" src="<%= e.img_url %> " alt="bronze" />
         <div class="wedding__content">
           <div class="wedding__box1">
-            <div class="wedding__title">Perfect Platinum</div>
+            <div class="wedding__title"><%= e.name_paket %></div>
             <div class="wedding__star">★★★★★</div>
           </div>
-          <div class="wedding__box2">Paket pernikahan super lengkap dengan semua kemewahan dengan spesifikasi layanan paling tinggi.</div>
+          <div class="wedding__box2"><%= e.ket_paket %></div>
           <div class="wedding__box3">
-            <div class="wedding__price">Rp. 130.000.000</div>
-            <div class="wedding__button"><a href="#">Pesan</a></div>
+            <div class="wedding__price">Rp. <%= e.harga_paket %></div>
+            <div class="wedding__button"><a href="/detail/<%= e.id %>">Pesan</a></div>
           </div>
         </div>
       </div>
-      <div class="wedding__card">
+      <% }) %>
+      <!-- <div class="wedding__card">
         <img class="wedding__image" src="./img/wed_card2.png" alt="bronze" />
         <div class="wedding__content">
           <div class="wedding__box1">
@@ -127,7 +133,7 @@
             <div class="wedding__button"><a href="#">Pesan</a></div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </div>

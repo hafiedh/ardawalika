@@ -17,13 +17,14 @@ module.exports = (sequelize, DataTypes) => {
       Paket.belongsTo(models.Entertainment, {
         foreignKey: "entertainment_id",
       });
-      Paket.hasMany(models.Order, { foreignKey: "paket_id" });
     }
   }
   Paket.init(
     {
       name_paket: DataTypes.STRING,
       harga_paket: DataTypes.STRING,
+      img_url: DataTypes.STRING,
+      ket_paket: DataTypes.STRING,
       dekorasi_id: DataTypes.INTEGER,
       catering_id: DataTypes.INTEGER,
       rias_id: DataTypes.INTEGER,

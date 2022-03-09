@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
   Category.init(
     {
       name: DataTypes.STRING,
+      judul_category: DataTypes.STRING,
+      ket_category: DataTypes.STRING,
+      img_carousel: DataTypes.STRING,
+      img_carousels: DataTypes.STRING,
       img_url: DataTypes.STRING,
     },
     {

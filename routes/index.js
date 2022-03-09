@@ -5,7 +5,6 @@ const ProductRouter = require("./ProductRoute");
 const CategoryRouter = require("./CategoryRoute");
 const PaketRoute = require("./PaketRoute");
 const CategoryController = require("../controllers/CategoryController");
-const PaketController = require("../controllers/PaketController");
 
 router.use("/users", UserRouter);
 router.use("/products", ProductRouter);
@@ -14,15 +13,14 @@ router.use("/pakets", PaketRoute);
 router.use(errorHandler);
 
 router.get("/", CategoryController.getCategories);
+// // WEDDING ROUTES //
+// router.get("/:id", PaketController.getPaket);
 
 // DOKUMENTASI ROUTES //
 router.get("/dokumentasi", (req, res) => {
   res.render("dokumentasi");
   console.log("dokumentasi");
 });
-
-// WEDDING ROUTES //
-router.get("/:id", PaketController.getPaket);
 
 // KORPORASI ROUTES //
 router.get("/korporasi", (req, res) => {

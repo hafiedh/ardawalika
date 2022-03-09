@@ -1,10 +1,30 @@
-const { Paket } = require("../models");
+const { Category, Paket } = require("../models");
 
 class PaketController {
   static async getPakets(req, res, next) {
     try {
       const data = await Paket.findAll();
-      res.status(200).json({ data });
+      res.render("tes", { data });
+    } catch (error) {
+      next(error);
+    }
+  }
+  static async getPaketsByCategory(req, res, next) {
+    try {
+      const id = req.params.id;
+      const data = await Paket.findAll({
+        where: {
+          category_id: id,
+        },
+      });
+      const dataCategory = await Category.findAll({
+        where: {
+          id,
+        },
+      });
+      console.log(dataCategory);
+      res.render("wedding", { data, dataCategory });
+      // res.status(200).json({ data });
     } catch (error) {
       next(error);
     }
@@ -18,9 +38,7 @@ class PaketController {
           id,
         },
       });
-      res.render("wedding", { data });
-
-      // res.status(200).json({ data });
+      res.status(200).json({ data });
     } catch (error) {
       next(error);
     }
