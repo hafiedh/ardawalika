@@ -1,10 +1,10 @@
-const Paket = require("../controllers/PaketController");
+const PaketController = require("../controllers/PaketController");
 const router = require("express").Router();
 
-router.get("/", Paket.getPakets);
-router.get("/:id", Paket.getPaket);
-router.post("/", Paket.createPaket);
-router.put("/:id", Paket.updatePaket);
-router.delete("/:id", Paket.deletePaket);
+router.get("/", PaketController.getPakets);
+router.get("/:id", PaketController.getPaket);
+router.post("/", PaketController.createPaket);
+router.put("/:id", PaketController.updatePaket);
+router.delete("/:id", PaketController.deletePaket);
 
 module.exports = router;

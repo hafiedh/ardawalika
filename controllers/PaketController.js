@@ -1,6 +1,6 @@
 const { Pakets } = require("../models");
 
-class Pakets {
+class PaketController {
   static async getPakets(req, res, next) {
     try {
       const data = await Pakets.findAll();
@@ -83,4 +83,4 @@ class Pakets {
   }
 }
 
-module.exports = Pakets;
+module.exports = PaketController;
