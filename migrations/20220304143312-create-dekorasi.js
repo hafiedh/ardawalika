@@ -17,9 +17,6 @@ module.exports = {
       keterangan_dekorasi: {
         type: Sequelize.STRING,
       },
-      id_paket: {
-        type: Sequelize.INTEGER,
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

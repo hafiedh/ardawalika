@@ -1,8 +1,7 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
-
+  async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
       "Dekorasis",
       [
@@ -10,11 +9,9 @@ module.exports = {
           name_dekorasi: "Modern",
           harga_dekorasi: "10000000",
           keterangan_dekorasi: "Modern",
-          id_paket: "1",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-       
       ],
       {}
     );
@@ -27,15 +24,15 @@ module.exports = {
      *   name: 'John Doe',
      *   isBetaMember: false
      * }], {});
-    */
+     */
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.
      *
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-  }
+  },
 };
