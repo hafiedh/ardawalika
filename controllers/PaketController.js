@@ -1,9 +1,9 @@
-const { Pakets } = require("../models");
+const { Paket } = require("../models");
 
 class PaketController {
   static async getPakets(req, res, next) {
     try {
-      const data = await Pakets.findAll();
+      const data = await Paket.findAll();
       res.status(200).json({ data });
     } catch (error) {
       next(error);
@@ -13,7 +13,7 @@ class PaketController {
   static async getPaket(req, res, next) {
     try {
       const id = req.params.id;
-      const data = await Pakets.findOne({
+      const data = await Paket.findOne({
         where: {
           id,
         },
@@ -26,7 +26,7 @@ class PaketController {
 
   static async createPaket(req, res, next) {
     try {
-      const data = await Pakets.create({
+      const data = await Paket.create({
         name_paket: req.body.name_paket,
         harga_paket: req.body.harga_paket,
         dekorasi_id: req.body.dekorasi_id,
@@ -55,7 +55,7 @@ class PaketController {
         category_id,
       };
 
-      const updated = await Pakets.update(data, {
+      const updated = await Paket.update(data, {
         where: {
           id,
         },
@@ -69,7 +69,7 @@ class PaketController {
   static async deletePaket(req, res, next) {
     try {
       const id = req.params.id;
-      const data = Pakets.deletePaket({
+      const data = Paket.deletePaket({
         where: {
           id,
         },
