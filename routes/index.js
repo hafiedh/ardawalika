@@ -2,86 +2,88 @@ const router = require("express").Router();
 const errorHandler = require("../middlewares/errorHandler");
 const UserRouter = require("./UserRoute");
 const ProductRouter = require("./ProductRoute");
+const CategoryRouter = require("./CategoryRoute");
 
 router.use("/users", UserRouter);
 router.use("/products", ProductRouter);
+router.use("/categories", CategoryRouter);
 router.use(errorHandler);
 
 router.get("/", (req, res) => {
-    res.render("index")
-    console.log("index")
-})
+  res.render("index");
+  console.log("index");
+});
 
 // DOKUMENTASI ROUTES //
 router.get("/dokumentasi", (req, res) => {
-    res.render("dokumentasi")
-    console.log("dokumentasi")
-})
+  res.render("dokumentasi");
+  console.log("dokumentasi");
+});
 
 // WEDDING ROUTES //
 router.get("/wedding", (req, res) => {
-    res.render("wedding")
-    console.log("wedding")
-})
+  res.render("wedding");
+  console.log("wedding");
+});
 
 // KORPORASI ROUTES //
 router.get("/korporasi", (req, res) => {
-    res.render("korporasi")
-    console.log("korporasi")
-})
+  res.render("korporasi");
+  console.log("korporasi");
+});
 
 // KELUARGA ROUTES //
 router.get("/keluarga", (req, res) => {
-    res.render("keluarga")
-    console.log("keluarga")
-})
+  res.render("keluarga");
+  console.log("keluarga");
+});
 
 // ORDER ROUTES //
 router.get("/order", (req, res) => {
-    res.render("order")
-    console.log("order")
-})
+  res.render("order");
+  console.log("order");
+});
 
 //LOGIN ROUTES
 router.get("/login", (req, res) => {
-    res.render("login")
-    console.log("login")
-})
+  res.render("login");
+  console.log("login");
+});
 
 //REGISTER ROUTES
 router.get("/register", (req, res) => {
-    res.render("register")
-    console.log("register")
-})
+  res.render("register");
+  console.log("register");
+});
 
 //RESET EMAIL ROUTES
 router.get("/resetemail", (req, res) => {
-    res.render("resetemail")
-    console.log("resetemail")
-})
+  res.render("resetemail");
+  console.log("resetemail");
+});
 
 //RESET PASSWORD ROUTES
 router.get("/resetpass", (req, res) => {
-    res.render("resetpass")
-    console.log("resetpass")
-})
+  res.render("resetpass");
+  console.log("resetpass");
+});
 
 //PASSWORD TELAH DIUBAH ROUTES
 router.get("/resetdone", (req, res) => {
-    res.render("resetdone")
-    console.log("resetdone")
-})
+  res.render("resetdone");
+  console.log("resetdone");
+});
 
 // About Us
 router.get("/tentang-kami", (req, res) => {
-    res.render("tentang-kami")
-    console.log("tentang-kami")
-})
+  res.render("tentang-kami");
+  console.log("tentang-kami");
+});
 
 // Riwayat Pemesanan
 router.get("/riwayat-pemesanan", (req, res) => {
-    res.render("riwayat-pemesanan")
-    console.log("riwayat-pemesanan")
-})
+  res.render("riwayat-pemesanan");
+  console.log("riwayat-pemesanan");
+});
 
 module.exports = router;
