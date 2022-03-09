@@ -18,7 +18,9 @@ class PaketController {
           id,
         },
       });
-      res.status(200).json({ data });
+      res.render("wedding", { data });
+
+      // res.status(200).json({ data });
     } catch (error) {
       next(error);
     }

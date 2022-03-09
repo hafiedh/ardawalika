@@ -12,19 +12,19 @@ module.exports = {
       [
         {
           name: "Corporate",
-          img_url: "https://unsplash.com/photos/cW4lLTavU80",
+          img_url: "https://ik.imagekit.io/ardawalika/paket-corporate_k8i96ZdSo-nv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668476401",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           name: "Wedding",
-          img_url: "https://unsplash.com/photos/8vaQKYnawHw",
+          img_url: "https://ik.imagekit.io/ardawalika/paket-wedding_1GfhCjwzc.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1646668463186",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           name: "Family Gathering",
-          img_url: "https://unsplash.com/photos/wYOPqmtDD0w",
+          img_url: "https://ik.imagekit.io/ardawalika/paket-keluarga_52edhXy35sG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1646668466264",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
