@@ -6,12 +6,34 @@ module.exports = {
       "Entertainments",
       [
         {
-          name_entertainment: "Paket 1",
-          harga_entertainment: "100000",
-          keterangan_entertainment: "Musik tradisional",
+          name_entertainment: "Sederhana",
+          harga_entertainment: "1000000",
+          keterangan_entertainment: "MC 1 Orang, Penyanyi 1 Orang + Organ Tunggal, Sound System Indoor",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name_entertainment: "Standar",
+          harga_entertainment: "2000000",
+          keterangan_entertainment: "MC 1 Orang, Penyanyi 2 Orang + Organ Tunggal, Sound System Indoor + Outdoor",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name_entertainment: "Lengkap",
+          harga_entertainment: "3000000",
+          keterangan_entertainment: "MC 1 Orang, Penyanyi 4 Orang + Organ Tunggal, Sound System Indoor + Outdoor",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name_entertainment: "Mewah",
+          harga_entertainment: "4000000",
+          keterangan_entertainment: "MC 2 Orang, Penyanyi Grup Band, Sound System Indoor + Outdoor",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }
+
        
       ],
       {}
