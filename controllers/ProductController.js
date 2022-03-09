@@ -3,7 +3,18 @@ const { Dekorasi,Dokumentasi,Entertainment,Rias,Catering } = require("../models"
 
 
 class ProductController {
-    static async getDecorations (req,res) {
+
+    static async getDecorationById(req,res,next){
+        try {
+            const id = req.params.id
+            const dekorasi = await Dekorasi.findByPk(id)
+            res.json(dekorasi).status(200)
+        } catch (error) {
+            next(error)
+        }
+        
+    }
+    static async getDecorations (req,res,next) {
         try{
             const dekorasi = await Dekorasi.findAll()
             res.json(dekorasi).status(200)
@@ -12,7 +23,7 @@ class ProductController {
         }
     }
 
-    static async createDecoration(req,res){
+    static async createDecoration(req,res,next){
         try{
             const dekorasi = await Dekorasi.create({
                 name_dekorasi:req.body.name_dekorasi,
@@ -65,7 +76,7 @@ class ProductController {
        }
     }
 
-    static async getDocumentations (req,res) {
+    static async getDocumentations (req,res,next) {
         try{
             const documentations = await Dokumentasi.findAll()
             res.json(documentations).status(200)
@@ -73,8 +84,17 @@ class ProductController {
             next(error);
         }
     }
-
-    static async createDocumentation(req,res){
+    static async getDocumentationById(req,res,next){
+        try {
+            const id = req.params.id
+            const dokumentasi = await Dokumentasi.findByPk(id)
+            res.json(dokumentasi).status(200)
+        } catch (error) {
+            next(error)
+        }
+        
+    }
+    static async createDocumentation(req,res,next){
         try{
             const documentation = await Dokumentasi.create({
                 name_dokumentasi:req.body.name_dokumentasi,
@@ -127,13 +147,24 @@ class ProductController {
         }
      }
 
-     static async getEntertainments (req,res) {
+     static async getEntertainments (req,res,next) {
         try{
             const entertainment = await Entertainment.findAll()
             res.json(entertainment).status(200)
         }catch (error){
             next(error)
         }
+    }
+
+    static async getEntertainmentById(req,res,next){
+        try {
+            const id = req.params.id
+            const entertainment = await Entertainment.findByPk(id)
+            res.json(entertainment).status(200)
+        } catch (error) {
+            next(error)
+        }
+        
     }
     static async createEntertainment(req,res){
         try{
@@ -187,13 +218,23 @@ class ProductController {
             next(error)
         }
      }
-     static async getRias (req,res) {
+     static async getRias (req,res,next) {
         try{
             const rias = await Rias.findAll()
             res.json(rias).status(200)
         }catch (error){
             next(error)
         }
+    }
+    static async getRiasById(req,res,next){
+        try {
+            const id = req.params.id
+            const rias = await Rias.findByPk(id)
+            res.json(rias).status(200)
+        } catch (error) {
+            next(error)
+        }
+        
     }
     static async createRias(req,res){
         try{
@@ -249,7 +290,7 @@ class ProductController {
      }
 
 
-     static async getCaterings (req,res) {
+     static async getCaterings(req,res,next) {
         try{
             const catering = await Catering.findAll()
             res.json(catering).status(200)
@@ -257,6 +298,17 @@ class ProductController {
             next(error)
         }
     }
+    static async getCateringById(req,res,next){
+        try {
+            const id = req.params.id
+            const catering = await Catering.findByPk(id)
+            res.json(catering).status(200)
+        } catch (error) {
+            next(error)
+        }
+        
+    }
+    
     static async createCatering(req,res){
         try{
             const catering = await Catering.create({
