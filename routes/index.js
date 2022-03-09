@@ -88,4 +88,10 @@ router.get("/riwayat-pemesanan", (req, res) => {
   console.log("riwayat-pemesanan");
 });
 
+// TES DETAIL DOKUMENTASI //
+router.get("/dokumentasi-detail", (req, res) => {
+    res.render("dokumentasi_detail")
+    console.log("dokumentasi-detail")
+})
+
 module.exports = router;

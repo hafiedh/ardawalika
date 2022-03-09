@@ -7,6 +7,8 @@ $navbar-txt: 2rem;
 $medium: 3rem;
 
 $black: #070504;
+$lightblue: #1081e8;
+$copyright: #a4a9b6;
 $header-color: #293845;
 $lightblue: #1081e8;
 $header-button: #1081e8;
@@ -30,6 +32,7 @@ $gray-text: #2c2c2c;
 @import "header";
 @import "home";
 @import "dokumentasi";
+@import "dokumentasi-detail";
 @import "footer";
 @import "wedding";
 @import "korporasi";
