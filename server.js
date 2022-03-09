@@ -4,7 +4,7 @@ const port = 3000;
 const cors = require("cors");
 const router = require("./routes/index");
 const bodyParser = require("body-parser");
-
+``;
 app.use(cors());
 app.use(express.static("views/assets"));
 app.set("view engine", "ejs");
