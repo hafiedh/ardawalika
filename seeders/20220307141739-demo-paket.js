@@ -128,7 +128,6 @@ module.exports = {
       ],
       {}
     );
->>>>>>> fiturbe/category
   },
 
   async down(queryInterface, Sequelize) {
