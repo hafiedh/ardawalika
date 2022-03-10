@@ -5,27 +5,24 @@ const ProductRouter = require("./ProductRoute");
 const CategoryRouter = require("./CategoryRoute");
 const PaketRoute = require("./PaketRoute");
 
+const AdminRouter = require("./AdminRoute");
+const CategoryController = require("../controllers/CategoryController");
+
 router.use("/users", UserRouter);
 router.use("/products", ProductRouter);
 router.use("/categories", CategoryRouter);
 router.use("/pakets", PaketRoute);
+router.use("/admin", AdminRouter);
 router.use(errorHandler);
 
-router.get("/", (req, res) => {
-  res.render("index");
-  console.log("index");
-});
+router.get("/", CategoryController.getCategories);
+// // WEDDING ROUTES //
+// router.get("/:id", PaketController.getPaket);
 
 // DOKUMENTASI ROUTES //
 router.get("/dokumentasi", (req, res) => {
   res.render("dokumentasi");
   console.log("dokumentasi");
-});
-
-// WEDDING ROUTES //
-router.get("/wedding", (req, res) => {
-  res.render("wedding");
-  console.log("wedding");
 });
 
 // KORPORASI ROUTES //
@@ -90,8 +87,8 @@ router.get("/riwayat-pemesanan", (req, res) => {
 
 // TES DETAIL DOKUMENTASI //
 router.get("/dokumentasi-detail", (req, res) => {
-    res.render("dokumentasi_detail")
-    console.log("dokumentasi-detail")
-})
+  res.render("dokumentasi_detail");
+  console.log("dokumentasi-detail");
+});
 
 module.exports = router;

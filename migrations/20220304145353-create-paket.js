@@ -14,6 +14,12 @@ module.exports = {
       harga_paket: {
         type: Sequelize.INTEGER,
       },
+      img_url: {
+        type: Sequelize.STRING,
+      },
+      ket_paket: {
+        type: Sequelize.STRING,
+      },
       dekorasi_id: {
         type: Sequelize.INTEGER,
         references: {
@@ -67,9 +73,6 @@ module.exports = {
           onDelete: "CASCADE",
           onUpdate: "CASCADE",
         },
-      },
-      imageUrl: {
-        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
