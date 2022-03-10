@@ -37,7 +37,7 @@ class PaketController {
         result_iconlayanan.push(resulticon);
       });
 
-      res.render("wedding", { data, dataCategory, result_layanan, result_iconlayanan });
+      res.render("paket", { data, dataCategory, result_layanan, result_iconlayanan });
       // res.status(200).json({ data });
     } catch (error) {
       next(error);
