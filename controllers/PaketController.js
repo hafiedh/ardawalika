@@ -37,7 +37,12 @@ class PaketController {
         result_iconlayanan.push(resulticon);
       });
 
-      res.render("paket", { data, dataCategory, result_layanan, result_iconlayanan });
+      res.render("paket", {
+        data,
+        dataCategory,
+        result_layanan,
+        result_iconlayanan,
+      });
       // res.status(200).json({ data });
     } catch (error) {
       next(error);
@@ -77,7 +82,16 @@ class PaketController {
   static async updatePaket(req, res, next) {
     try {
       const id = req.params.id;
-      const { name_paket, harga_paket, dekorasi_id, catering_id, rias_id, dokumentasi_id, entertainment_id, category_id } = req.body;
+      const {
+        name_paket,
+        harga_paket,
+        dekorasi_id,
+        catering_id,
+        rias_id,
+        dokumentasi_id,
+        entertainment_id,
+        category_id,
+      } = req.body;
       const data = {
         name_paket,
         harga_paket,

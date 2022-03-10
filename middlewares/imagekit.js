@@ -3,10 +3,11 @@ const axios = require("axios");
 const IMGKIT_API = process.env.IMAGEKIT_PRIVATEKEY;
 
 function imgKit(req, res, next) {
-  if (req.files) {
+  if (req.file) {
     let data = new FormData();
-    data.append("file", req.files.imgUrl.data.toString("base64"));
-    data.append("fileName", req.files.imgUrl.name);
+    console.log(req.file);
+    data.append("file", req.file.buffer.toString("base64"));
+    data.append("fileName", req.file.originalname);
     const APIkey = Buffer.from(IMGKIT_API + ":").toString("base64");
 
     axios({
