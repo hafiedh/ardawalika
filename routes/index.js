@@ -4,11 +4,13 @@ const UserRouter = require("./UserRoute");
 const ProductRouter = require("./ProductRoute");
 const CategoryRouter = require("./CategoryRoute");
 const PaketRoute = require("./PaketRoute");
+const AdminRouter = require("./AdminRoute");
 
 router.use("/users", UserRouter);
 router.use("/products", ProductRouter);
 router.use("/categories", CategoryRouter);
 router.use("/pakets", PaketRoute);
+router.use("/admin", AdminRouter);
 router.use(errorHandler);
 
 router.get("/", (req, res) => {
