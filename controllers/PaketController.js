@@ -22,8 +22,22 @@ class PaketController {
           id,
         },
       });
-      console.log(dataCategory);
-      res.render("wedding", { data, dataCategory });
+
+      const result_layanan = [];
+      const result_iconlayanan = [];
+
+      await dataCategory.map((e) => {
+        const data = e.ket_layanan;
+        const dataicon = e.icon_layanan;
+
+        const result = data.split("|");
+        const resulticon = dataicon.split("|");
+
+        result_layanan.push(result);
+        result_iconlayanan.push(resulticon);
+      });
+
+      res.render("wedding", { data, dataCategory, result_layanan, result_iconlayanan });
       // res.status(200).json({ data });
     } catch (error) {
       next(error);

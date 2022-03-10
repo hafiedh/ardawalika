@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       judul_category: DataTypes.STRING,
       ket_category: DataTypes.STRING,
+      ket_layanan: DataTypes.STRING(5000),
+      icon_layanan: DataTypes.STRING(5000),
       img_carousel: DataTypes.STRING,
       img_carousels: DataTypes.STRING,
       img_url: DataTypes.STRING,

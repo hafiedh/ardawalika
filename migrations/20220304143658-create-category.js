@@ -17,6 +17,12 @@ module.exports = {
       ket_category: {
         type: Sequelize.STRING,
       },
+      ket_layanan: {
+        type: Sequelize.STRING(5000),
+      },
+      icon_layanan: {
+        type: Sequelize.STRING(5000),
+      },
       img_carousel: {
         type: Sequelize.STRING,
       },

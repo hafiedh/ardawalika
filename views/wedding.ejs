@@ -25,11 +25,13 @@
 <div class="greywed">
   <div class="wrapperwed">
     <section class="itemwed">
+      <% for( let i = 0; i < result_layanan[0].length; i++ ) { %>
       <div class="itemwed__box">
-        <img class="itemwed__image" src="./assets/img/wed_icon-1.svg" />
-        <p class="itemwed__text">Perancangan konsep dan tema pernikahan</p>
+        <img class="itemwed__image" src="<%= result_iconlayanan[0][i] %>" />
+        <p class="itemwed__text"><%= result_layanan[0][i] %></p>
       </div>
-      <div class="itemwed__box">
+      <% } %>
+      <!-- <div class="itemwed__box">
         <img class="itemwed__image" src="./assets/img/wed_icon-2.svg" />
         <p class="itemwed__text">Pembuatan rundown acara dari pembukaan hingga penutup.</p>
       </div>
@@ -60,7 +62,7 @@
       <div class="itemwed__box">
         <img class="itemwed__image" src="./assets/img/wed_icon-9.svg" />
         <p class="itemwed__text">Menyimpan dan mengirimkan hantaran, kado, dan mahar</p>
-      </div>
+      </div> -->
     </section>
   </div>
 </div>
@@ -86,7 +88,7 @@
           </div>
           <div class="wedding__box2"><%= e.ket_paket %></div>
           <div class="wedding__box3">
-            <div class="wedding__price">Rp. <%= e.harga_paket %></div>
+            <div class="wedding__price"><%= new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(e.harga_paket) %></div>
             <div class="wedding__button"><a href="/detail/<%= e.id %>">Pesan</a></div>
           </div>
         </div>
