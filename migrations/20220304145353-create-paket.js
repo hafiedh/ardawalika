@@ -14,6 +14,12 @@ module.exports = {
       harga_paket: {
         type: Sequelize.INTEGER,
       },
+      img_url: {
+        type: Sequelize.STRING,
+      },
+      ket_paket: {
+        type: Sequelize.STRING,
+      },
       dekorasi_id: {
         type: Sequelize.INTEGER,
         references: {

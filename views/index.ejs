@@ -5,13 +5,8 @@
     <h1 class="logo" id="logo-home">Ardawalika</h1>
     <div class="home-txt">
       <p class="home-txt-p">
-        Dengan standar, kreativitas, dan pengalaman kami yang sangat tinggi,
-        kami akan selalu melebihi harapan Anda. Kami telah bekerja dengan
-        sebagian besar merek global dan lokal yang populer, menciptakan
-        pengalaman di mana orang dapat terhubung dengan mereka. Karena kami
-        percaya merek adalah manusia. Atau, setidaknya mereka harus berusaha
-        untuk menjadi lebih seperti kita. Mereka memiliki nama, karakter, dan
-        kepribadian.
+        Dengan standar, kreativitas, dan pengalaman kami yang sangat tinggi, kami akan selalu melebihi harapan Anda. Kami telah bekerja dengan sebagian besar merek global dan lokal yang populer, menciptakan pengalaman di mana orang dapat
+        terhubung dengan mereka. Karena kami percaya merek adalah manusia. Atau, setidaknya mereka harus berusaha untuk menjadi lebih seperti kita. Mereka memiliki nama, karakter, dan kepribadian.
       </p>
       <div class="home-txt-bubbles">
         <p>Event Planner</p>
@@ -31,25 +26,24 @@
       Selenggarakan Event Impian <br />
       Anda Bersama Kami
     </h3>
-    <p>
-      Kami yakin kamu dapat mewujudkan event yang ingin kamu lakukan sesuai
-      keinginan dan seleramu. Kami pastikan anda mendaptkan hasil yang memuaskan
-    </p>
+    <p>Kami yakin kamu dapat mewujudkan event yang ingin kamu lakukan sesuai keinginan dan seleramu. Kami pastikan anda mendaptkan hasil yang memuaskan</p>
   </div>
   <div class="paket-cards">
-    <div class="kartu" id="paket-korporat">
-      <a href="/korporasi">
-        <h3>Paket Acara Korporasi</h3>
+    <% data.forEach(e => { %>
+    <div class="kartu" id="paket-korporat" style="background-image: url('<%= e.img_url %>')">
+      <a href="pakets/<%= e.id %>">
+        <h3>Paket Acara <%= e.name %></h3>
       </a>
     </div>
-    <div class="kartu paket-pernikahan" id="paket-pernikahan">
+    <% }) %>
+    <!-- <div class="kartu paket-pernikahan" id="paket-pernikahan">
       <a href="/wedding"><h3>Paket Pernikahan</h3></a>
     </div>
     <div class="kartu paket-keluarga" id="paket-keluarga">
       <a href="/keluarga">
         <h3>Paket Acara Keluarga</h3>
       </a>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -57,10 +51,7 @@
   <div class="keunggulan-container">
     <div class="keunggulan-left">
       <h3>Kenapa Ardawalika?</h3>
-      <p>
-        Kami telah berpengalaman menyelenggarakan puluhan event dan melayani
-        puluhan korporat dan personal mewujudkan event impian mereka
-      </p>
+      <p>Kami telah berpengalaman menyelenggarakan puluhan event dan melayani puluhan korporat dan personal mewujudkan event impian mereka</p>
       <h1>20+</h1>
       <p>Event yang telah kami selenggarakan</p>
       <h1>50+</h1>
@@ -73,10 +64,7 @@
         </div>
         <div class="keunggulan-right-txt">
           <h3>Kustomisasi Paket Event</h3>
-          <p>
-            Fitur kustomisasi paket event untuk menyesuaikan spesifikasi event
-            sesuai keinginanmu
-          </p>
+          <p>Fitur kustomisasi paket event untuk menyesuaikan spesifikasi event sesuai keinginanmu</p>
         </div>
       </div>
       <div class="keunggulan-right-container">
@@ -85,10 +73,7 @@
         </div>
         <div class="keunggulan-right-txt">
           <h3>Atur Tanggal dengan Mudah</h3>
-          <p>
-            Proses pemesanan tanggal event kurang dari 5 menit dan fitur atur
-            ulang jadwal agar eventmu tetap terlaksana
-          </p>
+          <p>Proses pemesanan tanggal event kurang dari 5 menit dan fitur atur ulang jadwal agar eventmu tetap terlaksana</p>
         </div>
       </div>
       <div class="keunggulan-right-container">
@@ -97,10 +82,7 @@
         </div>
         <div class="keunggulan-right-txt">
           <h3>Pelacakan Aktivitas Vendor</h3>
-          <p>
-            Aktivitas persiapan dari vendor dapat kamu lihat tanpa harus
-            komfirmasi ulang melalui chat
-          </p>
+          <p>Aktivitas persiapan dari vendor dapat kamu lihat tanpa harus komfirmasi ulang melalui chat</p>
         </div>
       </div>
     </div>
@@ -127,12 +109,8 @@
     <ol class="carousele__viewport">
       <li id="carousele__slide2" tabindex="0" class="carousele__slide">
         <div class="carousele__snapper"></div>
-        <a href="#carousele__slide4" class="carousele__prev"
-          >Go to previous slide</a
-        >
-        <a href="#carousele__slide3" class="carousele__next"
-          >Go to next slide</a
-        >
+        <a href="#carousele__slide4" class="carousele__prev">Go to previous slide</a>
+        <a href="#carousele__slide3" class="carousele__next">Go to next slide</a>
         <div class="testimoni-cards">
           <div class="kartu">
             <div class="circle">
@@ -141,11 +119,7 @@
             <div class="container">
               <h4>Suparjo</h4>
               <img src="/img/rating3.svg" />
-              <p>
-                Ardawalika merupakan event organizer terbaik yang pernah saya
-                pakai jasanya. mereka memahami apa yang kami butuhkan dan
-                memberikan pelayanan yang luar biasa
-              </p>
+              <p>Ardawalika merupakan event organizer terbaik yang pernah saya pakai jasanya. mereka memahami apa yang kami butuhkan dan memberikan pelayanan yang luar biasa</p>
             </div>
           </div>
 
@@ -156,23 +130,15 @@
             <div class="container">
               <h4>Jamilah</h4>
               <img src="/img/rating3.svg" />
-              <p>
-                saya menggunakan Ardawalika sebagai EO untuk pernikahan saya dan
-                itu merupakan pilihan terbaik yang pernah saya lakukan!
-                pelayanan ramah, tepat waktu dan tanpa kesalahan yang berarti
-              </p>
+              <p>saya menggunakan Ardawalika sebagai EO untuk pernikahan saya dan itu merupakan pilihan terbaik yang pernah saya lakukan! pelayanan ramah, tepat waktu dan tanpa kesalahan yang berarti</p>
             </div>
           </div>
         </div>
       </li>
       <li id="carousele__slide3" tabindex="0" class="carousele__slide">
         <div class="carousele__snapper"></div>
-        <a href="#carousele__slide2" class="carousele__prev"
-          >Go to previous slide</a
-        >
-        <a href="#carousele__slide4" class="carousele__next"
-          >Go to next slide</a
-        >
+        <a href="#carousele__slide2" class="carousele__prev">Go to previous slide</a>
+        <a href="#carousele__slide4" class="carousele__next">Go to next slide</a>
         <div class="testimoni-cards">
           <div class="kartu">
             <div class="circle">
@@ -181,10 +147,7 @@
             <div class="container">
               <h4>John Doe</h4>
               <img src="/img/rating3.svg" />
-              <p>
-                Lorem ipsum dolor sit amet adipisicing elit. Officiis aliquid
-                nulla. Lorem ipsum dolor sit amet.
-              </p>
+              <p>Lorem ipsum dolor sit amet adipisicing elit. Officiis aliquid nulla. Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
 
@@ -195,23 +158,15 @@
             <div class="container">
               <h4>Jane Doe</h4>
               <img src="/img/rating3.svg" />
-              <p>
-                Lorem ipsum doadsflor sit Lorem ipsum dolor sit amet. amet
-                adipisicing elit. Officiis aliquid nulla. Lorem ipsum dolor sit
-                amet.
-              </p>
+              <p>Lorem ipsum doadsflor sit Lorem ipsum dolor sit amet. amet adipisicing elit. Officiis aliquid nulla. Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
         </div>
       </li>
       <li id="carousele__slide4" tabindex="0" class="carousele__slide">
         <div class="carousele__snapper"></div>
-        <a href="#carousele__slide3" class="carousele__prev"
-          >Go to previous slide</a
-        >
-        <a href="#carousele__slide2" class="carousele__next"
-          >Go to first slide</a
-        >
+        <a href="#carousele__slide3" class="carousele__prev">Go to previous slide</a>
+        <a href="#carousele__slide2" class="carousele__next">Go to first slide</a>
         <div class="testimoni-cards">
           <div class="kartu">
             <div class="circle">
@@ -220,10 +175,7 @@
             <div class="container">
               <h4>John Doe</h4>
               <img src="/img/rating3.svg" />
-              <p>
-                Lorem ipsum dolor sit amet adipisicing elit. Officiis aliquid
-                nulla. Lorem ipsum dolor sit amet.
-              </p>
+              <p>Lorem ipsum dolor sit amet adipisicing elit. Officiis aliquid nulla. Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
 
@@ -234,11 +186,7 @@
             <div class="container">
               <h4>Jane Doe</h4>
               <img src="/img/rating3.svg" />
-              <p>
-                Lorem ipsum doadsflor sit Lorem ipsum dolor sit amet. amet
-                adipisicing elit. Officiis aliquid nulla. Lorem ipsum dolor sit
-                amet.
-              </p>
+              <p>Lorem ipsum doadsflor sit Lorem ipsum dolor sit amet. amet adipisicing elit. Officiis aliquid nulla. Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
         </div>

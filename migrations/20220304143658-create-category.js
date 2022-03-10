@@ -11,6 +11,24 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
       },
+      judul_category: {
+        type: Sequelize.STRING,
+      },
+      ket_category: {
+        type: Sequelize.STRING,
+      },
+      ket_layanan: {
+        type: Sequelize.STRING(5000),
+      },
+      icon_layanan: {
+        type: Sequelize.STRING(5000),
+      },
+      img_carousel: {
+        type: Sequelize.STRING,
+      },
+      img_carousels: {
+        type: Sequelize.STRING,
+      },
       img_url: {
         type: Sequelize.STRING,
       },
