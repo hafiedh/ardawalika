@@ -194,15 +194,13 @@ class UserController {
 
   static async updateUserPhoto(req, res, next) {
     try {
-      const token = req.headers.access_token;
+      const { id, email } = req.user;
       const imgUrl = req.body.image;
-      const payload = verify(token);
-      const { id } = payload;
       const update = await User.update(
         { imgUrl },
         {
           where: {
-            id,
+            [Op.or]: [{ id }, { email }],
           },
         }
       );

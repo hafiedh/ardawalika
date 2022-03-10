@@ -1,8 +1,8 @@
 const UserController = require("../controllers/UserController");
 const authentication = require("../middlewares/authentication");
-const uploadImage = require("../middlewares/multer");
+const upload = require("../middlewares/multer");
 const imgKit = require("../middlewares/imagekit");
-const updateDataUser = require("../middlewares/updateuser");
+const updateDataUser = require("../middlewares/updatedatauser");
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
@@ -16,11 +16,17 @@ router.post("/login-google", UserController.googleLogin);
 router.get("/verify/:accessToken", UserController.verification);
 router.use(authentication);
 router.post(
-  "/upload-image",
+  "/update-profile",
+  function (req, res, next) {
+    upload.single("name")(req, res, function (error) {
+      if (error) {
+        console.log(`upload.single error: ${error}`);
+      }
+      next();
+    });
+  },
   updateDataUser,
-  uploadImage,
   imgKit,
   UserController.updateUserPhoto
 );
-
 module.exports = router;
