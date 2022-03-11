@@ -1,16 +1,19 @@
         // SCRIPT FOR THE LANDING PAGE'S NAVBAR //
+        const tes = document.querySelector(".main-head");
+        console.log(tes.childNodes);
         $(document).ready(function () {
             
             console.log("tessssssssss")
             $(window).scroll(function () {
-                console.log("aaaaaaaaaaaaaaaaa")
+                //console.log("aaaaaaaaaaaaaaaaa")
                 if ($(this).scrollTop() > 150) {
                     $('.main-head').addClass("solid");
                     $(".main-head ul").attr("id", "main-head-ul")
-                    // $('.main-head').css({"box-shadow": "1px 1px 10px #293845"});
+                    $("#image").attr('src', '/img/dropdown2.png')
                 } else {
                     $('.main-head').removeClass("solid");
                     $('#main-head-ul').removeAttr('id');
+                    $("#image").attr('src', '/img/dropdown.png')
                     $('.main-head').css({"box-shadow": "none"});
                 }
             });
