@@ -4884,8 +4884,12 @@ button {
 }
 
 .profile__user__container .edit-password__change {
-  margin: 2rem 0rem;
+  margin: 0rem 0rem;
   display: none;
+}
+
+.profile__user__container .edit-password__change label {
+  margin: 2.2rem 0rem 0.5rem 0rem;
 }
 
 .profile__user__container #profile-input-password label {
@@ -4894,6 +4898,10 @@ button {
 
 .inactive label {
   color: #9e9e9e;
+}
+
+.active input {
+  background-color: white;
 }
 
 @media screen and (max-width: 768px) {
