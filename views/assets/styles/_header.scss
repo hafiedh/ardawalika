@@ -4,9 +4,9 @@
   color: $header-color;
   z-index: 10;
   width: 100%;
-  //box-shadow: 1px 1px 10px $header-color;
 
   nav {
+    //background-color: lightgrey;
     display: flex;
     min-height: 15vh;
     width: 95%;
@@ -14,12 +14,17 @@
     align-items: center;
     //padding: 2rem;
     flex-wrap: wrap;
-
+    .tes {
+      @include flex(center, center, row);
+      margin: 0rem 1rem;
+    }
     ul {
+      //background-color: lavender;
+      margin: auto;
       display: flex;
       list-style: none;
-      flex: 1 1 80rem;
-      justify-content: center;
+      // flex: 1 1 80rem;
+      justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
     }
@@ -124,6 +129,20 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+
+  .main-head {
+    nav {
+      ul {
+        margin: auto;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        list-style: none;
+        flex: 1 1 80rem;
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+      }
     }
   }
 }
