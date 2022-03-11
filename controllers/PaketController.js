@@ -129,6 +129,28 @@ class PaketController {
       next(error);
     }
   }
+
+  static async updatePaket(req, res, next) {
+    try {
+      const id = req.session.paket_id;
+      const img_url = req.body.image;
+      await Paket.update(
+        {
+          img_url,
+        },
+        {
+          where: {
+            id,
+          },
+        }
+      );
+      res.status(200).json({
+        message: `Paket ${id} berhasil diupdate`,
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 
 module.exports = PaketController;
