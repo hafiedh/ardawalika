@@ -4740,4 +4740,187 @@ button {
     font-size: 14px;
   }
 }
+
+.profile-filler {
+  min-height: 15vh;
+}
+
+.profile__user {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.profile__user h4 {
+  width: 50%;
+  margin: auto;
+  font-weight: 700;
+}
+
+.profile__user .picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 100%;
+  margin: 3.5rem auto 2.5rem auto;
+}
+
+.profile__user .picture img {
+  width: 100%;
+  max-width: 9rem;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile__user .picture #edit {
+  width: 35%;
+}
+
+.profile__user .picture label {
+  width: 15%;
+  margin-top: -4rem;
+  margin-left: 15rem;
+}
+
+.profile__user__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.profile__user__container img {
+  max-width: 1.5rem;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile__user__container label {
+  color: #0a0a0a;
+  font-weight: 400;
+}
+
+.profile__user__container input {
+  width: 90%;
+  background: #ededed;
+  border-radius: 0.6rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.8rem;
+  border: 1px solid #c2c2c2;
+}
+
+.profile__user__container textarea {
+  width: 90%;
+  background: #ededed;
+  border-radius: 0.6rem;
+  border: 1px solid #c2c2c2;
+  height: 150px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  resize: none;
+  margin-right: 0.8rem;
+}
+
+.profile__user__container .field {
+  margin: auto;
+  margin: 1.2rem 1rem;
+  width: 55%;
+}
+
+.profile__user__container .field .simpan-perubahan {
+  background-color: #1081e8;
+}
+
+.profile__user__container .field .profile-keluar {
+  background-color: #cb3a31;
+}
+
+.profile__user__container .field button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  text-align: center;
+  padding: 6px 16px 6px 16px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  border: none;
+  margin: 1rem 0rem 3.5rem 0rem;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-filler {
+    min-height: 43vh;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .profile__user {
+    width: 80%;
+  }
+  .profile__user .picture img {
+    width: 100%;
+    max-width: 12rem;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .profile__user input,
+  .profile__user button {
+    font-size: 2rem;
+  }
+  .profile__user h4 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 441px) {
+  .profile__user {
+    width: 80%;
+  }
+  .profile__user__container {
+    width: 100%;
+    margin: auto;
+    background-color: lightgoldenrodyellow;
+  }
+  .profile__user__container input {
+    width: 90%;
+    margin: auto;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,61 @@
+<%- include('./partials/navbar-general'); %>
+<section class="profile-filler"></section>
+<section class="profile">
+    <div class="profile__user">
+        <h4>Profil Akun</h4>
+        <div class="picture">
+            <img src="/assets/img/avatar3.png" alt="">
+            <input type="file" name="uploadfile" id="img" style="display:none;" />
+            <label for="img"><img src="/assets/img/editpic.svg" id="edit"></label>
+        </div>
+        <div class="profile__user__container">
+            <div class="profile__user__nama-lengkap field">
+                <label>Nama Lengkap</label>
+                <div class="profile__user__nama-lengkap__text-field">
+                    <input type="text" id="profile-nama-lengkap" placeholder="Jane Doe" />
+                    <img src="/assets/img/edit.png">
+                </div>
+            </div>
+            <div class="profile__user__username field">
+                <label>Username</label>
+                <div class="profile__user__username__text-field">
+                    <input type="text" id="login-input-username" placeholder="janedoe123" />
+                    <img src="/assets/img/edit.png">
+                </div>
+            </div>
+            <div class="profile__user__email field">
+                <label>Email</label>
+                <div class="profile__user__email__text-field">
+                    <input type="email" id="login-input-email" placeholder="janedoe@gmail.com" />
+                    <img src="/assets/img/edit.png">
+                </div>
+            </div>
+            <div class="profile__user__email field">
+                <label>Nomor Telepon</label>
+                <div class="profile__user__nomor__text-field">
+                    <input type="number" id="login-input-nomor" placeholder="08xx-xxxx-xxxx" />
+                    <img src="/assets/img/edit.png">
+                </div>
+            </div>
+            <div class="profile__user__alamat field">
+                <label>Alamat</label>
+                <div class="profile__user__alamat__text-field">
+                    <textarea id="login-input-alamat" placeholder=""> </textarea>
+                    <img src="/assets/img/edit.png">
+                </div>
+            </div>
+            <div class="profile__user__password field">
+                <label>Kata Sandi</label>
+                <div class="profile__user__alamat__text-field">
+                    <input type="password" id="login-input-password" />
+                    <img src="/assets/img/edit.png">
+                </div>
+            </div>
+            <div class="profile__user__actions field">
+                <button class="simpan-perubahan">Simpan Perubahan</button>
+                <button class="profile-keluar">Keluar</button>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('./partials/footer'); %>
