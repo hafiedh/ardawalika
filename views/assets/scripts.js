@@ -1,6 +1,6 @@
         // SCRIPT FOR THE LANDING PAGE'S NAVBAR //
         const tes = document.querySelector(".main-head");
-        console.log(tes.childNodes);
+        //console.log(tes.childNodes);
         $(document).ready(function () {
             
             console.log("tessssssssss")
@@ -103,6 +103,7 @@
                return;
            }
         }
+
 
 
 

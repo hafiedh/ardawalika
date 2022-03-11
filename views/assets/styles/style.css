@@ -4742,7 +4742,7 @@ button {
 }
 
 .profile-filler {
-  min-height: 15vh;
+  min-height: 20vh;
 }
 
 .profile__user {
@@ -4883,9 +4883,22 @@ button {
   color: white;
 }
 
+.profile__user__container .edit-password__change {
+  margin: 2rem 0rem;
+  display: none;
+}
+
+.profile__user__container #profile-input-password label {
+  color: #0a0a0a;
+}
+
+.inactive label {
+  color: #9e9e9e;
+}
+
 @media screen and (max-width: 768px) {
   .profile-filler {
-    min-height: 43vh;
+    min-height: 30vh;
   }
 }
 
