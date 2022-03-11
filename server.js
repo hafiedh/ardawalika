@@ -5,6 +5,7 @@ const cors = require("cors");
 const router = require("./routes/index");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
+const session = require("express-session");
 
 app.use(cors());
 app.use(express.static("views/assets"));
@@ -13,6 +14,13 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(
+  session({
+    secret: "ardawalika",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 app.use(methodOverride("_method"));
 app.use(router);
 
