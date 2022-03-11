@@ -3,8 +3,14 @@ const { Category } = require("../models");
 class CategoryController {
   static async getCategories(req, res, next) {
     try {
+      let navbar = false;
       const data = await Category.findAll();
-      res.render("index", { data });
+      if (req.session) {
+        navbar = true;
+        res.render("index", { data, navbar });
+      } else {
+        res.render("index", { data, navbar });
+      }
       // res.status(200).json({ data });
     } catch (error) {
       next(error);
