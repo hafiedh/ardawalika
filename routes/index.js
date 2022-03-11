@@ -16,6 +16,7 @@ router.use("/admin", AdminRouter);
 router.use(errorHandler);
 
 router.get("/", CategoryController.getCategories);
+
 // // WEDDING ROUTES //
 // router.get("/:id", PaketController.getPaket);
 

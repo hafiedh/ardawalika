@@ -11,7 +11,7 @@ async function authentication(req, res, next) {
       throw { status: 400, message: "Token expired, Please Login again" };
     const user = await User.findOne({
       where: {
-        [Op.or]: [{ email: payload.email }, { username: payload.email }],
+        [Op.or]: [{ email: payload.email }, { username: payload.username }],
       },
     });
     if (!user) throw { status: 404, message: "User not found" };

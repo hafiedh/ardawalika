@@ -112,4 +112,160 @@ module.exports = {
         }
     },
 
+    // Rias
+    
+    viewRias : async(req,res) => {
+        
+        const rias = await Rias.findAll();
+        res.render('admin/rias/index',{rias})
+    },
+    createRias : async(req,res) => {
+        try{
+            const {name_rias,harga_rias,keterangan_rias} = req.body;
+           
+            await Rias.create({
+                name_rias,
+                harga_rias,
+                keterangan_rias
+            });
+            res.redirect('/admin/rias')
+        }catch(error){
+            res.redirect('/admin/rias')
+        }
+    },
+    updateRias : async(req,res) => {
+        try{
+            const { id, name_rias,harga_rias,keterangan_rias } = req.body;
+            const rias = await Rias.findByPk(id );
+            
+            rias.name_rias= name_rias,
+            rias.harga_rias = harga_rias,
+            rias.keterangan_rias = keterangan_rias,
+            await rias.save()
+
+            res.redirect('/admin/rias');
+            
+        }catch(error){
+            res.redirect('/admin/rias')
+        }
+    
+    },
+    deleteRias : async(req,res)=>{
+        try {
+             await Rias.destroy({
+                where:{
+                    id:req.params.id
+                }
+            })
+            res.redirect('/admin/rias')
+            
+        } catch (error) {
+            res.redirect('/admin/rias')
+        }
+    },
+
+    // Dokumentasi
+    viewDokumentasi : async(req,res) => {
+        
+        const dokumentasi = await Dokumentasi.findAll();
+        res.render('admin/dokumentasi/index',{dokumentasi})
+    },
+    createDokumentasi : async(req,res) => {
+        try{
+            const {name_dokumentasi,harga_dokumentasi,keterangan_dokumentasi} = req.body;
+           
+            await Dokumentasi.create({
+                name_dokumentasi,
+                harga_dokumentasi,
+                keterangan_dokumentasi
+            });
+            res.redirect('/admin/dokumentasi')
+        }catch(error){
+            res.redirect('/admin/dokumentasi')
+        }
+    },
+    updateDokumentasi : async(req,res) => {
+        try{
+            const { id, name_dokumentasi,harga_dokumentasi,keterangan_dokumentasi } = req.body;
+            const dokumentasi = await Dokumentasi.findByPk(id );
+            
+            dokumentasi.name_dokumentasi= name_dokumentasi,
+            dokumentasi.harga_dokumentasi = harga_dokumentasi,
+            dokumentasi.keterangan_dokumentasi = keterangan_dokumentasi,
+            await dokumentasi.save()
+
+            res.redirect('/admin/dokumentasi');
+            
+        }catch(error){
+            res.redirect('/admin/dokumentasi')
+        }
+    
+    },
+    deleteDokumentasi : async(req,res)=>{
+        try {
+             await Dokumentasi.destroy({
+                where:{
+                    id:req.params.id
+                }
+            })
+            res.redirect('/admin/dokumentasi')
+            
+        } catch (error) {
+            res.redirect('/admin/dokumentasi')
+        }
+    },
+
+    // Entertainment
+    viewEntertainment : async(req,res) => {
+        
+        const entertainment = await Entertainment.findAll();
+        res.render('admin/entertainment/index',{entertainment})
+    },
+    createEntertainment : async(req,res) => {
+        try{
+            const {name_entertainment,harga_entertainment,keterangan_entertainment} = req.body;
+           
+            await Entertainment.create({
+                name_entertainment,
+                harga_entertainment,
+                keterangan_entertainment
+            });
+            res.redirect('/admin/entertainment')
+        }catch(error){
+            res.redirect('/admin/entertainment')
+        }
+    },
+    updateEntertainment : async(req,res) => {
+        try{
+            const { id, name_entertainment,harga_entertainment,keterangan_entertainment } = req.body;
+            const entertainment = await Entertainment.findByPk(id );
+            
+            entertainment.name_entertainment= name_entertainment,
+            entertainment.harga_entertainment = harga_entertainment,
+            entertainment.keterangan_entertainment = keterangan_entertainment,
+            await entertainment.save()
+
+            res.redirect('/admin/entertainment');
+            
+        }catch(error){
+            res.redirect('/admin/entertainment')
+        }
+    
+    },
+    deleteEntertainment : async(req,res)=>{
+        try {
+             await Entertainment.destroy({
+                where:{
+                    id:req.params.id
+                }
+            })
+            res.redirect('/admin/entertainment')
+            
+        } catch (error) {
+            res.redirect('/admin/entertainment')
+        }
+    },
+
+
+
 }

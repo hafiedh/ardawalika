@@ -1,23 +1,9 @@
 const multer = require("multer");
+
 const storage = multer.memoryStorage();
-
-const fileFilter = (req, file, cb) => {
-  const fileSize = +req.headers["content-length"];
-
-  if (
-    (file.mimetype === "image/png" ||
-      file.mimetype === "image/jpg" ||
-      file.mimetype === "image/jpeg") &&
-    fileSize <= 255000
-  ) {
-    cb(null, true);
-  } else {
-    cb(null, false);
-  }
-};
-
-const upload = multer({ storage: storage, fileFilter: fileFilter }).single(
-  "imgUrl"
-);
+const upload = multer({
+  storage: storage,
+  limits: { fileSize: 8 * 1024 * 1024 },
+});
 
 module.exports = upload;
