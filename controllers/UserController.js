@@ -64,12 +64,13 @@ class UserController {
         id: user.id,
         role: user.role,
       });
-      // res.render("index");
-      res.status(200).json({
-        status: 200,
-        message: "Login success",
-        token,
-      });
+      req.session.token = token;
+      req.session.navbar = true;
+      if (user.role === "admin") {
+        res.redirect("/admin/dashboard");
+      } else {
+        res.redirect("/");
+      }
     } catch (err) {
       next(err);
     }
@@ -212,6 +213,17 @@ class UserController {
       } else {
         throw { status: 400, message: "Failed to update data" };
       }
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async logout(req, res, next) {
+    try {
+      req.session.destroy((err) => {
+        if (err) throw err;
+        res.redirect("/");
+      });
     } catch (error) {
       next(error);
     }

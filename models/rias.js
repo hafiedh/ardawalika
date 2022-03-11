@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Rias.hasMany(models.Paket, { foreignKey: "rias_id" });
-      Rias.hasMany(models.Order, { foreignKey: "rias_id" });
     }
   }
   Rias.init(
