@@ -1,4 +1,4 @@
-const { Dekorasi,Dokumentasi,Entertainment,Rias,Catering } = require("../models");
+const { Dekorasi,Dokumentasi,Entertainment,Rias,Catering,User,Category,Paket } = require("../models");
 const fs = require('fs-extra');
 const path = require('path');
 
@@ -266,6 +266,88 @@ module.exports = {
         }
     },
 
+    viewUser : async(req,res) => {
+        
+        const user = await User.findAll();
+        res.render('admin/user/index',{user})
+    },
+
+    viewCategory : async(req,res) => {
+        const category = await Category.findAll();
+        res.render('admin/category/index',{category})
+    },
+    viewCreateCategory : async(req,res) => {
+        res.render('admin/category/create')
+    },
+
+    viewPaket : async(req,res) =>{
+        const paket = await Paket.findAll({
+            include:[{
+                model:Category
+            },
+            {
+                model:Dekorasi,
+                attributes: ['name_dekorasi'],
+            },
+            {
+                model:Rias,
+                attributes: ['name_rias'],
+                
+            },
+            {
+                model:Entertainment,
+                attributes: ['name_entertainment']
+            },
+            {
+                model:Catering,
+                attributes: ['name_catering']
+            },
+            {
+                model:Dokumentasi,
+                attributes: ['name_dokumentasi']
+            },
+
+        
+        ],
+           
+        });
+        res.render('admin/paket/index',{paket})
+    },
+
+    viewCreatePaket:async(req,res)=>{
+        try {
+            const category = await Category.findAll();
+            const dekorasi = await Dekorasi.findAll();
+            const rias = await Rias.findAll();
+            const entertainment = await Entertainment.findAll()
+            const dokumentasi = await Dokumentasi.findAll()
+            const catering = await Catering.findAll()
+      
+              res.render('admin/paket/create',{dekorasi,category,rias,entertainment,dokumentasi,catering})
+        } catch (error) {
+            res.redirect('/')
+        }
 
 
+    },
+
+    createPaket:async(req,res,next)=>{
+        try {
+             await Paket.create({
+              category_id: req.body.category,
+              name_paket: req.body.name,
+              harga_paket: req.body.harga,
+              dekorasi_id: req.body.dekorasi,
+              catering_id: req.body.catering,
+              rias_id: req.body.rias,
+              dokumentasi_id: req.body.dokumentasi,
+              entertainment_id: req.body.entertainment,
+              img_url : "tes"
+            });
+            res.redirect('/admin/paket')
+          } catch (error) {
+            next(error);
+          }
+    }  
 }
+

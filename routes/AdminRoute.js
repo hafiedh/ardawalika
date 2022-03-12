@@ -1,6 +1,8 @@
 const AdminController = require("../controllers/AdminController");
 const router = require("express").Router();
 
+router.get('/user',AdminController.viewUser)
+
 router.get('/dashboard',AdminController.viewDashboard)
 router.get('/dekorasi',AdminController.viewDecoration)
 router.post('/dekorasi',AdminController.createDecoration)
@@ -26,4 +28,11 @@ router.get('/entertainment',AdminController.viewEntertainment)
 router.post('/entertainment',AdminController.createEntertainment)
 router.put('/entertainment',AdminController.updateEntertainment)
 router.delete('/entertainment/:id',AdminController.deleteEntertainment)
+
+router.get('/category',AdminController.viewCategory)
+router.get('/category/create',AdminController.viewCreateCategory)
+
+router.get('/paket',AdminController.viewPaket)
+router.get('/paket/create',AdminController.viewCreatePaket)
+router.post('/paket',AdminController.createPaket)
 module.exports = router;

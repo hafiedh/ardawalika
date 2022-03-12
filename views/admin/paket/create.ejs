@@ -1,0 +1,136 @@
+<%- include('../../admin/partials/header.ejs') %>
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+  <%- include('../../admin/partials/sidebar.ejs') %>
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <%- include('../../admin/partials/navbar.ejs') %>
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+        
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Add Paket</h1>
+        <!-- End Heading -->
+
+        <!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <form action="/admin/paket" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="name">Category</label>
+                    <select class="form-control" name="category">
+                      
+                      <% for(let i = 0; i< category.length; i++){ %>
+                      <option value="<%= category[i].id %>"><%= category[i].name %></option>
+                      <%}%>
+                    </select>
+                  </div>
+                <div class="form-group">
+                    <label for="name">Dekorasi</label>
+                    <select class="form-control" name="dekorasi">
+                      
+                      <% for(let i = 0; i< dekorasi.length; i++){ %>
+                      <option value="<%= dekorasi[i].id %>"><%= dekorasi[i].name_dekorasi %> - <%= dekorasi[i].keterangan_dekorasi %></option>
+                      <%}%>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Catering</label>
+                    <select class="form-control" name="catering">
+                      
+                      <% for(let i = 0; i< catering.length; i++){ %>
+                      <option value="<%= catering[i].id %>"><%= catering[i].name_catering   %> - <%= catering[i].keterangan_catering   %></option>
+                      <%}%>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Entertainment</label>
+                    <select class="form-control" name="entertainment">
+                      
+                      <% for(let i = 0; i< entertainment.length; i++){ %>
+                      <option value="<%= entertainment[i].id %>"><%= entertainment[i].name_entertainment %> - <%= entertainment[i].keterangan_entertainment %></option>
+                      <%}%>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Dokumentasi</label>
+                    <select class="form-control" name="dokumentasi">
+                      
+                      <% for(let i = 0; i< dokumentasi.length; i++){ %>
+                      <option value="<%= dokumentasi[i].id %>"><%= dokumentasi[i].name_dokumentasi %> - <%= dokumentasi[i].keterangan_dokumentasi %></option>
+                      <%}%>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Rias</label>
+                    <select class="form-control" name="rias">
+                      
+                      <% for(let i = 0; i< rias.length; i++){ %>
+                      <option value="<%= rias[i].id %>"><%= rias[i].name_rias %> - <%= rias[i].keterangan_rias %></option>
+                      <%}%>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Harga</label>
+                    <input type="number" min="1" class="form-control" name="harga" placeholder="Enter name" required>
+                  </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+    </div>
+  </div>
+
+      </div>
+      <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <%- include('../../admin/partials/footer.ejs') %>
+
+  </div>
+  <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="login.html">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('../../admin/partials/js.ejs') %>
+
