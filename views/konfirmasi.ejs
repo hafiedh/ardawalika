@@ -1,0 +1,39 @@
+<%- include('./partials/navbar-general'); %>
+
+
+    <section class="dokumentasi-filler"></section>
+<form class="konfirmasi">
+    <div class="konfirmasi__section-container">
+        <div class="konfirmasi__pilih-tanggal field">
+            <form class="konfirmasi__pilih-tanggal__form" action="#" method="">
+                <h4>Pilih Tanggal Acara</h4>
+                <input type="text" id="pilih-tanggal" placeholder="Please select Date Time" data-input>
+            </form>
+        </div>
+        <div class="konfirmasi__pilih-bank field">
+            <form class="konfirmasi__pilih-bank__form" action="#" method="">
+                <h4 for="pilihBank">Pilih Bank:</h4>
+                <select id="pilihBank" name="pilihBank" type="select">
+                    <option value="BNI">BNI</option>
+                    <option value="Mandiri">Mandiri</option>
+                    <option value="BRI">BRI</option>
+                </select>
+            </form>
+        </div>
+        <div class="konfirmasi__norek field">
+            <form class="konfirmasi__norek__form" action="#" method="">
+                <h4 for="norek">Nomor Rekening</h4>
+                <input type="number" name="konfirmasiInputNorek" id="konfirmasiInputNorek" placeholder="xx-xxxx-xxxx" />
+            </form>
+        </div>
+    </div>
+</form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+    <script>
+        $("#pilih-tanggal").flatpickr({
+            enableTime: true,
+            dateFormat: "F, d Y H:i"
+        });
+    </script>
+<%- include('./partials/footer'); %>

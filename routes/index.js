@@ -99,4 +99,10 @@ router.get("/profile", (req, res) => {
   console.log("profile");
 });
 
+// tesDates //
+router.get("/konfirmasi", (req, res) => {
+  res.render("konfirmasi");
+  console.log("konfirmasi");
+});
+
 module.exports = router;

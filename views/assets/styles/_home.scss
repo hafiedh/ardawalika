@@ -295,8 +295,12 @@
   }
   .hasil-6 {
     @include flex(center, center, row);
-    p {
+    p,
+    a {
       color: white;
+    }
+    a:hover {
+      text-decoration: none;
     }
     background: linear-gradient(
         0deg,
