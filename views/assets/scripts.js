@@ -18,7 +18,7 @@
                 }
             });
             
-            // createActiveLeft()
+            createActiveLeft()
         });
 
         
@@ -83,16 +83,16 @@
         // detailPaket.addEventListener("click", createActiveLeft)
         // kustomisasi.addEventListener("click", createActiveRight)
 
-        // function createActiveLeft() {
-        //     console.log("tes create id")
-        //     boxOptions.setAttribute("id", "active-left")
+        function createActiveLeft() {
+            console.log("tes create id")
+            boxOptions.setAttribute("id", "active-left")
 
-        //     if (boxDetailPaket.style.display !== "block") {
-        //         boxDetailPaket.style.display = "block"
-        //         boxKustomisasi.style.display = "none"
-        //         console.log("block")
-        //     }
-        // }
+            if (boxDetailPaket.style.display !== "block") {
+                boxDetailPaket.style.display = "block"
+                boxKustomisasi.style.display = "none"
+                console.log("block")
+            }
+        }
 
         // function createActiveRight() {
         //     console.log("tes create id right")
