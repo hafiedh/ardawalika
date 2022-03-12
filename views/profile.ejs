@@ -1,61 +1,54 @@
 <%- include('./partials/navbar-general'); %>
+
 <section class="profile-filler"></section>
-<form class="profile">
+<form class="profile" method="post" enctype="multipart/form-data" action="/users/update-profile">
     <div class="profile__user">
         <h4>Profil Akun</h4>
         <div class="picture">
-            <img src="/img/avatar3.png" alt="">
-            <input type="file" name="uploadfile" id="img" style="display:none;" />
+            <img  alt="ImageProfile" src=<%= Users.img_Url %> >
+            <input type="file" name="name" id="img" style="display:none;" />
             <label for="img"><img src="/img/editpic.svg" id="edit"></label>
         </div>
         <div class="profile__user__container">
             <div class="profile__user__nama-lengkap field">
                 <label>Nama Lengkap</label>
                 <div class="profile__user__nama-lengkap__text-field">
-                    <input type="text" name="profileNamaLengkap" id="profileNamaLengkap" placeholder="Jane Doe" />
+                    <input type="text" name="fullname" id="profileNamaLengkap" placeholder=<%= Users.fullname %> />
                     <img src="/img/edit.png">
                 </div>
             </div>
             <div class="profile__user__username field">
                 <label>Username</label>
                 <div class="profile__user__username__text-field">
-                    <input type="text" name="profileInputUsername" id="profileInputUsername" placeholder="janedoe123" />
-                    <img src="/img/edit.png">
-                </div>
-            </div>
-            <div class="profile__user__email field">
-                <label>Email</label>
-                <div class="profile__user__email__text-field">
-                    <input type="email" name="profileInputEmail" id="profileInputEmail"
-                        placeholder="janedoe@gmail.com" />
+                    <input type="text" name="username" id="profileInputUsername" placeholder=<%= Users.username %> />
                     <img src="/img/edit.png">
                 </div>
             </div>
             <div class="profile__user__email field">
                 <label>Nomor Telepon</label>
                 <div class="profile__user__nomor__text-field">
-                    <input type="number" name="profileInputNomor" id="profileInputNomor" placeholder="08xx-xxxx-xxxx" />
+                    <input type="number" name="phoneNumber" id="profileInputNomor" placeholder= <%= Users.phoneNumber %> />
                     <img src="/img/edit.png">
                 </div>
             </div>
             <div class="profile__user__alamat field">
                 <label>Alamat</label>
                 <div class="profile__user__alamat__text-field">
-                    <textarea id="profileInputAlamat" name="profileInputAlamat" placeholder=""> </textarea>
+                    <textarea id="profileInputAlamat" name="address" placeholder=<%= Users.address %>> </textarea>
                     <img src="/img/edit.png">
                 </div>
             </div>
             <div class="profile__user__password field" id="profile-input-password">
                 <div class="profile__user__password__text-field">
                     <label>Kata Sandi</label>
-                    <input type="password" id="password" />
+                    <input type="password" id="password" name="password"/>
                     <img src="/img/edit.png" class="edit-password">
                     <div class="edit-password__change">
                         <label>Sandi Baru</label>
-                        <input type="password" id="profileChangePassword" name="profileChangePassword" />
+                        <input type="password" id="profileChangePassword" name="confirm_password" />
                         <label>Konfirmasi Sandi Baru</label>
                         <input type="password" id="profileChangePasswordKonfirmasi"
-                            name="profileChangePasswordKonfirmasi" />
+                            name="confirm_new_password" />
                     </div>
                 </div>
             </div>
@@ -65,8 +58,8 @@
             </div>
         </div>
     </div>
-</form>
 
+</form>
 <script>
     const editPass = document.querySelector(".edit-password")
     const editPassChange = document.querySelector(".edit-password__change")
@@ -96,13 +89,18 @@
         }
     }
 
-        const form = document.forms[0]
-        form.addEventListener("submit", function (event) {
-            event.preventDefault()
-            const formData = new FormData(this)
-            for (const formElement of formData) {
-                console.log(formElement)
-            }
-        })
+        // const form = document.forms[0]
+        // form.addEventListener("submit", function (event) {
+        //     event.preventDefault()
+        //     const formData = new FormData(this)
+        //     // for (let formElement of formData) {
+        //     // }
+        //     let response = await fetch('/users/update-profile', {
+        //             method: 'POST',
+        //             body: formData // <--- THIS IS THE CHANGE});
+        // })
+        // let json = await response.json()
+        // console.log(json)
+        // })
 </script>
 <%- include('./partials/footer'); %>
