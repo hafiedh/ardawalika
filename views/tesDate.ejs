@@ -1,0 +1,20 @@
+<%- include('./partials/navbar-general'); %>
+
+
+    <div class="konfirmasi">
+        <section class="dokumentasi-filler"></section>
+        <form class="konfirmasi__pilih-tanggal" action="#" method="">
+            <h3>Pilih Tanggal Acara</h3>
+            <input type="text" id="pilih-tanggal" placeholder="Please select Date Time" data-input>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+    <script>
+        $("#pilih-tanggal").flatpickr({
+            enableTime: true,
+            dateFormat: "F, d Y H:i"
+        });
+    </script>
+<%- include('./partials/footer'); %>

@@ -98,4 +98,10 @@ router.get("/profile", (req, res) => {
   console.log("profile");
 });
 
+// tesDates //
+router.get("/tesDate", (req, res) => {
+  res.render("tesDate");
+  console.log("tesDate");
+});
+
 module.exports = router;
