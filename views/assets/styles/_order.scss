@@ -25,10 +25,14 @@
     .detail-paket {
       //background-color: lavender;
       flex: 1 1 50rem;
-      margin-top: -1.9rem;
-      margin-left: -3.3rem;
+      // margin-top: -1.9rem;
+      // margin-left: -3.3rem;
       padding-left: 2rem;
-      border-left: 3px solid white;
+      //border-left: 3px solid white;
+      h3 {
+        margin: 2rem 2rem 4rem 2rem;
+        font-size: $medium;
+      }
     }
 
     .kustomisasi {
@@ -48,9 +52,11 @@
   }
   &__box {
     margin: 5rem 0rem;
-    border-right: 3px solid #0f1d40;
-    border-left: 3px solid #0f1d40;
-    border-bottom: 3px solid #0f1d40;
+    // border-right: 3px solid #0f1d40;
+    // border-left: 3px solid #0f1d40;
+    // border-bottom: 3px solid #0f1d40;
+    border: 3px solid #0f1d40;
+    border-radius: 0.8rem;
     padding: 1rem 3rem;
     min-height: 100vh;
   }
@@ -62,54 +68,54 @@
   }
 }
 
-#active-left {
-  .detail-paket {
-    margin-top: -1.9rem;
-    margin-left: -3.3rem;
-    padding-left: 2.1rem;
-    //border-radius: 0.8rem;
-    border-top: 3px solid #0f1d40;
-    border-right: 3px solid #0f1d40;
-    border-left: 3px solid #0f1d40;
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-  }
-  .kustomisasi {
-    border-bottom: 3px solid #0f1d40;
-    border-right: 3px solid #cacdd5;
-    border-left: 3px solid #cacdd5;
-    border-top: 3px solid #cacdd5;
+// #active-left {
+//   .detail-paket {
+//     margin-top: -1.9rem;
+//     margin-left: -3.3rem;
+//     padding-left: 2.1rem;
+//     //border-radius: 0.8rem;
+//     border-top: 3px solid #0f1d40;
+//     border-right: 3px solid #0f1d40;
+//     border-left: 3px solid #0f1d40;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
+//   }
+//   .kustomisasi {
+//     border-bottom: 3px solid #0f1d40;
+//     border-right: 3px solid #cacdd5;
+//     border-left: 3px solid #cacdd5;
+//     border-top: 3px solid #cacdd5;
 
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
 
-    // background-color: lightpink;
-  }
-}
+//     // background-color: lightpink;
+//   }
+// }
 
-#active-right {
-  .detail-paket {
-    border-bottom: 3px solid #0f1d40;
-    border-left: 3px solid white;
+// #active-right {
+//   .detail-paket {
+//     border-bottom: 3px solid #0f1d40;
+//     border-left: 3px solid white;
 
-    border-left: 3px solid #cacdd5;
-    border-top: 3px solid #cacdd5;
-    border-right: 3px solid #cacdd5;
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-    margin-right: 3rem;
-  }
-  .kustomisasi {
-    margin-top: -2rem;
-    margin-left: -3.3rem;
-    padding-left: 2.1rem;
-    border-top: 3px solid #0f1d40;
-    border-right: 3px solid #0f1d40;
-    border-left: 3px solid #0f1d40;
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-  }
-}
+//     border-left: 3px solid #cacdd5;
+//     border-top: 3px solid #cacdd5;
+//     border-right: 3px solid #cacdd5;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
+//     margin-right: 3rem;
+//   }
+//   .kustomisasi {
+//     margin-top: -2rem;
+//     margin-left: -3.3rem;
+//     padding-left: 2.1rem;
+//     border-top: 3px solid #0f1d40;
+//     border-right: 3px solid #0f1d40;
+//     border-left: 3px solid #0f1d40;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
+//   }
+// }
 
 .box-detail-paket {
   h4 {
@@ -181,13 +187,31 @@
     //min-height: 10vh;
     display: none;
   }
+
+  textarea {
+    width: 90%;
+    @include flex(space-between, flex-start, row);
+    //background: #ededed;
+    border-radius: 0.8rem;
+    border: 1px solid #c2c2c2;
+    height: 15rem;
+    box-sizing: border-box;
+    font-size: $text;
+    resize: none;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+    //background-color: lavender;
+  }
 }
 
 // BUTTONS/CUSTOMISATION SECTION //
 .detail-paket-right {
   width: 50%;
   margin: 0 0 0 auto;
-
+  //background-color: lavender;
+  // @include flex(space-between, flex-start, column);
   .detail-paket-biaya {
     background-color: #f5f6f7;
     margin: 1rem 0rem 2rem 1rem;
@@ -211,13 +235,18 @@
   }
 
   .kustom-pesan {
-    @include flex(space-between, flex-start, row);
+    @include flex(center, flex-end, row);
+    //width: 80%;
+    margin: auto;
+    //background-color: lightblue;
     flex-wrap: wrap;
     .btn-kustomisasi {
-      margin: 0rem 0rem 0.5rem 1rem;
+      //margin: 0rem 0rem 0.5rem 1rem;
+      margin: 0.5rem;
       background-color: white;
       border: 1px solid #1081e8;
-      padding: 1.2rem 2.4rem;
+      width: 50%;
+      padding: 1.2rem 0.5rem;
       border-radius: 0.8rem;
       font-size: 1.3rem;
       color: #1081e8;
@@ -225,12 +254,14 @@
     }
     .btn-pesan {
       background-color: #1081e8;
-      margin: 0rem 0rem 0.5rem 1rem;
+      //margin: 0rem 0rem 0.5rem 1rem;
+      margin: 0.5rem;
       font-size: 1.3rem;
       border: none;
-      padding: 1.3rem 4.6rem;
       color: white;
       border-radius: 0.8rem;
+      width: 45%;
+      padding: 1.2rem 0.5rem;
     }
   }
 }
@@ -375,6 +406,20 @@
 }
 
 // MEDIA QUERY //
+@media screen and (max-width: 796px) {
+  #btnPesan {
+    background-color: #1081e8;
+    //margin: 0rem 0rem 0.5rem 1rem;
+    margin: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+    color: white;
+    border-radius: 0.8rem;
+    width: 50%;
+    padding: 1.2rem 0.5rem;
+  }
+}
+
 @media screen and (max-width: 719px) {
   .detail-paket-biaya {
     h4 {

@@ -7,11 +7,11 @@
     <div class="order__box">
         <div class="box-options" id="active-left">
             <div class="detail-paket">
-                <p>Detail Paket</p>
+                <h3>Detail Paket</h3>
             </div>
-            <div class="kustomisasi">
+            <!-- <div class="kustomisasi">
                 <p>Kustomisasi</p>
-            </div>
+            </div> -->
         </div>
 
         <!-- SECTION DETAIL PAKET -->
@@ -173,6 +173,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="note info">
+                    <div class="info-keterangan">
+                        <h4>Note</h4>
+                    </div>
+                    <textarea id="noteOrder" name="noteOrder" placeholder=""> </textarea>
+                </div>
             </div>
 
             <div class="detail-paket-right">
@@ -183,9 +189,8 @@
                     </div>
                 </div>
                 <div class="kustom-pesan">
-                    <button class="btn-kustomisasi">Saya membutuhkan kustomisasi</button>
-                    <button class="btn-pesan">Pesan sekarang</button>
-                </div>
+                    <button class="btn-kustomisasi">Kustomisasi</button>
+                    <button class="btn-pesan" id="btnPesan" type="submit">Pesan sekarang</button></div>
             </div>
             <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
         </div>
@@ -313,7 +318,7 @@
                 </div>
             </div>
             <div class="kustom-pesan">
-                <button class="btn-pesan">Pesan sekarang</button>
+                <button class="btn-pesan" type="submit">Pesan sekarang</button>
             </div>
         </div>
         <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>

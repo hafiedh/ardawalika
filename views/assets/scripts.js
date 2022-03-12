@@ -18,7 +18,7 @@
                 }
             });
             
-            createActiveLeft()
+            // createActiveLeft()
         });
 
         
@@ -32,31 +32,7 @@
         const boxDetailPaket = document.querySelector(".box-detail-paket")
         const boxKustomisasi = document.querySelector(".box-kustomisasi")
 
-        detailPaket.addEventListener("click", createActiveLeft)
-        kustomisasi.addEventListener("click", createActiveRight)
-
-        function createActiveLeft() {
-            console.log("tes create id")
-            boxOptions.setAttribute("id", "active-left")
-
-            if (boxDetailPaket.style.display !== "block") {
-                boxDetailPaket.style.display = "block"
-                boxKustomisasi.style.display = "none"
-                console.log("block")
-            }
-        }
-
-        function createActiveRight() {
-            console.log("tes create id right")
-            boxOptions.setAttribute("id", "active-right")
-
-            if (boxKustomisasi.style.display !== "block") {
-                boxKustomisasi.style.display = "block"
-                boxDetailPaket.style.display = "none"
-                console.log("kustomisasi")
-            }
-        }
-
+        
         detailPaketChoices.onclick = (e) => {
             console.log("ini tes3")
             const getClassName = e.target.className;
@@ -103,6 +79,31 @@
                return;
            }
         }
+
+        // detailPaket.addEventListener("click", createActiveLeft)
+        // kustomisasi.addEventListener("click", createActiveRight)
+
+        // function createActiveLeft() {
+        //     console.log("tes create id")
+        //     boxOptions.setAttribute("id", "active-left")
+
+        //     if (boxDetailPaket.style.display !== "block") {
+        //         boxDetailPaket.style.display = "block"
+        //         boxKustomisasi.style.display = "none"
+        //         console.log("block")
+        //     }
+        // }
+
+        // function createActiveRight() {
+        //     console.log("tes create id right")
+        //     boxOptions.setAttribute("id", "active-right")
+
+        //     if (boxKustomisasi.style.display !== "block") {
+        //         boxKustomisasi.style.display = "block"
+        //         boxDetailPaket.style.display = "none"
+        //         console.log("kustomisasi")
+        //     }
+        // }
 
 
 
