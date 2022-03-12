@@ -207,17 +207,58 @@ module.exports = {
   },
 
   // Entertainment
-  viewEntertainment: async (req, res) => {
+  
+  viewEntertainment : async(req,res) => {
+        
     const entertainment = await Entertainment.findAll();
-    res.render("admin/entertainment/index", { entertainment });
-  },
-  createEntertainment: async (req, res) => {
+    res.render('admin/entertainment/index',{entertainment})
+},
+createEntertainment : async(req,res) => {
+    try{
+        const {name_entertainment,harga_entertainment,keterangan_entertainment} = req.body;
+       
+        await Entertainment.create({
+            name_entertainment,
+            harga_entertainment,
+            keterangan_entertainment
+        });
+        res.redirect('/admin/entertainment')
+    }catch(error){
+        res.redirect('/admin/entertainment')
+    }
+},
+updateEntertainment : async(req,res) => {
+    try{
+        const { id, name_entertainment,harga_entertainment,keterangan_entertainment } = req.body;
+        const entertainment = await Entertainment.findByPk(id );
+        
+        entertainment.name_entertainment= name_entertainment,
+        entertainment.harga_entertainment = harga_entertainment,
+        entertainment.keterangan_entertainment = keterangan_entertainment,
+        await entertainment.save()
+
+        res.redirect('/admin/entertainment');
+        
+    }catch(error){
+        res.redirect('/admin/entertainment')
+    }
+
+},
+deleteEntertainment : async(req,res)=>{
     try {
-      const {
-        name_entertainment,
-        harga_entertainment,
-        keterangan_entertainment,
-      } = req.body;
+         await Entertainment.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        res.redirect('/admin/entertainment')
+        
+    } catch (error) {
+        res.redirect('/admin/entertainment')
+    }
+},
+
+
 
     viewUser : async(req,res) => {
         
@@ -225,13 +266,7 @@ module.exports = {
         res.render('admin/user/index',{user})
     },
 
-    viewCategory : async(req,res) => {
-        const category = await Category.findAll();
-        res.render('admin/category/index',{category})
-    },
-    viewCreateCategory : async(req,res) => {
-        res.render('admin/category/create')
-    },
+
 
     viewPaket : async(req,res) =>{
         const paket = await Paket.findAll({

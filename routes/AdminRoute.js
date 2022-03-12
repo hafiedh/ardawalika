@@ -29,8 +29,6 @@ router.post('/entertainment',AdminController.createEntertainment)
 router.put('/entertainment',AdminController.updateEntertainment)
 router.delete('/entertainment/:id',AdminController.deleteEntertainment)
 
-router.get('/category',AdminController.viewCategory)
-router.get('/category/create',AdminController.viewCreateCategory)
 
 router.get('/paket',AdminController.viewPaket)
 router.get('/paket/create',AdminController.viewCreatePaket)
