@@ -27,4 +27,8 @@ router.get("/entertainment", AdminController.viewEntertainment);
 router.post("/entertainment", AdminController.createEntertainment);
 router.put("/entertainment", AdminController.updateEntertainment);
 router.delete("/entertainment/:id", AdminController.deleteEntertainment);
+
+router.get('/paket',AdminController.viewPaket)
+router.get('/paket/create',AdminController.viewCreatePaket)
+router.post('/paket',AdminController.createPaket)
 module.exports = router;
