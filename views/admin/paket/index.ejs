@@ -1,0 +1,100 @@
+<%- include('../../admin/partials/header.ejs') %>
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+  <%- include('../../admin/partials/sidebar.ejs') %>
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <%- include('../../admin/partials/navbar.ejs') %>
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+        
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Category</h1>
+        <!-- End Heading -->
+
+        <!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>Gambar</th>
+              <th>Judul Kategori</th>
+              <th>Harga</th>
+              <th>Dekorasi</th>
+              <th>Catering</th>
+              <th>Rias</th>
+              <th>Dokumentasi</th>
+              <th>Entertainment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let i = 0; i < paket.length; i++){ %>
+            <tr>
+              <td><%= i + 1 %></td>
+              <td><%= paket[i].name_paket %></td>
+              <td>
+                <img src="<%= paket[i].img_url %>" alt="imageUrl" width="70px">
+              </td>
+              <td><%= paket[i].Category.name %></td>
+              <td><%= paket[i].harga_paket%></td>
+              <td><%= paket[i].Dekorasi.name_dekorasi%></td>
+              <td><%= paket[i].Catering.name_catering %></td>
+              <td><%= paket[i].Ria.name_rias %></td>
+              <td><%= paket[i].Dokumentasi.name_dokumentasi %></td>
+              <td><%= paket[i].Entertainment.name_entertainment %></td>
+            
+
+
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+      </div>
+      <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <%- include('../../admin/partials/footer.ejs') %>
+
+  </div>
+  <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+
+
+<%- include('../../admin/partials/js.ejs') %>
+
+<script>
+
+
+</script>
