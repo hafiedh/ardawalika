@@ -158,12 +158,15 @@
   }
 
   #paket-korporat {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     background: linear-gradient(
-        0deg,
-        rgba(15, 29, 64, 0.9) 0%,
-        rgba(15, 29, 64, 0) 58.66%
-      ),
-      url("/img/paket-corporate.png");
+      0deg,
+      rgba(15, 29, 64, 0.9) 0%,
+      rgba(15, 29, 64, 0) 80%
+    );
+    height: 100%;
   }
 
   #paket-pernikahan {
@@ -307,6 +310,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    box-sizing: hidden;
     border-radius: 0.8rem;
     width: 100%;
     max-width: 38rem;
