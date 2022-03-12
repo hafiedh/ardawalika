@@ -2,27 +2,14 @@ const { User } = require("../models");
 const { Op } = require("sequelize");
 const { sign, verify } = require("../helpers/jwt");
 const { decode } = require("../helpers/bcrypt");
-const {
-  sendEmail,
-  sendEmailResetPassword,
-  sendEmailForgotPassword,
-} = require("../helpers/nodemailer");
+const { sendEmail, sendEmailResetPassword, sendEmailForgotPassword } = require("../helpers/nodemailer");
 const generator = require("generate-password");
 const fetchGoogleUser = require("../helpers/googleAuth");
 
 class UserController {
   static async register(req, res, next) {
     try {
-      let {
-        email,
-        password,
-        username,
-        fullname,
-        phoneNumber = "",
-        imgUrl = "",
-        address = "",
-        role = "user",
-      } = req.body;
+      let { email, password, username, fullname, phoneNumber = "", imgUrl = "", address = "", role = "user" } = req.body;
       const result = await User.create({
         email,
         password,
@@ -34,18 +21,15 @@ class UserController {
         role,
       });
 
-      if (!result) throw { status: 400, message: "Register failed" };
+      if (!result) res.redirect("/reigster?error=Register failed");
 
-      const token = sign({ email, fullname, id: result.id, role });
+      const token = sign({ email, username, id: result.id, role });
       const url = `http://localhost:3000/users/verify/${token}`;
-      sendEmail(email, fullname, url);
-      res.status(201).json({
-        status: 201,
-        message: `Register success, Sent a verification email to ${email}`,
-        token,
-      });
+      sendEmail(email, username, url);
+      res.redirect("/login?error=Register success, Sent a verification email to your email");
     } catch (err) {
-      next(err);
+      // next(err);
+      res.redirect(`/register?error=${err.errors[0].message}`);
     }
   }
 
@@ -74,7 +58,7 @@ class UserController {
       if (user.role === "admin") {
         res.redirect("/admin/dashboard");
       } else {
-        res.redirect("/");
+        res.redirect(`/users/profile/${user.id}`);
       }
     } catch (err) {
       next(err);
@@ -140,9 +124,7 @@ class UserController {
     try {
       const { accessToken } = req.params;
       const payload = verify(accessToken);
-      res.send(
-        "Use this link as new password and confirm password form. Don't tell to others about your AccessKey"
-      );
+      res.send("Use this link as new password and confirm password form. Don't tell to others about your AccessKey");
     } catch (error) {
       next(error);
     }
@@ -166,10 +148,11 @@ class UserController {
       });
       await User.update({ password: newPassword }, { where: { email } });
       sendEmailForgotPassword(email, newPassword);
-      res.status(200).json({
-        status: 200,
-        message: "Your new password has been sent to your email",
-      });
+      // res.status(200).json({
+      //   status: 200,
+      //   message: "Your new password has been sent to your email",
+      // });
+      res.redirect("/login?error=Reset password success, Your new password has been sent to your email");
     } catch (error) {
       next(error);
     }
@@ -186,12 +169,12 @@ class UserController {
           where: {
             id: payload.id,
             email: payload.email,
-            fullname: payload.fullname,
+            username: payload.username,
           },
         }
       );
-
-      res.status(200).json({ status: 200, message: "Your account is active" });
+      const data = payload.email;
+      res.render("verifikasi", { data });
     } catch (err) {
       console.log(err);
       next(err);
@@ -208,11 +191,10 @@ class UserController {
       if (!user) {
         throw { status: 404, message: "User not found" };
       }
-      res.render("profile", { Users:user });
+      res.render("profile", { Users: user });
     } catch (error) {
       next(error);
     }
-
   }
   static async updateUserPhoto(req, res, next) {
     try {

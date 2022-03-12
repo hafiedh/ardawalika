@@ -20,9 +20,9 @@
         <div class="reset__text">Masukkan email yang terdaftar. Kami akan mengirimkan kode verifikasi untuk mengatur ulang kata sandi</div>
 
         <!-- EMAIL INPUT -->
-        <form action="#">
+        <form action="/users/forgot-password" method="post">
           <div class="reset__email">
-            <input type="text" placeholder="Email" required />
+            <input type="text" name="email" placeholder="Email" required />
             <div class="reset__icon"></div>
           </div>
 
