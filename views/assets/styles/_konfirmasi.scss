@@ -6,6 +6,9 @@
   margin-bottom: 5rem;
   //background-color: lavender;
   @include flex(flex-start, center, column);
+  &__pilih-bank {
+    cursor: pointer;
+  }
   .field {
     width: 100%;
     //background-color: lightblue;
@@ -27,6 +30,7 @@
     }
     select {
       //width: 100%;
+      cursor: pointer;
       border: 0.2rem solid whitesmoke;
       border-radius: 0.8rem;
       padding: 1rem 1rem;
