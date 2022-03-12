@@ -34,18 +34,15 @@ class UserController {
         role,
       });
 
-      if (!result) throw { status: 400, message: "Register failed" };
+      if (!result) res.redirect("/reigster?error=Register failed");
 
-      const token = sign({ email, fullname, id: result.id, role });
+      const token = sign({ email, username, id: result.id, role });
       const url = `http://localhost:3000/users/verify/${token}`;
-      sendEmail(email, fullname, url);
-      res.status(201).json({
-        status: 201,
-        message: `Register success, Sent a verification email to ${email}`,
-        token,
-      });
+      sendEmail(email, username, url);
+      res.redirect("/login?error=Register success, Sent a verification email to your email");
     } catch (err) {
-      next(err);
+      // next(err);
+      res.redirect(`/register?error=${err.errors[0].message}`)
     }
   }
 
@@ -74,7 +71,7 @@ class UserController {
       if (user.role === "admin") {
         res.redirect("/admin/dashboard");
       } else {
-        res.redirect("/");
+        res.redirect(`/users/profile/${user.id}`);
       }
     } catch (err) {
       next(err);
@@ -166,10 +163,11 @@ class UserController {
       });
       await User.update({ password: newPassword }, { where: { email } });
       sendEmailForgotPassword(email, newPassword);
-      res.status(200).json({
-        status: 200,
-        message: "Your new password has been sent to your email",
-      });
+      // res.status(200).json({
+      //   status: 200,
+      //   message: "Your new password has been sent to your email",
+      // });
+      res.redirect("/login?error=Reset password success, Your new password has been sent to your email")
     } catch (error) {
       next(error);
     }
@@ -186,7 +184,7 @@ class UserController {
           where: {
             id: payload.id,
             email: payload.email,
-            fullname: payload.fullname,
+            username: payload.username,
           },
         }
       );
