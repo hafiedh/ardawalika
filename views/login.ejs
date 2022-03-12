@@ -17,10 +17,15 @@
           Hai, <br />
           Selamat Datang <br />
         </div>
-        <% if(error) { %>
+
+        <!-- ERROR -->
+        <% if(error.includes("success")) { %>
+        <p style="color: green"><%= error %></p>
+        <br />
+        <% } else {%>
         <p style="color: red"><%= error %></p>
         <br />
-        <% } %>
+        <% } %> 
 
         <!-- EMAIL INPUT -->
         <form action="/users/login" method="post">
@@ -52,7 +57,7 @@
         <!-- LUPA PASSWORD -->
         <div class="login__forgot">
           lupa kata sandi?
-          <a href="resetpass">Klik disini</a>
+          <a href="/resetemail">Klik disini</a>
         </div>
 
         <!-- BREAK LINE -->
