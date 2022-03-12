@@ -2736,10 +2736,12 @@ footer h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50rem;
           flex: 1 1 50rem;
-  margin-top: -1.9rem;
-  margin-left: -3.3rem;
   padding-left: 2rem;
-  border-left: 3px solid white;
+}
+
+.order .box-options .detail-paket h3 {
+  margin: 2rem 2rem 4rem 2rem;
+  font-size: 3rem;
 }
 
 .order .box-options .kustomisasi {
@@ -2763,9 +2765,8 @@ footer h3 {
 
 .order__box {
   margin: 5rem 0rem;
-  border-right: 3px solid #0f1d40;
-  border-left: 3px solid #0f1d40;
-  border-bottom: 3px solid #0f1d40;
+  border: 3px solid #0f1d40;
+  border-radius: 0.8rem;
   padding: 1rem 3rem;
   min-height: 100vh;
 }
@@ -2776,48 +2777,6 @@ footer h3 {
 
 .order .help span {
   color: #1081e8;
-}
-
-#active-left .detail-paket {
-  margin-top: -1.9rem;
-  margin-left: -3.3rem;
-  padding-left: 2.1rem;
-  border-top: 3px solid #0f1d40;
-  border-right: 3px solid #0f1d40;
-  border-left: 3px solid #0f1d40;
-  border-top-right-radius: 0.8rem;
-  border-top-left-radius: 0.8rem;
-}
-
-#active-left .kustomisasi {
-  border-bottom: 3px solid #0f1d40;
-  border-right: 3px solid #cacdd5;
-  border-left: 3px solid #cacdd5;
-  border-top: 3px solid #cacdd5;
-  border-top-right-radius: 0.8rem;
-  border-top-left-radius: 0.8rem;
-}
-
-#active-right .detail-paket {
-  border-bottom: 3px solid #0f1d40;
-  border-left: 3px solid white;
-  border-left: 3px solid #cacdd5;
-  border-top: 3px solid #cacdd5;
-  border-right: 3px solid #cacdd5;
-  border-top-right-radius: 0.8rem;
-  border-top-left-radius: 0.8rem;
-  margin-right: 3rem;
-}
-
-#active-right .kustomisasi {
-  margin-top: -2rem;
-  margin-left: -3.3rem;
-  padding-left: 2.1rem;
-  border-top: 3px solid #0f1d40;
-  border-right: 3px solid #0f1d40;
-  border-left: 3px solid #0f1d40;
-  border-top-right-radius: 0.8rem;
-  border-top-left-radius: 0.8rem;
 }
 
 .box-detail-paket h4 {
@@ -2947,6 +2906,35 @@ footer h3 {
   display: none;
 }
 
+.detail-paket-choices textarea {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 0.8rem;
+  border: 1px solid #c2c2c2;
+  height: 15rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  resize: none;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
 .detail-paket-right {
   width: 50%;
   margin: 0 0 0 auto;
@@ -3008,39 +2996,53 @@ footer h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .detail-paket-right .kustom-pesan .btn-kustomisasi {
-  margin: 0rem 0rem 0.5rem 1rem;
+  margin: 0.5rem;
   background-color: white;
   border: 1px solid #1081e8;
-  padding: 1.2rem 2.4rem;
+  width: 50%;
+  padding: 1.2rem 0.5rem;
   border-radius: 0.8rem;
   font-size: 1.3rem;
   color: #1081e8;
   font-weight: 600;
 }
 
+.detail-paket-right .kustom-pesan .btn-kustomisasi a {
+  color: #1081e8;
+}
+
 .detail-paket-right .kustom-pesan .btn-pesan {
   background-color: #1081e8;
-  margin: 0rem 0rem 0.5rem 1rem;
+  margin: 0.5rem;
   font-size: 1.3rem;
   border: none;
-  padding: 1.3rem 4.6rem;
-  color: white;
   border-radius: 0.8rem;
+  width: 45%;
+  padding: 1.2rem 0.5rem;
+}
+
+.detail-paket-right .kustom-pesan .btn-pesan a {
+  color: white;
+}
+
+.detail-paket-right .kustom-pesan a:hover {
+  text-decoration: none;
 }
 
 .box-kustomisasi h4 {
@@ -3285,6 +3287,22 @@ footer h3 {
   padding: 1.3rem 3.5rem;
   color: white;
   border-radius: 0.8rem;
+}
+
+@media screen and (max-width: 796px) {
+  #btnPesan {
+    background-color: #1081e8;
+    margin: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+    color: white;
+    border-radius: 0.8rem;
+    width: 100%;
+    padding: 1.2rem 0.5rem;
+  }
+  #btnKustomisasi {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 719px) {
@@ -4995,6 +5013,10 @@ button {
           flex-direction: column;
 }
 
+.konfirmasi__pilih-bank {
+  cursor: pointer;
+}
+
 .konfirmasi .field {
   width: 100%;
   margin: 2rem 0rem 3rem 0rem;
@@ -5029,6 +5051,7 @@ button {
 }
 
 .konfirmasi .field select {
+  cursor: pointer;
   border: 0.2rem solid whitesmoke;
   border-radius: 0.8rem;
   padding: 1rem 1rem;
@@ -5036,5 +5059,24 @@ button {
   width: 30rem;
   font-size: 1.5rem;
   color: #818181;
+}
+
+.konfirmasi .simpan-konfirmasi {
+  border: none;
+  padding: 0.8rem 2.8rem;
+  border-radius: 0.8rem;
+  background-color: #070504;
+  color: white;
+  width: 100%;
+  margin: 1rem 0rem;
+  cursor: pointer;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+  /* the property that is going to be changed from from button to button:hover*/
+  /*animation: cloudAnimation 2s infinite; */
+}
+
+.konfirmasi .simpan-konfirmasi:hover {
+  background-color: #1081e8;
 }
 /*# sourceMappingURL=style.css.map */
