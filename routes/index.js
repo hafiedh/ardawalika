@@ -4,6 +4,7 @@ const UserRouter = require("./UserRoute");
 const ProductRouter = require("./ProductRoute");
 const CategoryRouter = require("./CategoryRoute");
 const PaketRoute = require("./PaketRoute");
+const OrderRoute = require("./OrderRoute");
 
 const AdminRouter = require("./AdminRoute");
 const CategoryController = require("../controllers/CategoryController");
@@ -13,6 +14,7 @@ router.use("/products", ProductRouter);
 router.use("/categories", CategoryRouter);
 router.use("/pakets", PaketRoute);
 router.use("/admin", AdminRouter);
+router.use("/orders", OrderRoute);
 router.use(errorHandler);
 
 router.get("/", CategoryController.getCategories);
@@ -90,6 +92,12 @@ router.get("/riwayat-pemesanan", (req, res) => {
 router.get("/dokumentasi-detail", (req, res) => {
   res.render("dokumentasi_detail");
   console.log("dokumentasi-detail");
+});
+
+// PROFILE ROUTES //
+router.get("/profile", (req, res) => {
+  res.render("profile");
+  console.log("profile");
 });
 
 module.exports = router;
