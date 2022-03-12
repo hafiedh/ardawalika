@@ -177,7 +177,9 @@ class OrderController {
   static async handleNotification(req, res, next) {
     try {
 
-    } catch (error) {}
+    } catch (error) {
+      next(error);
+    }
   }
 
   static async history(req, res, next) {
@@ -226,31 +228,41 @@ class OrderController {
         attributes: { exclude: ["createdAt", "updateAt"] },
         where: { id: id },
       })
+      if (!order) throw { status: 404, message: "Order not found" };
       const paket = await Paket.findOne({
         attributes: { exclude: ["createdAt", "updateAt"] },
-        where: { id: order.paket_id },
+        where: { [Op.or]: [{ id: order.paket_id }, { id: order.paket_custom_id }] },
         include:[Dekorasi, Catering, Rias, Category, Dokumentasi, Entertainment],
       })
       let data = {}
-      if(order.dekorasi_status){}
-
-      if(order.catering_status){}
-      
-      if(order.rias_status){}
-
-      if(order.category_status){}
-
-      if(order.dokumentasi_status){}
-
-      if(order.entertainment_status){}
-
-
+      if(order.dekorasi_status){
+        data.dekorasi = paket.Dekorasi
+      }
+      if(order.catering_status){
+        data.Catering = paket.Catering
+      }
+      if(order.rias_status){
+        data.Rias = paket.Rias
+      }
+      if(order.category_status){
+        data.Category = paket.Category
+      }
+      if(order.dokumentasi_status){
+        data.Dokumentasi = paket.Dokumentasi
+      }
+      if(order.entertainment_status){
+        data.Entertainment = paket.Entertainment
+      }
+    res.status(200).json({
+      message: "Order found",
+      data: data
+    });
     } catch (error) {
       next(error);
     }
   }
 
-  static async detail(req, res, next) {
+static async detail(req, res, next) {
     const { id } = req.params;
     try {
       const result = await Order.findOne({
