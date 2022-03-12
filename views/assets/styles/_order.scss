@@ -251,6 +251,9 @@
       font-size: 1.3rem;
       color: #1081e8;
       font-weight: 600;
+      a {
+        color: #1081e8;
+      }
     }
     .btn-pesan {
       background-color: #1081e8;
@@ -258,10 +261,15 @@
       margin: 0.5rem;
       font-size: 1.3rem;
       border: none;
-      color: white;
       border-radius: 0.8rem;
       width: 45%;
       padding: 1.2rem 0.5rem;
+      a {
+        color: white;
+      }
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
 }
@@ -415,8 +423,11 @@
     border: none;
     color: white;
     border-radius: 0.8rem;
-    width: 50%;
+    width: 100%;
     padding: 1.2rem 0.5rem;
+  }
+  #btnKustomisasi {
+    width: 100%;
   }
 }
 

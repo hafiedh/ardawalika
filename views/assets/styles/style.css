@@ -3023,15 +3023,26 @@ footer h3 {
   font-weight: 600;
 }
 
+.detail-paket-right .kustom-pesan .btn-kustomisasi a {
+  color: #1081e8;
+}
+
 .detail-paket-right .kustom-pesan .btn-pesan {
   background-color: #1081e8;
   margin: 0.5rem;
   font-size: 1.3rem;
   border: none;
-  color: white;
   border-radius: 0.8rem;
   width: 45%;
   padding: 1.2rem 0.5rem;
+}
+
+.detail-paket-right .kustom-pesan .btn-pesan a {
+  color: white;
+}
+
+.detail-paket-right .kustom-pesan a:hover {
+  text-decoration: none;
 }
 
 .box-kustomisasi h4 {
@@ -3286,8 +3297,11 @@ footer h3 {
     border: none;
     color: white;
     border-radius: 0.8rem;
-    width: 50%;
+    width: 100%;
     padding: 1.2rem 0.5rem;
+  }
+  #btnKustomisasi {
+    width: 100%;
   }
 }
 
