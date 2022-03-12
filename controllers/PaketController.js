@@ -1,4 +1,4 @@
-const { Category, Paket } = require("../models");
+const { Category, Paket, PaketCustom } = require("../models");
 
 class PaketController {
   static async getPakets(req, res, next) {
@@ -149,6 +149,14 @@ class PaketController {
       });
     } catch (error) {
       next(error);
+    }
+  }
+
+  static async customPaket(req,res,next){
+    try {
+      
+    } catch (error) {
+      next(error)
     }
   }
 }

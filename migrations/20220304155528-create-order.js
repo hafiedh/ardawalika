@@ -23,9 +23,17 @@ module.exports = {
       },
       paket_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
           model: "Pakets",
+          key: "id",
+          onUpdade: "CASCADE",
+          onDelete: "CASCADE",
+        },
+      },
+      paket_custom_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "PaketCustoms",
           key: "id",
           onUpdade: "CASCADE",
           onDelete: "CASCADE",

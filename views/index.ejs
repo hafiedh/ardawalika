@@ -1,5 +1,6 @@
-<% if(true){ %> <%- include('partials/navbar-home') %> <% } else{ %> <%-
-include('partials/navbar-general') %> <% } %>
+<% if(!navbar){ %> <%- include('partials/navbar-general') %> <% } else{ %> <%-
+include('partials/navbar-home') %> <% } %>
+
 <!--  -->
 <section class="home">
   <div class="home-top">

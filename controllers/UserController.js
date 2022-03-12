@@ -55,9 +55,13 @@ class UserController {
       const user = await User.findOne({
         where: { email: { [Op.eq]: email } },
       });
-      if (!user) throw { status: 404, message: "User not found" };
+      if (!user) {
+        return res.redirect("/login?error=User not found");
+      }
       const isMatch = await decode(password, user.password);
-      if (!isMatch) throw { status: 400, message: "Wrong Email or Password" };
+      if (!isMatch) {
+        return res.redirect("/login?error=Wrong Email or Password");
+      }
       const token = sign({
         email,
         username: user.username,
@@ -65,6 +69,7 @@ class UserController {
         role: user.role,
       });
       req.session.token = token;
+      req.session.user = user;
       req.session.navbar = true;
       if (user.role === "admin") {
         res.redirect("/admin/dashboard");
@@ -222,7 +227,8 @@ class UserController {
     try {
       req.session.destroy((err) => {
         if (err) throw err;
-        res.redirect("/");
+        console.log(req.session);
+        res.redirect("/login");
       });
     } catch (error) {
       next(error);

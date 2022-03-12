@@ -6,12 +6,11 @@ class CategoryController {
       let navbar = false;
       const data = await Category.findAll();
       if (req.session) {
-        navbar = true;
+        navbar = req.session.navbar;
         res.render("index", { data, navbar });
       } else {
         res.render("index", { data, navbar });
       }
-      // res.status(200).json({ data });
     } catch (error) {
       next(error);
     }

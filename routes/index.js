@@ -8,6 +8,8 @@ const OrderRoute = require("./OrderRoute");
 
 const AdminRouter = require("./AdminRoute");
 const CategoryController = require("../controllers/CategoryController");
+const { route } = require("./OrderRoute");
+const { render } = require("ejs");
 
 router.use("/users", UserRouter);
 router.use("/products", ProductRouter);
@@ -48,7 +50,13 @@ router.get("/order", (req, res) => {
 
 //LOGIN ROUTES
 router.get("/login", (req, res) => {
-  res.render("login");
+  let error = "";
+  if (req.query.error) {
+    error = req.query.error;
+    res.render("login", { error: req.query.error });
+  } else {
+    res.render("login", { error: error });
+  }
   console.log("login");
 });
 
@@ -80,12 +88,6 @@ router.get("/resetdone", (req, res) => {
 router.get("/tentang-kami", (req, res) => {
   res.render("tentang-kami");
   console.log("tentang-kami");
-});
-
-// Riwayat Pemesanan
-router.get("/riwayat-pemesanan", (req, res) => {
-  res.render("riwayat-pemesanan");
-  console.log("riwayat-pemesanan");
 });
 
 // TES DETAIL DOKUMENTASI //
