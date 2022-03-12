@@ -103,9 +103,9 @@ router.get("/profile", (req, res) => {
 });
 
 // tesDates //
-router.get("/tesDate", (req, res) => {
-  res.render("tesDate");
-  console.log("tesDate");
+router.get("/konfirmasi", (req, res) => {
+  res.render("konfirmasi");
+  console.log("konfirmasi");
 });
 
 module.exports = router;
