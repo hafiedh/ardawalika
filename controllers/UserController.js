@@ -71,16 +71,11 @@ class UserController {
       req.session.token = token;
       req.session.user = user;
       req.session.navbar = true;
-      // if (user.role === "admin") {
-      //   res.redirect("/admin/dashboard");
-      // } else {
-      //   res.redirect("/");
-      // }
-      res.status(200).json({
-        status: 200,
-        message: "Login success",
-        token,
-      });
+      if (user.role === "admin") {
+        res.redirect("/admin/dashboard");
+      } else {
+        res.redirect("/");
+      }
     } catch (err) {
       next(err);
     }
@@ -203,6 +198,22 @@ class UserController {
     }
   }
 
+  static async getProfile(req, res, next) {
+    try {
+      const { id } = req.params;
+      const user = await User.findOne({
+        where: { id },
+        attributes: { exclude: ["password"] },
+      });
+      if (!user) {
+        throw { status: 404, message: "User not found" };
+      }
+      res.render("profile", { Users:user });
+    } catch (error) {
+      next(error);
+    }
+
+  }
   static async updateUserPhoto(req, res, next) {
     try {
       const { id, email } = req.user;

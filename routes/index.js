@@ -93,10 +93,10 @@ router.get("/dokumentasi-detail", (req, res) => {
   console.log("dokumentasi-detail");
 });
 
-// PROFILE ROUTES //
-router.get("/profile", (req, res) => {
-  res.render("profile");
-  console.log("profile");
+// tesDates //
+router.get("/konfirmasi", (req, res) => {
+  res.render("konfirmasi");
+  console.log("konfirmasi");
 });
 
 // tesDates //

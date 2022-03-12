@@ -36,4 +36,19 @@
       color: #818181;
     }
   }
+  .simpan-konfirmasi {
+    border: none;
+    padding: 0.8rem 2.8rem;
+    border-radius: 2.5rem;
+    background-color: #070504;
+    color: white;
+    width: 100%;
+    margin: 1rem 0rem;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out; /* the property that is going to be changed from from button to button:hover*/
+    /*animation: cloudAnimation 2s infinite; */
+  }
+  .simpan-konfirmasi:hover {
+    background-color: $lightblue;
+  }
 }

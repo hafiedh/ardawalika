@@ -40,8 +40,9 @@ include('partials/navbar-home') %> <% } %>
   </div>
   <div class="paket-cards">
     <% data.forEach(e => { %>
-      <a class="kartu" style="background-image: url('<%= e.img_url %>')" href="pakets/<%= e.id %>">
-        <div id="paket-korporat">
+      <a class="kartu" style="position: relative;" href="pakets/<%= e.id %>">
+        <img src="<%= e.img_url %>" alt="Package Image" width="100%" height="100%" style="object-fit: cover; position: absolute;">
+        <div id="paket-korporat" style="position: absolute;">
           <h3>Paket Acara <%= e.name %></h3>
         </div>
       </a>
