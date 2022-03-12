@@ -154,7 +154,17 @@ class PaketController {
 
   static async customPaket(req,res,next){
     try {
-    
+      const { name_paket, dekorasi_id, catering_id, rias_id, dokumentasi_id, entertainment_id, category_id } = req.body;
+      const data = await PaketCustom.create({
+        name_paket,
+        dekorasi_id,
+        catering_id,
+        rias_id,
+        dokumentasi_id,
+        entertainment_id,
+        category_id,
+      });
+      res.status(200).json({ data });
       
     } catch (error) {
       next(error)

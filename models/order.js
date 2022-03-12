@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       tanggal_acara: DataTypes.STRING,
       riwayat_pesanan: DataTypes.DATE,
       total_harga: DataTypes.INTEGER,
+      midtrans_response: DataTypes.TEXT,
       catering_status:{
         type: DataTypes.BOOLEAN,
         defaultValue: false,

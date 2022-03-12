@@ -1,6 +1,8 @@
 const { Order, Paket, Dekorasi, Catering, Rias, Category, Dokumentasi, Entertainment, PaketCustom} = require("../models");
 const midtransClient = require("midtrans-client");
 const { Op } = require("sequelize");
+const uuid = require("uuid")
+
 
 let coreApi = new midtransClient.CoreApi({
   isProduction: false,
@@ -11,9 +13,10 @@ let coreApi = new midtransClient.CoreApi({
 class OrderController {
   static async createOrder(req, res, next) {
     try {
+      const order_id = uuid.v4()
       const { id, email, fullname, phoneNumber, address } = req.user;
-      const { paket_id } = req.params;
-      const { tanggal_acara, total_harga, nama_bank } = req.body;
+      const { paket_id, total_harga } = req.params;
+      const { tanggal_acara, nama_bank } = req.body;
 
       const paket = await Paket.findOne({
         where: { id: paket_id },
@@ -28,7 +31,7 @@ class OrderController {
         tanggal_acara: tanggal_acara,
         riwayat_pesanan: new Date(),
         total_harga: total_harga,
-        midtrans_response: "",
+        midtrans_response: null
       });
 
       if (!result) throw { status: 400, message: "Register failed" };
@@ -39,7 +42,7 @@ class OrderController {
           bank: nama_bank,
         },
         transaction_details: {
-          order_id: result.id,
+          order_id: order_id,
           gross_amount: total_harga,
         },
         item_details: {
@@ -57,9 +60,11 @@ class OrderController {
       };
       const charge = await coreApi.charge(data);
       if (charge.status_code === "200" || charge.status_code === "201") {
-        await Order.update(
+        const update = await Order.update(
           { midtrans_response: JSON.stringify(charge) },
-          { where: { id: result.id } }
+          { where: { 
+            id: result.id,
+           }}
         );
         res.status(200).json({
           message: "Order created",
@@ -70,6 +75,7 @@ class OrderController {
             riwayat_pesanan: result.riwayat_pesanan,
             total_harga: result.total_harga,
             midtrans_response: charge,
+            update
           },
         });
       } else {
@@ -80,78 +86,94 @@ class OrderController {
     }
   }
 
-  static async crateOrderCustom(req,res,next) {
+  static async createOrderCustom(req,res,next) {
+    try {
+      const order_id = uuid.v4()
       const { id, email, fullname, phoneNumber, address } = req.user;
       const { paket_id } = req.params;
       const { tanggal_acara, nama_bank } = req.body;
 
       const paket = await PaketCustom.findOne({
+        attributes: {exclude: ["createdAt", "updateAt"]},
         where: { id: paket_id },
-         include:[Dekorasi, Catering, Rias, Category, Dokumentasi, Entertainment]
+         include:[Dekorasi, Catering, Rias, Dokumentasi, Entertainment]
+      })
+      if (!paket) throw { status: 404, message: "Paket not found" };
+
+      let total_harga = 0;
+      let data_harga = {
+          Dekorasi: paket.Dekorasi.harga_dekorasi,
+          Catering: paket.Catering.harga_catering,
+          Rias: paket.Ria.harga_rias,
+          Dokumentasi: paket.Dokumentasi.harga_dokumentasi,
+          Entertainment: paket.Entertainment.harga_entertainment
+      };
+
+      for(let i in data_harga){
+          total_harga += data_harga[i];
+      }
+
+     const result = await Order.create({
+        name_order: paket.name_paket,
+        user_id: id,
+        paket_custom_id: paket_id,
+        tanggal_acara: tanggal_acara,
+        riwayat_pesanan: new Date(),
+        total_harga: total_harga,
+        midtrans_response: null
       });
-
-      console.log(paket)
+     
+     if (!result) throw { status: 400, message: "Register failed" };
+      const data = {
+        payment_type: "bank_transfer",
+        bank_transfer: {
+          bank: nama_bank,
+        },
+        transaction_details: {
+          order_id: order_id,
+          gross_amount: total_harga,
+        },
+        item_details: {
+          id: paket_id,
+          price: total_harga,
+          quantity: 1,
+          name: paket.name_paket,
+        },
+        customer_details: {
+          fullname: fullname,
+          email: email,
+          phone: phoneNumber,
+          address: address,
+        },
+      };
+       const charge = await coreApi.charge(data);
+      if (charge.status_code === "200" || charge.status_code === "201") {
+        const update = await Order.update(
+          { midtrans_response: JSON.stringify(charge) },
+          { where: { 
+            id: result.id,
+           }}
+        );
+        res.status(200).json({
+          message: "Order created",
+          data: {
+            id: result.id,
+            name_order: result.name_order,
+            tanggal_acara: result.tanggal_acara,
+            riwayat_pesanan: result.riwayat_pesanan,
+            total_harga: result.total_harga,
+            midtrans_response: charge,
+            update
+          },
+        });
       
-      // if (!paket) throw { status: 404, message: "Paket not found" };
-
-      // const result = await Order.create({
-      //   name_order: paket.name_paket,
-      //   user_id: id,
-      //   paket_custom_id: paket_id,
-      //   tanggal_acara: tanggal_acara,
-      //   riwayat_pesanan: new Date(),
-      //   total_harga: total_harga,
-      //   midtrans_response: "",
-      // });
-
-      // if (!result) throw { status: 400, message: "Register failed" };
-
-      // const data = {
-      //   payment_type: "bank_transfer",
-      //   bank_transfer: {
-      //     bank: nama_bank,
-      //   },
-      //   transaction_details: {
-      //     order_id: result.id,
-      //     gross_amount: total_harga,
-      //   },
-      //   item_details: {
-      //     id: paket_id,
-      //     price: total_harga,
-      //     quantity: 1,
-      //     name: paket.name_paket,
-      //   },
-      //   customer_details: {
-      //     fullname: fullname,
-      //     email: email,
-      //     phone: phoneNumber,
-      //     address: address,
-      //   },
-      // };
-      // const charge = await coreApi.charge(data);
-      // if (charge.status_code === "200" || charge.status_code === "201") {
-      //   await Order.update(
-      //     { midtrans_response: JSON.stringify(charge) },
-      //     { where: { id: result.id } }
-      //   );
-      //   res.status(200).json({
-      //     message: "Order created",
-      //     data: {
-      //       id: result.id,
-      //       name_order: result.name_order,
-      //       tanggal_acara: result.tanggal_acara,
-      //       riwayat_pesanan: result.riwayat_pesanan,
-      //       total_harga: result.total_harga,
-      //       midtrans_response: charge,
-      //     },
-      //   });
-      // } else {
-      //   throw { status: 400, message: "Charge failed" };
-      // }
+      } else {
+        throw { status: 400, message: "Charge failed" };
+      }
     } catch (err) {
       next(err);
+    }
   }
-
   static async handleNotification(req, res, next) {
     try {
 
