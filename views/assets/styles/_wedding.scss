@@ -190,7 +190,10 @@
     padding: 0.9em;
     text-align: center;
     border-radius: 8px;
-    a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    &:hover {
       text-decoration: none;
       color: #ffffff;
       font-size: 16px;
@@ -252,6 +255,8 @@
       align-items: center;
     }
     &__button {
+      text-decoration: none;
+      color: #ffffff;
       padding: 1rem 4.75rem;
     }
   }
@@ -310,6 +315,8 @@
       font-size: 28px;
     }
     &__button {
+      text-decoration: none;
+      color: #ffffff;
       padding: 1.4rem 8rem;
     }
   }

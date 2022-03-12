@@ -89,7 +89,7 @@
           <div class="wedding__box2"><%= e.ket_paket %></div>
           <div class="wedding__box3">
             <div class="wedding__price"><%= new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(e.harga_paket) %></div>
-            <div class="wedding__button"><a href="/detail/<%= e.id %>">Pesan</a></div>
+            <a class="wedding__button" href="/detail/<%= e.id %>">Pesan</a>
           </div>
         </div>
       </div>
