@@ -95,10 +95,11 @@ router.get("/dokumentasi-detail", (req, res) => {
   console.log("dokumentasi-detail");
 });
 
-// tesDates //
+// Page Konfirmasi //
 router.get("/konfirmasi", (req, res) => {
   res.render("konfirmasi");
   console.log("konfirmasi");
 });
+
 
 module.exports = router;
