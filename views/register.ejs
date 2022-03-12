@@ -19,19 +19,24 @@
         </div>
 
         <!-- EMAIL INPUT -->
-        <form action="#">
+        <form action="/users/register" method="post">
           <div class="register__name">
-            <input type="name" placeholder="Nama pengguna" required />
+            <input type="name" name="username" placeholder="Nama pengguna" required />
             <div class="register__icon"></div>
           </div>
           <div class="register__email">
-            <input type="text" placeholder="Email" required />
+            <input type="text" name="email" placeholder="Email" required />
             <div class="register__icon"></div>
           </div>
           <div class="register__pass">
-            <input type="password" placeholder="Kata Sandi" required />
+            <input type="password" name="password" placeholder="Kata Sandi" required />
             <div class="register__icon"></div>
           </div>
+
+           <!-- ERROR -->
+           <% if (error){ %> 
+            <div><strong style="color: red;"><%= error %> </strong></div><br>
+          <%} %>
 
           <!-- INGAT SAYA-CHECK BOX -->
           <div class="register__box">

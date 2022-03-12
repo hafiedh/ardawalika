@@ -47,19 +47,21 @@ router.get("/keluarga", (req, res) => {
 
 //LOGIN ROUTES
 router.get("/login", (req, res) => {
-  let error = "";
-  if (req.query.error) {
-    error = req.query.error;
-    res.render("login", { error: req.query.error });
-  } else {
-    res.render("login", { error: error });
+  let error = ''
+  if (req.query.error){
+    error = req.query.error
   }
+  res.render("login", {error});
   console.log("login");
 });
 
 //REGISTER ROUTES
 router.get("/register", (req, res) => {
-  res.render("register");
+  let error = ''
+  if (req.query.error){
+    error = req.query.error
+  }
+  res.render("register", {error});
   console.log("register");
 });
 
