@@ -96,8 +96,11 @@
     }
     .edit-password__change {
       //background-color: pink;
-      margin: 2rem 0rem;
+      margin: 0rem 0rem;
       display: none;
+      label {
+        margin: 2.2rem 0rem 0.5rem 0rem;
+      }
     }
     #profile-input-password {
       label {
@@ -110,6 +113,12 @@
 .inactive {
   label {
     color: #9e9e9e;
+  }
+}
+
+.active {
+  input {
+    background-color: white;
   }
 }
 
