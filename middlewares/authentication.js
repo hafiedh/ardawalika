@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 
 async function authentication(req, res, next) {
   try {
-      const token = req.headers.access_token;
+      const token = req.session.token;
       const payload = verify(token);
       const exp = payload.exp;
       if (Date.now() >= exp * 1000)

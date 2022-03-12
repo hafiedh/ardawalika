@@ -35,4 +35,8 @@ router.get("/logout", (req, res) => {
   console.log("logout");
 });
 router.post("/logout", UserController.logout);
+// PROFILE ROUTES //
+
+router.get("/profile/:id", UserController.getProfile);
+
 module.exports = router;
