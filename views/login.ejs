@@ -15,8 +15,12 @@
         <!-- LOGIN HEADER -->
         <div class="login__header">
           Hai, <br />
-          Selamat Datang
+          Selamat Datang <br />
         </div>
+        <% if(error) { %>
+        <p style="color: red"><%= error %></p>
+        <br />
+        <% } %>
 
         <!-- EMAIL INPUT -->
         <form action="/users/login" method="post">

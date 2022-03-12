@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Category.hasMany(models.Paket, { foreignKey: "category_id" });
-      Category.hasMany(models.Order, { foreignKey: "category_id" });
+      Category.hasMany(models.PaketCustom, { foreignKey: "category_id" });
     }
   }
   Category.init(

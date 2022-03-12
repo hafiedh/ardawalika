@@ -1,17 +1,22 @@
-<%- include('./partials/navbar-general'); %>
-
+<%- include('./partials/navbar-home'); %>
 <div class="wrapper">
   <h1 class="title">Riwayat Saya</h1>
+  <% orders.forEach((order) => { %>
   <div class="history-card">
-    <img class="history-card__img" src="img/thumbnail_order_history.png">
+    <img class="history-card__img" src= <%= order.img_url %>  />
     <div class="history-card__text">
-      <h1 class="history-card__order-code">#SAS0806</h1>
-      <h1 class="history-card__package-title">Paket Perfect Platinum</h1>
-      <p class="history-card__total">Total Bayar - <b>Rp130.000.000</b></p>
-      <p class="history-card__event-date">Tanggal Acara - <b>28 Februari 2022</b></p>
+      <h1 class="history-card__order-code"><%= order.id %></h1>
+      <h1 class="history-card__package-title"><%= order.name_order %></h1>
+      <p class="history-card__total">
+        Total Bayar : <b>Rp.<%= order.total_harga %></b>
+      </p>
+      <p class="history-card__event-date">
+        Tanggal Acara : <b><%= order.tanggal_acara %></b>
+      </p>
     </div>
     <button class="history-card__button">Detail</button>
   </div>
+  <% }); %>
 </div>
 
 <%- include('./partials/footer'); %>

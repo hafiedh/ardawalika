@@ -13,65 +13,12 @@ module.exports = {
       },
       user_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: "Users",
           key: "id",
+          onUpdade: "CASCADE",
           onDelete: "CASCADE",
-          onUpdate: "CASCADE",
-        },
-      },
-      categori_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Categories",
-          key: "id",
-          onDelete: "CASCADE",
-          onUpdate: "CASCADE",
-        },
-      },
-      dekorasi_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Dekorasis",
-          key: "id",
-          onDelete: "CASCADE",
-          onUpdate: "CASCADE",
-        },
-      },
-      catering_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Caterings",
-          key: "id",
-          onDelete: "CASCADE",
-          onUpdate: "CASCADE",
-        },
-      },
-      entertainment_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Entertainments",
-          key: "id",
-          onDelete: "CASCADE",
-          onUpdate: "CASCADE",
-        },
-      },
-      rias_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Rias",
-          key: "id",
-          onDelete: "CASCADE",
-          onUpdate: "CASCADE",
-        },
-      },
-      dokumentasi_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Dokumentasis",
-          key: "id",
-          onDelete: "CASCADE",
-          onUpdate: "CASCADE",
         },
       },
       paket_id: {
@@ -79,18 +26,32 @@ module.exports = {
         references: {
           model: "Pakets",
           key: "id",
+          onUpdade: "CASCADE",
           onDelete: "CASCADE",
-          onUpdate: "CASCADE",
         },
       },
-      jadwal: {
+      paket_custom_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "PaketCustoms",
+          key: "id",
+          onUpdade: "CASCADE",
+          onDelete: "CASCADE",
+        },
+      },
+      tanggal_acara: {
         type: Sequelize.STRING,
       },
-      history: {
-        type: Sequelize.STRING,
+      riwayat_pesanan: {
+        type: Sequelize.DATE,
       },
       total_harga: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      midtrans_response: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

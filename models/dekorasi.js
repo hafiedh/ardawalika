@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Dekorasi.hasMany(models.Paket, { foreignKey: "dekorasi_id" });
-      Dekorasi.hasMany(models.Order, { foreignKey: "dekorasi_id" });
+      Dekorasi.hasMany(models.PaketCustom, { foreignKey: "dekorasi_id" });
     }
   }
   Dekorasi.init(
@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       name_dekorasi: DataTypes.STRING,
       harga_dekorasi: DataTypes.INTEGER,
       keterangan_dekorasi: DataTypes.STRING,
-     
     },
     {
       sequelize,

@@ -29,4 +29,10 @@ router.post(
   imgKit,
   UserController.updateUserPhoto
 );
+
+router.get("/logout", (req, res) => {
+  res.render("logout");
+  console.log("logout");
+});
+router.post("/logout", UserController.logout);
 module.exports = router;

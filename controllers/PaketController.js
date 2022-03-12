@@ -1,4 +1,4 @@
-const { Category, Paket } = require("../models");
+const { Category, Paket, PaketCustom } = require("../models");
 
 class PaketController {
   static async getPakets(req, res, next) {
@@ -127,6 +127,37 @@ class PaketController {
       });
     } catch (error) {
       next(error);
+    }
+  }
+
+  static async updatePaket(req, res, next) {
+    try {
+      const id = req.session.paket_id;
+      const img_url = req.body.image;
+      await Paket.update(
+        {
+          img_url,
+        },
+        {
+          where: {
+            id,
+          },
+        }
+      );
+      res.status(200).json({
+        message: `Paket ${id} berhasil diupdate`,
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async customPaket(req,res,next){
+    try {
+    
+      
+    } catch (error) {
+      next(error)
     }
   }
 }
