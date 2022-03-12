@@ -71,11 +71,16 @@ class UserController {
       req.session.token = token;
       req.session.user = user;
       req.session.navbar = true;
-      if (user.role === "admin") {
-        res.redirect("/admin/dashboard");
-      } else {
-        res.redirect("/");
-      }
+      // if (user.role === "admin") {
+      //   res.redirect("/admin/dashboard");
+      // } else {
+      //   res.redirect("/");
+      // }
+      res.status(200).json({
+        status: 200,
+        message: "Login success",
+        token,
+      });
     } catch (err) {
       next(err);
     }

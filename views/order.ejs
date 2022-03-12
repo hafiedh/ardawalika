@@ -2,7 +2,7 @@
 
 <section class="order-filler"></section>
 <section class="order">
-    <h3>Perfect Platinum</h3>
+    <h3>Perfect <%= name_paket %></h3>
     <p>Paket super lengkap dengan spesifikasi layanan paling tinggi.</p>
     <div class="order__box">
         <div class="box-options" id="active-left">
@@ -73,126 +73,100 @@
             <div class="detail-paket-keterangan">
                 <h4>Detail Paket</h4>
             </div>
+            <% 
+                const total = dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias + dokumentasi.harga_dokumentasi + entertainment.harga_entertainment;
+
+                function toRupiah(price) {
+                    return new Intl.NumberFormat("id-ID", {
+                        style: "currency",
+                        currency: "IDR"
+                    }).format(price);
+                }
+            %>
             <div class="detail-paket-choices">
                 <div class="dekorasi info">
                     <div class="info-keterangan">
-                        <h4>Dekorasi Platinum</h4>
+                        <h4>Dekorasi <%= dekorasi.name_dekorasi %></h4>
                         <div class="sect">
-                            <h4>Rp. 22.000.000</h4>
+                            <h4><%= toRupiah(dekorasi.harga_dekorasi) %></h4>
                             <img src="/img/info.svg">
                         </div>
                     </div>
                     <div class="paket-detail paket-detail-dekorasi">
                         <ul>
-                            <li>Dekorasi pelaminan maks 10 meter</li>
-                            <li>Teman pelaminan (fresh flower & artificial)</li>
-                            <li>1 Set meja & kursi akad</li>
-                            <li>1 Backdrop Music</li>
-                            <li>1 Spot galeri photo</li>
-                            <li>1 Spot photoboot</li>
-                            <li>6 Pilar jalan & karpet jalan</li>
-                            <li>3 Gate lengkung / kotak</li>
-                            <li>1 Pergola masuk 3x4 meter</li>
-                            <li>2 Meja penerima tamu & kotak angpau</li>
-                            <li>Welcome sign</li>
+                            <% dekorasi.keterangan_dekorasi.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
                         </ul>
                     </div>
                 </div>
                 <div class="rias info">
                     <div class="info-keterangan">
-                        <h4>Rias Platinum</h4>
+                        <h4>Rias <%= rias.name_rias %> </h4>
                         <div class="sect">
-                            <h4>Rp. 23.000.000</h4>
+                            <h4><%= toRupiah(rias.harga_rias) %> </h4>
                             <img src="/img/info.svg">
                         </div>
                     </div>
                     <div class="paket-detail paket-detail-rias">
                         <ul>
-                            <li>Make up pengantin akad & resepsi</li>
-                            <li>Busana pengantin akad & resepsi</li>
-                            <li>Handboquet</li>
-                            <li>Make up 2 & busana pasang orang tua</li>
-                            <li>Make up & kebaya untuk 1 pasang pager ayu</li>
-                            <li>Make up & kebaya untuk 1 pasang pager bagus</li>
+                            <% rias.keterangan_rias.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
                         </ul>
                     </div>
                 </div>
                 <div class="katering info">
                     <div class="info-keterangan">
-                        <h4>Katering Platinum</h4>
+                        <h4>Katering <%= catering.name_catering %> </h4>
                         <div class="sect">
-                            <h4>Rp. 33.000.000</h4>
+                            <h4><%= toRupiah(catering.harga_catering) %> </h4>
                             <img src="/img/info.svg">
                         </div>
                     </div>
                     <div class="paket-detail paket-detail-katering">
                         <ul>
-                            <li>1000 Pax</li>
-                            <li>7 Buffet</li>
-                            <li>3 Foodstall</li>
-                            <li>100 Pax Coffee Break</li>
-                            <li>Dekorasi area katering</li>
-                            <li>Meja Katering Pengantin & VIP</li>
+                            <% catering.keterangan_catering.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
                         </ul>
                     </div>
                 </div>
                 <div class="documentation info">
                     <div class="info-keterangan">
-                        <h4>Dokumentasi Platinum</h4>
+                        <h4>Dokumentasi <%= dokumentasi.name_dokumentasi %> </h4>
                         <div class="sect">
-                            <h4>Rp. 13.000.000</h4>
+                            <h4><%= toRupiah(dokumentasi.harga_dokumentasi) %> </h4>
                             <img src="/img/info.svg">
                         </div>
                     </div>
                     <div class="paket-detail paket-detail-documentation">
                         <ul>
-                            <li>Liputan akad & resepsi</li>
-                            <li>1 Wedding album magazine</li>
-                            <li>1 Group album magazine</li>
-                            <li>1 Custom box eksklusif</li>
-                            <li>1x cetak foto 16R + Frame</li>
-                            <li>Video liputan durasi 15-20 menit</li>
-                            <li>Photo & video edit</li>
-                            <li>USB photo & all files</li>
+                            <% dokumentasi.keterangan_dokumentasi.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
                         </ul>
                     </div>
                 </div>
                 <div class="hiburan info">
                     <div class="info-keterangan">
-                        <h4>Katering Platinum</h4>
+                        <h4>Entertainment <%= entertainment.name_entertainment %> </h4>
                         <div class="sect">
-                            <h4>Rp. 30.000.000</h4>
+                            <h4><%= toRupiah(entertainment.harga_entertainment) %> </h4>
                             <img src="/img/info.svg">
                         </div>
                     </div>
                     <div class="paket-detail paket-detail-hiburan">
                         <ul>
-                            <li>2 Vokalis</li>
-                            <li>1 Keyboard</li>
-                            <li>1 Saxophone / biola</li>
-                            <li>1 Gitar</li>
-                            <li>1 Bass</li>
-                            <li>Sound system 5000 watt</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mc info">
-                    <div class="info-keterangan">
-                        <h4>MC Platinum</h4>
-                        <div class="sect">
-                            <h4>Rp. 9.000.000</h4>
-                            <img src="/img/info.svg">
-                        </div>
-                    </div>
-                    <div class="paket-detail paket-detail-mc">
-                        <ul>
-                            <li>MC akad & resepsi</li>
+                            <% entertainment.keterangan_entertainment.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
                         </ul>
                     </div>
                 </div>
                 <div class="tambahan info">
                     <div class="info-keterangan">
-                        <h4>Hiburan Platinum</h4>
+                        <h4>Tambahan</h4>
                         <div class="sect">
                             <h4>Rp. 0</h4>
                             <img src="/img/info.svg">
@@ -205,7 +179,7 @@
                 <div class="detail-paket-biaya">
                     <h4>Total Bayar</h4>
                     <div class="sect">
-                        <h4>Rp. 130.000.000</h4>
+                        <h4><%= toRupiah(total) %> </h4>
                     </div>
                 </div>
                 <div class="kustom-pesan">
@@ -230,26 +204,18 @@
             <div class="container">
                 <div class="info">
                     <div class="info-keterangan">
-                        <h4>Dekorasi Platinum</h4>
+                        <h4>Dekorasi <%= dekorasi.name_dekorasi %> ></h4>
                         <img src="/img/info.svg">
                     </div>
                     <div class="sect">
-                        <h4>Rp. 22.000.000</h4>
+                        <h4><%= toRupiah(dekorasi.harga_dekorasi) %> </h4>
                     </div>
                 </div>
                 <div class="kustomisasi-detail kustomisasi-detail-dekorasi">
                     <ul>
-                        <li>Dekorasi pelaminan maks 10 meter</li>
-                        <li>Teman pelaminan (fresh flower & artificial)</li>
-                        <li>1 Set meja & kursi akad</li>
-                        <li>1 Backdrop Music</li>
-                        <li>1 Spot galeri photo</li>
-                        <li>1 Spot photoboot</li>
-                        <li>6 Pilar jalan & karpet jalan</li>
-                        <li>3 Gate lengkung / kotak</li>
-                        <li>1 Pergola masuk 3x4 meter</li>
-                        <li>2 Meja penerima tamu & kotak angpau</li>
-                        <li>Welcome sign</li>
+                        <% dekorasi.keterangan_dekorasi.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
                     </ul>
                 </div>
             </div>
@@ -257,100 +223,72 @@
                 <div class="info">
                     <div class="kustomisasi-info-container"></div>
                     <div class="info-keterangan">
-                        <h4>Rias Platinum</h4>
+                        <h4>Rias <%= rias.name_rias %> </h4>
                         <img src="/img/info.svg">
                     </div>
                     <div class="sect">
-                        <h4>Rp. 23.000.000</h4>
+                        <h4><%= toRupiah(rias.harga_rias) %> </h4>
                     </div>
                 </div>
                 <div class="kustomisasi-detail kustomisasi-detail-dekorasi">
                     <ul id="kustomisasi-rias">
-                        <li>Rias Platinum</li>
-                        <li>Rias Gold</li>
-                        <li>Rias Silver</li>
-                        <li>Rias Bronze</li>
+                        <% rias.keterangan_rias.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
                     </ul>
                 </div>
             </div>
             <div class="container">
                 <div class="info">
                     <div class="info-keterangan">
-                        <h4>Katering Platinum</h4>
+                        <h4>Katering <%= catering.name_catering %> </h4>
                         <img src="/img/info.svg">
                     </div>
                     <div class="sect">
-                        <h4>Rp. 33.000.000</h4>
+                        <h4><%= toRupiah(catering.harga_catering) %> </h4>
                     </div>
                 </div>
                 <div class="kustomisasi-detail kustomisasi-detail-katering">
                     <ul>
-                        <li>1000 Pax</li>
-                        <li>7 Buffet</li>
-                        <li>3 Foodstall</li>
-                        <li>100 Pax Coffee Break</li>
-                        <li>Dekorasi area katering</li>
-                        <li>Meja Katering Pengantin & VIP</li>
+                        <% catering.keterangan_catering.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
                     </ul>
                 </div>
             </div>
             <div class="container">
                 <div class="info">
                     <div class="info-keterangan">
-                        <h4>Dokumentasi Platinum</h4>
+                        <h4>Dokumentasi <%= dokumentasi.name_dokumentasi %> </h4>
                         <img src="/img/info.svg">
                     </div>
                     <div class="sect">
-                        <h4>Rp. 13.000.000</h4>
+                        <h4><%= toRupiah(dokumentasi.harga_dokumentasi) %> </h4>
                     </div>
                 </div>
                 <div class="kustomisasi-detail kustomisasi-detail-documentation">
                     <ul>
-                        <li>Liputan akad & resepsi</li>
-                        <li>1 Wedding album magazine</li>
-                        <li>1 Group album magazine</li>
-                        <li>1 Custom box eksklusif</li>
-                        <li>1x cetak foto 16R + Frame</li>
-                        <li>Video liputan durasi 15-20 menit</li>
-                        <li>Photo & video edit</li>
-                        <li>USB photo & all files</li>
+                        <% dokumentasi.keterangan_dokumentasi.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
                     </ul>
                 </div>
             </div>
             <div class="container">
                 <div class="info">
                     <div class="info-keterangan">
-                        <h4>Hiburan Platinum</h4>
+                        <h4>Entertainment <%= entertainment.name_entertainment %></h4>
                         <img src="/img/info.svg">
                     </div>
                     <div class="sect">
-                        <h4>Rp. 30.000.000</h4>
+                        <h4><%= toRupiah(entertainment.harga_entertainment) %></h4>
                     </div>
                 </div>
                 <div class="kustomisasi-detail kustomisasi-detail-hiburan">
                     <ul>
-                        <li>2 Vokalis</li>
-                        <li>1 Keyboard</li>
-                        <li>1 Saxophone / biola</li>
-                        <li>1 Gitar</li>
-                        <li>1 Bass</li>
-                        <li>Sound system 5000 watt</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="container">
-                <div class="info">
-                    <div class="info-keterangan">
-                        <h4>MC Platinum</h4>
-                        <img src="/img/info.svg">
-                    </div>
-                    <div class="sect">
-                        <h4>Rp. 9.000.000</h4>
-                    </div>
-                </div>
-                <div class="kustomisasi-detail kustomisasi-detail-mc">
-                    <ul>
-                        <li>MC akad & resepsi</li>
+                        <% entertainment.keterangan_entertainment.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
                     </ul>
                 </div>
             </div>
@@ -371,7 +309,7 @@
             <div class="kustomisasi-biaya">
                 <h4>Total Bayar</h4>
                 <div class="sect">
-                    <h4>Rp. 130.000.000</h4>
+                    <h4><%= toRupiah(total) %> </h4>
                 </div>
             </div>
             <div class="kustom-pesan">

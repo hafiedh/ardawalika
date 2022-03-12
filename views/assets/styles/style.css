@@ -578,8 +578,24 @@ a {
 }
 
 .paket #paket-korporat {
+<<<<<<< HEAD
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(15, 29, 64, 0.9)), color-stop(58.66%, rgba(15, 29, 64, 0))), url("/img/paket-corporate.png");
   background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 58.66%), url("/img/paket-corporate.png");
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(15, 29, 64, 0.9)), color-stop(80%, rgba(15, 29, 64, 0)));
+  background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 80%);
+  height: 100%;
+>>>>>>> origin/develop
 }
 
 .paket #paket-pernikahan {
@@ -806,6 +822,8 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  -webkit-box-sizing: hidden;
+          box-sizing: hidden;
   border-radius: 0.8rem;
   width: 100%;
   max-width: 38rem;
@@ -1727,9 +1745,12 @@ footer h3 {
   padding: 0.9em;
   text-align: center;
   border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
 
-.wedding__button a {
+.wedding__button:hover {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
@@ -1793,6 +1814,8 @@ footer h3 {
             align-items: center;
   }
   .wedding__button {
+    text-decoration: none;
+    color: #ffffff;
     padding: 1rem 4.75rem;
   }
 }
@@ -1850,6 +1873,8 @@ footer h3 {
     font-size: 28px;
   }
   .wedding__button {
+    text-decoration: none;
+    color: #ffffff;
     padding: 1.4rem 8rem;
   }
 }

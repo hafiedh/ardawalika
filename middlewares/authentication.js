@@ -4,8 +4,7 @@ const { Op } = require("sequelize");
 
 async function authentication(req, res, next) {
   try {
-    if (req.session) {
-      const token = req.session.token;
+      const token = req.headers.access_token;
       const payload = verify(token);
       const exp = payload.exp;
       if (Date.now() >= exp * 1000)
@@ -18,9 +17,6 @@ async function authentication(req, res, next) {
       if (!user) throw { status: 404, message: "User not found" };
       req.user = user;
       next();
-    } else {
-      throw { status: 400, message: "Please Login" };
-    }
   } catch (err) {
     next(err);
   }

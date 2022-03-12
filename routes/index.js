@@ -8,6 +8,8 @@ const OrderRoute = require("./OrderRoute");
 
 const AdminRouter = require("./AdminRoute");
 const CategoryController = require("../controllers/CategoryController");
+
+const DetailController = require("../controllers/DetailController");
 const { route } = require("./OrderRoute");
 const { render } = require("ejs");
 
@@ -17,6 +19,7 @@ router.use("/categories", CategoryRouter);
 router.use("/pakets", PaketRoute);
 router.use("/admin", AdminRouter);
 router.use("/orders", OrderRoute);
+router.use("/detail/:id", DetailController.getDetail);
 router.use(errorHandler);
 
 router.get("/", CategoryController.getCategories);
@@ -40,12 +43,6 @@ router.get("/korporasi", (req, res) => {
 router.get("/keluarga", (req, res) => {
   res.render("keluarga");
   console.log("keluarga");
-});
-
-// ORDER ROUTES //
-router.get("/order", (req, res) => {
-  res.render("order");
-  console.log("order");
 });
 
 //LOGIN ROUTES
