@@ -1,14 +1,6 @@
-const {
-  Dekorasi,
-  Dokumentasi,
-  Entertainment,
-  Rias,
-  Catering,
-} = require("../models");
-const fs = require("fs-extra");
-const path = require("path");
-
-const { User } = require("../models");
+const { Dekorasi,Dokumentasi,Entertainment,Rias,Catering,User,Category,Paket } = require("../models");
+const fs = require('fs-extra');
+const path = require('path');
 
 module.exports = {
   viewDashboard: (req, res) => {
