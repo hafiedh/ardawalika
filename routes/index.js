@@ -63,4 +63,10 @@ router.get("/resetdone", (req, res) => {
   console.log("resetdone");
 });
 
+// tes kustomisasi //
+router.get("/kostumisasi", (req, res) => {
+  res.render("kostumisasi");
+  console.log("kustomisasi");
+});
+
 module.exports = router;
