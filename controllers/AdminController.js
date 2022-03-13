@@ -414,13 +414,14 @@ module.exports = {
                 name_paket: req.body.name_paket,
                 ket_paket: req.body.ket_paket,
                 harga_paket: req.body.harga_paket,
+                des_paket: req.body.des_paket,
                 category_id: req.body.category_id,
                 dekorasi_id: req.body.dekorasi_id,
                 catering_id: req.body.catering_id,
                 rias_id: req.body.rias_id,
                 dokumentasi_id: req.body.dokumentasi_id,
                 entertainment_id: req.body.entertainment_id,
-                img_url: req.body.image
+                img_url: req.body.image,
             });
             res.redirect('/admin/paket')
         } catch (error) {
