@@ -17,16 +17,14 @@
       <div class="container-fluid">
         
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">Paket</h1>
+        <h1 class="h3 mb-4 text-gray-800">Order</h1>
         <!-- End Heading -->
 
         <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
       <!-- Button trigger modal -->
-      <a href="/admin/paket/create"  class="btn btn-primary" >
-        <i class="fas fa-plus"></i>
-      </a>
+
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -35,40 +33,25 @@
             <tr>
               <th>No</th>
               <th>Name</th>
-              <th>Gambar</th>
-              <th>Judul Kategori</th>
+              <th>User</th>
+              <th>Paket</th>
               <th>Harga</th>
-              <th>Dekorasi</th>
-              <th>Catering</th>
-              <th>Rias</th>
-              <th>Dokumentasi</th>
-              <th>Entertainment</th>
-              <th>Action</th>
+              <th>Tanggal Acara</th>
+            
             </tr>
           </thead>
           <tbody>
-            <% for(let i = 0; i < paket.length; i++){ %>
+            <% for(let i = 0; i < order.length; i++){ %>
             <tr>
               <td><%= i + 1 %></td>
-              <td><%= paket[i].name_paket ?paket[i].name_paket:" kosong" %></td>
-              <td>
-                <img src="<%= paket[i].img_url %>" alt="imageUrl" width="70px">
-              </td>
-              <td><%= paket[i].Category.name ?paket[i].Category.name:" kosong" %></td>
-              <td><%= paket[i].harga_paket ?paket[i].harga_paket :" kosong "%></td>
-              <td><%= paket[i].Dekorasi.name_dekorasi ?paket[i].Dekorasi.name_dekorasi:" kosong "%></td>
-              <td><%= paket[i].Catering.name_catering %></td>
-              <td><%= paket[i].Ria.name_rias %></td>
-              <td><%= paket[i].Dokumentasi.name_dokumentasi %></td>
-              <td><%= paket[i].Entertainment.name_entertainment %></td>
+              <td><%= order[i].name_order ?order[i].name_order:" kosong" %></td>
+              <td><%= order[i].User.username ?order[i].User.username:" kosong" %></td>
+              <td><%= order[i].Paket.name_paket %></td>
+              <td><%= order[i].total_harga %></td>
+              <td><%= order[i].tanggal_acara %></td>
             
-              <td>
-                <form action="/admin/paket/<%= paket[i].id %>?_method=DELETE" method="POST">
-                  <a href="/admin/paket/<%= paket[i].id %>/edit" type="button" class="btn btn-warning btn-circle btn-sm button-update"
-                    data-id="<%= paket[i].id %>" data-name="<%= paket[i].name_paket %> "  ><i class="fas fa-edit"></i></a>
-                  <button type="submit" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button>
-                </form>
-              </td>
+            
+          
 
             </tr>
             <% } %>
@@ -104,15 +87,4 @@
 
 
 
-<script>
-  $('#dataTable').on('click', '.button-update', function () {
-    let id = $(this).data('id');
-    let name = $(this).data('name');
 
-    $('#edit-modal').modal('show');
-    $('.id').val(id);
-    $('.name').val(name);
-   
-
-  })
-</script>

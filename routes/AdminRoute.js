@@ -38,4 +38,5 @@ router.put("/paket/:id", AdminController.updatePaket);
 router.delete("/paket/:id", AdminController.deletePaket);
 
 router.get("/user", AdminController.viewUser);
+router.get("/order", AdminController.viewOrder);
 module.exports = router;
