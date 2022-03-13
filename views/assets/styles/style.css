@@ -142,12 +142,125 @@ a {
   margin: 1.5rem 0rem;
 }
 
+.main-head .dropdown {
+  position: relative;
+  display: block;
+}
+
+.main-head .dropdown img {
+  width: 10%;
+  margin-left: 0.7rem;
+}
+
+.main-head .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e5e5e5;
+  border-radius: 0.2rem;
+  min-width: 24rem;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1.8rem 1.6rem;
+  z-index: 1;
+  text-align: justify;
+}
+
+.main-head .dropdown .dropdown-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-head .dropdown .dropdown-content li {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.main-head .dropdown #dropdown-content a {
+  color: #1081e8;
+  font-weight: 500;
+}
+
+.main-head .dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .main-head #logo {
   font-family: "MuseoModerno", cursive;
   font-size: 3rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: white;
+}
+
+.dropdown-user {
+  position: relative;
+  display: block;
+}
+
+.dropdown-user hr {
+  width: 100%;
+  height: 1px;
+  background: #cef1fd;
+}
+
+.dropdown-user img {
+  width: 10%;
+  margin-left: 0.7rem;
+}
+
+.dropdown-user .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0rem;
+  background-color: #e5e5e5;
+  border-radius: 0.2rem;
+  min-width: 25rem;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1.8rem 0.5rem;
+  z-index: 1;
+  text-align: justify;
+}
+
+.dropdown-user .dropdown-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dropdown-user .dropdown-content li {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.dropdown-user #dropdown-content a {
+  color: #1081e8;
+  font-weight: 500;
+}
+
+.dropdown-user:hover .dropdown-content {
+  display: block;
 }
 
 #main-head-general {
@@ -296,6 +409,30 @@ a {
   }
 }
 
+@media screen and (max-width: 711px) {
+  .dropdown-user .dropdown-content {
+    position: absolute;
+    right: 0rem;
+    top: 10rem;
+  }
+}
+
+@media screen and (max-width: 663px) {
+  .dropdown-user .dropdown-content {
+    position: absolute;
+    right: 32rem;
+    top: 8rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .dropdown-user .dropdown-content {
+    position: absolute;
+    right: 20rem;
+    top: 8rem;
+  }
+}
+
 .home {
   background: url("/img/background.png");
   background-repeat: no-repeat;
@@ -392,59 +529,6 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 100px;
-}
-
-.dropdown {
-  position: relative;
-  display: block;
-}
-
-.dropdown img {
-  width: 10%;
-  margin-left: 0.7rem;
-}
-
-.dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #e5e5e5;
-  border-radius: 0.2rem;
-  min-width: 24rem;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 1.8rem 1.6rem;
-  z-index: 1;
-  text-align: justify;
-}
-
-.dropdown .dropdown-content ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.dropdown .dropdown-content li {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-
-.dropdown #dropdown-content a {
-  color: #1081e8;
-  font-weight: 500;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 .paket {
