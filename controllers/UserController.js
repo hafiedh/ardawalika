@@ -40,7 +40,7 @@ class UserController {
         where: { email: { [Op.eq]: email } },
       });
       if (!user) {
-        return res.redirect("/login?error=User not found");
+        return res.redirect("/login?error=Wrong Email or Password");
       }
       const isMatch = await decode(password, user.password);
       if (!isMatch) {
