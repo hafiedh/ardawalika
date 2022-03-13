@@ -25,27 +25,6 @@ router.use(errorHandler);
 
 router.use("/", HomeRoute);
 
-// // WEDDING ROUTES //
-// router.get("/:id", PaketController.getPaket);
-
-// DOKUMENTASI ROUTES //
-// router.get("/dokumentasi", (req, res) => {
-//   res.render("dokumentasi");
-//   console.log("dokumentasi");
-// });
-
-// // KORPORASI ROUTES //
-// router.get("/korporasi", (req, res) => {
-//   res.render("korporasi");
-//   console.log("korporasi");
-// });
-
-// // KELUARGA ROUTES //
-// router.get("/keluarga", (req, res) => {
-//   res.render("keluarga");
-//   console.log("keluarga");
-// });
-
 //LOGIN ROUTES
 router.get("/login", (req, res) => {
   let error = "";
@@ -83,24 +62,5 @@ router.get("/resetdone", (req, res) => {
   res.render("resetdone");
   console.log("resetdone");
 });
-
-// About Us
-// router.get("/tentang-kami", (req, res) => {
-//   res.render("tentang-kami");
-//   console.log("tentang-kami");
-// });
-
-// TES DETAIL DOKUMENTASI //
-// router.get("/dokumentasi-detail", (req, res) => {
-//   const user = req.session.user;
-//   res.render("dokumentasi_detail", { user });
-//   console.log("dokumentasi-detail");
-// });
-
-// Page Konfirmasi //
-// router.get("/konfirmasi", (req, res) => {
-//   res.render("konfirmasi");
-//   console.log("konfirmasi");
-// });
 
 module.exports = router;

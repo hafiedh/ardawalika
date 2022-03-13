@@ -18,7 +18,7 @@ class DetailController {
       const data = await Paket.findAll(options);
 
       const renderData = {
-        name_paket: data[0].name_paket,
+        paket: data[0],
         dekorasi: data[0].Dekorasi,
         catering: data[0].Catering,
         rias: data[0].Ria,
@@ -28,7 +28,7 @@ class DetailController {
         user: req.session.user,
       };
 
-      console.log(renderData);
+      console.log(data[0]);
 
       // res.status(200).json(renderData);
       res.render("order", renderData);
