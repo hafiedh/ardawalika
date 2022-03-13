@@ -8,7 +8,6 @@ const OrderRoute = require("./OrderRoute");
 
 const AdminRouter = require("./AdminRoute");
 const CategoryController = require("../controllers/CategoryController");
-
 const DetailController = require("../controllers/DetailController");
 const { route } = require("./OrderRoute");
 const { render } = require("ejs");
@@ -20,6 +19,7 @@ router.use("/pakets", PaketRoute);
 router.use("/admin", AdminRouter);
 router.use("/orders", OrderRoute);
 router.use("/detail/:id", DetailController.getDetail);
+router.use("/customdetail/:id", DetailController.getPaketCustomDetail);
 router.use(errorHandler);
 
 router.get("/", CategoryController.getCategories);

@@ -1,4 +1,4 @@
-const { Category, Paket } = require("../models");
+const { Category, Paket, PaketCustom } = require("../models");
 
 class DetailController {
   static async getDetail(req, res, next) {
@@ -18,6 +18,7 @@ class DetailController {
       const data = await Paket.findAll(options);
 
       const renderData = {
+          paket_id: data[0].id,
           name_paket: data[0].name_paket,
           dekorasi: data[0].Dekorasi,
           catering: data[0].Catering,
@@ -26,11 +27,32 @@ class DetailController {
           dokumentasi: data[0].Dokumentasi,
           entertainment: data[0].Entertainment
       }
-
-    //   res.status(200).json(renderData);
-    res.render('order', renderData );
+      res.render('order', renderData );
     } catch (error) {
       next(error);
+    }
+  }
+
+    static async getPaketCustomDetail(req,res,next){
+    try {
+        const options = {
+          where : { id: req.params.id},
+          include: ['Dekorasi','Catering', 'Ria', 'Category', 'Dokumentasi', 'Entertainment']
+        };
+        const data = await PaketCustom.findOne(options);
+          const renderData = {
+          paket_id: data.id,
+          name_paket: data.name_paket,
+          dekorasi: data.Dekorasi,
+          catering: data.Catering,
+          rias: data.Ria,
+          category: data.Category,
+          dokumentasi: data.Dokumentasi,
+          entertainment: data.Entertainment
+          }
+       res.render('order', renderData );
+    } catch (error) {
+        next(error);
     }
   }
 }

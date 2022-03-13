@@ -2,23 +2,31 @@
 
 
 <section class="dokumentasi-filler"></section>
-<form class="konfirmasi">
+<form class="konfirmasi" method="post" action="/orders/charge">
     <div class="konfirmasi__section-container">
         <div class="konfirmasi__pilih-tanggal field">
             <h4>Pilih Tanggal Acara</h4>
-            <input type="text" name="pilihTanggal" id="pilih-tanggal" placeholder="Please select Date Time" data-input>
+            <input type="text" name="tanggal_acara" id="pilih-tanggal" placeholder="Please select Date Time" data-input>
         </div>
         <div class="konfirmasi__pilih-bank field">
             <h4 for="pilihBank">Pilih Bank:</h4>
-            <select id="pilihBank" name="pilihBank" type="select">
-                <option value="BNI">BNI</option>
-                <option value="Permata">Permata</option>
-                <option value="BRI">BRI</option>
+            <select id="pilihBank" name="nama_bank" type="select">
+                <option value="bni">BNI</option>
+                <option value="bri">BRI</option>
+                <option value="bca">BCA</option>
             </select>
         </div>
         <div class="konfirmasi__norek field">
             <h4 for="norek">Nomor Rekening</h4>
-            <input type="number" name="konfirmasiInputNorek" id="konfirmasiInputNorek" placeholder="xx-xxxx-xxxx" />
+            <input type="number" name="nomor_rekening" id="konfirmasiInputNorek" placeholder="xx-xxxx-xxxx" />
+        </div>
+        <div class="konfirmasi__pilih-tanggal field">
+            <h4>Total Harga</h4>
+            <input type="number" name="total_harga" value="<%= data.total_harga %>" readonly>
+        </div>
+        <div class="konfirmasi__pilih-tanggal field">
+            <h4>Paket Id</h4>
+            <input type="text" name="paket_id" value="<%= data.paket_id %>" readonly>
         </div>
         <button class="simpan-konfirmasi" type="submit">Checkout</button>
     </div>
@@ -31,13 +39,13 @@
             dateFormat: "F, d Y H:i"
         });
 
-    const formKonfirmasi = document.forms[0]
-    formKonfirmasi.addEventListener("submit", function (event) {
-        event.preventDefault()
-        const formData2 = new FormData(this)
-        for (const formElement2 of formData2) {
-            console.log(formElement2)
-        }
-    })
+    // const formKonfirmasi = document.forms[0]
+    // formKonfirmasi.addEventListener("submit", function (event) {
+    //     event.preventDefault()
+    //     const formData2 = new FormData(this)
+    //     for (const formElement2 of formData2) {
+    //         console.log(formElement2)
+    //     }
+    // })
     </script>
 <%- include('./partials/footer'); %>
