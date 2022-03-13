@@ -131,9 +131,7 @@ class PaketController {
           },
         }
       );
-      res.status(200).json({
-        message: `Paket ${id} berhasil diupdate`,
-      });
+      res.redirect("/admin/paket");
     } catch (error) {
       next(error);
     }

@@ -6,7 +6,6 @@ module.exports = {
       "Pakets",
       [
         {
-          id: 1,
           name_paket: "Anniversary",
           harga_paket: 11300000,
           img_url: "https://ik.imagekit.io/ardawalika/kor_card1_ng_aJ4Pf6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668454122",
@@ -23,7 +22,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 2,
           name_paket: "Seminar",
           harga_paket: 1000000,
           img_url: "https://ik.imagekit.io/ardawalika/kor_card2_CsAHli4_Z.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668454221",
@@ -40,7 +38,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 3,
           name_paket: "Perfect Platinum",
           harga_paket: 130000000,
           img_url: "https://ik.imagekit.io/ardawalika/wed_card1_xFneIPZS2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668477254",
@@ -57,7 +54,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 4,
           name_paket: "Luxury Gold",
           harga_paket: 110000000,
           img_url: "https://ik.imagekit.io/ardawalika/wed_card2_-Ju9qzP2k.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668478319",
@@ -74,7 +70,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 5,
           name_paket: "Sprinkle Silver",
           harga_paket: 95000000,
           img_url: "https://ik.imagekit.io/ardawalika/wed_card3_iC8Ovy622.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668478752",
@@ -91,7 +86,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 6,
           name_paket: "Nova Bronze",
           harga_paket: 95000000,
           img_url: "https://ik.imagekit.io/ardawalika/wed_card4_pPAFkBtshH73.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668478779",
@@ -108,7 +102,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 7,
           name_paket: "Ulang Tahun",
           harga_paket: 5000000,
           img_url: "https://ik.imagekit.io/ardawalika/kel_card1_CfHXXzxJ1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668448284",
@@ -125,7 +118,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 8,
           name_paket: "Reuni Keluarga",
           harga_paket: 5600000,
           img_url: "https://ik.imagekit.io/ardawalika/kel_card2_P9-LSvsjZYTU.png?ik-sdk-version=javascript-1.4.3&updatedAt=1646668448879",
