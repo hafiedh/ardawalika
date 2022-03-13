@@ -184,14 +184,15 @@ class UserController {
   static async getProfile(req, res, next) {
     try {
       const { id } = req.params;
-      const user = await User.findOne({
+      const users = await User.findOne({
         where: { id },
         attributes: { exclude: ["password"] },
       });
-      if (!user) {
+      if (!users) {
         throw { status: 404, message: "User not found" };
       }
-      res.render("profile", { Users: user });
+      const user = req.session.user;
+      res.render("profile", { Users: users, user });
     } catch (error) {
       next(error);
     }
@@ -199,9 +200,10 @@ class UserController {
   static async updateUserPhoto(req, res, next) {
     try {
       const { id, email } = req.user;
-      const imgUrl = req.body.image;
+      console.log(req.user);
+      const image = req.body.image;
       const update = await User.update(
-        { imgUrl },
+        { imgUrl: image },
         {
           where: {
             [Op.or]: [{ id }, { email }],
@@ -209,10 +211,7 @@ class UserController {
         }
       );
       if (update) {
-        res.status(200).json({
-          status: 200,
-          message: "Successfully update user data",
-        });
+        res.redirect(`/users/profile/${id}`);
       } else {
         throw { status: 400, message: "Failed to update data" };
       }

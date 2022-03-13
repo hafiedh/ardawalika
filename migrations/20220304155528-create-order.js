@@ -32,7 +32,6 @@ module.exports = {
       },
       paket_custom_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
           model: "PaketCustoms",
           key: "id",

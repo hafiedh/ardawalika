@@ -12,6 +12,7 @@ class PaketController {
   static async getPaketsByCategory(req, res, next) {
     try {
       const id = req.params.id;
+      const user = req.session.user;
       const data = await Paket.findAll({
         where: {
           category_id: id,
@@ -37,12 +38,7 @@ class PaketController {
         result_iconlayanan.push(resulticon);
       });
 
-      res.render("paket", {
-        data,
-        dataCategory,
-        result_layanan,
-        result_iconlayanan,
-      });
+      res.render("paket", { user, data, dataCategory, result_layanan, result_iconlayanan });
       // res.status(200).json({ data });
     } catch (error) {
       next(error);
@@ -82,16 +78,7 @@ class PaketController {
   static async updatePaket(req, res, next) {
     try {
       const id = req.params.id;
-      const {
-        name_paket,
-        harga_paket,
-        dekorasi_id,
-        catering_id,
-        rias_id,
-        dokumentasi_id,
-        entertainment_id,
-        category_id,
-      } = req.body;
+      const { name_paket, harga_paket, dekorasi_id, catering_id, rias_id, dokumentasi_id, entertainment_id, category_id } = req.body;
       const data = {
         name_paket,
         harga_paket,
@@ -144,15 +131,13 @@ class PaketController {
           },
         }
       );
-      res.status(200).json({
-        message: `Paket ${id} berhasil diupdate`,
-      });
+      res.redirect("/admin/paket");
     } catch (error) {
       next(error);
     }
   }
 
-  static async customPaket(req,res,next){
+  static async customPaket(req, res, next) {
     try {
       const { name_paket, dekorasi_id, catering_id, rias_id, dokumentasi_id, entertainment_id, category_id } = req.body;
       const data = await PaketCustom.create({
@@ -165,9 +150,8 @@ class PaketController {
         category_id,
       });
       res.status(200).json({ data });
-      
     } catch (error) {
-      next(error)
+      next(error);
     }
   }
 }

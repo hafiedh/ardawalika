@@ -15,9 +15,8 @@ class OrderController {
     try {
       const order_id = uuid.v4()
       const { id, email, fullname, phoneNumber, address } = req.user;
-      const { paket_id, total_harga } = req.params;
-      const { tanggal_acara, nama_bank } = req.body;
-
+      const { tanggal_acara, nama_bank, total_harga, paket_id, nomor_rekening } = req.body;
+      console.log(req.body);
       const paket = await Paket.findOne({
         where: { id: paket_id },
       });
@@ -56,6 +55,7 @@ class OrderController {
           email: email,
           phone: phoneNumber,
           address: address,
+          rekening: nomor_rekening
         },
       };
       const charge = await coreApi.charge(data);
@@ -301,5 +301,32 @@ static async detail(req, res, next) {
     next(error);
   }
 }
+
+  static async checkoutPage(req, res, next) {
+  try {
+      const { paket_id, total_harga } = req.params;
+      const data = {
+        paket_id,
+        total_harga,
+      };
+      res.render("konfirmasi", { data });
+  } catch (error) {
+    next(error);
+  }
+  }
+
+ static async customCheckoutPage(req, res, next) {
+  try {
+   const { paket_id, total_harga } = req.params;
+      const data = {
+        paket_id,
+        total_harga,
+      };
+      res.render("konfirmasi", { data });
+  } catch (error) {
+    next(error);
+  }
+  }
+
 }
 module.exports = OrderController;

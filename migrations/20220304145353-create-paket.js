@@ -20,6 +20,9 @@ module.exports = {
       ket_paket: {
         type: Sequelize.STRING,
       },
+      des_paket: {
+        type: Sequelize.STRING(2000),
+      },
       dekorasi_id: {
         type: Sequelize.INTEGER,
         references: {

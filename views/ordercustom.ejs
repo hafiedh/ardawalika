@@ -1,0 +1,330 @@
+<%- include('./partials/navbar-general'); %>
+
+<section class="order-filler"></section>
+<section class="order">
+    <h3>Perfect <%= name_paket %></h3>
+    <p>Paket super lengkap dengan spesifikasi layanan paling tinggi.</p>
+    <div class="order__box">
+        <div class="box-options" id="active-left">
+            <div class="detail-paket">
+                <h3>Detail Paket</h3>
+            </div>
+            <!-- <div class="kustomisasi">
+                <p>Kustomisasi</p>
+            </div> -->
+        </div>
+
+        <!-- SECTION DETAIL PAKET -->
+        <div class="box-detail-paket">
+            <div class="detail-paket-deskripsi">
+                <h4>Deskripsi Paket</h4>
+                <p>Paket pernikahan All In dengan paketan catering 1000 pax untuk konsep acara normal. Biasanya
+                    digunakan untuk acara
+                    gedung atau venue yang cukup luas di area Bandung. Dengan segala sesuatunya yang tetap mengikuti
+                    protokol kesehatan.
+                    Demi keamanan dan kenyamanan bersama.</p>
+            </div>
+            <div class="detail-paket-galeri">
+                <h4>Galeri Paket</h4>
+                <div class="galeri-gambar">
+                    <!-- <img src="/img/order1.png" >
+                                        <img src="/img/order2.png">
+                                        <img src="/img/order3.jpg"> -->
+                    <div class="container-fluid">
+                        <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+                            <div class="carousel-inner w-100 mx-auto" role="listbox">
+                                <div class="carousel-item col-md-3 active">
+                                    <img class="img-fluid mx-auto d-block" src="/img/order1.png" alt="slide 1">
+                                </div>
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src="/img/order2.jpg" alt="slide 2">
+                                </div>
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src="/img/order3.jpg" alt="slide 3">
+                                </div>
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src="/img/tes8.jpg" alt="slide 4">
+                                </div>
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src="/img/tes11.jpg" alt="slide 5">
+                                </div>
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src="/img/tes9.jpg" alt="slide 6">
+                                </div>
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src="/img/img1.jpg" alt="slide 7">
+                                </div>
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src="/img/img2.jpg" alt="slide 7">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+                                <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-paket-keterangan">
+                <h4>Detail Paket</h4>
+            </div>
+            <% 
+                const total = dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias + dokumentasi.harga_dokumentasi + entertainment.harga_entertainment;
+
+                function toRupiah(price) {
+                    return new Intl.NumberFormat("id-ID", {
+                        style: "currency",
+                        currency: "IDR"
+                    }).format(price);
+                }
+            %>
+            <div class="detail-paket-choices">
+                <div class="dekorasi info">
+                    <div class="info-keterangan">
+                        <h4>Dekorasi <%= dekorasi.name_dekorasi %></h4>
+                        <div class="sect">
+                            <h4><%= toRupiah(dekorasi.harga_dekorasi) %></h4>
+                            <img src="/img/info.svg">
+                        </div>
+                    </div>
+                    <div class="paket-detail paket-detail-dekorasi">
+                        <ul>
+                            <% dekorasi.keterangan_dekorasi.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rias info">
+                    <div class="info-keterangan">
+                        <h4>Rias <%= rias.name_rias %> </h4>
+                        <div class="sect">
+                            <h4><%= toRupiah(rias.harga_rias) %> </h4>
+                            <img src="/img/info.svg">
+                        </div>
+                    </div>
+                    <div class="paket-detail paket-detail-rias">
+                        <ul>
+                            <% rias.keterangan_rias.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="katering info">
+                    <div class="info-keterangan">
+                        <h4>Katering <%= catering.name_catering %> </h4>
+                        <div class="sect">
+                            <h4><%= toRupiah(catering.harga_catering) %> </h4>
+                            <img src="/img/info.svg">
+                        </div>
+                    </div>
+                    <div class="paket-detail paket-detail-katering">
+                        <ul>
+                            <% catering.keterangan_catering.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="documentation info">
+                    <div class="info-keterangan">
+                        <h4>Dokumentasi <%= dokumentasi.name_dokumentasi %> </h4>
+                        <div class="sect">
+                            <h4><%= toRupiah(dokumentasi.harga_dokumentasi) %> </h4>
+                            <img src="/img/info.svg">
+                        </div>
+                    </div>
+                    <div class="paket-detail paket-detail-documentation">
+                        <ul>
+                            <% dokumentasi.keterangan_dokumentasi.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hiburan info">
+                    <div class="info-keterangan">
+                        <h4>Entertainment <%= entertainment.name_entertainment %> </h4>
+                        <div class="sect">
+                            <h4><%= toRupiah(entertainment.harga_entertainment) %> </h4>
+                            <img src="/img/info.svg">
+                        </div>
+                    </div>
+                    <div class="paket-detail paket-detail-hiburan">
+                        <ul>
+                            <% entertainment.keterangan_entertainment.split(',').forEach(element => { %>
+                                <li><%= element %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tambahan info">
+                    <div class="info-keterangan">
+                        <h4>Tambahan</h4>
+                        <div class="sect">
+                            <h4>Rp. 0</h4>
+                            <img src="/img/info.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="note info">
+                    <div class="info-keterangan">
+                        <h4>Note</h4>
+                    </div>
+                    <textarea id="noteOrder" name="noteOrder" placeholder=""> </textarea>
+                </div>
+            </div>
+
+            <div class="detail-paket-right">
+                <div class="detail-paket-biaya">
+                    <h4>Total Bayar</h4>
+                    <div class="sect">
+                        <h4><%= toRupiah(total) %> </h4>
+                    </div>
+                </div>
+               <div class="kustom-pesan">
+                    <button class="btn-kustomisasi" id="btnKustomisasi"><a href="https://wa.me/6282267263157">Kustomisasi</a></button>
+                    <button class="btn-pesan" id="btnPesan" type="submit"><a href="#">Pesan sekarang</a></button>
+                </div>
+            </div>
+            <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
+        </div>
+
+        <!-- SECTION KUSTOMISASI -->
+        <div class="box-kustomisasi">
+        <div class="kustomisasi-deskripsi">
+            <h4>Kustomisasi Paket</h4>
+            <p>Kami menyediakan beberapa pilihan paket layanan lainnya dengan detail harga yang berbeda disetiap paketnya. Anda dapat
+            melakukan perubahan pada setiap layanan sesuai dengan kebutuhan anda.</p>
+        </div>
+        <div class="kustomisasi-judul">
+            <h4>Pilih Kustomisasi</h4>
+        </div>
+        <div class="kustomisasi-choices">
+            <div class="container">
+                <div class="info">
+                    <div class="info-keterangan">
+                        <h4>Dekorasi <%= dekorasi.name_dekorasi %> ></h4>
+                        <img src="/img/info.svg">
+                    </div>
+                    <div class="sect">
+                        <h4><%= toRupiah(dekorasi.harga_dekorasi) %> </h4>
+                    </div>
+                </div>
+                <div class="kustomisasi-detail kustomisasi-detail-dekorasi">
+                    <ul>
+                        <% dekorasi.keterangan_dekorasi.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="info">
+                    <div class="kustomisasi-info-container"></div>
+                    <div class="info-keterangan">
+                        <h4>Rias <%= rias.name_rias %> </h4>
+                        <img src="/img/info.svg">
+                    </div>
+                    <div class="sect">
+                        <h4><%= toRupiah(rias.harga_rias) %> </h4>
+                    </div>
+                </div>
+                <div class="kustomisasi-detail kustomisasi-detail-dekorasi">
+                    <ul id="kustomisasi-rias">
+                        <% rias.keterangan_rias.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="info">
+                    <div class="info-keterangan">
+                        <h4>Katering <%= catering.name_catering %> </h4>
+                        <img src="/img/info.svg">
+                    </div>
+                    <div class="sect">
+                        <h4><%= toRupiah(catering.harga_catering) %> </h4>
+                    </div>
+                </div>
+                <div class="kustomisasi-detail kustomisasi-detail-katering">
+                    <ul>
+                        <% catering.keterangan_catering.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="info">
+                    <div class="info-keterangan">
+                        <h4>Dokumentasi <%= dokumentasi.name_dokumentasi %> </h4>
+                        <img src="/img/info.svg">
+                    </div>
+                    <div class="sect">
+                        <h4><%= toRupiah(dokumentasi.harga_dokumentasi) %> </h4>
+                    </div>
+                </div>
+                <div class="kustomisasi-detail kustomisasi-detail-documentation">
+                    <ul>
+                        <% dokumentasi.keterangan_dokumentasi.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="info">
+                    <div class="info-keterangan">
+                        <h4>Entertainment <%= entertainment.name_entertainment %></h4>
+                        <img src="/img/info.svg">
+                    </div>
+                    <div class="sect">
+                        <h4><%= toRupiah(entertainment.harga_entertainment) %></h4>
+                    </div>
+                </div>
+                <div class="kustomisasi-detail kustomisasi-detail-hiburan">
+                    <ul>
+                        <% entertainment.keterangan_entertainment.split(',').forEach(element => { %>
+                            <li><%= element %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="info">
+                    <div class="info-keterangan">
+                        <h4>Tambahan</h4>
+                        <img src="/img/info.svg">
+                    </div>
+                    <div class="sect">
+                        <h4>Rp. 0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="kustomisasi-right">
+            <div class="kustomisasi-biaya">
+                <h4>Total Bayar</h4>
+                <div class="sect">
+                    <h4><%= toRupiah(total) %> </h4>
+                </div>
+            </div>
+            <div class="kustom-pesan">
+                <button class="btn-pesan" type="submit">Pesan sekarang</button>
+            </div>
+        </div>
+        <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
+        </div>
+    </div>
+</section>
+
+<%- include('./partials/footer'); %>
