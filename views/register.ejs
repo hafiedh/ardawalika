@@ -21,7 +21,11 @@
         <!-- EMAIL INPUT -->
         <form action="/users/register" method="post">
           <div class="register__name">
-            <input type="name" name="username" placeholder="Nama pengguna" required />
+            <input type="name" name="username" placeholder="Username" required />
+            <div class="register__icon"></div>
+          </div>
+           <div class="register__name">
+            <input type="name" name="fullname" placeholder="Nama Lengkap" required />
             <div class="register__icon"></div>
           </div>
           <div class="register__email">
@@ -51,7 +55,7 @@
 
         <!-- LUPA PASSWORD -->
         <div class="register__forgot">
-          Sudah punya akun
+          Sudah punya akun?
           <a href="/login">Klik disini</a>
         </div>
 

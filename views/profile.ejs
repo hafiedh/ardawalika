@@ -5,7 +5,7 @@
   <div class="profile__user">
     <h4>Profil Akun</h4>
     <div class="picture">
-      <img alt="ImageProfile" src="<%= Users.img_Url %>" />
+      <img alt="ImageProfile" src="<%= Users.imgUrl %>" />
       <input type="file" name="name" id="img" style="display: none" />
       <label for="img"><img src="/img/editpic.svg" id="edit" /></label>
     </div>
@@ -13,34 +13,34 @@
       <div class="profile__user__nama-lengkap field">
         <label>Nama Lengkap</label>
         <div class="profile__user__nama-lengkap__text-field">
-          <input type="text" name="fullname" id="profileNamaLengkap" placeholder="<%= Users.fullname %>" />
+          <input type="text" name="fullname" id="profileNamaLengkap" value="<%= Users.fullname %>" />
           <img src="/img/edit.png" />
         </div>
       </div>
       <div class="profile__user__username field">
         <label>Username</label>
         <div class="profile__user__username__text-field">
-          <input type="text" name="username" id="profileInputUsername" placeholder="<%= Users.username %>" />
+          <input type="text" name="username" id="profileInputUsername"  value="<%= Users.username %>" />
           <img src="/img/edit.png" />
         </div>
       </div>
       <div class="profile__user__email field">
         <label>Nomor Telepon</label>
         <div class="profile__user__nomor__text-field">
-          <input type="number" name="phoneNumber" id="profileInputNomor" placeholder="<%= Users.phoneNumber %>" />
+          <input type="number" name="phoneNumber" id="profileInputNomor" value="<%= Users.phoneNumber %>" />
           <img src="/img/edit.png" />
         </div>
       </div>
       <div class="profile__user__alamat field">
         <label>Alamat</label>
         <div class="profile__user__alamat__text-field">
-          <textarea id="profileInputAlamat" name="address" placeholder="<%= Users.address %>"> </textarea>
+          <textarea id="profileInputAlamat" name="address" ><%= Users.address %></textarea>
           <img src="/img/edit.png" />
         </div>
       </div>
       <div class="profile__user__password field" id="profile-input-password">
         <div class="profile__user__password__text-field">
-          <label>Kata Sandi</label>
+          <label>Kata Sandi Lama</label>
           <input type="password" id="password" name="password" />
           <img src="/img/edit.png" class="edit-password" />
           <div class="edit-password__change">
