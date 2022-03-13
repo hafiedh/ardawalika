@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       img_carousel: DataTypes.STRING,
       img_carousels: DataTypes.STRING,
       img_url: DataTypes.STRING,
+      img_paket: DataTypes.STRING(5000),
     },
     {
       sequelize,
