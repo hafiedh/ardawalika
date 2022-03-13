@@ -2,27 +2,14 @@ const { User } = require("../models");
 const { Op } = require("sequelize");
 const { sign, verify } = require("../helpers/jwt");
 const { decode } = require("../helpers/bcrypt");
-const {
-  sendEmail,
-  sendEmailResetPassword,
-  sendEmailForgotPassword,
-} = require("../helpers/nodemailer");
+const { sendEmail, sendEmailResetPassword, sendEmailForgotPassword } = require("../helpers/nodemailer");
 const generator = require("generate-password");
 const fetchGoogleUser = require("../helpers/googleAuth");
 
 class UserController {
   static async register(req, res, next) {
     try {
-      let {
-        email,
-        password,
-        username,
-        fullname,
-        phoneNumber = "",
-        imgUrl = "",
-        address = "",
-        role = "user",
-      } = req.body;
+      let { email, password, username, fullname, phoneNumber = "", imgUrl = "", address = "", role = "user" } = req.body;
       const result = await User.create({
         email,
         password,
@@ -42,7 +29,7 @@ class UserController {
       res.redirect("/login?error=Register success, Sent a verification email to your email");
     } catch (err) {
       // next(err);
-      res.redirect(`/register?error=${err.errors[0].message}`)
+      res.redirect(`/register?error=${err.errors[0].message}`);
     }
   }
 
@@ -53,7 +40,7 @@ class UserController {
         where: { email: { [Op.eq]: email } },
       });
       if (!user) {
-        return res.redirect("/login?error=User not found");
+        return res.redirect("/login?error=Wrong Email or Password");
       }
       const isMatch = await decode(password, user.password);
       if (!isMatch) {
@@ -137,9 +124,7 @@ class UserController {
     try {
       const { accessToken } = req.params;
       const payload = verify(accessToken);
-      res.send(
-        "Use this link as new password and confirm password form. Don't tell to others about your AccessKey"
-      );
+      res.send("Use this link as new password and confirm password form. Don't tell to others about your AccessKey");
     } catch (error) {
       next(error);
     }
@@ -167,7 +152,7 @@ class UserController {
       //   status: 200,
       //   message: "Your new password has been sent to your email",
       // });
-      res.redirect("/login?error=Reset password success, Your new password has been sent to your email")
+      res.redirect("/login?error=Reset password success, Your new password has been sent to your email");
     } catch (error) {
       next(error);
     }
@@ -188,8 +173,8 @@ class UserController {
           },
         }
       );
-
-      res.status(200).json({ status: 200, message: "Your account is active" });
+      const data = payload.email;
+      res.render("verifikasi", { data });
     } catch (err) {
       console.log(err);
       next(err);
@@ -206,11 +191,10 @@ class UserController {
       if (!user) {
         throw { status: 404, message: "User not found" };
       }
-      res.render("profile", { Users:user });
+      res.render("profile", { Users: user });
     } catch (error) {
       next(error);
     }
-
   }
   static async updateUserPhoto(req, res, next) {
     try {
