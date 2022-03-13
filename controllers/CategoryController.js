@@ -5,12 +5,20 @@ class CategoryController {
     try {
       let navbar = false;
       const data = await Category.findAll();
-      if (req.session) {
-        navbar = req.session.navbar;
-        res.render("index", { data, navbar });
+      console.log(req.session.user);
+      if (!req.session.user) {
+        const user = null;
+        res.render("index", { data, user });
       } else {
-        res.render("index", { data, navbar });
+        const user = req.session.user;
+        res.render("index", { data, user });
       }
+      // if (req.session) {
+      //   navbar = req.session.navbar;
+      //   res.render("index", { data, navbar });
+      // } else {
+      //   res.render("index", { data, navbar });
+      // }
     } catch (error) {
       next(error);
     }

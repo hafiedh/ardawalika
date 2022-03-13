@@ -1,5 +1,7 @@
 const AdminController = require("../controllers/AdminController");
 const router = require("express").Router();
+const upload = require("../middlewares/multer");
+const imgKit = require("../middlewares/imagekit");
 
 // router.get("/login", AdminController.viewLogin);
 router.get("/dashboard", AdminController.viewDashboard);
@@ -30,5 +32,11 @@ router.delete("/entertainment/:id", AdminController.deleteEntertainment);
 
 router.get('/paket',AdminController.viewPaket)
 router.get('/paket/create',AdminController.viewCreatePaket)
-router.post('/paket',AdminController.createPaket)
+router.get('/paket/:id/edit',AdminController.viewEditPaket)
+router.post('/paket', imgKit,AdminController.createPaket)
+router.put("/paket/:id", AdminController.updatePaket);
+router.delete("/paket/:id", AdminController.deletePaket);
+
+router.get("/user", AdminController.viewUser);
+router.get("/order", AdminController.viewOrder);
 module.exports = router;

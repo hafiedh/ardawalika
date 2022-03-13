@@ -57,45 +57,6 @@
   }
 }
 
-// DROPDOWN NAVBAR //
-.dropdown {
-  //background-color: lavender;
-  position: relative;
-  display: block;
-  img {
-    width: 10%;
-    margin-left: 0.7rem;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #e5e5e5;
-    border-radius: 0.2rem;
-    min-width: 24rem;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 1.8rem 1.6rem;
-    z-index: 1;
-    text-align: justify;
-    ul {
-      @include flex(flex-start, flex-start, column);
-    }
-    li {
-      margin-top: 0.2rem;
-      margin-bottom: 0.2rem;
-    }
-  }
-  #dropdown-content {
-    a {
-      color: #1081e8;
-      font-weight: 500;
-    }
-  }
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 // PAKET SECTION //
 .paket {
   width: 95%;
