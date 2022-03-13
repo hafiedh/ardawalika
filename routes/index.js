@@ -5,6 +5,7 @@ const ProductRouter = require("./ProductRoute");
 const CategoryRouter = require("./CategoryRoute");
 const PaketRoute = require("./PaketRoute");
 const OrderRoute = require("./OrderRoute");
+const HomeRoute = require("./HomeRoute");
 
 const AdminRouter = require("./AdminRoute");
 const CategoryController = require("../controllers/CategoryController");
@@ -22,46 +23,46 @@ router.use("/orders", OrderRoute);
 router.use("/detail/:id", DetailController.getDetail);
 router.use(errorHandler);
 
-router.get("/", CategoryController.getCategories);
+router.use("/", HomeRoute);
 
 // // WEDDING ROUTES //
 // router.get("/:id", PaketController.getPaket);
 
 // DOKUMENTASI ROUTES //
-router.get("/dokumentasi", (req, res) => {
-  res.render("dokumentasi");
-  console.log("dokumentasi");
-});
+// router.get("/dokumentasi", (req, res) => {
+//   res.render("dokumentasi");
+//   console.log("dokumentasi");
+// });
 
-// KORPORASI ROUTES //
-router.get("/korporasi", (req, res) => {
-  res.render("korporasi");
-  console.log("korporasi");
-});
+// // KORPORASI ROUTES //
+// router.get("/korporasi", (req, res) => {
+//   res.render("korporasi");
+//   console.log("korporasi");
+// });
 
-// KELUARGA ROUTES //
-router.get("/keluarga", (req, res) => {
-  res.render("keluarga");
-  console.log("keluarga");
-});
+// // KELUARGA ROUTES //
+// router.get("/keluarga", (req, res) => {
+//   res.render("keluarga");
+//   console.log("keluarga");
+// });
 
 //LOGIN ROUTES
 router.get("/login", (req, res) => {
-  let error = ''
-  if (req.query.error){
-    error = req.query.error
+  let error = "";
+  if (req.query.error) {
+    error = req.query.error;
   }
-  res.render("login", {error});
+  res.render("login", { error });
   console.log("login");
 });
 
 //REGISTER ROUTES
 router.get("/register", (req, res) => {
-  let error = ''
-  if (req.query.error){
-    error = req.query.error
+  let error = "";
+  if (req.query.error) {
+    error = req.query.error;
   }
-  res.render("register", {error});
+  res.render("register", { error });
   console.log("register");
 });
 
@@ -84,22 +85,22 @@ router.get("/resetdone", (req, res) => {
 });
 
 // About Us
-router.get("/tentang-kami", (req, res) => {
-  res.render("tentang-kami");
-  console.log("tentang-kami");
-});
+// router.get("/tentang-kami", (req, res) => {
+//   res.render("tentang-kami");
+//   console.log("tentang-kami");
+// });
 
 // TES DETAIL DOKUMENTASI //
-router.get("/dokumentasi-detail", (req, res) => {
-  res.render("dokumentasi_detail");
-  console.log("dokumentasi-detail");
-});
+// router.get("/dokumentasi-detail", (req, res) => {
+//   const user = req.session.user;
+//   res.render("dokumentasi_detail", { user });
+//   console.log("dokumentasi-detail");
+// });
 
 // Page Konfirmasi //
-router.get("/konfirmasi", (req, res) => {
-  res.render("konfirmasi");
-  console.log("konfirmasi");
-});
-
+// router.get("/konfirmasi", (req, res) => {
+//   res.render("konfirmasi");
+//   console.log("konfirmasi");
+// });
 
 module.exports = router;

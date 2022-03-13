@@ -184,14 +184,15 @@ class UserController {
   static async getProfile(req, res, next) {
     try {
       const { id } = req.params;
-      const user = await User.findOne({
+      const users = await User.findOne({
         where: { id },
         attributes: { exclude: ["password"] },
       });
-      if (!user) {
+      if (!users) {
         throw { status: 404, message: "User not found" };
       }
-      res.render("profile", { Users: user });
+      const user = req.session.user;
+      res.render("profile", { Users: users, user });
     } catch (error) {
       next(error);
     }

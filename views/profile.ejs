@@ -2,105 +2,103 @@
 
 <section class="profile-filler"></section>
 <form class="profile" method="post" enctype="multipart/form-data" action="/users/update-profile">
-    <div class="profile__user">
-        <h4>Profil Akun</h4>
-        <div class="picture">
-            <img  alt="ImageProfile" src=<%= Users.img_Url %> >
-            <input type="file" name="name" id="img" style="display:none;" />
-            <label for="img"><img src="/img/editpic.svg" id="edit"></label>
-        </div>
-        <div class="profile__user__container">
-            <div class="profile__user__nama-lengkap field">
-                <label>Nama Lengkap</label>
-                <div class="profile__user__nama-lengkap__text-field">
-                    <input type="text" name="fullname" id="profileNamaLengkap" placeholder=<%= Users.fullname %> />
-                    <img src="/img/edit.png">
-                </div>
-            </div>
-            <div class="profile__user__username field">
-                <label>Username</label>
-                <div class="profile__user__username__text-field">
-                    <input type="text" name="username" id="profileInputUsername" placeholder=<%= Users.username %> />
-                    <img src="/img/edit.png">
-                </div>
-            </div>
-            <div class="profile__user__email field">
-                <label>Nomor Telepon</label>
-                <div class="profile__user__nomor__text-field">
-                    <input type="number" name="phoneNumber" id="profileInputNomor" placeholder= <%= Users.phoneNumber %> />
-                    <img src="/img/edit.png">
-                </div>
-            </div>
-            <div class="profile__user__alamat field">
-                <label>Alamat</label>
-                <div class="profile__user__alamat__text-field">
-                    <textarea id="profileInputAlamat" name="address" placeholder=<%= Users.address %>> </textarea>
-                    <img src="/img/edit.png">
-                </div>
-            </div>
-            <div class="profile__user__password field" id="profile-input-password">
-                <div class="profile__user__password__text-field">
-                    <label>Kata Sandi</label>
-                    <input type="password" id="password" name="password"/>
-                    <img src="/img/edit.png" class="edit-password">
-                    <div class="edit-password__change">
-                        <label>Sandi Baru</label>
-                        <input type="password" id="profileChangePassword" name="confirm_password" />
-                        <label>Konfirmasi Sandi Baru</label>
-                        <input type="password" id="profileChangePasswordKonfirmasi"
-                            name="confirm_new_password" />
-                    </div>
-                </div>
-            </div>
-            <div class="profile__user__actions field">
-                <button class="simpan-perubahan" type="submit">Simpan Perubahan</button>
-                <button class="profile-keluar">Keluar</button>
-            </div>
-        </div>
+  <div class="profile__user">
+    <h4>Profil Akun</h4>
+    <div class="picture">
+      <img alt="ImageProfile" src="<%= Users.img_Url %>" />
+      <input type="file" name="name" id="img" style="display: none" />
+      <label for="img"><img src="/img/editpic.svg" id="edit" /></label>
     </div>
-
+    <div class="profile__user__container">
+      <div class="profile__user__nama-lengkap field">
+        <label>Nama Lengkap</label>
+        <div class="profile__user__nama-lengkap__text-field">
+          <input type="text" name="fullname" id="profileNamaLengkap" placeholder="<%= Users.fullname %>" />
+          <img src="/img/edit.png" />
+        </div>
+      </div>
+      <div class="profile__user__username field">
+        <label>Username</label>
+        <div class="profile__user__username__text-field">
+          <input type="text" name="username" id="profileInputUsername" placeholder="<%= Users.username %>" />
+          <img src="/img/edit.png" />
+        </div>
+      </div>
+      <div class="profile__user__email field">
+        <label>Nomor Telepon</label>
+        <div class="profile__user__nomor__text-field">
+          <input type="number" name="phoneNumber" id="profileInputNomor" placeholder="<%= Users.phoneNumber %>" />
+          <img src="/img/edit.png" />
+        </div>
+      </div>
+      <div class="profile__user__alamat field">
+        <label>Alamat</label>
+        <div class="profile__user__alamat__text-field">
+          <textarea id="profileInputAlamat" name="address" placeholder="<%= Users.address %>"> </textarea>
+          <img src="/img/edit.png" />
+        </div>
+      </div>
+      <div class="profile__user__password field" id="profile-input-password">
+        <div class="profile__user__password__text-field">
+          <label>Kata Sandi</label>
+          <input type="password" id="password" name="password" />
+          <img src="/img/edit.png" class="edit-password" />
+          <div class="edit-password__change">
+            <label>Sandi Baru</label>
+            <input type="password" id="profileChangePassword" name="confirm_password" />
+            <label>Konfirmasi Sandi Baru</label>
+            <input type="password" id="profileChangePasswordKonfirmasi" name="confirm_new_password" />
+          </div>
+        </div>
+      </div>
+      <div class="profile__user__actions field">
+        <button class="simpan-perubahan" type="submit">Simpan Perubahan</button>
+        <button class="profile-keluar">Keluar</button>
+      </div>
+    </div>
+  </div>
 </form>
 <script>
-    const editPass = document.querySelector(".edit-password")
-    const editPassChange = document.querySelector(".edit-password__change")
-    const passTextField = document.querySelector(".profile__user__password__text-field")
-    const fields = document.querySelectorAll(".field")
+  const editPass = document.querySelector(".edit-password");
+  const editPassChange = document.querySelector(".edit-password__change");
+  const passTextField = document.querySelector(".profile__user__password__text-field");
+  const fields = document.querySelectorAll(".field");
 
-    editPass.onclick = (e) => {
-        //console.log("ini edit tes")
-        const getClassName = e.target.className;
-        console.log(getClassName)
-        if (editPassChange.style.display !== "block") {
-            editPassChange.style.display = "block"
-            passTextField.classList.add("active")
-            console.log("block")
-            fields.forEach((field) => {
-                field.classList.add("inactive")
-                //console.log("ini field")
-            })
-        } else {
-            editPassChange.style.display = "none"
-            passTextField.classList.remove("active")
-            fields.forEach((field) => {
-                field.classList.remove("inactive")
-                //console.log("ini field")
-            })
-            console.log("none")
-        }
+  editPass.onclick = (e) => {
+    //console.log("ini edit tes")
+    const getClassName = e.target.className;
+    console.log(getClassName);
+    if (editPassChange.style.display !== "block") {
+      editPassChange.style.display = "block";
+      passTextField.classList.add("active");
+      console.log("block");
+      fields.forEach((field) => {
+        field.classList.add("inactive");
+        //console.log("ini field")
+      });
+    } else {
+      editPassChange.style.display = "none";
+      passTextField.classList.remove("active");
+      fields.forEach((field) => {
+        field.classList.remove("inactive");
+        //console.log("ini field")
+      });
+      console.log("none");
     }
+  };
 
-        // const form = document.forms[0]
-        // form.addEventListener("submit", function (event) {
-        //     event.preventDefault()
-        //     const formData = new FormData(this)
-        //     // for (let formElement of formData) {
-        //     // }
-        //     let response = await fetch('/users/update-profile', {
-        //             method: 'POST',
-        //             body: formData // <--- THIS IS THE CHANGE});
-        // })
-        // let json = await response.json()
-        // console.log(json)
-        // })
+  // const form = document.forms[0]
+  // form.addEventListener("submit", function (event) {
+  //     event.preventDefault()
+  //     const formData = new FormData(this)
+  //     // for (let formElement of formData) {
+  //     // }
+  //     let response = await fetch('/users/update-profile', {
+  //             method: 'POST',
+  //             body: formData // <--- THIS IS THE CHANGE});
+  // })
+  // let json = await response.json()
+  // console.log(json)
+  // })
 </script>
 <%- include('./partials/footer'); %>
