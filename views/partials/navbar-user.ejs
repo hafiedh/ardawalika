@@ -22,9 +22,14 @@
         <li><a href="/tentang-kami">Tentang Kami</a></li>
       </ul>
       <div class="navbar-masuk">
-        <a href="/login">
-          <button class="navbar-masuk-button" onclick=""><i class="fa fa-user"></i> udah masuk</button>
-        </a>
+        <button class="dropdown" onclick=""><i class="fa fa-user"></i> <%= user.username %></button>
+        <div class="dropdown-content" id="dropdown-content">
+          <ul>
+            <li><a href="/pakets/1">Akun Profile</a></li>
+            <li><a href="/pakets/2">Riwayat Transaksi</a></li>
+            <li><a href="/pakets/3">Logout</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>

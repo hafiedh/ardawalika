@@ -161,30 +161,16 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background: linear-gradient(
-      0deg,
-      rgba(15, 29, 64, 0.9) 0%,
-      rgba(15, 29, 64, 0) 80%
-    );
+    background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 80%);
     height: 100%;
   }
 
   #paket-pernikahan {
-    background: linear-gradient(
-        0deg,
-        rgba(15, 29, 64, 0.9) 0%,
-        rgba(15, 29, 64, 0) 58.66%
-      ),
-      url("/img/paket-wedding.jpg");
+    background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 58.66%), url("/img/paket-wedding.jpg");
   }
 
   #paket-keluarga {
-    background: linear-gradient(
-        0deg,
-        rgba(15, 29, 64, 0.9) 0%,
-        rgba(15, 29, 64, 0) 58.66%
-      ),
-      url("/img/paket-keluarga.jpg");
+    background: linear-gradient(0deg, rgba(15, 29, 64, 0.9) 0%, rgba(15, 29, 64, 0) 58.66%), url("/img/paket-keluarga.jpg");
   }
 
   #paket-korporat,
@@ -302,12 +288,7 @@
     a:hover {
       text-decoration: none;
     }
-    background: linear-gradient(
-        0deg,
-        rgba(15, 29, 64, 1) 0%,
-        rgba(15, 29, 64, 0.5) 58.66%
-      ),
-      url("/img/pic6.png");
+    background: linear-gradient(0deg, rgba(15, 29, 64, 1) 0%, rgba(15, 29, 64, 0.5) 58.66%), url("/img/pic6.png");
   }
   .kartu {
     min-height: 50vh;
