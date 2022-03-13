@@ -2990,7 +2990,220 @@ footer h3 {
   display: none;
 }
 
+.detail-paket-choices .paket-detail-kustomisasi select {
+  width: 90%;
+  border-radius: 0.8rem;
+  border: 1px solid #c2c2c2;
+  height: 5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  resize: none;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.detail-paket-choices .paket-detail-kustomisasi #namaDekorasi {
+  height: 5rem;
+}
+
 .detail-paket-choices textarea {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 0.8rem;
+  border: 1px solid #c2c2c2;
+  height: 15rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  resize: none;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.detail-paket-choices .note-dropdown {
+  display: none;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 0.8rem;
+  border: 1px solid #c2c2c2;
+  height: 5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  resize: none;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.kustomisasi-paket-choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 50vh;
+}
+
+.kustomisasi-paket-choices .info {
+  background-color: #f5f6f7;
+  margin: 0rem 0rem 1.3rem 0rem;
+  cursor: pointer;
+}
+
+.kustomisasi-paket-choices .info-keterangan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 0.8rem;
+}
+
+.kustomisasi-paket-choices .info-keterangan h4 {
+  margin-left: 3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+}
+
+.kustomisasi-paket-choices .info-keterangan .sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+}
+
+.kustomisasi-paket-choices .info-keterangan .sect img {
+  margin: 1rem 2rem;
+}
+
+.kustomisasi-paket-choices .info-keterangan .sect h4 {
+  font-weight: 400;
+  color: #0b2589;
+}
+
+.kustomisasi-paket-choices .paket-detail {
+  margin: 0rem 7rem 2rem 7rem;
+  display: none;
+}
+
+.kustomisasi-paket-choices .paket-detail-kustomisasi {
+  display: none;
+}
+
+.kustomisasi-paket-choices .paket-detail-kustomisasi select {
+  width: 90%;
+  border-radius: 0.8rem;
+  border: 1px solid #c2c2c2;
+  height: 4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  resize: none;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.kustomisasi-paket-choices textarea {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 0.8rem;
+  border: 1px solid #c2c2c2;
+  height: 15rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.5rem;
+  resize: none;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.kustomisasi-paket-choices .note-dropdown {
+  display: none;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3099,7 +3312,6 @@ footer h3 {
   margin: 0.5rem;
   background-color: white;
   border: 1px solid #1081e8;
-  width: 50%;
   padding: 1.2rem 0.5rem;
   border-radius: 0.8rem;
   font-size: 1.3rem;
@@ -3117,7 +3329,7 @@ footer h3 {
   font-size: 1.3rem;
   border: none;
   border-radius: 0.8rem;
-  width: 45%;
+  width: 100%;
   padding: 1.2rem 0.5rem;
 }
 
