@@ -224,7 +224,6 @@ class UserController {
     try {
       req.session.destroy((err) => {
         if (err) throw err;
-        console.log(req.session);
         res.redirect("/login");
       });
     } catch (error) {

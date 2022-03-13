@@ -66,18 +66,7 @@ class OrderController {
             id: result.id,
            }}
         );
-        res.status(200).json({
-          message: "Order created",
-          data: {
-            id: result.id,
-            name_order: result.name_order,
-            tanggal_acara: result.tanggal_acara,
-            riwayat_pesanan: result.riwayat_pesanan,
-            total_harga: result.total_harga,
-            midtrans_response: charge,
-            update
-          },
-        });
+        res.redirect("/orders/history");
       } else {
         throw { status: 400, message: "Charge failed" };
       }
@@ -154,19 +143,7 @@ class OrderController {
             id: result.id,
            }}
         );
-        res.status(200).json({
-          message: "Order created",
-          data: {
-            id: result.id,
-            name_order: result.name_order,
-            tanggal_acara: result.tanggal_acara,
-            riwayat_pesanan: result.riwayat_pesanan,
-            total_harga: result.total_harga,
-            midtrans_response: charge,
-            update
-          },
-        });
-      
+        res.redirect("/orders/history");
       } else {
         throw { status: 400, message: "Charge failed" };
       }
@@ -188,7 +165,7 @@ class OrderController {
       console.log(req.user);
       const result = await Order.findAll({
         attributes: { exclude: ["createdAt", "updateAt"] },
-        where: { user_id: id },
+        where: { [Op.and]: [{ user_id: id }, { paket_id: { [Op.ne]: null } }] },
       });
       if (!result) throw { status: 404, message: "Order not found" };
       const paketId = result.map((item) => item.paket_id);
@@ -215,7 +192,46 @@ class OrderController {
         };
       });
       console.log(data);
-      res.render("riwayat-pemesanan", { orders: data });
+       const user = req.session.user;
+      if(data.length === 0){
+        res.render("paketkosong", {user});
+      }else{
+       res.render("riwayat-pemesanan", { orders: data, user });
+      }
+     
+    } catch (error) {
+      next(error);
+    }
+  }
+
+    static async historyCustom(req, res, next) {
+    try {
+      const { id } = req.user;
+      console.log(req.user);
+      const result = await Order.findAll({
+        attributes: { exclude: ["createdAt", "updateAt"] },
+        where: { [Op.and]: [{ user_id: id }, { paket_custom_id: { [Op.ne]: null } }] },
+      });
+      const data = result.map((item) => {
+        return {
+          id: item.id,
+          user_id: item.user_id,
+          paket_id: item.paket_custom_id,
+          name_order: item.name_order,
+          tanggal_acara: item.tanggal_acara,
+          riwayat_pesanan: item.riwayat_pesanan.toString().substring(0, 10),
+          total_harga: item.total_harga.toString(),
+          midtrans_response: JSON.parse(item.midtrans_response),
+        };
+      });
+      console.log(data);
+       const user = req.session.user;
+      if(data.length === 0){
+        res.render("paketkosong",{user});
+      }else{
+       res.render("riwayat-pemesanan-custom", { orders: data, user });
+      }
+     
     } catch (error) {
       next(error);
     }

@@ -5,6 +5,7 @@ const authentication = require("../middlewares/authentication");
 router.use(authentication);
 router.post("/notification", OrderController.handleNotification);
 router.get("/history", OrderController.history);
+router.get("/historyCustom", OrderController.historyCustom);
 router.post("/chargecustom", OrderController.createOrderCustom);
 router.post("/charge", OrderController.createOrder);
 router.get("/tracking/:id", OrderController.tracking);
