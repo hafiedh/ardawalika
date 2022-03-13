@@ -188,7 +188,144 @@
     display: none;
   }
 
+  .paket-detail-kustomisasi {
+    //margin: 0rem 7rem 2rem 7rem;
+    //min-height: 10vh;
+    //display: none;
+    select {
+      width: 90%;
+      border-radius: 0.8rem;
+      border: 1px solid #c2c2c2;
+      height: 5rem;
+      box-sizing: border-box;
+      font-size: $text;
+      resize: none;
+      margin: auto;
+      flex-wrap: wrap;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 3.5rem;
+      //background-color: lavender;
+    }
+    #namaDekorasi {
+      height: 5rem;
+    }
+  }
+
   textarea {
+    width: 90%;
+    @include flex(space-between, flex-start, row);
+    //background: #ededed;
+    border-radius: 0.8rem;
+    border: 1px solid #c2c2c2;
+    height: 15rem;
+    box-sizing: border-box;
+    font-size: $text;
+    resize: none;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+    //background-color: lavender;
+  }
+
+  .note-dropdown {
+    display: none;
+    width: 90%;
+    @include flex(space-between, flex-start, row);
+    //background: #ededed;
+    border-radius: 0.8rem;
+    border: 1px solid #c2c2c2;
+    height: 5rem;
+    box-sizing: border-box;
+    font-size: $text;
+    resize: none;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+    //background-color: lavender;
+  }
+}
+
+.kustomisasi-paket-choices {
+  @include flex(flex-start, space-between, column);
+  min-height: 50vh;
+
+  .info {
+    background-color: #f5f6f7;
+    margin: 0rem 0rem 1.3rem 0rem;
+    cursor: pointer;
+  }
+
+  .info-keterangan {
+    @include flex(space-between, flex-start, row);
+    flex-wrap: wrap;
+    border-radius: 0.8rem;
+    h4 {
+      margin-left: 3rem;
+      flex: 1 1 50rem;
+    }
+    .sect {
+      @include flex(space-between, flex-start, row);
+      //background-color: lightpink;
+      flex: 1 1 10rem;
+      img {
+        margin: 1rem 2rem;
+      }
+      h4 {
+        font-weight: 400;
+        color: #0b2589;
+      }
+    }
+  }
+
+  .paket-detail {
+    margin: 0rem 7rem 2rem 7rem;
+    //min-height: 10vh;
+    display: none;
+  }
+
+  .paket-detail-kustomisasi {
+    //margin: 0rem 7rem 2rem 7rem;
+    //min-height: 10vh;
+    display: none;
+    select {
+      width: 90%;
+      border-radius: 0.8rem;
+      border: 1px solid #c2c2c2;
+      height: 4rem;
+      box-sizing: border-box;
+      font-size: $text;
+      resize: none;
+      margin: auto;
+      flex-wrap: wrap;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 3.5rem;
+      //background-color: lavender;
+    }
+  }
+
+  textarea {
+    width: 90%;
+    @include flex(space-between, flex-start, row);
+    //background: #ededed;
+    border-radius: 0.8rem;
+    border: 1px solid #c2c2c2;
+    height: 15rem;
+    box-sizing: border-box;
+    font-size: $text;
+    resize: none;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+    //background-color: lavender;
+  }
+
+  .note-dropdown {
+    display: none;
     width: 90%;
     @include flex(space-between, flex-start, row);
     //background: #ededed;
@@ -245,7 +382,7 @@
       margin: 0.5rem;
       background-color: white;
       border: 1px solid #1081e8;
-      width: 50%;
+      //width: 10%;
       padding: 1.2rem 0.5rem;
       border-radius: 0.8rem;
       font-size: 1.3rem;
@@ -262,7 +399,7 @@
       font-size: 1.3rem;
       border: none;
       border-radius: 0.8rem;
-      width: 45%;
+      width: 100%;
       padding: 1.2rem 0.5rem;
       a {
         color: white;
