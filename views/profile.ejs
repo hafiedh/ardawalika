@@ -53,7 +53,6 @@
       </div>
       <div class="profile__user__actions field">
         <button class="simpan-perubahan" type="submit">Simpan Perubahan</button>
-        <button class="profile-keluar">Keluar</button>
       </div>
     </div>
   </div>
@@ -63,8 +62,6 @@
   const editPassChange = document.querySelector(".edit-password__change");
   const passTextField = document.querySelector(".profile__user__password__text-field");
   const fields = document.querySelectorAll(".field");
-  const outButton = document.getElementById("toHome");
-
   editPass.onclick = (e) => {
     //console.log("ini edit tes")
     const getClassName = e.target.className;
@@ -87,12 +84,6 @@
       console.log("none");
     }
   };
-
-  outButton.onclick = (e) => {
-    e.preventDefault();
-    window.location.href = "/";
-  };
-
   // const form = document.forms[0]
   // form.addEventListener("submit", function (event) {
   //     event.preventDefault()

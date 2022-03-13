@@ -20,6 +20,7 @@ class DetailController {
       const result_image = data[0].Category.img_paket.split("|");
 
       const renderData = {
+        paket_id: data[0].id,
         paket: data[0],
         dekorasi: data[0].Dekorasi,
         catering: data[0].Catering,
