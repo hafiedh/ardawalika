@@ -332,22 +332,80 @@ module.exports = {
     },
 
     createPaket:async(req,res,next)=>{
+      try {
+        const data = await Paket.create({
+          name_paket: req.body.name_paket,
+          ket_paket: req.body.ket_paket,
+          harga_paket: req.body.harga_paket,
+          category_id: req.body.category_id,
+          dekorasi_id: req.body.dekorasi_id,
+          catering_id: req.body.catering_id,
+          rias_id: req.body.rias_id,
+          dokumentasi_id: req.body.dokumentasi_id,
+          entertainment_id: req.body.entertainment_id,
+          img_url:req.body.image
+        });
+        res.redirect('/admin/paket')
+      } catch (error) {
+        next(error);
+      }
+    } ,
+    viewEditPaket: async(req,res) =>{
+        const idPaket= req.params.id
         try {
-             await Paket.create({
-              category_id: req.body.category,
-              name_paket: req.body.name,
-              harga_paket: req.body.harga,
-              dekorasi_id: req.body.dekorasi,
-              catering_id: req.body.catering,
-              rias_id: req.body.rias,
-              dokumentasi_id: req.body.dokumentasi,
-              entertainment_id: req.body.entertainment,
-              img_url : "tes"
-            });
-            res.redirect('/admin/paket')
-          } catch (error) {
-            next(error);
-          }
-    }  
+            
+            const category = await Category.findAll();
+            const dekorasi = await Dekorasi.findAll();
+            const rias = await Rias.findAll();
+            const entertainment = await Entertainment.findAll()
+            const dokumentasi = await Dokumentasi.findAll()
+            const catering = await Catering.findAll()
+            const paket= await Paket.findByPk(idPaket);
+           
+              res.render('admin/paket/edit',{dekorasi,category,rias,entertainment,dokumentasi,catering,paket})
+        } catch (error) {
+            res.redirect('/')
+        }
+    },
+    updatePaket : async(req,res) => {
+        const idPaket= req.params.id
+      try{
+          const { id, name_paket,ket_paket,harga_paket,category_id,dekorasi_id,catering_id,dokumentasi_id,entertainment_id,image} = req.body;
+          const paket= await Paket.findByPk(idPaket );
+          
+          paket.name_paket= name_paket,
+          paket.ket_paket = ket_paket,
+          paket.harga_paket = harga_paket,
+          paket.category_id=category_id,
+          paket.dekorasi_id= dekorasi_id,
+          paket.catering_id = catering_id,
+          paket.dokumentasi_id = dokumentasi_id,
+          paket.entertainment_id = entertainment_id,
+          paket.img_url = image
+
+          await paket.save()
+
+          res.redirect('/admin/paket');
+          
+      }catch(error){
+          res.redirect('/admin/paket')
+      }
+  
+  },
+  deletePaket : async(req,res)=>{
+    try {
+         await Paket.destroy({
+            where:{
+                id:req.params.id
+            }
+        })
+        res.redirect('/admin/paket')
+        
+    } catch (error) {
+        res.redirect('/admin/paket')
+    }
+},
+
+
 }
 
