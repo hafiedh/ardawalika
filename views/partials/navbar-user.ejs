@@ -21,13 +21,17 @@
         <li><a href="/dokumentasi">Dokumentasi</a></li>
         <li><a href="/tentang-kami">Tentang Kami</a></li>
       </ul>
-      <div class="navbar-masuk">
-        <button class="dropdown" onclick=""><i class="fa fa-user"></i> <%= user.username %></button>
+      <div class="navbar-masuk dropdown-user">
+        <button class="dropdown" onclick=""><i class="fa fa-user-circle" aria-hidden="true"></i></i>
+          fira
+        </button>
         <div class="dropdown-content" id="dropdown-content">
           <ul>
-            <li><a href="/pakets/1">Akun Profile</a></li>
-            <li><a href="/pakets/2">Riwayat Transaksi</a></li>
-            <li><a href="/pakets/3">Logout</a></li>
+            <li><a href="/pakets/1"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile</a></li>
+            <li><a href="/pakets/2"><i class="fa fa-history" aria-hidden="true"></i> Riwayat Transaksi</a></li>
+            <li><a href="/pakets/2"><i class="fa fa-cubes" aria-hidden="true"></i> Lacak Pesanan</a></li>
+            <hr>
+            <li><a href="/pakets/3"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
           </ul>
         </div>
       </div>
