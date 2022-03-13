@@ -19,45 +19,24 @@
             <div class="box-detail-paket">
                 <div class="detail-paket-deskripsi">
                     <h4>Deskripsi Paket</h4>
-                    <p>Paket pernikahan All In dengan paketan catering 1000 pax untuk konsep acara normal. Biasanya
-                        digunakan untuk acara
-                        gedung atau venue yang cukup luas di area Bandung. Dengan segala sesuatunya yang tetap mengikuti
-                        protokol kesehatan.
-                        Demi keamanan dan kenyamanan bersama.</p>
+                    <p><%= paket.des_paket %> </p>
                 </div>
                 <div class="detail-paket-galeri">
                     <h4>Galeri Paket</h4>
                     <div class="galeri-gambar">
-                        <!-- <img src="/img/order1.png" >
-                                        <img src="/img/order2.png">
-                                        <img src="/img/order3.jpg"> -->
                         <div class="container-fluid">
                             <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
                                 <div class="carousel-inner w-100 mx-auto" role="listbox">
-                                    <div class="carousel-item col-md-3 active">
-                                        <img class="img-fluid mx-auto d-block" src="/img/order1.png" alt="slide 1">
-                                    </div>
-                                    <div class="carousel-item col-md-3">
-                                        <img class="img-fluid mx-auto d-block" src="/img/order2.jpg" alt="slide 2">
-                                    </div>
-                                    <div class="carousel-item col-md-3">
-                                        <img class="img-fluid mx-auto d-block" src="/img/order3.jpg" alt="slide 3">
-                                    </div>
-                                    <div class="carousel-item col-md-3">
-                                        <img class="img-fluid mx-auto d-block" src="/img/tes8.jpg" alt="slide 4">
-                                    </div>
-                                    <div class="carousel-item col-md-3">
-                                        <img class="img-fluid mx-auto d-block" src="/img/tes11.jpg" alt="slide 5">
-                                    </div>
-                                    <div class="carousel-item col-md-3">
-                                        <img class="img-fluid mx-auto d-block" src="/img/tes9.jpg" alt="slide 6">
-                                    </div>
-                                    <div class="carousel-item col-md-3">
-                                        <img class="img-fluid mx-auto d-block" src="/img/img1.jpg" alt="slide 7">
-                                    </div>
-                                    <div class="carousel-item col-md-3">
-                                        <img class="img-fluid mx-auto d-block" src="/img/img2.jpg" alt="slide 7">
-                                    </div>
+                                    <% for( let i = 0; i < 1; i++ ) { %>
+                                        <div class="carousel-item col-md-3 active">
+                                            <img class="img-fluid mx-auto d-block" src="<%= image[0] %> " alt="slide 2">
+                                        </div>
+                                    <% } %>
+                                    <% for( let i = 1; i < image.length; i++ ) { %>                                    
+                                        <div class="carousel-item col-md-3">
+                                            <img class="img-fluid mx-auto d-block" src="<%= image[i] %> " alt="slide <%= i %> ">
+                                        </div>
+                                    <% } %>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExample" role="button"
                                     data-slide="prev">
@@ -86,7 +65,7 @@
                                 </h4>
                                 <div class="sect">
                                     <h4>
-                                        <%= toRupiah(dekorasi.harga_dekorasi) %>
+                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi) %> 
                                     </h4>
                                     <img src="/img/info.svg">
                                 </div>
@@ -107,7 +86,7 @@
                                 </h4>
                                 <div class="sect">
                                     <h4>
-                                        <%= toRupiah(rias.harga_rias) %>
+                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(rias.harga_rias) %> 
                                     </h4>
                                     <img src="/img/info.svg">
                                 </div>
@@ -128,7 +107,7 @@
                                 </h4>
                                 <div class="sect">
                                     <h4>
-                                        <%= toRupiah(catering.harga_catering) %>
+                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(catering.harga_catering) %> 
                                     </h4>
                                     <img src="/img/info.svg">
                                 </div>
@@ -149,7 +128,7 @@
                                 </h4>
                                 <div class="sect">
                                     <h4>
-                                        <%= toRupiah(dokumentasi.harga_dokumentasi) %>
+                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dokumentasi.harga_dokumentasi) %> 
                                     </h4>
                                     <img src="/img/info.svg">
                                 </div>
@@ -170,7 +149,7 @@
                                 </h4>
                                 <div class="sect">
                                     <h4>
-                                        <%= toRupiah(entertainment.harga_entertainment) %>
+                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(entertainment.harga_entertainment) %> 
                                     </h4>
                                     <img src="/img/info.svg">
                                 </div>
@@ -183,15 +162,6 @@
                                         </li>
                                         <% }) %>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="tambahan info">
-                            <div class="info-keterangan">
-                                <h4>Tambahan</h4>
-                                <div class="sect">
-                                    <h4>Rp. 0</h4>
-                                    <img src="/img/info.svg">
-                                </div>
                             </div>
                         </div>
                         <div class="note info">
@@ -207,7 +177,8 @@
                             <h4>Total Bayar</h4>
                             <div class="sect">
                                 <h4>
-                                    <%= toRupiah(total) %>
+                                    <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias +
+                                    dokumentasi.harga_dokumentasi + entertainment.harga_entertainment) %> 
                                 </h4>
                             </div>
                         </div>

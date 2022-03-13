@@ -17,6 +17,8 @@ class DetailController {
       };
       const data = await Paket.findAll(options);
 
+      const result_image = data[0].Category.img_paket.split("|");
+
       const renderData = {
         paket: data[0],
         dekorasi: data[0].Dekorasi,
@@ -26,9 +28,8 @@ class DetailController {
         dokumentasi: data[0].Dokumentasi,
         entertainment: data[0].Entertainment,
         user: req.session.user,
+        image: result_image,
       };
-
-      console.log(data[0]);
 
       // res.status(200).json(renderData);
       res.render("order", renderData);
