@@ -60,7 +60,7 @@
                                 </h4>
                             </div>
                             <div class="paket-detail-kustomisasi">
-                                <input class="note-dropdown" id="namaDekorasi" name="nama_dekorasi" placeholder=""> </input>
+                                <input class="note-dropdown" id="nama_paket" name="nama_paket" placeholder=""> </input>
                             </div>
                         </div>
                         <div class="dekorasi info">
@@ -69,7 +69,7 @@
                                 </h4>
                             </div>
                             <div class="paket-detail-kustomisasi">
-                                <select class="note-dropdown" id="namaDekorasi" name="nama_dekorasi" placeholder=""> </select>
+                                <select class="note-dropdown" id="nama_dekorasi" name="nama_dekorasi" placeholder=""> </select>
                             </div>
                         </div>
                         <div class="rias info">
@@ -114,7 +114,7 @@
 
                         <div class="detail-paket-right">
                             <div class="detail-paket-biaya">
-                                <h4>Total Bayar</h4>
+                                <h4 class="h4-total-bayar">Total Bayar</h4>
                                 <div class="sect">
                                     <h4>
                                        Total
@@ -124,7 +124,7 @@
                             <div class="kustom-pesan">
                                 <!-- <button class="btn-kustomisasi" id="btnKustomisasi"><a
                                         href="https://wa.me/6282267263157">Kustomisasi</a></button> -->
-                                <button class="btn-pesan" id="btnPesan" type="submit"><a
+                                <button class="btn-pesan" id="btnPesanKustom" type="submit"><a
                                         href="">Buat Paket</a></button>
                             </div>
                         </div>
@@ -155,11 +155,11 @@
                         console.log("event: ", e.target.className)
 
                         if (getParent && getList && getClassName !== "detail-paket-choices"
-                            && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
-                            if (getList.style.display !== "block") {
+                            && getClassName !== "info-keterangan" && getAnotherClassName !== "sect" && getClassName !== "kustom-pesan") {
+                            if (getList.style.display !== "block"  && getClassName !== "h4-total-bayar" && getClassName !== "sect" && getClassName !== "btn-pesan") {
                                 getList.style.display = "block"
                                 console.log(e)
-                            } else if (getClassName !== "note-dropdown") {
+                            } else if (getClassName !== "note-dropdown"  && getClassName !== "btn-pesan"  && getClassName !== "h4-total-bayar" && getClassName !== "sect-total" && getClassName !== "sect") {
                                 getList.style.display = "none"
                                 console.log(e)
                             }
