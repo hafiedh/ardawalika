@@ -1,0 +1,41 @@
+<%- include('./partials/navbar-general'); %>
+
+<section class="dokumentasi-filler"></section>
+<form class="konfirmasi" method="post" action="/orders/chargecustom">
+    <div class="konfirmasi__section-container">
+        <div class="konfirmasi__pilih-tanggal field">
+            <h4>Pilih Tanggal Acara</h4>
+            <input type="text" name="tanggal_acara" id="pilih-tanggal" placeholder="Please select Date Time" data-input>
+        </div>
+        <div class="konfirmasi__pilih-bank field">
+            <h4 for="pilihBank">Pilih Bank:</h4>
+            <select id="pilihBank" name="nama_bank" type="select">
+                <option value="bni">BNI</option>
+                <option value="bri">BRI</option>
+                <option value="bca">BCA</option>
+            </select>
+        </div>
+        <div class="konfirmasi__norek field">
+            <h4 for="norek">Nomor Rekening</h4>
+            <input type="number" name="nomor_rekening" id="konfirmasiInputNorek" placeholder="xx-xxxx-xxxx" />
+        </div>
+        <div class="konfirmasi__pilih-tanggal field">
+            <h4>Total Harga</h4>
+            <input type="number" name="total_harga" value="<%= data.total_harga %>" readonly>
+        </div>
+        <div class="konfirmasi__pilih-tanggal field">
+            <!-- <h4>Paket Id</h4> -->
+            <input type="text" name="paket_id" value="<%= data.paket_id %>" hidden>
+        </div>
+        <button class="simpan-konfirmasi" type="submit">Checkout</button>
+    </div>
+</form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+    <script>
+        $("#pilih-tanggal").flatpickr({
+            enableTime: true,
+            dateFormat: "F, d Y H:i"
+        });
+    </script>
+<%- include('./partials/footer'); %>

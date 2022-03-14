@@ -6,7 +6,6 @@ const imgKit = require("../middlewares/imagekit");
 
 // router.get("/", PaketController.getPakets);
 router.post("/", PaketController.createPaket);
-router.post("/paketcustom", PaketController.customPaket);
 router.post(
   "/createPaket",
   function (req, res, next) {
