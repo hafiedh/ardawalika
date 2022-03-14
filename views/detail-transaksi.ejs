@@ -6,7 +6,7 @@
     <!-- Title -->
     <div class="header__title">
       <h1 class="header__package-name"><%= data.paket.name_paket %> </h1>
-      <h1 class="header__order-code">Test</h1>
+      <h1 class="header__order-code"><%= data.result.id %></h1>
     </div>
 
     <!-- Button & Label -->
@@ -35,28 +35,28 @@
         <table>
           <tr>
             <td width="124">Nama</td>
-            <td>:</td>
-            <td>TEST</td>
+            <td>: </td>
+            <td><%= data.fullname %></td>
           </tr>
           <tr>
             <td width="124">Email</td>
             <td>:</td>
-            <td>ASDASDAS></td>
+            <td><%= data.email %></td>
           </tr>
           <tr>
             <td width="124">Alamat</td>
-            <td>:</td>
-            <td>ASDASDASD</td>
+            <td style="padding-right: 1rem;">:</td>
+            <td><%= data.address %></td>
           </tr>
           <tr>
             <td width="124">Nomor HP</td>
             <td>:</td>
-            <td>ASDASDASDASD</td>
+            <td><%= data.phoneNumber %></td>
           </tr>
           <tr>
             <td width="124">Tanggal Acara</td>
             <td>:</td>
-            <td>ASDASDASDAS</td>
+            <td><%= data.result.tanggal_acara %></td>
           </tr>
         </table>
       </div>
@@ -71,152 +71,72 @@
       <div class="customer-order__order-details-description">
         <div class="customer-order__order-details-item">
           <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">ASDASDASDASD</p>
-            <p class="customer-order__price">ASDASDASDASDA</p>
+            <p class="customer-order__item"><%= data.paket.Dekorasi.name_dekorasi %></p>
+            <p class="customer-order__price"><%= data.paket.Dekorasi.harga_dekorasi %></p>
             <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
           </button>
           <div class="customer-order__order-details-description-item">
-            <p class="customer-order__description-item-1">Dekorasi Pelaminan maks 10 meter</p>
-            <p class="customer-order__description-item-2">Teman Pelaminan (Fresh Flower & Artificial)</p>
-            <p class="customer-order__description-item-3">1 Set meja & kursi Akad</p>
-            <p class="customer-order__description-item-4">1 Backdrop Music</p>
-            <p class="customer-order__description-item-5">1 Spot Galeri Foto</p>
-            <p class="customer-order__description-item-6">1 Spot Photobooth</p>
-            <p class="customer-order__description-item-7">6 Pilar jalan & Karpet jalan</p>
-            <p class="customer-order__description-item-8">3 Gate lengkung/kotak</p>
-            <p class="customer-order__description-item-9">1 Pergola masuk 3 x 4 meter</p>
-            <p class="customer-order__description-item-10">2 Meja penerima tamu & kotak angpau</p>
-            <p class="customer-order__description-item-11">Welcome sign</p>
+            <% data.paket.Dekorasi.keterangan_dekorasi.split(',').forEach((item) => { %>
+            <p class="customer-order__description-item-1"><%= item %></p>
+            <% }) %>
+          </div>
+           
+        </div>
+        <div class="customer-order__order-details-item">
+          <button class="customer-order__order-details-description-info">
+            <p class="customer-order__item"><%= data.paket.Ria.name_rias %></p>
+            <p class="customer-order__price"><%= data.paket.Ria.harga_rias %></p>
+            <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
+          </button>
+          <div class="customer-order__order-details-description-item">
+             <% data.paket.Ria.keterangan_rias.split(',').forEach((item) => { %>
+            <p class="customer-order__description-item-1"><%= item %></p>
+            <% }) %>
+          </div>
+        <div class="customer-order__order-details-item">
+          <button class="customer-order__order-details-description-info">
+            <p class="customer-order__item"><%= data.paket.Catering.name_catering %></p>
+            <p class="customer-order__price"><%= data.paket.Catering.harga_catering %></p>
+            <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
+          </button>
+          <div class="customer-order__order-details-description-item">
+          <% data.paket.Catering.keterangan_catering.split(',').forEach((item) => { %>
+            <p class="customer-order__description-item-1"><%= item %></p>
+          <% }) %>
           </div>
         </div>
         <div class="customer-order__order-details-item">
           <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">Rias Platinum</p>
-            <p class="customer-order__price">Rp23.000.000</p>
+            <p class="customer-order__item"><%= data.paket.Dokumentasi.name_dokumentasi %></p>
+            <p class="customer-order__price"><%= data.paket.Dokumentasi.harga_dokumentasi %></p>
             <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
           </button>
           <div class="customer-order__order-details-description-item">
-            <p class="customer-order__description-item-1">Dekorasi Pelaminan maks 10 meter</p>
-            <p class="customer-order__description-item-2">Teman Pelaminan (Fresh Flower & Artificial)</p>
-            <p class="customer-order__description-item-3">1 Set meja & kursi Akad</p>
-            <p class="customer-order__description-item-4">1 Backdrop Music</p>
-            <p class="customer-order__description-item-5">1 Spot Galeri Foto</p>
-            <p class="customer-order__description-item-6">1 Spot Photobooth</p>
-            <p class="customer-order__description-item-7">6 Pilar jalan & Karpet jalan</p>
-            <p class="customer-order__description-item-8">3 Gate lengkung/kotak</p>
-            <p class="customer-order__description-item-9">1 Pergola masuk 3 x 4 meter</p>
-            <p class="customer-order__description-item-10">2 Meja penerima tamu & kotak angpau</p>
-            <p class="customer-order__description-item-11">Welcome sign</p>
+          <% data.paket.Dokumentasi.keterangan_dokumentasi.split(',').forEach((item) => { %>
+            <p class="customer-order__description-item-1"><%= item %></p>
+          <% }) %>
           </div>
         </div>
         <div class="customer-order__order-details-item">
           <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">Katering Platinum</p>
-            <p class="customer-order__price">Rp33.000.000</p>
+            <p class="customer-order__item"><%= data.paket.Entertainment.name_entertainment %></p>
+            <p class="customer-order__price"><%= data.paket.Entertainment.harga_entertainment %></p>
             <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
           </button>
           <div class="customer-order__order-details-description-item">
-            <p class="customer-order__description-item-1">Dekorasi Pelaminan maks 10 meter</p>
-            <p class="customer-order__description-item-2">Teman Pelaminan (Fresh Flower & Artificial)</p>
-            <p class="customer-order__description-item-3">1 Set meja & kursi Akad</p>
-            <p class="customer-order__description-item-4">1 Backdrop Music</p>
-            <p class="customer-order__description-item-5">1 Spot Galeri Foto</p>
-            <p class="customer-order__description-item-6">1 Spot Photobooth</p>
-            <p class="customer-order__description-item-7">6 Pilar jalan & Karpet jalan</p>
-            <p class="customer-order__description-item-8">3 Gate lengkung/kotak</p>
-            <p class="customer-order__description-item-9">1 Pergola masuk 3 x 4 meter</p>
-            <p class="customer-order__description-item-10">2 Meja penerima tamu & kotak angpau</p>
-            <p class="customer-order__description-item-11">Welcome sign</p>
-          </div>
-        </div>
-        <div class="customer-order__order-details-item">
-          <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">Dokumentasi Platinum</p>
-            <p class="customer-order__price">Rp13.000.000</p>
-            <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
-          </button>
-          <div class="customer-order__order-details-description-item">
-            <p class="customer-order__description-item-1">Dekorasi Pelaminan maks 10 meter</p>
-            <p class="customer-order__description-item-2">Teman Pelaminan (Fresh Flower & Artificial)</p>
-            <p class="customer-order__description-item-3">1 Set meja & kursi Akad</p>
-            <p class="customer-order__description-item-4">1 Backdrop Music</p>
-            <p class="customer-order__description-item-5">1 Spot Galeri Foto</p>
-            <p class="customer-order__description-item-6">1 Spot Photobooth</p>
-            <p class="customer-order__description-item-7">6 Pilar jalan & Karpet jalan</p>
-            <p class="customer-order__description-item-8">3 Gate lengkung/kotak</p>
-            <p class="customer-order__description-item-9">1 Pergola masuk 3 x 4 meter</p>
-            <p class="customer-order__description-item-10">2 Meja penerima tamu & kotak angpau</p>
-            <p class="customer-order__description-item-11">Welcome sign</p>
-          </div>
-        </div>
-        <div class="customer-order__order-details-item">
-          <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">Hiburan Platinum</p>
-            <p class="customer-order__price">Rp30.000.000</p>
-            <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
-          </button>
-          <div class="customer-order__order-details-description-item">
-            <p class="customer-order__description-item-1">Dekorasi Pelaminan maks 10 meter</p>
-            <p class="customer-order__description-item-2">Teman Pelaminan (Fresh Flower & Artificial)</p>
-            <p class="customer-order__description-item-3">1 Set meja & kursi Akad</p>
-            <p class="customer-order__description-item-4">1 Backdrop Music</p>
-            <p class="customer-order__description-item-5">1 Spot Galeri Foto</p>
-            <p class="customer-order__description-item-6">1 Spot Photobooth</p>
-            <p class="customer-order__description-item-7">6 Pilar jalan & Karpet jalan</p>
-            <p class="customer-order__description-item-8">3 Gate lengkung/kotak</p>
-            <p class="customer-order__description-item-9">1 Pergola masuk 3 x 4 meter</p>
-            <p class="customer-order__description-item-10">2 Meja penerima tamu & kotak angpau</p>
-            <p class="customer-order__description-item-11">Welcome sign</p>
-          </div>
-        </div>
-        <div class="customer-order__order-details-item">
-          <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">MC Platinum</p>
-            <p class="customer-order__price">Rp9.000.000</p>
-            <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
-          </button>
-          <div class="customer-order__order-details-description-item">
-            <p class="customer-order__description-item-1">Dekorasi Pelaminan maks 10 meter</p>
-            <p class="customer-order__description-item-2">Teman Pelaminan (Fresh Flower & Artificial)</p>
-            <p class="customer-order__description-item-3">1 Set meja & kursi Akad</p>
-            <p class="customer-order__description-item-4">1 Backdrop Music</p>
-            <p class="customer-order__description-item-5">1 Spot Galeri Foto</p>
-            <p class="customer-order__description-item-6">1 Spot Photobooth</p>
-            <p class="customer-order__description-item-7">6 Pilar jalan & Karpet jalan</p>
-            <p class="customer-order__description-item-8">3 Gate lengkung/kotak</p>
-            <p class="customer-order__description-item-9">1 Pergola masuk 3 x 4 meter</p>
-            <p class="customer-order__description-item-10">2 Meja penerima tamu & kotak angpau</p>
-            <p class="customer-order__description-item-11">Welcome sign</p>
-          </div>
-        </div>
-        <div class="customer-order__order-details-item">
-          <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">Tambahan</p>
-            <p class="customer-order__price">Rp0</p>
-            <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
-          </button>
-          <div class="customer-order__order-details-description-item">
-            <p class="customer-order__description-item-1">Dekorasi Pelaminan maks 10 meter</p>
-            <p class="customer-order__description-item-2">Teman Pelaminan (Fresh Flower & Artificial)</p>
-            <p class="customer-order__description-item-3">1 Set meja & kursi Akad</p>
-            <p class="customer-order__description-item-4">1 Backdrop Music</p>
-            <p class="customer-order__description-item-5">1 Spot Galeri Foto</p>
-            <p class="customer-order__description-item-6">1 Spot Photobooth</p>
-            <p class="customer-order__description-item-7">6 Pilar jalan & Karpet jalan</p>
-            <p class="customer-order__description-item-8">3 Gate lengkung/kotak</p>
-            <p class="customer-order__description-item-9">1 Pergola masuk 3 x 4 meter</p>
-            <p class="customer-order__description-item-10">2 Meja penerima tamu & kotak angpau</p>
-            <p class="customer-order__description-item-11">Welcome sign</p>
+           <% data.paket.Entertainment.keterangan_entertainment.split(',').forEach((item) => { %>
+            <p class="customer-order__description-item-1"><%= item %></p>
+          <% }) %>
           </div>
         </div>
         <hr class="customer-order__total-price-separator">
         <div class="customer-order__total-price-item">
           <p class="customer-order__item">Total Bayar</p>
-          <p class="customer-order__total-price">Rp130.000.000</p>
+          <p class="customer-order__total-price"><%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(data.paket.Dekorasi.harga_dekorasi + data.paket.Catering.harga_catering + data.paket.Ria.harga_rias +
+                                    data.paket.Dokumentasi.harga_dokumentasi + data.paket.Entertainment.harga_entertainment) %> </p>
         </div>
       </div>
     </div>
-
   </section>
 </div>
 
