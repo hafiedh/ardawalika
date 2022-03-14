@@ -3308,6 +3308,7 @@ footer h3 {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: auto;
+  background-color: white;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
