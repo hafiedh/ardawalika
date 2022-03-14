@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <%- include('./partials/navbar-general'); %>
-=======
-<%- include('./partials/navbar-home'); %>
-
->>>>>>> 10d41b6476ad8b93594127cd856b92a87ebe45b7
 <div class="wrapper">
   <h1 class="title">Riwayat Saya</h1>
   <% orders.forEach((order) => { %>
@@ -19,12 +14,13 @@
         Tanggal Acara : <b><%= order.tanggal_acara %></b>
       </p>
     </div>
-    <button class="history-card__button" onclick="detail(this)">Detail</button>
+    <button class="history-card__button" onclick="detail(this,order.paket_id )">Detail</button>
   </div>
   <% }); %>
 </div>
 <script>
   function detail(e) {
+  console.log(e.order_id);
     var id = e.parentElement.children[0].innerHTML;
     window.location.href = './riwayat-pemesanan-detail.html?id=' + id;
   }

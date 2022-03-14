@@ -66,7 +66,8 @@ class OrderController {
             id: result.id,
            }}
         );
-        res.redirect("/orders/history");
+        const user = req.session.user;
+        res.redirect("/orders/history", { user });
       } else {
         throw { status: 400, message: "Charge failed" };
       }
@@ -324,7 +325,8 @@ static async detail(req, res, next) {
         paket_id,
         total_harga,
       };
-      res.render("konfirmasi", { data });
+      const user = req.session.user;
+      res.render("konfirmasi", { data, user });
   } catch (error) {
     next(error);
   }
@@ -337,7 +339,8 @@ static async detail(req, res, next) {
         paket_id,
         total_harga,
       };
-      res.render("konfirmasi", { data });
+      const user = req.session.user;
+      res.render("konfirmasi", { data, user });
   } catch (error) {
     next(error);
   }
