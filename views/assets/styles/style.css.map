@@ -23,7 +23,8 @@
         "_resetdone.scss",
         "_profile.scss",
         "_konfirmasi.scss",
-        "_tracking.scss"
+        "_tracking.scss",
+        "_detail-transaksi.scss"
     ],
     "names": [],
     "file": "style.css"

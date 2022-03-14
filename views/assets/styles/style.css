@@ -5350,10 +5350,12 @@ button {
 :root {
   --clr-primary: #1081e8;
   --clr-yellow: #ffc806;
-  --clr-grey: #d1d1d1;
+  --clr-darkgrey: #848996;
+  --clr-grey: #e7e8ec;
   --clr-lightgrey: #f5f6f7;
   --clr-white: #ffffff;
   --clr-black: #000000;
+  --clr-blue: #0B2589;
   --ff-primary: "Inter", sans-serif;
 }
 
@@ -5438,5 +5440,274 @@ input {
   color: var(--clr-white);
   cursor: pointer;
 }
-/*# sourceMappingURL=style.css.map */
+
+.wrapper-detail-transaksi {
+  width: 100%;
+  margin-inline: auto;
+  padding-top: 110px;
+  max-width: 1115px;
+}
+
+.wrapper-detail-transaksi .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.wrapper-detail-transaksi .header__title {
+  width: 100%;
+  margin: 0 0 auto -2px;
+}
+
+.wrapper-detail-transaksi .header__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper-detail-transaksi .header__button-service-track {
+  width: 213px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 600;
+  margin-bottom: 13px;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border: 1px solid var(--clr-primary);
+}
+
+.wrapper-detail-transaksi .header__choose-date {
+  width: auto;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+}
+
+.wrapper-detail-transaksi .header__choose-date::-webkit-input-placeholder {
+  color: var(--clr-primary);
+}
+
+.wrapper-detail-transaksi .header__choose-date:-ms-input-placeholder {
+  color: var(--clr-primary);
+}
+
+.wrapper-detail-transaksi .header__choose-date::-ms-input-placeholder {
+  color: var(--clr-primary);
+}
+
+.wrapper-detail-transaksi .header__choose-date::placeholder {
+  color: var(--clr-primary);
+}
+
+.wrapper-detail-transaksi .header__reminder-label {
+  width: 550px;
+  text-align: end;
+  font-size: 14px;
+  color: var(--clr-darkgrey);
+  margin: 7.5px 0.8px 0 0;
+}
+
+.wrapper-detail-transaksi .header__button-and-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.wrapper-detail-transaksi .customer-order {
+  width: 1115px;
+  margin: 50px auto 100px;
+}
+
+.wrapper-detail-transaksi .customer-order__customer-details, .wrapper-detail-transaksi .customer-order__order-details {
+  margin: 14px 0;
+}
+
+.wrapper-detail-transaksi .customer-order__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2rem;
+  width: 100%;
+  background: var(--clr-lightgrey);
+  color: var(--clr-black);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 7.5px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper-detail-transaksi .customer-order__info.active, .wrapper-detail-transaksi .customer-order__order-details-description-info.active {
+  color: var(--clr-primary);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.wrapper-detail-transaksi .customer-order__info-logo {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  font-size: 19.5px;
+}
+
+.wrapper-detail-transaksi .customer-order__customer-details-description, .wrapper-detail-transaksi .customer-order__order-details-description-item {
+  font-family: var(--ff-primary);
+  font-size: 16px;
+  padding: 0 1.1rem;
+  background-color: var(--clr-lightgrey);
+  border-radius: 7.5px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  line-height: 1.5;
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-description {
+  margin-top: -4.5px;
+  padding: 0 1.2rem;
+  font-size: 16px;
+  background-color: var(--clr-lightgrey);
+  border-radius: 7.5px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  line-height: 1.5;
+}
+
+.wrapper-detail-transaksi .customer-order__customer-details-description.active {
+  max-height: 100% !important;
+  height: auto;
+  padding: 0 1.075rem 1.075rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-description.active {
+  max-height: 100% !important;
+  height: auto;
+  padding: 0 1.2rem 1.2rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-item {
+  margin: 31px 0;
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-description-info {
+  margin-top: -17px;
+  background-color: var(--clr-grey);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2rem;
+  width: 100%;
+  border-radius: 7.5px;
+  color: var(--clr-black);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-description-info.active {
+  background-color: var(--clr-grey);
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-description-info.active .wrapper-detail-transaksi .customer-order__info-logo {
+  color: var(--clr-primary);
+}
+
+.wrapper-detail-transaksi .customer-order__price {
+  margin: 0.35px 17.5px 0 auto;
+  font-weight: normal;
+  color: var(--clr-blue);
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-description-item {
+  background: var(--clr-grey);
+  padding: 0 1.2rem;
+}
+
+.wrapper-detail-transaksi .customer-order__order-details-description-item.active {
+  background: var(--clr-grey);
+  max-height: 100% !important;
+  height: auto;
+  padding: 0 1.2rem 1.2rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.wrapper-detail-transaksi .customer-order__description-item-1, .wrapper-detail-transaksi .customer-order__description-item-2, .wrapper-detail-transaksi .customer-order__description-item-3, .wrapper-detail-transaksi .customer-order__description-item-4, .wrapper-detail-transaksi .customer-order__description-item-5, .wrapper-detail-transaksi .customer-order__description-item-6, .wrapper-detail-transaksi .customer-order__description-item-7, .wrapper-detail-transaksi .customer-order__description-item-8, .wrapper-detail-transaksi .customer-order__description-item-9, .wrapper-detail-transaksi .customer-order__description-item-10, .wrapper-detail-transaksi .customer-order__description-item-11 {
+  margin: 5px 0 0;
+}
+
+.wrapper-detail-transaksi .customer-order__total-price-separator {
+  margin-top: -16px;
+  border-top: 1px dashed var(--clr-darkgrey);
+}
+
+.wrapper-detail-transaksi .customer-order__total-price-item {
+  margin-top: 13px;
+  background-color: var(--clr-grey);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2rem;
+  width: 100%;
+  border-radius: 7.5px;
+  color: var(--clr-black);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
+.wrapper-detail-transaksi .customer-order__total-price {
+  margin: 0.35px 0 0 auto;
+  font-weight: bold;
+  color: var(--clr-blue);
+}
 /*# sourceMappingURL=style.css.map */
