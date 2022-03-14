@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-const { promises } = require("form-data");
-const { Category, Paket, PaketCustom, Dekorasi, Catering, Rias, Dokumentasi, Entertainment} = require("../models");
-=======
 const { Category, Paket, PaketCustom, Catering, Dekorasi, Dokumentasi, Entertainment, Rias } = require("../models");
->>>>>>> 58b58c983e2349d53b6f854adf70053c82013f5b
 
 class DetailController {
   static async getDetail(req, res, next) {
