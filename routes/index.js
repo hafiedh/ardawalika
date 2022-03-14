@@ -69,4 +69,14 @@ router.get("/kostumisasi", (req, res) => {
   console.log("kustomisasi");
 });
 
+router.get("/tracking", (req, res) => {
+  res.render("tracking");
+  console.log("tracking");
+});
+
+router.get("/detail-transaksi", (req, res) => {
+  res.render("detail-transaksi");
+  console.log("detail-transaksi");
+});
+
 module.exports = router;

@@ -1,24 +1,24 @@
-<%- include('./partials/navbar-home'); %>
+<%- include('./partials/navbar-general'); %>
 
 <div class="wrapper-detail-transaksi">
   <!-- Header -->
   <div class="header">
     <!-- Title -->
     <div class="header__title">
-      <h1 class="header__package-name">Paket Perfect Platinum</h1>
-      <h1 class="header__order-code">#SAS0806</h1>
+      <h1 class="header__package-name"><%= data.paket.name_paket %> </h1>
+      <h1 class="header__order-code">Test</h1>
     </div>
 
     <!-- Button & Label -->
     <div class="header__button-and-label">
       <!-- Button -->
       <div class="header__button">
-        <button class="header__button-service-track">Lacak Layanan</button>
-        <input type="date" name="ubahTanggal" id="ubah-tanggal" class="header__choose-date"
-          placeholder="Ubah Tanggal" data-input>
+        <!-- <button class="header__button-service-track">Lacak Layanan</button> -->
+        <!-- <input type="date" name="ubahTanggal" id="ubah-tanggal" class="header__choose-date"
+          placeholder="Ubah Tanggal" data-input> -->
       </div>
       <!-- Label -->
-      <p class="header__reminder-label">Kamu masih dapat mengubah tanggal hingga 16 Desember 2021</p>
+      <!-- <p class="header__reminder-label">Kamu masih dapat mengubah tanggal hingga 16 Desember 2021</p> -->
     </div>
   </div>
 
@@ -36,27 +36,27 @@
           <tr>
             <td width="124">Nama</td>
             <td>:</td>
-            <td>Angeli</td>
+            <td>TEST</td>
           </tr>
           <tr>
             <td width="124">Email</td>
             <td>:</td>
-            <td>emailkamu@email.com</td>
+            <td>ASDASDAS></td>
           </tr>
           <tr>
             <td width="124">Alamat</td>
             <td>:</td>
-            <td>Jalan Jalak Bali 20 No. 4, Desa Burung, Kecamatan Langka, Kodepos 88800</td>
+            <td>ASDASDASD</td>
           </tr>
           <tr>
             <td width="124">Nomor HP</td>
             <td>:</td>
-            <td>08123456789</td>
+            <td>ASDASDASDASD</td>
           </tr>
           <tr>
             <td width="124">Tanggal Acara</td>
             <td>:</td>
-            <td>6 Januari 2022</td>
+            <td>ASDASDASDAS</td>
           </tr>
         </table>
       </div>
@@ -71,8 +71,8 @@
       <div class="customer-order__order-details-description">
         <div class="customer-order__order-details-item">
           <button class="customer-order__order-details-description-info">
-            <p class="customer-order__item">Dekorasi Platinum</p>
-            <p class="customer-order__price">Rp22.000.000</p>
+            <p class="customer-order__item">ASDASDASDASD</p>
+            <p class="customer-order__price">ASDASDASDASDA</p>
             <i class="customer-order__info-logo fa fa-circle-exclamation"></i>
           </button>
           <div class="customer-order__order-details-description-item">
@@ -221,7 +221,29 @@
 </div>
 
 <!-- Accordion -->
-<script src="accordion_transaction-detail.js"></script>
+<script >
+const info = document.querySelectorAll(".customer-order__info")
+const orderDetailsDescriptionInfo = document.querySelectorAll(".customer-order__order-details-description-info")
+const customerDetailsdescription = document.querySelectorAll(".customer-order__customer-details-description")
+const orderDetailsdescription = document.querySelectorAll(".customer-order__order-details-description")
+const descriptionInDescription = document.querySelectorAll(".customer-order__order-details-description-item")
+
+info.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const panel = btn.nextElementSibling
+    panel.classList.toggle("active")
+    btn.classList.toggle("active")
+  })
+})
+
+orderDetailsDescriptionInfo.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const panel = btn.nextElementSibling
+    panel.classList.toggle("active")
+    btn.classList.toggle("active")
+  })
+})
+</script>
 <!-- Flatpickr JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>

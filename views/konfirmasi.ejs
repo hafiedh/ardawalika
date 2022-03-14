@@ -1,4 +1,4 @@
-<%- include('./partials/_navbar-home'); %>
+<%- include('./partials/navbar-general'); %>
 
 <section class="dokumentasi-filler"></section>
 <form class="konfirmasi" method="post" action="/orders/charge">
@@ -24,8 +24,8 @@
             <input type="number" name="total_harga" value="<%= data.total_harga %>" readonly>
         </div>
         <div class="konfirmasi__pilih-tanggal field">
-            <h4>Paket Id</h4>
-            <input type="text" name="paket_id" value="<%= data.paket_id %>" readonly>
+            <!-- <h4>Paket Id</h4> -->
+            <input type="text" name="paket_id" value="<%= data.paket_id %>" hidden>
         </div>
         <button class="simpan-konfirmasi" type="submit">Checkout</button>
     </div>

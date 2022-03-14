@@ -39,6 +39,7 @@ class DetailController {
     }
   }
 
+ 
   static async getPaketCustomDetail(req, res, next) {
     try {
       const options = {

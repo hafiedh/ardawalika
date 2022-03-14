@@ -3,9 +3,7 @@
         //console.log(tes.childNodes);
         $(document).ready(function () {
             
-            console.log("tessssssssss")
             $(window).scroll(function () {
-                //console.log("aaaaaaaaaaaaaaaaa")
                 if ($(this).scrollTop() > 150) {
                     $('.main-head').addClass("solid");
                     $(".main-head ul").attr("id", "main-head-ul")
@@ -39,12 +37,12 @@
             const getAnotherClassName = e.target.parentNode.className;
             const getParent = e.target.parentNode.parentNode;
             const getList = getParent.children[1];
-            // console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
-            // console.log(getParent, getList, getClassName)
-            // console.log(getList)
+            console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+            console.log(getParent, getList, getClassName)
+            console.log(getList)
 
         if(getParent && getList && getClassName !== "detail-paket-choices" 
-            && getClassName !== "info-keterangan" && getAnotherClassName !== "sect"){
+            && getClassName !== "info-keterangan" && getAnotherClassName !== "sect" && getclassName !== "btn-pesan"){
             if (getList.style.display !== "block") {
                     getList.style.display = "block"
             } else {
