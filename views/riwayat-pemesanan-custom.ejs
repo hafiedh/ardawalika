@@ -14,15 +14,8 @@
         Tanggal Acara : <b><%= order.tanggal_acara %></b>
       </p>
     </div>
-    <button class="history-card__button" onclick="detail(this,order.paket_id )">Detail</button>
+    <button class="history-card__button" onclick="detail(this)">Detail</button>
   </div>
   <% }); %>
 </div>
-<script>
-  function detail(e) {
-  console.log(e.order_id);
-    var id = e.parentElement.children[0].innerHTML;
-    window.location.href = './riwayat-pemesanan-detail.html?id=' + id;
-  }
-</script>
 <%- include('./partials/footer'); %>

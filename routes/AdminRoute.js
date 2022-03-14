@@ -2,8 +2,12 @@ const AdminController = require("../controllers/AdminController");
 const router = require("express").Router();
 const upload = require("../middlewares/multer");
 const imgKit = require("../middlewares/imagekit");
+const authentication = require("../middlewares/authentication");
+const isAdmin = require("../middlewares/isAdmin");
 
 // router.get("/login", AdminController.viewLogin);
+router.use(authentication);
+router.use(isAdmin);
 router.get("/dashboard", AdminController.viewDashboard);
 router.get("/dekorasi", AdminController.viewDecoration);
 router.post("/dekorasi", AdminController.createDecoration);
