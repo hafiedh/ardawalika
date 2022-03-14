@@ -80,8 +80,7 @@ class OrderController {
     try {
       const order_id = uuid.v4()
       const { id, email, fullname, phoneNumber, address } = req.user;
-      const { paket_id } = req.params;
-      const { tanggal_acara, nama_bank } = req.body;
+      const { tanggal_acara, nama_bank, total_harga, paket_id, nomor_rekening } = req.body;
 
       const paket = await PaketCustom.findOne({
         attributes: {exclude: ["createdAt", "updateAt"]},
@@ -89,19 +88,6 @@ class OrderController {
          include:[Dekorasi, Catering, Rias, Dokumentasi, Entertainment]
       })
       if (!paket) throw { status: 404, message: "Paket not found" };
-
-      let total_harga = 0;
-      let data_harga = {
-          Dekorasi: paket.Dekorasi.harga_dekorasi,
-          Catering: paket.Catering.harga_catering,
-          Rias: paket.Ria.harga_rias,
-          Dokumentasi: paket.Dokumentasi.harga_dokumentasi,
-          Entertainment: paket.Entertainment.harga_entertainment
-      };
-
-      for(let i in data_harga){
-          total_harga += data_harga[i];
-      }
 
      const result = await Order.create({
         name_order: paket.name_paket,
@@ -134,6 +120,7 @@ class OrderController {
           email: email,
           phone: phoneNumber,
           address: address,
+          rekening: nomor_rekening
         },
       };
        const charge = await coreApi.charge(data);
@@ -144,7 +131,8 @@ class OrderController {
             id: result.id,
            }}
         );
-        res.redirect("/orders/history");
+        const user = req.session.user;
+        res.redirect("/orders/historycustom", { user });
       } else {
         throw { status: 400, message: "Charge failed" };
       }
@@ -339,8 +327,9 @@ static async detail(req, res, next) {
         paket_id,
         total_harga,
       };
+      console.log(data);
       const user = req.session.user;
-      res.render("konfirmasi", { data, user });
+      res.render("konfirmasicustom", { data, user });
   } catch (error) {
     next(error);
   }
@@ -437,6 +426,74 @@ static async detail(req, res, next) {
     } catch (error) {
       next(error);
     }
+  }
+
+   static async getDetailCustom(req, res, next) {
+    try {
+      const { id } = req.params;
+      const { fullname, email, address, phoneNumber } = req.user;
+      const result = await Order.findOne({
+        attributes: { exclude: ["createdAt", "updateAt"] },
+        where: { id: id },
+      });
+      if (!result) throw { status: 404, message: "Order not found" };
+      const paket = await PaketCustom.findOne({
+        where: { id: result.paket_custom_id },
+        include:[Dekorasi, Catering, Rias, Category, Dokumentasi, Entertainment],
+      });
+      if(!paket) throw { status: 404, message: "Paket not found" };
+      const data = {
+        fullname,
+        email,
+        address,
+        phoneNumber,
+        paket,
+        result,
+      };
+      const user = req.session.user;
+      res.render("detail-transaksi", { data, user });
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async customPaket(req, res, next) {
+    try {
+    console.log(req.body);
+    
+    const name_paket = req.body.paket_name;
+    const dekorasi_id = req.body.nama_dekorasi
+    const category_id = req.body.nama_category
+    const catering_id = req.body.nama_catering
+    const rias_id = req.body.nama_rias
+    const dokumentasi_id = req.body.nama_dokumentasi
+    const entertainment_id = req.body.nama_entertainment
+
+    console.log( typeof name_paket);
+    console.log( typeof dekorasi_id);
+    const data = await PaketCustom.create({
+      name_paket,
+      dekorasi_id,
+      catering_id,
+      rias_id,
+      category_id,
+      dokumentasi_id,
+      entertainment_id,
+    });
+    const id = data.id;
+    res.redirect("/customdetail/" + id);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async kostumisasiPage(req, res, next) {
+  try {
+    const user = req.session.user;
+    res.render("kostumisasi", { user });
+  } catch (error) {
+    next(error);
+  }
   }
 }
 module.exports = OrderController;

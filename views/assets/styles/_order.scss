@@ -117,7 +117,117 @@
 //   }
 // }
 
+// HEREEEEEEEEEE//
+#box-detail-paket-kustomisasi {
+  background-color: #f5f6f7;
+  padding: 2.5rem 2rem;
+  border-radius: 0.8rem;
+}
+
+.kustomisasi-paket-choices {
+  @include flex(flex-start, space-between, column);
+  //min-height: 20vh;
+  //background-color: lavender;
+  .info {
+    //background-color: pink;
+    margin: 0rem 0rem 1.3rem 0rem;
+    cursor: pointer;
+    //width: 20%;
+    height: 15vh;
+  }
+
+  .info-keterangan {
+    @include flex(space-between, flex-start, row);
+    flex-wrap: wrap;
+    border-radius: 0.8rem;
+    h4 {
+      margin-left: 3rem;
+      flex: 1 1 50rem;
+      font-size: 1.6rem;
+    }
+    .sect {
+      @include flex(space-between, flex-start, row);
+      //background-color: lightpink;
+      flex: 1 1 10rem;
+      img {
+        margin: 1rem 2rem;
+      }
+      h4 {
+        font-weight: 400;
+        color: #0b2589;
+      }
+    }
+  }
+
+  .paket-detail {
+    margin: 0rem 7rem 2rem 7rem;
+    //min-height: 10vh;
+    display: none;
+  }
+
+  .paket-detail-kustomisasi {
+    //background-color: lavender;
+    //margin: 0rem 7rem 2rem 7rem;
+    //min-height: 10vh;
+    //display: none;
+    select {
+      width: 90%;
+      border-radius: 0.8rem;
+      border: 1px solid #c2c2c2;
+      height: 4rem;
+      box-sizing: border-box;
+      font-size: $text;
+      resize: none;
+      margin: auto;
+      flex-wrap: wrap;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 3.5rem;
+      //background-color: lavender;
+    }
+    #nama_paket {
+      height: 5rem;
+    }
+  }
+
+  textarea {
+    width: 90%;
+    @include flex(space-between, flex-start, row);
+    //background: #ededed;
+    border-radius: 0.8rem;
+    border: 1px solid #c2c2c2;
+    height: 15rem;
+    box-sizing: border-box;
+    font-size: $text;
+    resize: none;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+    //background-color: lavender;
+  }
+
+  .note-dropdown {
+    //display: none;
+    width: 90%;
+    @include flex(space-between, flex-start, row);
+    //background: #ededed;
+    border-radius: 0.8rem;
+    border: 1px solid #c2c2c2;
+    height: 4rem;
+    box-sizing: border-box;
+    font-size: $text;
+    resize: none;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    //background-color: lavender;
+  }
+}
+
 .box-detail-paket {
+  //background-color: lavender;
   h4 {
     font-weight: 700;
     margin: 1rem 0rem;
@@ -248,110 +358,11 @@
   }
 }
 
-.kustomisasi-paket-choices {
-  @include flex(flex-start, space-between, column);
-  min-height: 50vh;
-
-  .info {
-    background-color: #f5f6f7;
-    margin: 0rem 0rem 1.3rem 0rem;
-    cursor: pointer;
-  }
-
-  .info-keterangan {
-    @include flex(space-between, flex-start, row);
-    flex-wrap: wrap;
-    border-radius: 0.8rem;
-    h4 {
-      margin-left: 3rem;
-      flex: 1 1 50rem;
-    }
-    .sect {
-      @include flex(space-between, flex-start, row);
-      //background-color: lightpink;
-      flex: 1 1 10rem;
-      img {
-        margin: 1rem 2rem;
-      }
-      h4 {
-        font-weight: 400;
-        color: #0b2589;
-      }
-    }
-  }
-
-  .paket-detail {
-    margin: 0rem 7rem 2rem 7rem;
-    //min-height: 10vh;
-    display: none;
-  }
-
-  .paket-detail-kustomisasi {
-    //background-color: lavender;
-    //margin: 0rem 7rem 2rem 7rem;
-    //min-height: 10vh;
-    display: none;
-    select {
-      width: 90%;
-      border-radius: 0.8rem;
-      border: 1px solid #c2c2c2;
-      height: 4rem;
-      box-sizing: border-box;
-      font-size: $text;
-      resize: none;
-      margin: auto;
-      flex-wrap: wrap;
-      padding: 1rem;
-      margin-top: 0.5rem;
-      margin-bottom: 3.5rem;
-      //background-color: lavender;
-    }
-    #nama_paket {
-      height: 5rem;
-    }
-  }
-
-  textarea {
-    width: 90%;
-    @include flex(space-between, flex-start, row);
-    //background: #ededed;
-    border-radius: 0.8rem;
-    border: 1px solid #c2c2c2;
-    height: 15rem;
-    box-sizing: border-box;
-    font-size: $text;
-    resize: none;
-    margin: auto;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-    margin-bottom: 3.5rem;
-    //background-color: lavender;
-  }
-
-  .note-dropdown {
-    display: none;
-    width: 90%;
-    @include flex(space-between, flex-start, row);
-    //background: #ededed;
-    border-radius: 0.8rem;
-    border: 1px solid #c2c2c2;
-    height: 15rem;
-    box-sizing: border-box;
-    font-size: $text;
-    resize: none;
-    margin: auto;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-    margin-bottom: 3.5rem;
-    //background-color: lavender;
-  }
-}
-
 // BUTTONS/CUSTOMISATION SECTION //
 .detail-paket-right {
   width: 50%;
   margin: 0 0 0 auto;
-  //background-cobtnlor: lavender;
+  //background-color: lavender;
   // @include flex(space-between, flex-start, column);
   .detail-paket-biaya {
     background-color: #f5f6f7;
@@ -362,7 +373,7 @@
     h4 {
       flex: 1 1 10rem;
       //background-color: lightpink;
-      margin: 1rem 0.5rem 1rem 4rem;
+      //margin: 1rem 0.5rem 1rem 4rem;
     }
     .sect {
       @include flex(flex-start, flex-end, row);
@@ -379,10 +390,10 @@
     @include flex(center, flex-end, row);
     //width: 80%;
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    //background-color: lightblue;
     flex-wrap: wrap;
     .btn-kustomisasi {
-      // margin: 0rem 0rem 0.5rem 1rem;
+      //margin: 0rem 0rem 0.5rem 1rem;
       margin: 0.5rem;
       background-color: white;
       border: 1px solid #1081e8;
@@ -441,7 +452,7 @@
 
     .info-keterangan {
       @include flex(space-between, flex-start, row);
-      background-color: #f5f6f7;
+      //background-color: #f5f6f7;
       flex-wrap: wrap;
       flex: 1 1 50rem;
       border-radius: 0.8rem;
@@ -529,7 +540,7 @@
 
     .kustom-pesan {
       @include flex(flex-end, flex-end, row);
-      background-color: lavender;
+      // background-color: lavender;
       flex-wrap: wrap;
       .btn-kustomisasi {
         margin: 0rem 0rem 0.5rem 1rem;
@@ -542,7 +553,7 @@
         font-weight: 600;
       }
       .btn-pesan {
-        //background-color: pink;
+        background-color: #1081e8;
         margin: 0rem 0rem 0.5rem 1rem;
         font-size: 1.3rem;
         border: none;
@@ -556,7 +567,8 @@
 
 #btnPesanKustom {
   width: 100%;
-  //background-color: lavender;
+  color: white;
+  font-weight: 500;
 }
 
 // MEDIA QUERY //

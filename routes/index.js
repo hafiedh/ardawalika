@@ -63,12 +63,6 @@ router.get("/resetdone", (req, res) => {
   console.log("resetdone");
 });
 
-// tes kustomisasi //
-router.get("/kostumisasi", (req, res) => {
-  res.render("kostumisasi");
-  console.log("kustomisasi");
-});
-
 router.get("/tracking", (req, res) => {
   res.render("tracking");
   console.log("tracking");

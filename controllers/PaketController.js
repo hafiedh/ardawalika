@@ -136,31 +136,6 @@ class PaketController {
       next(error);
     }
   }
-
-  static async customPaket(req, res, next) {
-    try {
-      const name_paket = parseInt(req.body.name_paket);
-      const dekorasi_id = parseInt(req.body.dekorasi_id);
-      const catering_id = parseInt(req.body.catering_id);
-      const rias_id = parseInt(req.body.rias_id);
-      const dokumentasi_id = parseInt(req.body.dokumentasi_id);
-      const entertainment_id = parseInt(req.body.entertainment_id);
-      const category_id = parseInt(req.body.category_id);
-
-      const data = await PaketCustom.create({
-        name_paket,
-        dekorasi_id,
-        catering_id,
-        rias_id,
-        dokumentasi_id,
-        entertainment_id,
-        category_id,
-      });
-    res.redirect("/customdetail/${data.id}");
-    } catch (error) {
-      next(error);
-    }
-  }
   
 }
 
