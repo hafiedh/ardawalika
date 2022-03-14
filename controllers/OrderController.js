@@ -432,6 +432,7 @@ static async detail(req, res, next) {
         paket,
         result,
       };
+      console.log(data);
       const user = req.session.user;
       res.render("detail-transaksi", { data, user });
     } catch (error) {
