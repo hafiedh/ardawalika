@@ -15,7 +15,6 @@
         "_order.scss",
         "_carousel.scss",
         "_tentang-kami.scss",
-        "_riwayat-pemesanan.scss",
         "_login.scss",
         "_register.scss",
         "_resetemail.scss",
@@ -23,8 +22,10 @@
         "_resetdone.scss",
         "_profile.scss",
         "_konfirmasi.scss",
+        "_riwayat-pemesanan.scss",
+        "_detail-transaksi.scss",
         "_tracking.scss",
-        "_detail-transaksi.scss"
+        "_detail-tracking.scss"
     ],
     "names": [],
     "file": "style.css"
