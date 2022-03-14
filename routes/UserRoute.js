@@ -20,7 +20,7 @@ router.post(
   function (req, res, next) {
     upload.single("name")(req, res, function (error) {
       if (error) {
-        console.log(`upload.single error: ${error}`);
+        next(error);
       }
       next();
     });

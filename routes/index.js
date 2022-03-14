@@ -32,7 +32,6 @@ router.get("/login", (req, res) => {
     error = req.query.error;
   }
   res.render("login", { error });
-  console.log("login");
 });
 
 //REGISTER ROUTES
@@ -42,35 +41,29 @@ router.get("/register", (req, res) => {
     error = req.query.error;
   }
   res.render("register", { error });
-  console.log("register");
 });
 
 //RESET EMAIL ROUTES
 router.get("/resetemail", (req, res) => {
   res.render("resetemail");
-  console.log("resetemail");
 });
 
 //RESET PASSWORD ROUTES
 router.get("/resetpass", (req, res) => {
   res.render("resetpass");
-  console.log("resetpass");
 });
 
 //PASSWORD TELAH DIUBAH ROUTES
 router.get("/resetdone", (req, res) => {
   res.render("resetdone");
-  console.log("resetdone");
 });
 
 router.get("/tracking", (req, res) => {
   res.render("tracking");
-  console.log("tracking");
 });
 
 router.get("/detail-transaksi", (req, res) => {
   res.render("detail-transaksi");
-  console.log("detail-transaksi");
 });
 
 module.exports = router;

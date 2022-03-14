@@ -5,7 +5,6 @@ const IMGKIT_API = process.env.IMAGEKIT_PRIVATEKEY;
 function imgKit(req, res, next) {
   if (req.file) {
     let data = new FormData();
-    console.log(req.file);
     data.append("file", req.file.buffer.toString("base64"));
     data.append("fileName", req.file.originalname);
     const APIkey = Buffer.from(IMGKIT_API + ":").toString("base64");
@@ -21,7 +20,6 @@ function imgKit(req, res, next) {
     })
       .then((data) => {
         req.body.image = data.data.url;
-        console.log(req.body.image);
         next();
       })
       .catch((err) => {

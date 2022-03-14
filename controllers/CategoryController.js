@@ -13,12 +13,6 @@ class CategoryController {
         const user = req.session.user;
         res.render("index", { data, user });
       }
-      // if (req.session) {
-      //   navbar = req.session.navbar;
-      //   res.render("index", { data, navbar });
-      // } else {
-      //   res.render("index", { data, navbar });
-      // }
     } catch (error) {
       next(error);
     }

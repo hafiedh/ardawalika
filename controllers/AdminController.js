@@ -5,7 +5,6 @@ module.exports = {
     res.render("admin/dashboard/index");
   },
 
-  // admin Dekorasi
   viewDecoration: async (req, res) => {
     const dekorasi = await Dekorasi.findAll();
     res.render("admin/dekorasi/index", {
@@ -52,7 +51,6 @@ module.exports = {
     }
   },
 
-  // Catering
 
   viewCatering: async (req, res) => {
     const catering = await Catering.findAll();
@@ -99,7 +97,6 @@ module.exports = {
     }
   },
 
-  // Rias
 
   viewRias: async (req, res) => {
     const rias = await Rias.findAll();
@@ -146,7 +143,6 @@ module.exports = {
     }
   },
 
-  // Dokumentasi
   viewDokumentasi: async (req, res) => {
     const dokumentasi = await Dokumentasi.findAll();
     res.render("admin/dokumentasi/index", {
@@ -192,7 +188,6 @@ module.exports = {
     }
   },
 
-  // Entertainment
   viewEntertainment: async (req, res) => {
     const entertainment = await Entertainment.findAll();
     res.render("admin/entertainment/index", {

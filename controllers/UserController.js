@@ -175,7 +175,6 @@ class UserController {
       const data = payload.email;
       res.render("verifikasi", { data });
     } catch (err) {
-      console.log(err);
       next(err);
     }
   }
@@ -199,7 +198,6 @@ class UserController {
   static async updateUserPhoto(req, res, next) {
     try {
       const { id, email } = req.user;
-      console.log(req.user);
       const image = req.body.image;
       const update = await User.update(
         { imgUrl: image },

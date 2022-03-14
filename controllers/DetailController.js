@@ -3,12 +3,6 @@ const { Category, Paket, PaketCustom } = require("../models");
 class DetailController {
   static async getDetail(req, res, next) {
     try {
-      //     Paket.belongsTo(models.Dekorasi, { foreignKey: "dekorasi_id" });
-      //   Paket.belongsTo(models.Catering, { foreignKey: "catering_id" });
-      //   Paket.belongsTo(models.Rias, { foreignKey: "rias_id" });
-      //   Paket.belongsTo(models.Category, { foreignKey: "category_id" });
-      //   Paket.belongsTo(models.Dokumentasi, { foreignKey: "dokumentasi_id" });
-      //   Paket.belongsTo(models.Entertainment, {foreignKey: "entertainment_id",});
       const options = {
         where: {
           id: req.params.id,
@@ -62,10 +56,6 @@ class DetailController {
         user: req.session.user,
         image: result_image,
       };
-<<<<<<< HEAD
-    
-=======
->>>>>>> 0cd2f09ad52fb988b0d41784ae609ae30ab2d736
       res.render("ordercustom", renderData);
     } catch (error) {
       next(error);

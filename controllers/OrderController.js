@@ -16,7 +16,6 @@ class OrderController {
       const order_id = uuid.v4()
       const { id, email, fullname, phoneNumber, address } = req.user;
       const { tanggal_acara, nama_bank, total_harga, paket_id, nomor_rekening } = req.body;
-      console.log(req.body);
       const paket = await Paket.findOne({
         where: { id: paket_id },
       });
@@ -179,7 +178,6 @@ class OrderController {
           midtrans_response: JSON.parse(item.midtrans_response),
         };
       });
-      console.log(data);
        const user = req.session.user;
       if(data.length === 0){
         res.render("paketkosong", {user});
@@ -195,7 +193,6 @@ class OrderController {
     static async historyCustom(req, res, next) {
     try {
       const { id } = req.user;
-      console.log(req.user);
       const result = await Order.findAll({
         attributes: { exclude: ["createdAt", "updateAt"] },
         where: { [Op.and]: [{ user_id: id }, { paket_custom_id: { [Op.ne]: null } }] },
@@ -212,7 +209,6 @@ class OrderController {
           midtrans_response: JSON.parse(item.midtrans_response),
         };
       });
-      console.log(data);
        const user = req.session.user;
       if(data.length === 0){
         res.render("paketkosong",{user});
@@ -327,7 +323,6 @@ static async detail(req, res, next) {
         paket_id,
         total_harga,
       };
-      console.log(data);
       const user = req.session.user;
       res.render("konfirmasicustom", { data, user });
   } catch (error) {
@@ -459,8 +454,7 @@ static async detail(req, res, next) {
 
   static async customPaket(req, res, next) {
     try {
-    console.log(req.body);
-    
+
     const name_paket = req.body.paket_name;
     const dekorasi_id = req.body.nama_dekorasi
     const category_id = req.body.nama_category
@@ -469,8 +463,6 @@ static async detail(req, res, next) {
     const dokumentasi_id = req.body.nama_dokumentasi
     const entertainment_id = req.body.nama_entertainment
 
-    console.log( typeof name_paket);
-    console.log( typeof dekorasi_id);
     const data = await PaketCustom.create({
       name_paket,
       dekorasi_id,
