@@ -1,4 +1,4 @@
-const { Category, Paket, PaketCustom, Catering, Dekorasi, Dokumentasi, Entertainment, Rias } = require("../models");
+const { Category, Paket, PaketCustom } = require("../models");
 
 class DetailController {
   static async getDetail(req, res, next) {
@@ -16,11 +16,6 @@ class DetailController {
         include: ["Dekorasi", "Catering", "Ria", "Category", "Dokumentasi", "Entertainment"],
       };
       const data = await Paket.findAll(options);
-      const dataCatering = await Catering.findAll();
-      const dataDekorasi = await Dekorasi.findAll();
-      const dataDokumentasi = await Dokumentasi.findAll();
-      const dataEntertainment = await Entertainment.findAll();
-      const dataRias = await Rias.findAll();
 
       const result_image = data[0].Category.img_paket.split("|");
 
@@ -35,11 +30,6 @@ class DetailController {
         entertainment: data[0].Entertainment,
         user: req.session.user,
         image: result_image,
-        dataCatering,
-        dataDekorasi,
-        dataDokumentasi,
-        dataEntertainment,
-        dataRias,
       };
 
       // res.status(200).json(renderData);
