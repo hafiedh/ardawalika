@@ -1,0 +1,96 @@
+:root {
+  // Color
+  --clr-primary: #1081e8;
+  --clr-yellow: #ffc806;
+  --clr-darkgrey: #848996;
+  --clr-grey: #e7e8ec;
+  --clr-lightgrey: #f5f6f7;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-blue: #0b2589;
+
+  // Font Family
+  --ff-primary: "Inter", sans-serif;
+}
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Default Fonts
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-primary);
+}
+
+.wrapper-detail-tracking {
+  width: 100%;
+  margin-inline: auto;
+  padding-top: 110px;
+  max-width: 1115px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 auto -2px;
+  }
+
+  .mini-title {
+    margin-top: 35px;
+  }
+
+  .card {
+    margin: 20px 0 120px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 7.5px;
+      box-shadow: 0 0 7.5px var(--clr-grey);
+    }
+
+    &__category-item-name {
+      &__category {
+        margin-bottom: 2.5px;
+      }
+    }
+
+    &__date-time {
+      margin-left: auto;
+      margin-top: -50px;
+      margin-bottom: 25px;
+
+      &__date {
+        margin-bottom: 2.5px;
+      }
+    }
+
+    &__notes {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    &__images {
+      margin-top: 20px;
+
+      &__image-item {
+        margin-right: 15px;
+        border-radius: 3.75px;
+      }
+    }
+  }
+}
