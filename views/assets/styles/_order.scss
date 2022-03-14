@@ -210,6 +210,9 @@
       margin-bottom: 3.5rem;
       //background-color: lavender;
     }
+    #namaDekorasi {
+      height: 5rem;
+    }
   }
 
   textarea {
@@ -236,7 +239,7 @@
     //background: #ededed;
     border-radius: 0.8rem;
     border: 1px solid #c2c2c2;
-    height: 15rem;
+    height: 5rem;
     box-sizing: border-box;
     font-size: $text;
     resize: none;
@@ -383,7 +386,7 @@
       margin: 0.5rem;
       background-color: white;
       border: 1px solid #1081e8;
-      // width: 35%;
+      //width: 10%;
       padding: 1.2rem 0.5rem;
       border-radius: 0.8rem;
       font-size: 1.3rem;
