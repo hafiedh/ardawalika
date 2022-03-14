@@ -162,7 +162,6 @@ class OrderController {
   static async history(req, res, next) {
     try {
       const { id } = req.user;
-      console.log(req.user);
       const result = await Order.findAll({
         attributes: { exclude: ["createdAt", "updateAt"] },
         where: { [Op.and]: [{ user_id: id }, { paket_id: { [Op.ne]: null } }] },
@@ -342,6 +341,70 @@ static async detail(req, res, next) {
   } catch (error) {
     next(error);
   }
+  }
+
+   static async getAllPaketComponent(req, res, next) {
+    try {
+      Promise.all([
+        Catering.findAll(),
+        Dekorasi.findAll(),
+        Rias.findAll(),
+        Category.findAll(),
+        Dokumentasi.findAll(),
+        Entertainment.findAll(),
+      ]).then(([catering, dekorasi, rias, category, dokumentasi, entertainment]) => {
+        let renderData = {};
+
+        renderData.catering = catering.map((item) => {
+          return {
+            id: item.id,
+            name: item.name_catering,
+          };
+        });
+
+        renderData.dekorasi = dekorasi.map((item) => {
+          return {
+            id: item.id,
+            name: item.name_dekorasi,
+          };
+        });
+
+        renderData.rias = rias.map((item) => {
+          return {
+            id: item.id,
+            name: item.name_rias,
+          };
+        });
+
+        renderData.category = category.map((item) => {
+          return {
+            id: item.id,
+            name: item.name_category,
+          };
+        });
+
+        renderData.dokumentasi = dokumentasi.map((item) => {
+          return {
+            id: item.id,
+            name: item.name_dokumentasi,
+          };
+        });
+
+        renderData.entertainment = entertainment.map((item) => {
+          return {
+            id: item.id,
+            name: item.name_entertainment,
+          };
+        });
+
+        res.status(200).json({
+          message: "Paket found",
+          data: renderData,
+      });
+    });
+    } catch (error) {
+      next(error);
+    }
   }
 
 }

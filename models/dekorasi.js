@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       name_dekorasi: DataTypes.STRING,
       harga_dekorasi: DataTypes.INTEGER,
-      keterangan_dekorasi: DataTypes.STRING,
+      keterangan_dekorasi: DataTypes.STRING(1000),
     },
     {
       sequelize,

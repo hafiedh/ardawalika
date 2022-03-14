@@ -3,6 +3,7 @@ const router = require("express").Router();
 const authentication = require("../middlewares/authentication");
 
 router.use(authentication);
+router.get("/allComponent", OrderController.getAllPaketComponent);
 router.post("/notification", OrderController.handleNotification);
 router.get("/history", OrderController.history);
 router.get("/historyCustom", OrderController.historyCustom);

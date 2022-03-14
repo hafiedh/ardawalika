@@ -5,8 +5,19 @@
   "repository": "https://gitlab.com/ajisetiaji101/ardawalika.git",
   "author": "TIM E SYNRGY BATCH 4",
   "license": "MIT",
+  "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template",
+        "admin",
+        "app"
+    ],
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "axios": "^0.26.0",
@@ -30,10 +41,27 @@
     "nodemailer": "^6.7.2",
     "pg": "^8.7.3",
     "sequelize": "^6.16.2",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "@fortawesome/fontawesome-free": "5.15.3",
+    "bootstrap": "4.6.0",
+    "chart.js": "2.9.4",
+    "datatables.net-bs4": "1.10.24",
+    "jquery": "3.6.0",
+    "jquery.easing": "^1.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+     "browser-sync": "2.26.14",
+     "del": "6.0.0",
+     "gulp": "4.0.2",
+     "gulp-autoprefixer": "7.0.1",
+     "gulp-clean-css": "4.3.0",
+     "gulp-header": "2.0.9",
+     "gulp-plumber": "^1.2.1",
+     "gulp-rename": "2.0.0",
+     "gulp-sass": "4.1.0",
+     "gulp-uglify": "3.0.2",
+     "merge-stream": "2.0.0"
   }
 }

@@ -1,4 +1,5 @@
-const { Category, Paket, PaketCustom } = require("../models");
+const { promises } = require("form-data");
+const { Category, Paket, PaketCustom, Dekorasi, Catering, Rias, Dokumentasi, Entertainment} = require("../models");
 
 class DetailController {
   static async getDetail(req, res, next) {
@@ -38,6 +39,8 @@ class DetailController {
       next(error);
     }
   }
+
+ 
 
   static async getPaketCustomDetail(req, res, next) {
     try {

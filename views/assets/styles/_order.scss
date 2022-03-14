@@ -373,16 +373,16 @@
 
   .kustom-pesan {
     @include flex(center, flex-end, row);
-    //width: 80%;
+    width: 80%;
     margin: auto;
-    //background-color: lightblue;
+    background-color: rgb(255, 255, 255);
     flex-wrap: wrap;
     .btn-kustomisasi {
-      //margin: 0rem 0rem 0.5rem 1rem;
+      // margin: 0rem 0rem 0.5rem 1rem;
       margin: 0.5rem;
       background-color: white;
       border: 1px solid #1081e8;
-      //width: 10%;
+      width: 100%;
       padding: 1.2rem 0.5rem;
       border-radius: 0.8rem;
       font-size: 1.3rem;
