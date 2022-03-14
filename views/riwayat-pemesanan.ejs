@@ -14,15 +14,12 @@
         Tanggal Acara : <b><%= order.tanggal_acara %></b>
       </p>
     </div>
-    <button class="history-card__button" onclick="detail(this,order.paket_id )">Detail</button>
+    <a class="history-card__button" href="/orders/detail-riwayat/<%= order.id %> ">
+    <button class="history-card__button">Detail</button>
+    </a>
   </div>
   <% }); %>
 </div>
 <script>
-  function detail(e) {
-  console.log(e.order_id);
-    var id = e.parentElement.children[0].innerHTML;
-    window.location.href = './riwayat-pemesanan-detail.html?id=' + id;
-  }
 </script>
 <%- include('./partials/footer'); %>

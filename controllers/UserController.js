@@ -28,7 +28,6 @@ class UserController {
       sendEmail(email, username, url);
       res.redirect("/login?error=Register success, Sent a verification email to your email");
     } catch (err) {
-      // next(err);
       res.redirect(`/register?error=${err.errors[0].message}`);
     }
   }
