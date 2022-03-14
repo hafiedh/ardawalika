@@ -3,9 +3,7 @@
         //console.log(tes.childNodes);
         $(document).ready(function () {
             
-            console.log("tessssssssss")
             $(window).scroll(function () {
-                //console.log("aaaaaaaaaaaaaaaaa")
                 if ($(this).scrollTop() > 150) {
                     $('.main-head').addClass("solid");
                     $(".main-head ul").attr("id", "main-head-ul")

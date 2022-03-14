@@ -7,7 +7,6 @@ const descriptionInDescription = document.querySelectorAll(".customer-order__ord
 info.forEach((btn) => {
   btn.addEventListener("click", () => {
     const panel = btn.nextElementSibling
-    
     panel.classList.toggle("active")
     btn.classList.toggle("active")
   })
@@ -16,7 +15,6 @@ info.forEach((btn) => {
 orderDetailsDescriptionInfo.forEach((btn) => {
   btn.addEventListener("click", () => {
     const panel = btn.nextElementSibling
-    
     panel.classList.toggle("active")
     btn.classList.toggle("active")
   })

@@ -410,5 +410,33 @@ static async detail(req, res, next) {
     }
   }
 
+  static async getDetailRiwayat(req, res, next) {
+    try {
+      const { id } = req.params;
+      const { fullname, email, address, phoneNumber } = req.user;
+      const result = await Order.findOne({
+        attributes: { exclude: ["createdAt", "updateAt"] },
+        where: { id: id },
+      });
+      if (!result) throw { status: 404, message: "Order not found" };
+      const paket = await Paket.findOne({
+        where: { id: result.paket_id },
+        include:[Dekorasi, Catering, Rias, Category, Dokumentasi, Entertainment],
+      });
+      if(!paket) throw { status: 404, message: "Paket not found" };
+      const data = {
+        fullname,
+        email,
+        address,
+        phoneNumber,
+        paket,
+        result,
+      };
+      const user = req.session.user;
+      res.render("detail-transaksi", { data, user });
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 module.exports = OrderController;
