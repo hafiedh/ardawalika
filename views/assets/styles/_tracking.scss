@@ -1,0 +1,91 @@
+:root {
+  // Color
+  --clr-primary: #1081e8;
+  --clr-yellow: #ffc806;
+  --clr-grey: #d1d1d1;
+  --clr-lightgrey: #f5f6f7;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  // Font Family
+  --ff-primary: "Inter", sans-serif;
+}
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-primary);
+}
+
+.wrapper-tracking {
+  width: 100%;
+  max-width: 1150px;
+  padding-top: 173px;
+  margin-bottom: 100px;
+  margin-inline: auto;
+
+  .title {
+    font-size: 42px;
+  }
+
+  .history-card {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 3px;
+    padding: 27.5px;
+    box-shadow: 0 0 14px var(--clr-grey);
+    border-radius: 10px;
+
+    &__img {
+      width: 162px;
+      margin-right: 27.5px;
+    }
+
+    &__order-code {
+      margin: 0 0 26px;
+    }
+
+    &__package-title {
+      margin-bottom: 29px;
+      font-size: 32px;
+    }
+
+    &__order-code,
+    &__total,
+    &__event-date {
+      font-size: 18px;
+    }
+
+    &__total {
+      margin-bottom: 5px;
+    }
+
+    &__button {
+      margin-left: auto;
+      padding: 5px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
+      cursor: pointer;
+    }
+  }
+}
