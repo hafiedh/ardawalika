@@ -75,16 +75,18 @@ button {
       margin-bottom: 5px;
     }
 
+
     &__button {
       margin-left: auto;
-      padding: 10px 50px;
+      padding: 2px 50px;
       font-size: 16px;
       border: none;
+      height: 50px;
       border-radius: 5px;
-      outline: none;
       background-color: var(--clr-primary);
       color: var(--clr-white);
       cursor: pointer;
     }
+
   }
 }
