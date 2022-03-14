@@ -2820,12 +2820,14 @@ footer h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50rem;
           flex: 1 1 50rem;
+  margin-top: -1.9rem;
+  margin-left: -3.3rem;
   padding-left: 2rem;
+  border-left: 3px solid white;
 }
 
 .order .box-options .detail-paket h3 {
-  margin: 2rem 2rem 4rem 2rem;
-  font-size: 3rem;
+  background-color: pink;
 }
 
 .order .box-options .kustomisasi {
@@ -2849,8 +2851,11 @@ footer h3 {
 
 .order__box {
   margin: 5rem 0rem;
-  border: 3px solid #0f1d40;
-  border-radius: 0.8rem;
+  border-right: 3px solid #0f1d40;
+  border-left: 3px solid #0f1d40;
+  border-bottom: 3px solid #0f1d40;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
   padding: 1rem 3rem;
   min-height: 100vh;
 }
@@ -2861,6 +2866,48 @@ footer h3 {
 
 .order .help span {
   color: #1081e8;
+}
+
+#active-left .detail-paket {
+  margin-top: -1.9rem;
+  margin-left: -3.3rem;
+  padding-left: 2.1rem;
+  border-top: 3px solid #0f1d40;
+  border-right: 3px solid #0f1d40;
+  border-left: 3px solid #0f1d40;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+
+#active-left .kustomisasi {
+  border-bottom: 3px solid #0f1d40;
+  border-right: 3px solid #cacdd5;
+  border-left: 3px solid #cacdd5;
+  border-top: 3px solid #cacdd5;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+
+#active-right .detail-paket {
+  border-bottom: 3px solid #0f1d40;
+  border-left: 3px solid white;
+  border-left: 3px solid #cacdd5;
+  border-top: 3px solid #cacdd5;
+  border-right: 3px solid #cacdd5;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  margin-right: 3rem;
+}
+
+#active-right .kustomisasi {
+  margin-top: -2rem;
+  margin-left: -3.3rem;
+  padding-left: 2.1rem;
+  border-top: 3px solid #0f1d40;
+  border-right: 3px solid #0f1d40;
+  border-left: 3px solid #0f1d40;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
 }
 
 .box-detail-paket h4 {
@@ -2929,6 +2976,10 @@ footer h3 {
   background-color: #f5f6f7;
   margin: 0rem 0rem 1.3rem 0rem;
   cursor: pointer;
+}
+
+.detail-paket-choices .detail-paket-deskripsi {
+  margin: 10rem 0rem;
 }
 
 .detail-paket-choices .info-keterangan {
@@ -3085,10 +3136,10 @@ footer h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 50vh;
+  margin: 3rem 0rem 1rem 0rem;
 }
 
 .kustomisasi-paket-choices .info {
-  background-color: #f5f6f7;
   margin: 0rem 0rem 1.3rem 0rem;
   cursor: pointer;
 }
@@ -3119,7 +3170,7 @@ footer h3 {
           flex: 1 1 50rem;
 }
 
-.kustomisasi-paket-choices .info-keterangan .sect {
+.kustomisasi-paket-choices .info-keterangan .sect-total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3138,11 +3189,11 @@ footer h3 {
           flex: 1 1 10rem;
 }
 
-.kustomisasi-paket-choices .info-keterangan .sect img {
+.kustomisasi-paket-choices .info-keterangan .sect-total img {
   margin: 1rem 2rem;
 }
 
-.kustomisasi-paket-choices .info-keterangan .sect h4 {
+.kustomisasi-paket-choices .info-keterangan .sect-total h4 {
   font-weight: 400;
   color: #0b2589;
 }
@@ -3234,12 +3285,12 @@ footer h3 {
 
 .detail-paket-right {
   width: 50%;
-  margin: 0 0 0 auto;
+  margin: 5rem 0 0 auto;
 }
 
 .detail-paket-right .detail-paket-biaya {
   background-color: #f5f6f7;
-  margin: 1rem 0rem 2rem 1rem;
+  margin: 2rem 0rem 2rem 1rem;
   border-radius: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3289,20 +3340,32 @@ footer h3 {
   font-size: 1.8rem;
 }
 
+.detail-paket-right .detail-paket-biaya .sect-total {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+}
+
+.detail-paket-right .detail-paket-biaya .sect-total h4 {
+  font-size: 1.8rem;
+  color: #0b2589;
+}
+
 .detail-paket-right .kustom-pesan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
   margin: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -3341,6 +3404,31 @@ footer h3 {
   text-decoration: none;
 }
 
+.kustom-pesan-kostumisasi {
+  width: 100%;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.kustom-pesan-kostumisasi .btn-pesan {
+  background-color: #1081e8;
+  margin: 0.5rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0.8rem;
+  width: 100%;
+  padding: 1.2rem 0.5rem;
+}
+
+.kustom-pesan-kostumisasi .btn-pesan a {
+  color: white;
+}
+
+.kustom-pesan-kostumisasi a:hover {
+  text-decoration: none;
+}
+
 .box-kustomisasi h4 {
   font-weight: 700;
   margin: 1rem 0rem;
@@ -3352,6 +3440,19 @@ footer h3 {
 
 .box-kustomisasi .kustomisasi-deskripsi p {
   font-weight: 400;
+}
+
+.box-kustomisasi select {
+  cursor: pointer;
+  border: 0.2rem solid whitesmoke;
+  border-radius: 0.8rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  font-size: 1.5rem;
+  color: #818181;
+  text-align: justify;
 }
 
 .box-kustomisasi .kustomisasi-choices {
@@ -3389,40 +3490,6 @@ footer h3 {
   cursor: pointer;
 }
 
-.box-kustomisasi .kustomisasi-choices .info-keterangan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: #f5f6f7;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
-  border-radius: 0.8rem;
-}
-
-.box-kustomisasi .kustomisasi-choices .info-keterangan img {
-  margin: 1rem 3rem;
-}
-
-.box-kustomisasi .kustomisasi-choices .info-keterangan h4 {
-  margin-left: 3rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50rem;
-          flex: 1 1 50rem;
-}
-
 .box-kustomisasi .kustomisasi-choices .sect {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 1rem;
@@ -3431,27 +3498,7 @@ footer h3 {
 
 .box-kustomisasi .kustomisasi-choices .sect h4 {
   font-weight: 400;
-  color: #0b2589;
-}
-
-.box-kustomisasi .kustomisasi-choices #kustomisasi-rias {
-  border-radius: 0.8rem;
-  margin: 0rem;
-  padding: 0rem;
-}
-
-.box-kustomisasi .kustomisasi-choices #kustomisasi-rias li {
-  border: 1px solid #979797;
-  padding: 10px 23px 10px 32px;
-  font-weight: 500;
-}
-
-.box-kustomisasi .kustomisasi-choices #kustomisasi-rias li:nth-child(1) {
-  border-radius: 8px 8px 0px 0px;
-}
-
-.box-kustomisasi .kustomisasi-choices #kustomisasi-rias li:nth-child(4) {
-  border-radius: 0px 0px 8px 8px;
+  color: pink;
 }
 
 .box-kustomisasi .kustomisasi-choices .kustomisasi-detail {
@@ -3467,26 +3514,6 @@ footer h3 {
 .box-kustomisasi .kustomisasi-choices .kustomisasi-detail ul {
   margin-left: 7rem;
   padding: 1rem 0rem;
-}
-
-.box-kustomisasi .kustomisasi-choices .sect {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 0rem 2rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 1rem;
-          flex: 1 1 1rem;
 }
 
 .box-kustomisasi .kustomisasi-right {
@@ -3546,35 +3573,6 @@ footer h3 {
   font-size: 1.8rem;
 }
 
-.box-kustomisasi .kustomisasi-right .kustom-pesan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.box-kustomisasi .kustomisasi-right .kustom-pesan .btn-kustomisasi {
-  margin: 0rem 0rem 0.5rem 1rem;
-  background-color: white;
-  border: 1px solid #1081e8;
-  padding: 1.2rem 2.4rem;
-  border-radius: 0.8rem;
-  font-size: 1.3rem;
-  color: #1081e8;
-  font-weight: 600;
-}
-
 .box-kustomisasi .kustomisasi-right .kustom-pesan .btn-pesan {
   background-color: #1081e8;
   margin: 0rem 0rem 0.5rem 1rem;
@@ -3583,6 +3581,7 @@ footer h3 {
   padding: 1.3rem 3.5rem;
   color: white;
   border-radius: 0.8rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 796px) {

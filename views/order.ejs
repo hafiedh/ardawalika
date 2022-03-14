@@ -1,191 +1,353 @@
 <%- include('./partials/navbar-general'); %>
 
-    <section class="order-filler"></section>
-    <section class="order">
-        <h3>Paket <%= paket.name_paket %>
-        </h3>
-        <p><%= paket.ket_paket %> </p>
-        <div class="order__box">
-            <div class="box-options" id="active-left">
-                <div class="detail-paket">
-                    <h3>Detail Paket</h3>
+<section class="order-filler"></section>
+<section class="order">
+  <h3>Paket <%= paket.name_paket %></h3>
+  <p><%= paket.ket_paket %></p>
+  <div class="order__box">
+    <div class="box-options" id="active-left">
+      <div class="detail-paket">
+        <p>Detail Paket</p>
+      </div>
+      <div class="kustomisasi">
+        <p>Kustomisasi</p>
+      </div>
+    </div>
+
+    <!-- SECTION DETAIL PAKET -->
+    <div class="box-detail-paket">
+      <div class="detail-paket-deskripsi">
+        <h4>Deskripsi Paket</h4>
+        <p><%= paket.des_paket %></p>
+      </div>
+      <div class="detail-paket-galeri">
+        <h4>Galeri Paket</h4>
+        <div class="galeri-gambar">
+          <div class="container-fluid">
+            <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+              <div class="carousel-inner w-100 mx-auto" role="listbox">
+                <% for( let i = 0; i < 1; i++ ) { %>
+                <div class="carousel-item col-md-3 active">
+                  <img class="img-fluid mx-auto d-block" src="<%= image[0] %> " alt="slide 2" />
                 </div>
-                <!-- <div class="kustomisasi">
-                <p>Kustomisasi</p>
-            </div> -->
+                <% } %> <% for( let i = 1; i < image.length; i++ ) { %>
+                <div class="carousel-item col-md-3">
+                  <img class="img-fluid mx-auto d-block" src="<%= image[i] %> " alt="slide <%= i %> " />
+                </div>
+                <% } %>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+                <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-
-            <!-- SECTION DETAIL PAKET -->
-            <div class="box-detail-paket">
-                <div class="detail-paket-deskripsi">
-                    <h4>Deskripsi Paket</h4>
-                    <p><%= paket.des_paket %> </p>
-                </div>
-                <div class="detail-paket-galeri">
-                    <h4>Galeri Paket</h4>
-                    <div class="galeri-gambar">
-                        <div class="container-fluid">
-                            <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
-                                <div class="carousel-inner w-100 mx-auto" role="listbox">
-                                    <% for( let i = 0; i < 1; i++ ) { %>
-                                        <div class="carousel-item col-md-3 active">
-                                            <img class="img-fluid mx-auto d-block" src="<%= image[0] %> " alt="slide 2">
-                                        </div>
-                                    <% } %>
-                                    <% for( let i = 1; i < image.length; i++ ) { %>                                    
-                                        <div class="carousel-item col-md-3">
-                                            <img class="img-fluid mx-auto d-block" src="<%= image[i] %> " alt="slide <%= i %> ">
-                                        </div>
-                                    <% } %>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExample" role="button"
-                                    data-slide="prev">
-                                    <i class="fa fa-chevron-left fa-lg text-muted"></i>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next text-faded" href="#carouselExample" role="button"
-                                    data-slide="next">
-                                    <i class="fa fa-chevron-right fa-lg text-muted"></i>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="detail-paket-keterangan">
-                    <h4>Detail Paket</h4>
-                </div>
-                <% const total=dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias +
-                    dokumentasi.harga_dokumentasi + entertainment.harga_entertainment; function toRupiah(price) { return
-                    new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(price); } %>
-                    <div class="detail-paket-choices">
-                        <div class="dekorasi info">
-                            <div class="info-keterangan">
-                                <h4>Dekorasi <%= dekorasi.name_dekorasi %>
-                                </h4>
-                                <div class="sect">
-                                    <h4>
-                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi) %> 
-                                    </h4>
-                                    <img src="/img/info.svg">
-                                </div>
-                            </div>
-                            <div class="paket-detail paket-detail-dekorasi">
-                                <ul>
-                                    <% dekorasi.keterangan_dekorasi.split(',').forEach(element=> { %>
-                                        <li>
-                                            <%= element %>
-                                        </li>
-                                        <% }) %>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="rias info">
-                            <div class="info-keterangan">
-                                <h4>Rias <%= rias.name_rias %>
-                                </h4>
-                                <div class="sect">
-                                    <h4>
-                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(rias.harga_rias) %> 
-                                    </h4>
-                                    <img src="/img/info.svg">
-                                </div>
-                            </div>
-                            <div class="paket-detail paket-detail-rias">
-                                <ul>
-                                    <% rias.keterangan_rias.split(',').forEach(element=> { %>
-                                        <li>
-                                            <%= element %>
-                                        </li>
-                                        <% }) %>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="katering info">
-                            <div class="info-keterangan">
-                                <h4>Katering <%= catering.name_catering %>
-                                </h4>
-                                <div class="sect">
-                                    <h4>
-                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(catering.harga_catering) %> 
-                                    </h4>
-                                    <img src="/img/info.svg">
-                                </div>
-                            </div>
-                            <div class="paket-detail paket-detail-katering">
-                                <ul>
-                                    <% catering.keterangan_catering.split(',').forEach(element=> { %>
-                                        <li>
-                                            <%= element %>
-                                        </li>
-                                        <% }) %>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="documentation info">
-                            <div class="info-keterangan">
-                                <h4>Dokumentasi <%= dokumentasi.name_dokumentasi %>
-                                </h4>
-                                <div class="sect">
-                                    <h4>
-                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dokumentasi.harga_dokumentasi) %> 
-                                    </h4>
-                                    <img src="/img/info.svg">
-                                </div>
-                            </div>
-                            <div class="paket-detail paket-detail-documentation">
-                                <ul>
-                                    <% dokumentasi.keterangan_dokumentasi.split(',').forEach(element=> { %>
-                                        <li>
-                                            <%= element %>
-                                        </li>
-                                        <% }) %>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hiburan info">
-                            <div class="info-keterangan">
-                                <h4>Entertainment <%= entertainment.name_entertainment %>
-                                </h4>
-                                <div class="sect">
-                                    <h4>
-                                        <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(entertainment.harga_entertainment) %> 
-                                    </h4>
-                                    <img src="/img/info.svg">
-                                </div>
-                            </div>
-                            <div class="paket-detail paket-detail-hiburan">
-                                <ul>
-                                    <% entertainment.keterangan_entertainment.split(',').forEach(element=> { %>
-                                        <li>
-                                            <%= element %>
-                                        </li>
-                                        <% }) %>
-                                </ul>
-                            </div>
-                        </div>
-
-                    <div class="detail-paket-right">
-                        <div class="detail-paket-biaya">
-                            <h4>Total Bayar</h4>
-                            <div class="sect">
-                                <h4>
-                                    <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias +
-                                    dokumentasi.harga_dokumentasi + entertainment.harga_entertainment) %> 
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="kustom-pesan">
-                            <button class="btn-kustomisasi" id="btnKustomisasi"><a
-                                    href="/kostumisasi">Kustomisasi</a></button>
-                            <button class="btn-pesan" id="btnPesan" type="submit"><a href="/orders/checkout/<%= paket_id %>/<%= total %>">Pesan
-                                    sekarang</a></button>
-                        </div>
-                    </div>
-                    <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="detail-paket-keterangan">
+        <h4>Detail Paket</h4>
+      </div>
+      <% const total=dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias + dokumentasi.harga_dokumentasi + entertainment.harga_entertainment; function toRupiah(price) { return new Intl.NumberFormat("id-ID", { style:
+      "currency" , currency: "IDR" }).format(price); } %>
+      <div class="detail-paket-choices">
+        <div class="dekorasi info">
+          <div class="info-keterangan">
+            <h4>Dekorasi <%= dekorasi.name_dekorasi %></h4>
+            <div class="sect">
+              <h4><%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi) %></h4>
+              <img src="/img/info.svg" />
             </div>
-    </section>
+          </div>
+          <div class="paket-detail paket-detail-dekorasi">
+            <ul>
+              <% dekorasi.keterangan_dekorasi.split(',').forEach(element=> { %>
+              <li><%= element %></li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+        <div class="rias info">
+          <div class="info-keterangan">
+            <h4>Rias <%= rias.name_rias %></h4>
+            <div class="sect">
+              <h4><%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(rias.harga_rias) %></h4>
+              <img src="/img/info.svg" />
+            </div>
+          </div>
+          <div class="paket-detail paket-detail-rias">
+            <ul>
+              <% rias.keterangan_rias.split(',').forEach(element=> { %>
+              <li><%= element %></li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+        <div class="katering info">
+          <div class="info-keterangan">
+            <h4>Katering <%= catering.name_catering %></h4>
+            <div class="sect">
+              <h4><%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(catering.harga_catering) %></h4>
+              <img src="/img/info.svg" />
+            </div>
+          </div>
+          <div class="paket-detail paket-detail-katering">
+            <ul>
+              <% catering.keterangan_catering.split(',').forEach(element=> { %>
+              <li><%= element %></li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+        <div class="documentation info">
+          <div class="info-keterangan">
+            <h4>Dokumentasi <%= dokumentasi.name_dokumentasi %></h4>
+            <div class="sect">
+              <h4><%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dokumentasi.harga_dokumentasi) %></h4>
+              <img src="/img/info.svg" />
+            </div>
+          </div>
+          <div class="paket-detail paket-detail-documentation">
+            <ul>
+              <% dokumentasi.keterangan_dokumentasi.split(',').forEach(element=> { %>
+              <li><%= element %></li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+        <div class="hiburan info">
+          <div class="info-keterangan">
+            <h4>Entertainment <%= entertainment.name_entertainment %></h4>
+            <div class="sect">
+              <h4><%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(entertainment.harga_entertainment) %></h4>
+              <img src="/img/info.svg" />
+            </div>
+          </div>
+          <div class="paket-detail paket-detail-hiburan">
+            <ul>
+              <% entertainment.keterangan_entertainment.split(',').forEach(element=> { %>
+              <li><%= element %></li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
 
-    
+        <div class="detail-paket-right">
+          <div class="detail-paket-biaya">
+            <h4 class="total-bayar">Total Bayar</h4>
+            <div class="sect">
+              <h4>
+                <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias + dokumentasi.harga_dokumentasi + entertainment.harga_entertainment) %>
+              </h4>
+            </div>
+          </div>
+          <div class="kustom-pesan">
+            <!-- <button class="btn-kustomisasi pick-kustomisasi" id="btnKustomisasi">Kustomisasi</button> -->
+            <button class="btn-pesan" id="btnPesan" type="submit"><a href="/orders/checkout/<%= paket_id %>/<%= total %>">Pesan sekarang</a></button>
+          </div>
+        </div>
+        <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
+      </div>
+    </div>
 
-    <%- include('./partials/footer'); %>
+    <!-- SECTION KUSTOMISASI -->
+    <div class="box-kustomisasi">
+      <div class="kustomisasi-deskripsi">
+        <h4>Deskripsi Paket</h4>
+        <p>Dengan Kustomisasi anda dapat mengganti paket yang sudah diterapkan pada paket yang dipilih</p>
+      </div>
+      <div class="detail-paket-keterangan">
+        <h4>Kostumisasi Paket</h4>
+      </div>
+
+      <form class="kustomisasi-paket-choices" method="post" action="">
+        <div class="dekorasi info">
+          <select class="info-keterangan">
+            <% dataDekorasi.forEach(e => { %>
+            <option>Dekorasi <%= e.name_dekorasi %> <%= e.harga_dekorasi %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="rias info">
+          <select class="info-keterangan">
+            <% dataRias.forEach(e => { %>
+            <option>Rias <%= e.name_rias %> <%= e.harga_rias %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="katering info">
+          <select class="info-keterangan">
+            <% dataCatering.forEach(e => { %>
+            <option>Catering <%= e.name_catering %> <%= e.harga_catering %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="documentation info">
+          <select class="info-keterangan">
+            <% dataDokumentasi.forEach(e => { %>
+            <option>Dokumentasi <%= e.name_dokumentasi %> <%= e.harga_dokumentasi %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="hiburan info">
+          <select class="info-keterangan">
+            <% dataEntertainment.forEach(e => { %>
+            <option>Entertainment <%= e.name_entertainment %> <%= e.harga_entertainment %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="detail-paket-right">
+          <div class="detail-paket-biaya">
+            <h4>Total Bayar</h4>
+            <div class="sect">
+              <h4>Total</h4>
+            </div>
+          </div>
+          <div class="kustom-pesan-kostumisasi">
+            <!-- <button class="btn-kustomisasi" id="btnKustomisasi"><a
+                                                href="https://wa.me/6282267263157">Kustomisasi</a></button> -->
+            <button class="btn-pesan" id="btnPesan" type="submit"><a href="#">Buat Paket</a></button>
+          </div>
+        </div>
+        <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  // SCRIPT TO SHOW DETAIL PAKET //
+  const detailPaket = document.querySelector(".detail-paket");
+  const detailPaketChoices = document.querySelector(".detail-paket-choices");
+  const kustomisasiChoices = document.querySelector(".kustomisasi-choices");
+  //const kustomisasiPaketChoices = document.querySelector(".kustomisasi-paket-choices");
+  const pickKustomisasi = document.querySelector(".pick-kustomisasi");
+  const idPickKustomisasi = document.querySelector("#btnKustomisasi");
+  const kustomisasi = document.querySelector(".kustomisasi");
+  const boxOptions = document.querySelector(".box-options");
+
+  const boxDetailPaket = document.querySelector(".box-detail-paket");
+  const boxKustomisasi = document.querySelector(".box-kustomisasi");
+
+  detailPaketChoices.onclick = (e) => {
+    console.log("ini tes3");
+    const getClassName = e.target.className;
+    const getAnotherClassName = e.target.parentNode.className;
+    const getParent = e.target.parentNode.parentNode;
+    const getList = getParent.children[1];
+    console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+    // console.log(getParent, getList, getClassName)
+    // console.log(getList)
+
+    if (
+      getParent &&
+      getList &&
+      getClassName !== "detail-paket-choices" &&
+      getClassName !== "info-keterangan" &&
+      getAnotherClassName !== "sect" &&
+      getClassName !== "btn-pesan" &&
+      getClassName !== "btn-kustomisasi" &&
+      getClassName !== "sect" &&
+      getClassName !== "total-bayar"
+    ) {
+      if (getList.style.display !== "block") {
+        getList.style.display = "block";
+      } else {
+        getList.style.display = "none";
+        console.log("none");
+      }
+    } else {
+      return;
+    }
+  };
+
+  // kustomisasiPaketChoices.onclick = (e) => {
+  //     console.log("ini kustomisasi");
+  //     const getClassName = e.target.className;
+  //     const getAnotherClassName = e.target.parentNode.className;
+  //     const getParent = e.target.parentNode.parentNode;
+  //     const getList = getParent.children[1];
+  //     console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+  //     console.log(getParent, getList, getClassName);
+  //     console.log(getList);
+  //     console.log("event: ", e.target.className);
+
+  //     if (getParent && getList && getClassName !== "detail-paket-choices" && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
+  //     if (getList.style.display !== "block") {
+  //         getList.style.display = "block";
+  //         console.log(e);
+  //     } else if (getClassName !== "note-dropdown") {
+  //         getList.style.display = "none";
+  //         console.log(e);
+  //     }
+  //     } else {
+  //     return;
+  //     }
+  // };
+
+  detailPaket.addEventListener("click", createActiveLeft);
+  kustomisasi.addEventListener("click", createActiveRight);
+  pickKustomisasi.addEventListener("click", createActiveRight);
+  idPickKustomisasi.addEventListener("click", createActiveRight);
+
+  //   kustomisasiChoices.onclick = (e) => {
+  //     console.log("ini tes kustomisasi");
+  //     const getClassName = e.target.className;
+  //     const getTagName = e.target.tagName;
+  //     const getAnotherClassName = e.target.parentNode.className;
+  //     const getParent = e.target.parentNode.parentNode.parentNode;
+  //     const getList = getParent.children[1];
+  //     console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+  //     // console.log("getParent: ",getParent, "getList: ", getList, "getClassName: ", getClassName)
+  //     // console.log("Tag Name: ", getTagName)
+
+  //     if (getParent && getList && getClassName !== "container" && getTagName !== "LI" && getTagName !== "UL" && getClassName !== "info" && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
+  //       if (getList.style.display !== "block") {
+  //         getList.style.display = "block";
+  //       } else {
+  //         getList.style.display = "none";
+  //         console.log("none");
+  //       }
+  //     } else {
+  //       return;
+  //     }
+  //   };
+
+  function createActiveLeft() {
+    console.log("tes create id");
+    boxOptions.setAttribute("id", "active-left");
+
+    if (boxDetailPaket.style.display !== "block") {
+      boxDetailPaket.style.display = "block";
+      boxKustomisasi.style.display = "none";
+      console.log("block");
+    }
+  }
+
+  function createActiveRight() {
+    console.log("tes create id right");
+    boxOptions.setAttribute("id", "active-right");
+
+    if (boxKustomisasi.style.display !== "block") {
+      boxKustomisasi.style.display = "block";
+      boxDetailPaket.style.display = "none";
+      console.log("kustomisasi");
+    }
+  }
+
+  const form = document.forms[0];
+  console.log(form);
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    for (const formElement of formData) {
+      console.log(formElement);
+      console.log(typeof formElement[1]);
+    }
+  });
+</script>
+
+<%- include('./partials/footer'); %>
