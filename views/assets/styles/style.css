@@ -4397,7 +4397,9 @@ button {
   padding: 2px 50px;
   font-size: 16px;
   border: none;
-  height: 50px;
+  -webkit-transform: translateX(350px);
+          transform: translateX(350px);
+  height: 45px;
   border-radius: 5px;
   background-color: var(--clr-primary);
   color: var(--clr-white);
