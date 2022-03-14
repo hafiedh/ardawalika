@@ -25,13 +25,14 @@
     .detail-paket {
       //background-color: lavender;
       flex: 1 1 50rem;
-      // margin-top: -1.9rem;
-      // margin-left: -3.3rem;
+      margin-top: -1.9rem;
+      margin-left: -3.3rem;
       padding-left: 2rem;
-      //border-left: 3px solid white;
+      border-left: 3px solid white;
       h3 {
-        margin: 2rem 2rem 4rem 2rem;
-        font-size: $medium;
+        background-color: pink;
+        //margin: 2rem 2rem 4rem 2rem;
+        //font-size: $medium;
       }
     }
 
@@ -52,11 +53,13 @@
   }
   &__box {
     margin: 5rem 0rem;
-    // border-right: 3px solid #0f1d40;
-    // border-left: 3px solid #0f1d40;
-    // border-bottom: 3px solid #0f1d40;
-    border: 3px solid #0f1d40;
-    border-radius: 0.8rem;
+    border-right: 3px solid #0f1d40;
+    border-left: 3px solid #0f1d40;
+    border-bottom: 3px solid #0f1d40;
+    border-bottom-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    //border: 3px solid #0f1d40;
+    //border-radius: 0.8rem;
     padding: 1rem 3rem;
     min-height: 100vh;
   }
@@ -68,54 +71,54 @@
   }
 }
 
-// #active-left {
-//   .detail-paket {
-//     margin-top: -1.9rem;
-//     margin-left: -3.3rem;
-//     padding-left: 2.1rem;
-//     //border-radius: 0.8rem;
-//     border-top: 3px solid #0f1d40;
-//     border-right: 3px solid #0f1d40;
-//     border-left: 3px solid #0f1d40;
-//     border-top-right-radius: 0.8rem;
-//     border-top-left-radius: 0.8rem;
-//   }
-//   .kustomisasi {
-//     border-bottom: 3px solid #0f1d40;
-//     border-right: 3px solid #cacdd5;
-//     border-left: 3px solid #cacdd5;
-//     border-top: 3px solid #cacdd5;
+#active-left {
+  .detail-paket {
+    margin-top: -1.9rem;
+    margin-left: -3.3rem;
+    padding-left: 2.1rem;
+    //border-radius: 0.8rem;
+    border-top: 3px solid #0f1d40;
+    border-right: 3px solid #0f1d40;
+    border-left: 3px solid #0f1d40;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+  }
+  .kustomisasi {
+    border-bottom: 3px solid #0f1d40;
+    border-right: 3px solid #cacdd5;
+    border-left: 3px solid #cacdd5;
+    border-top: 3px solid #cacdd5;
 
-//     border-top-right-radius: 0.8rem;
-//     border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
 
-//     // background-color: lightpink;
-//   }
-// }
+    // background-color: lightpink;
+  }
+}
 
-// #active-right {
-//   .detail-paket {
-//     border-bottom: 3px solid #0f1d40;
-//     border-left: 3px solid white;
+#active-right {
+  .detail-paket {
+    border-bottom: 3px solid #0f1d40;
+    border-left: 3px solid white;
 
-//     border-left: 3px solid #cacdd5;
-//     border-top: 3px solid #cacdd5;
-//     border-right: 3px solid #cacdd5;
-//     border-top-right-radius: 0.8rem;
-//     border-top-left-radius: 0.8rem;
-//     margin-right: 3rem;
-//   }
-//   .kustomisasi {
-//     margin-top: -2rem;
-//     margin-left: -3.3rem;
-//     padding-left: 2.1rem;
-//     border-top: 3px solid #0f1d40;
-//     border-right: 3px solid #0f1d40;
-//     border-left: 3px solid #0f1d40;
-//     border-top-right-radius: 0.8rem;
-//     border-top-left-radius: 0.8rem;
-//   }
-// }
+    border-left: 3px solid #cacdd5;
+    border-top: 3px solid #cacdd5;
+    border-right: 3px solid #cacdd5;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+    margin-right: 3rem;
+  }
+  .kustomisasi {
+    margin-top: -2rem;
+    margin-left: -3.3rem;
+    padding-left: 2.1rem;
+    border-top: 3px solid #0f1d40;
+    border-right: 3px solid #0f1d40;
+    border-left: 3px solid #0f1d40;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+  }
+}
 
 .box-detail-paket {
   h4 {
@@ -207,9 +210,6 @@
       margin-bottom: 3.5rem;
       //background-color: lavender;
     }
-    #namaDekorasi {
-      height: 5rem;
-    }
   }
 
   textarea {
@@ -236,7 +236,7 @@
     //background: #ededed;
     border-radius: 0.8rem;
     border: 1px solid #c2c2c2;
-    height: 5rem;
+    height: 15rem;
     box-sizing: border-box;
     font-size: $text;
     resize: none;
@@ -372,8 +372,9 @@
   }
 
   .kustom-pesan {
-    @include flex(center, flex-end, row);
-    //width: 80%;
+    @include flex(flex-start, flex-start, row);
+    //background-color: lavender;
+    width: 100%;
     margin: auto;
     //background-color: lightblue;
     flex-wrap: wrap;
@@ -382,7 +383,7 @@
       margin: 0.5rem;
       background-color: white;
       border: 1px solid #1081e8;
-      //width: 10%;
+      // width: 35%;
       padding: 1.2rem 0.5rem;
       border-radius: 0.8rem;
       font-size: 1.3rem;
@@ -408,6 +409,30 @@
     a:hover {
       text-decoration: none;
     }
+  }
+}
+
+.kustom-pesan-kostumisasi {
+  //@include flex(flex-start, flex-start, row);
+  //background-color: lavender;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+  .btn-pesan {
+    background-color: #1081e8;
+    //margin: 0rem 0rem 0.5rem 1rem;
+    margin: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.8rem;
+    width: 100%;
+    padding: 1.2rem 0.5rem;
+    a {
+      color: white;
+    }
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 
@@ -524,19 +549,19 @@
     }
 
     .kustom-pesan {
-      @include flex(flex-end, flex-end, row);
-      //background-color: lavender;
-      flex-wrap: wrap;
-      .btn-kustomisasi {
-        margin: 0rem 0rem 0.5rem 1rem;
-        background-color: white;
-        border: 1px solid #1081e8;
-        padding: 1.2rem 2.4rem;
-        border-radius: 0.8rem;
-        font-size: 1.3rem;
-        color: #1081e8;
-        font-weight: 600;
-      }
+      // @include flex(flex-end, flex-end, row);
+      // //background-color: lavender;
+      // flex-wrap: wrap;
+      // .btn-kustomisasi {
+      //   margin: 0rem 0rem 0.5rem 1rem;
+      //   background-color: white;
+      //   border: 1px solid #1081e8;
+      //   padding: 1.2rem 2.4rem;
+      //   border-radius: 0.8rem;
+      //   font-size: 1.3rem;
+      //   color: #1081e8;
+      //   font-weight: 600;
+      // }
       .btn-pesan {
         background-color: #1081e8;
         margin: 0rem 0rem 0.5rem 1rem;
@@ -545,6 +570,7 @@
         padding: 1.3rem 3.5rem;
         color: white;
         border-radius: 0.8rem;
+        width: 100%;
       }
     }
   }

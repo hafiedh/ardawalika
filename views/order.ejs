@@ -8,11 +8,11 @@
         <div class="order__box">
             <div class="box-options" id="active-left">
                 <div class="detail-paket">
-                    <h3>Detail Paket</h3>
+                    <p>Detail Paket</p>
                 </div>
-                <!-- <div class="kustomisasi">
+                <div class="kustomisasi">
                 <p>Kustomisasi</p>
-            </div> -->
+            </div>
             </div>
 
             <!-- SECTION DETAIL PAKET -->
@@ -167,7 +167,7 @@
 
                     <div class="detail-paket-right">
                         <div class="detail-paket-biaya">
-                            <h4>Total Bayar</h4>
+                            <h4 class="total-bayar">Total Bayar</h4>
                             <div class="sect">
                                 <h4>
                                     <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias +
@@ -176,16 +176,284 @@
                             </div>
                         </div>
                         <div class="kustom-pesan">
-                            <button class="btn-kustomisasi" id="btnKustomisasi"><a
-                                    href="/kostumisasi">Kustomisasi</a></button>
+                            <!-- <button class="btn-kustomisasi pick-kustomisasi" id="btnKustomisasi">Kustomisasi</button> -->
                             <button class="btn-pesan" id="btnPesan" type="submit"><a href="/orders/checkout/<%= paket_id %>/<%= total %>">Pesan
                                     sekarang</a></button>
                         </div>
                     </div>
                     <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
             </div>
+        </div>
+
+        <div class="box-kustomisasi">
+            <div class="detail-paket-deskripsi">
+                <h4>Deskripsi Paket</h4>
+        
+            </div>
+            <div class="detail-paket-galeri">
+                <h4>Galeri Paket</h4>
+                <div class="galeri-gambar">
+                    <div class="container-fluid">
+                        <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+                            <div class="carousel-inner w-100 mx-auto" role="listbox">
+                                <div class="carousel-item col-md-3 active">
+                                    <img class="img-fluid mx-auto d-block" src="" alt="slide 2">
+                                </div>
+        
+                                <div class="carousel-item col-md-3">
+                                    <img class="img-fluid mx-auto d-block" src=" " alt="slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+                                <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-paket-keterangan">
+                <h4>Kostumisasi Paket</h4>
+            </div>
+        
+            <form class="kustomisasi-paket-choices" method="post" action="">
+                <div class="nama info">
+                    <div class="info-keterangan">
+                        <h4>Nama Paket
+                        </h4>
+                    </div>
+                    <div class="paket-detail-kustomisasi">
+                        <input class="note-dropdown" id="namaDekorasi" name="nama_dekorasi" placeholder=""> </input>
+                    </div>
+                </div>
+                <div class="dekorasi info">
+                    <div class="info-keterangan">
+                        <h4>Dekorasi
+                        </h4>
+                    </div>
+                    <div class="paket-detail-kustomisasi">
+                        <select class="note-dropdown" id="namaDekorasi" name="nama_dekorasi" placeholder=""> </select>
+                    </div>
+                </div>
+                <div class="rias info">
+                    <div class="info-keterangan">
+                        <h4>Rias
+                        </h4>
+        
+                    </div>
+                    <div class="paket-detail-kustomisasi">
+                        <select class="note-dropdown" id="namaRias" name="nama_rias" placeholder=""> </select>
+                    </div>
+                </div>
+                <div class="katering info">
+                    <div class="info-keterangan">
+                        <h4>Katering
+                        </h4>
+        
+                    </div>
+                    <div class="paket-detail-kustomisasi">
+                        <select class="note-dropdown" id="namaKatering" name="nama_katering" placeholder=""> </select>
+                    </div>
+                </div>
+                <div class="documentation info">
+                    <div class="info-keterangan">
+                        <h4>Dokumentasi
+                        </h4>
+        
+                    </div>
+                    <div class="paket-detail-kustomisasi">
+                        <select class="note-dropdown" id="namaDokumentasi" name="nama_dokumentasi" placeholder=""> </select>
+                    </div>
+                </div>
+                <div class="hiburan info">
+                    <div class="info-keterangan">
+                        <h4>Entertainment
+                        </h4>
+        
+                    </div>
+                    <div class="paket-detail-kustomisasi">
+                        <select class="note-dropdown" id="namaEntertainment" name="nama_entertainment" placeholder=""> </select>
+                    </div>
+                </div>
+        
+                <div class="detail-paket-right">
+                    <div class="detail-paket-biaya">
+                        <h4>Total Bayar</h4>
+                        <div class="sect">
+                            <h4>
+                                Total
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="kustom-pesan-kostumisasi">
+                        <!-- <button class="btn-kustomisasi" id="btnKustomisasi"><a
+                                                href="https://wa.me/6282267263157">Kustomisasi</a></button> -->
+                        <button class="btn-pesan" id="btnPesan" type="submit"><a href="#">Buat Paket</a></button>
+                    </div>
+                </div>
+                <p class="help">Butuh bantuan? <span>Hubungi kami</span></p>
+            </form>
+        </div>
+        </div>
     </section>
 
-    
+    <script>
+          // SCRIPT TO SHOW DETAIL PAKET //
+            const detailPaket = document.querySelector(".detail-paket")
+            const detailPaketChoices = document.querySelector(".detail-paket-choices")
+            const kustomisasiChoices = document.querySelector(".kustomisasi-choices")
+            const kustomisasiPaketChoices = document.querySelector(".kustomisasi-paket-choices")
+            const pickKustomisasi = document.querySelector(".pick-kustomisasi")
+            const idPickKustomisasi = document.querySelector("#btnKustomisasi")
+            const kustomisasi = document.querySelector(".kustomisasi")
+            const boxOptions = document.querySelector(".box-options")
+
+            const boxDetailPaket = document.querySelector(".box-detail-paket")
+            const boxKustomisasi = document.querySelector(".box-kustomisasi")
+
+            kustomisasiPaketChoices.onclick = (e) => {
+                    console.log("ini kustomisasi")
+                    const getClassName = e.target.className;
+                    const getAnotherClassName = e.target.parentNode.className;
+                    const getParent = e.target.parentNode.parentNode;
+                    const getList = getParent.children[1];
+                    console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+                    console.log(getParent, getList, getClassName)
+                    console.log(getList)
+                    console.log("event: ", e.target.className)
+
+                    if (getParent && getList && getClassName !== "detail-paket-choices"
+                        && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
+                        if (getList.style.display !== "block") {
+                            getList.style.display = "block"
+                            console.log(e)
+                        } else if (getClassName !== "note-dropdown") {
+                            getList.style.display = "none"
+                            console.log(e)
+                        }
+                    } else {
+                        return;
+                    }
+                }
+
+            // pickKustomisasi.onclick = (e) => {
+            //             console.log("ini kustomisasi")
+            //             const getClassName = e.target.className;
+            //             const getAnotherClassName = e.target.parentNode.className;
+            //             const getParent = e.target.parentNode.parentNode;
+            //             const getList = getParent.children[1];
+            //             console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+            //             console.log(getParent, getList, getClassName)
+            //             console.log(getList)
+            //             console.log("event: ", e.target.className)
+
+            //             if (getParent && getList && getClassName !== "detail-paket-choices"
+            //                 && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
+            //                 if (getList.style.display !== "block") {
+            //                     getList.style.display = "block"
+            //                     console.log(e)
+            //                 } else if (getClassName !== "note-dropdown") {
+            //                     getList.style.display = "none"
+            //                     console.log(e)
+            //                 }
+            //             } else {
+            //                 return;
+            //             }
+            //         }
+
+            
+            detailPaket.addEventListener("click", createActiveLeft)
+            kustomisasi.addEventListener("click", createActiveRight)
+            pickKustomisasi.addEventListener("click", createActiveRight)
+            idPickKustomisasi.addEventListener("click", createActiveRight)
+
+            detailPaketChoices.onclick = (e) => {
+                console.log("ini tes3")
+                const getClassName = e.target.className;
+                const getAnotherClassName = e.target.parentNode.className;
+                const getParent = e.target.parentNode.parentNode;
+                const getList = getParent.children[1];
+                console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+                // console.log(getParent, getList, getClassName)
+                // console.log(getList)
+
+                if (getParent && getList && getClassName !== "detail-paket-choices"
+                    && getClassName !== "info-keterangan" && getAnotherClassName !== "sect"
+                    && getClassName !== "btn-pesan" && getClassName !== "btn-kustomisasi" 
+                    && getClassName !== "sect" && getClassName !== "total-bayar") {
+                    if (getList.style.display !== "block") {
+                        getList.style.display = "block"
+                    } else {
+                        getList.style.display = "none"
+                        console.log("none")
+                    }
+                } else {
+                    return;
+                }
+            }
+
+            kustomisasiChoices.onclick = (e) => {
+                console.log("ini tes kustomisasi")
+                const getClassName = e.target.className;
+                const getTagName = e.target.tagName;
+                const getAnotherClassName = e.target.parentNode.className;
+                const getParent = e.target.parentNode.parentNode.parentNode;
+                const getList = getParent.children[1];
+                console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+                // console.log("getParent: ",getParent, "getList: ", getList, "getClassName: ", getClassName)
+                // console.log("Tag Name: ", getTagName)
+
+                if (getParent && getList && getClassName !== "container" && getTagName !== "LI" && getTagName !== "UL"
+                    && getClassName !== "info" && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
+                    if (getList.style.display !== "block") {
+                        getList.style.display = "block"
+                    } else {
+                        getList.style.display = "none"
+                        console.log("none")
+                    }
+                } else {
+                    return;
+                }
+            }
+
+
+            function createActiveLeft() {
+                console.log("tes create id")
+                boxOptions.setAttribute("id", "active-left")
+
+                if (boxDetailPaket.style.display !== "block") {
+                    boxDetailPaket.style.display = "block"
+                    boxKustomisasi.style.display = "none"
+                    console.log("block")
+                }
+            }
+
+            function createActiveRight() {
+                console.log("tes create id right")
+                boxOptions.setAttribute("id", "active-right")
+
+                if (boxKustomisasi.style.display !== "block") {
+                    boxKustomisasi.style.display = "block"
+                    boxDetailPaket.style.display = "none"
+                    console.log("kustomisasi")
+                }
+            }
+
+              const form = document.forms[0]
+                console.log(form)
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault()
+                    const formData = new FormData(this)
+                    for (const formElement of formData) {
+                        console.log(formElement)
+                        console.log(typeof formElement[1])
+                    }
+                })
+        
+    </script>
 
     <%- include('./partials/footer'); %>
