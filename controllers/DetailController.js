@@ -31,8 +31,6 @@ class DetailController {
         user: req.session.user,
         image: result_image,
       };
-
-      // res.status(200).json(renderData);
       res.render("order", renderData);
     } catch (error) {
       next(error);
@@ -57,7 +55,8 @@ class DetailController {
         dokumentasi: data.Dokumentasi,
         entertainment: data.Entertainment,
       };
-      res.render("order", renderData);
+    
+      res.render("ordercustom", renderData);
     } catch (error) {
       next(error);
     }
