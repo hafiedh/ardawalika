@@ -25,14 +25,13 @@
     .detail-paket {
       //background-color: lavender;
       flex: 1 1 50rem;
-      margin-top: -1.9rem;
-      margin-left: -3.3rem;
+      // margin-top: -1.9rem;
+      // margin-left: -3.3rem;
       padding-left: 2rem;
-      border-left: 3px solid white;
+      //border-left: 3px solid white;
       h3 {
-        background-color: pink;
-        //margin: 2rem 2rem 4rem 2rem;
-        //font-size: $medium;
+        margin: 2rem 2rem 4rem 2rem;
+        font-size: $medium;
       }
     }
 
@@ -53,13 +52,11 @@
   }
   &__box {
     margin: 5rem 0rem;
-    border-right: 3px solid #0f1d40;
-    border-left: 3px solid #0f1d40;
-    border-bottom: 3px solid #0f1d40;
-    border-bottom-right-radius: 0.8rem;
-    border-bottom-left-radius: 0.8rem;
-    //border: 3px solid #0f1d40;
-    //border-radius: 0.8rem;
+    // border-right: 3px solid #0f1d40;
+    // border-left: 3px solid #0f1d40;
+    // border-bottom: 3px solid #0f1d40;
+    border: 3px solid #0f1d40;
+    border-radius: 0.8rem;
     padding: 1rem 3rem;
     min-height: 100vh;
   }
@@ -71,54 +68,54 @@
   }
 }
 
-#active-left {
-  .detail-paket {
-    margin-top: -1.9rem;
-    margin-left: -3.3rem;
-    padding-left: 2.1rem;
-    //border-radius: 0.8rem;
-    border-top: 3px solid #0f1d40;
-    border-right: 3px solid #0f1d40;
-    border-left: 3px solid #0f1d40;
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-  }
-  .kustomisasi {
-    border-bottom: 3px solid #0f1d40;
-    border-right: 3px solid #cacdd5;
-    border-left: 3px solid #cacdd5;
-    border-top: 3px solid #cacdd5;
+// #active-left {
+//   .detail-paket {
+//     margin-top: -1.9rem;
+//     margin-left: -3.3rem;
+//     padding-left: 2.1rem;
+//     //border-radius: 0.8rem;
+//     border-top: 3px solid #0f1d40;
+//     border-right: 3px solid #0f1d40;
+//     border-left: 3px solid #0f1d40;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
+//   }
+//   .kustomisasi {
+//     border-bottom: 3px solid #0f1d40;
+//     border-right: 3px solid #cacdd5;
+//     border-left: 3px solid #cacdd5;
+//     border-top: 3px solid #cacdd5;
 
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
 
-    // background-color: lightpink;
-  }
-}
+//     // background-color: lightpink;
+//   }
+// }
 
-#active-right {
-  .detail-paket {
-    border-bottom: 3px solid #0f1d40;
-    border-left: 3px solid white;
+// #active-right {
+//   .detail-paket {
+//     border-bottom: 3px solid #0f1d40;
+//     border-left: 3px solid white;
 
-    border-left: 3px solid #cacdd5;
-    border-top: 3px solid #cacdd5;
-    border-right: 3px solid #cacdd5;
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-    margin-right: 3rem;
-  }
-  .kustomisasi {
-    margin-top: -2rem;
-    margin-left: -3.3rem;
-    padding-left: 2.1rem;
-    border-top: 3px solid #0f1d40;
-    border-right: 3px solid #0f1d40;
-    border-left: 3px solid #0f1d40;
-    border-top-right-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-  }
-}
+//     border-left: 3px solid #cacdd5;
+//     border-top: 3px solid #cacdd5;
+//     border-right: 3px solid #cacdd5;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
+//     margin-right: 3rem;
+//   }
+//   .kustomisasi {
+//     margin-top: -2rem;
+//     margin-left: -3.3rem;
+//     padding-left: 2.1rem;
+//     border-top: 3px solid #0f1d40;
+//     border-right: 3px solid #0f1d40;
+//     border-left: 3px solid #0f1d40;
+//     border-top-right-radius: 0.8rem;
+//     border-top-left-radius: 0.8rem;
+//   }
+// }
 
 .box-detail-paket {
   h4 {
@@ -161,10 +158,6 @@
     background-color: #f5f6f7;
     margin: 0rem 0rem 1.3rem 0rem;
     cursor: pointer;
-  }
-
-  .detail-paket-deskripsi {
-    margin: 10rem 0rem;
   }
 
   .info-keterangan {
@@ -258,10 +251,9 @@
 .kustomisasi-paket-choices {
   @include flex(flex-start, space-between, column);
   min-height: 50vh;
-  margin: 3rem 0rem 1rem 0rem;
 
   .info {
-    //background-color: #f5f6f7;
+    background-color: #f5f6f7;
     margin: 0rem 0rem 1.3rem 0rem;
     cursor: pointer;
   }
@@ -274,7 +266,7 @@
       margin-left: 3rem;
       flex: 1 1 50rem;
     }
-    .sect-total {
+    .sect {
       @include flex(space-between, flex-start, row);
       //background-color: lightpink;
       flex: 1 1 10rem;
@@ -354,12 +346,12 @@
 // BUTTONS/CUSTOMISATION SECTION //
 .detail-paket-right {
   width: 50%;
-  margin: 5rem 0 0 auto;
+  margin: 0 0 0 auto;
   //background-color: lavender;
   // @include flex(space-between, flex-start, column);
   .detail-paket-biaya {
     background-color: #f5f6f7;
-    margin: 2rem 0rem 2rem 1rem;
+    margin: 1rem 0rem 2rem 1rem;
     border-radius: 0.8rem;
     @include flex(space-between, flex-start, row);
     flex-wrap: wrap;
@@ -377,21 +369,11 @@
       }
       //background-color: lightblue;
     }
-    .sect-total {
-      //background-color: lightpink;
-      flex: 1 1 10rem;
-      h4 {
-        // font-weight: 400;
-        font-size: 1.8rem;
-        color: #0b2589;
-      }
-    }
   }
 
   .kustom-pesan {
-    @include flex(flex-start, flex-start, row);
-    //background-color: lavender;
-    width: 100%;
+    @include flex(center, flex-end, row);
+    //width: 80%;
     margin: auto;
     //background-color: lightblue;
     flex-wrap: wrap;
@@ -429,30 +411,6 @@
   }
 }
 
-.kustom-pesan-kostumisasi {
-  //@include flex(flex-start, flex-start, row);
-  //background-color: lavender;
-  width: 100%;
-  margin: auto;
-  flex-wrap: wrap;
-  .btn-pesan {
-    background-color: #1081e8;
-    //margin: 0rem 0rem 0.5rem 1rem;
-    margin: 0.5rem;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 0.8rem;
-    width: 100%;
-    padding: 1.2rem 0.5rem;
-    a {
-      color: white;
-    }
-  }
-  a:hover {
-    text-decoration: none;
-  }
-}
-
 // SECTION KUSTOMISASI //
 .box-kustomisasi {
   h4 {
@@ -466,20 +424,6 @@
     }
   }
 
-  select {
-    //width: 100%;
-    cursor: pointer;
-    border: 0.2rem solid whitesmoke;
-    border-radius: 0.8rem;
-    padding: 1rem 1rem;
-    text-align: center;
-    width: 90%;
-    margin: auto;
-    font-size: $text;
-    color: #818181;
-    text-align: justify;
-  }
-
   .kustomisasi-choices {
     @include flex(flex-start, space-between, column);
     min-height: 50vh;
@@ -491,27 +435,45 @@
       cursor: pointer;
     }
 
-    // .info-keterangan {
-    //   @include flex(space-between, flex-start, row);
-    //   background-color: #f5f6f7;
-    //   flex-wrap: wrap;
-    //   flex: 1 1 50rem;
-    //   border-radius: 0.8rem;
-    //   img {
-    //     margin: 1rem 3rem;
-    //   }
-    //   h4 {
-    //     margin-left: 3rem;
-    //     flex: 1 1 50rem;
-    //   }
-    // }
+    .info-keterangan {
+      @include flex(space-between, flex-start, row);
+      background-color: #f5f6f7;
+      flex-wrap: wrap;
+      flex: 1 1 50rem;
+      border-radius: 0.8rem;
+      img {
+        margin: 1rem 3rem;
+      }
+      h4 {
+        margin-left: 3rem;
+        flex: 1 1 50rem;
+      }
+    }
 
     .sect {
       //background-color: lightpink;
       flex: 1 1 1rem;
       h4 {
         font-weight: 400;
-        color: pink;
+        color: #0b2589;
+      }
+    }
+
+    #kustomisasi-rias {
+      //background-color: lavender;
+      border-radius: 0.8rem;
+      margin: 0rem;
+      padding: 0rem;
+      li {
+        border: 1px solid #979797;
+        padding: 10px 23px 10px 32px;
+        font-weight: 500;
+      }
+      li:nth-child(1) {
+        border-radius: 8px 8px 0px 0px;
+      }
+      li:nth-child(4) {
+        border-radius: 0px 0px 8px 8px;
       }
     }
     .kustomisasi-detail {
@@ -524,6 +486,14 @@
         margin-left: 7rem;
         padding: 1rem 0rem;
       }
+      //min-height: 10vh;
+    }
+    .sect {
+      @include flex(space-between, flex-start, row);
+      margin: 0rem 2rem;
+      flex: 1 1 1rem;
+      //@include flex(center, center, row);
+      //background-color: lightpink;
     }
   }
 
@@ -554,19 +524,19 @@
     }
 
     .kustom-pesan {
-      // @include flex(flex-end, flex-end, row);
-      // //background-color: lavender;
-      // flex-wrap: wrap;
-      // .btn-kustomisasi {
-      //   margin: 0rem 0rem 0.5rem 1rem;
-      //   background-color: white;
-      //   border: 1px solid #1081e8;
-      //   padding: 1.2rem 2.4rem;
-      //   border-radius: 0.8rem;
-      //   font-size: 1.3rem;
-      //   color: #1081e8;
-      //   font-weight: 600;
-      // }
+      @include flex(flex-end, flex-end, row);
+      //background-color: lavender;
+      flex-wrap: wrap;
+      .btn-kustomisasi {
+        margin: 0rem 0rem 0.5rem 1rem;
+        background-color: white;
+        border: 1px solid #1081e8;
+        padding: 1.2rem 2.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.3rem;
+        color: #1081e8;
+        font-weight: 600;
+      }
       .btn-pesan {
         background-color: #1081e8;
         margin: 0rem 0rem 0.5rem 1rem;
@@ -575,7 +545,6 @@
         padding: 1.3rem 3.5rem;
         color: white;
         border-radius: 0.8rem;
-        width: 100%;
       }
     }
   }
