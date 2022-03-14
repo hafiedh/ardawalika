@@ -163,6 +163,10 @@
     cursor: pointer;
   }
 
+  .detail-paket-deskripsi {
+    margin: 10rem 0rem;
+  }
+
   .info-keterangan {
     @include flex(space-between, flex-start, row);
     flex-wrap: wrap;
@@ -254,9 +258,10 @@
 .kustomisasi-paket-choices {
   @include flex(flex-start, space-between, column);
   min-height: 50vh;
+  margin: 3rem 0rem 1rem 0rem;
 
   .info {
-    background-color: #f5f6f7;
+    //background-color: #f5f6f7;
     margin: 0rem 0rem 1.3rem 0rem;
     cursor: pointer;
   }
@@ -349,12 +354,12 @@
 // BUTTONS/CUSTOMISATION SECTION //
 .detail-paket-right {
   width: 50%;
-  margin: 0 0 0 auto;
+  margin: 5rem 0 0 auto;
   //background-color: lavender;
   // @include flex(space-between, flex-start, column);
   .detail-paket-biaya {
     background-color: #f5f6f7;
-    margin: 1rem 0rem 2rem 1rem;
+    margin: 2rem 0rem 2rem 1rem;
     border-radius: 0.8rem;
     @include flex(space-between, flex-start, row);
     flex-wrap: wrap;
@@ -461,6 +466,19 @@
     }
   }
 
+  select {
+    //width: 100%;
+    cursor: pointer;
+    border: 0.2rem solid whitesmoke;
+    border-radius: 0.8rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    font-size: $text;
+    color: #818181;
+  }
+
   .kustomisasi-choices {
     @include flex(flex-start, space-between, column);
     min-height: 50vh;
@@ -472,20 +490,20 @@
       cursor: pointer;
     }
 
-    .info-keterangan {
-      @include flex(space-between, flex-start, row);
-      background-color: #f5f6f7;
-      flex-wrap: wrap;
-      flex: 1 1 50rem;
-      border-radius: 0.8rem;
-      img {
-        margin: 1rem 3rem;
-      }
-      h4 {
-        margin-left: 3rem;
-        flex: 1 1 50rem;
-      }
-    }
+    // .info-keterangan {
+    //   @include flex(space-between, flex-start, row);
+    //   background-color: #f5f6f7;
+    //   flex-wrap: wrap;
+    //   flex: 1 1 50rem;
+    //   border-radius: 0.8rem;
+    //   img {
+    //     margin: 1rem 3rem;
+    //   }
+    //   h4 {
+    //     margin-left: 3rem;
+    //     flex: 1 1 50rem;
+    //   }
+    // }
 
     .sect {
       //background-color: lightpink;
@@ -493,24 +511,6 @@
       h4 {
         font-weight: 400;
         color: pink;
-      }
-    }
-
-    #kustomisasi-rias {
-      //background-color: lavender;
-      border-radius: 0.8rem;
-      margin: 0rem;
-      padding: 0rem;
-      li {
-        border: 1px solid #979797;
-        padding: 10px 23px 10px 32px;
-        font-weight: 500;
-      }
-      li:nth-child(1) {
-        border-radius: 8px 8px 0px 0px;
-      }
-      li:nth-child(4) {
-        border-radius: 0px 0px 8px 8px;
       }
     }
     .kustomisasi-detail {
@@ -523,14 +523,6 @@
         margin-left: 7rem;
         padding: 1rem 0rem;
       }
-      //min-height: 10vh;
-    }
-    .sect {
-      @include flex(space-between, flex-start, row);
-      margin: 0rem 2rem;
-      flex: 1 1 1rem;
-      //@include flex(center, center, row);
-      //background-color: lightpink;
     }
   }
 

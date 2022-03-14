@@ -17,5 +17,5 @@
                     $('.main-head').css({"box-shadow": "none"});
                 }
             });
-            createActiveLeft();
+            createActiveRight();
         });
