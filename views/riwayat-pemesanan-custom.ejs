@@ -14,7 +14,10 @@
         Tanggal Acara : <b><%= order.tanggal_acara %></b>
       </p>
     </div>
-    <button class="history-card__button" onclick="detail(this)">Detail</button>
+   <a href="/orders/detail-riwayat-custom/<%= order.id %>">
+     <button class="history-card__button">Detail</button>
+    </a>
+   
   </div>
   <% }); %>
 </div>

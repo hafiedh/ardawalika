@@ -41,17 +41,13 @@ h5 {
 
 ul {
   list-style: none;
+  font-size: $header1;
 }
 
 a {
   color: $gray-text;
   text-decoration: none;
 }
-
-// a:hover {
-//   color: $gray-text;
-//   text-decoration: none;
-// }
 
 @font-face {
   font-family: goshasans;
@@ -61,4 +57,9 @@ a {
 @font-face {
   font-family: gilroy-light;
   src: url("/font/Gilroy-Light.otf");
+}
+
+@font-face {
+  font-family: museo-bold;
+  src: url("/font/museo700-regular.otf");
 }

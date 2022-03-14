@@ -14,12 +14,11 @@
         Tanggal Acara : <b><%= order.tanggal_acara %></b>
       </p>
     </div>
-    <a class="history-card__button" href="/orders/detail-riwayat/<%= order.id %> ">
-    <button class="history-card__button">Detail</button>
+    <a href="/orders/detail-riwayat/<%= order.id %>">
+     <button class="history-card__button">Detail</button>
     </a>
+   
   </div>
   <% }); %>
 </div>
-<script>
-</script>
 <%- include('./partials/footer'); %>

@@ -31,8 +31,6 @@ class DetailController {
         user: req.session.user,
         image: result_image,
       };
-
-      // res.status(200).json(renderData);
       res.render("order", renderData);
     } catch (error) {
       next(error);
@@ -42,22 +40,29 @@ class DetailController {
  
   static async getPaketCustomDetail(req, res, next) {
     try {
-      const options = {
-        where: { id: req.params.id },
+       const options = {
+        where: {
+          id: req.params.id,
+        },
         include: ["Dekorasi", "Catering", "Ria", "Category", "Dokumentasi", "Entertainment"],
       };
-      const data = await PaketCustom.findOne(options);
+      const data = await PaketCustom.findAll(options);
+
+      const result_image = data[0].Category.img_paket.split("|");
+
       const renderData = {
-        paket_id: data.id,
-        name_paket: data.name_paket,
-        dekorasi: data.Dekorasi,
-        catering: data.Catering,
-        rias: data.Ria,
-        category: data.Category,
-        dokumentasi: data.Dokumentasi,
-        entertainment: data.Entertainment,
+        paket_id: data[0].id,
+        paket: data[0],
+        dekorasi: data[0].Dekorasi,
+        catering: data[0].Catering,
+        rias: data[0].Ria,
+        category: data[0].Category,
+        dokumentasi: data[0].Dokumentasi,
+        entertainment: data[0].Entertainment,
+        user: req.session.user,
+        image: result_image,
       };
-      res.render("order", renderData);
+      res.render("ordercustom", renderData);
     } catch (error) {
       next(error);
     }
