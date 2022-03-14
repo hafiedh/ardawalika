@@ -269,7 +269,7 @@
       margin-left: 3rem;
       flex: 1 1 50rem;
     }
-    .sect {
+    .sect-total {
       @include flex(space-between, flex-start, row);
       //background-color: lightpink;
       flex: 1 1 10rem;
@@ -371,6 +371,15 @@
         font-size: 1.8rem;
       }
       //background-color: lightblue;
+    }
+    .sect-total {
+      //background-color: lightpink;
+      flex: 1 1 10rem;
+      h4 {
+        // font-weight: 400;
+        font-size: 1.8rem;
+        color: #0b2589;
+      }
     }
   }
 
@@ -483,7 +492,7 @@
       flex: 1 1 1rem;
       h4 {
         font-weight: 400;
-        color: #0b2589;
+        color: pink;
       }
     }
 

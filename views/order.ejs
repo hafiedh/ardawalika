@@ -282,9 +282,9 @@
         
                 <div class="detail-paket-right">
                     <div class="detail-paket-biaya">
-                        <h4>Total Bayar</h4>
-                        <div class="sect">
-                            <h4>
+                        <h4 class="total-bayar">Total Bayar</h4>
+                        <div class="sect-total">
+                            <h4 class="total-bayar">
                                 Total
                             </h4>
                         </div>
@@ -302,6 +302,16 @@
     </section>
 
     <script>
+        const form = document.forms[0]
+            console.log(form)
+            form.addEventListener("submit", function (event) {
+                event.preventDefault()
+                const formData = new FormData(this)
+                for (const formElement of formData) {
+                    console.log(formElement)
+                    console.log(typeof formElement[1])
+                }
+            })
           // SCRIPT TO SHOW DETAIL PAKET //
             const detailPaket = document.querySelector(".detail-paket")
             const detailPaketChoices = document.querySelector(".detail-paket-choices")
@@ -315,6 +325,33 @@
             const boxDetailPaket = document.querySelector(".box-detail-paket")
             const boxKustomisasi = document.querySelector(".box-kustomisasi")
 
+
+             detailPaketChoices.onclick = (e) => {
+                    console.log("ini tes3")
+                    const getClassName = e.target.className;
+                    const getAnotherClassName = e.target.parentNode.className;
+                    const getParent = e.target.parentNode.parentNode;
+                    const getList = getParent.children[1];
+                    console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+                    // console.log(getParent, getList, getClassName)
+                    // console.log(getList)
+
+                    if (getParent && getList && getClassName !== "detail-paket-choices"
+                        && getClassName !== "info-keterangan" && getAnotherClassName !== "sect"
+                        && getClassName !== "btn-pesan" && getClassName !== "btn-kustomisasi"
+                        && getClassName !== "sect" && getClassName !== "total-bayar") {
+                        if (getList.style.display !== "block") {
+                            getList.style.display = "block"
+                        } else {
+                            getList.style.display = "none"
+                            console.log("none")
+                        }
+                    } else {
+                        return;
+                    }
+                }
+
+
             kustomisasiPaketChoices.onclick = (e) => {
                     console.log("ini kustomisasi")
                     const getClassName = e.target.className;
@@ -322,22 +359,23 @@
                     const getParent = e.target.parentNode.parentNode;
                     const getList = getParent.children[1];
                     console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
-                    console.log(getParent, getList, getClassName)
-                    console.log(getList)
+                    // console.log(getParent, getList, getClassName)
+                    // console.log(getList)
                     console.log("event: ", e.target.className)
 
-                    if (getParent && getList && getClassName !== "detail-paket-choices"
-                        && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
-                        if (getList.style.display !== "block") {
-                            getList.style.display = "block"
-                            console.log(e)
-                        } else if (getClassName !== "note-dropdown") {
-                            getList.style.display = "none"
-                            console.log(e)
-                        }
-                    } else {
-                        return;
+                  if (getParent && getList && getClassName !== "detail-paket-choices") {
+                    if (getList.style.display !== "block") {
+                        getList.style.display = "block"
+                        console.log(e)
+                    } else if (getClassName !== "note-dropdown"
+                        && getClassName !== "btn-pesan" && getClassName !== "detail-paket-right" 
+                        && getClassName !== "detail-paket-biaya" && getClassName !== "total-bayar" && getClassName !== "sect-total") {
+                        getList.style.display = "none"
+                        console.log(e)
                     }
+                } else {
+                    return;
+                }
                 }
 
             // pickKustomisasi.onclick = (e) => {
@@ -371,54 +409,31 @@
             pickKustomisasi.addEventListener("click", createActiveRight)
             idPickKustomisasi.addEventListener("click", createActiveRight)
 
-            detailPaketChoices.onclick = (e) => {
-                console.log("ini tes3")
-                const getClassName = e.target.className;
-                const getAnotherClassName = e.target.parentNode.className;
-                const getParent = e.target.parentNode.parentNode;
-                const getList = getParent.children[1];
-                console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
-                // console.log(getParent, getList, getClassName)
-                // console.log(getList)
+            // kustomisasiChoices.onclick = (e) => {
+            //     console.log("ini tes kustomisasi")
+            //     const getClassName = e.target.className;
+            //     const getTagName = e.target.tagName;
+            //     const getAnotherClassName = e.target.parentNode.className;
+            //     const getParent = e.target.parentNode.parentNode.parentNode;
+            //     const getList = getParent.children[1];
+            //     console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+            //     // console.log("getParent: ",getParent, "getList: ", getList, "getClassName: ", getClassName)
+            //     // console.log("Tag Name: ", getTagName)
 
-                if (getParent && getList && getClassName !== "detail-paket-choices"
-                    && getClassName !== "info-keterangan" && getAnotherClassName !== "sect"
-                    && getClassName !== "btn-pesan" && getClassName !== "btn-kustomisasi" 
-                    && getClassName !== "sect" && getClassName !== "total-bayar") {
-                    if (getList.style.display !== "block") {
-                        getList.style.display = "block"
-                    } else {
-                        getList.style.display = "none"
-                        console.log("none")
-                    }
-                } else {
-                    return;
-                }
-            }
-
-            kustomisasiChoices.onclick = (e) => {
-                console.log("ini tes kustomisasi")
-                const getClassName = e.target.className;
-                const getTagName = e.target.tagName;
-                const getAnotherClassName = e.target.parentNode.className;
-                const getParent = e.target.parentNode.parentNode.parentNode;
-                const getList = getParent.children[1];
-                console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
-                // console.log("getParent: ",getParent, "getList: ", getList, "getClassName: ", getClassName)
-                // console.log("Tag Name: ", getTagName)
-
-                if (getParent && getList && getClassName !== "container" && getTagName !== "LI" && getTagName !== "UL"
-                    && getClassName !== "info" && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
-                    if (getList.style.display !== "block") {
-                        getList.style.display = "block"
-                    } else {
-                        getList.style.display = "none"
-                        console.log("none")
-                    }
-                } else {
-                    return;
-                }
-            }
+            //      if (getParent && getList && getClassName !== "detail-paket-choices") {
+            //         if (getList.style.display !== "block") {
+            //             getList.style.display = "block"
+            //             console.log(e)
+            //         } else if (getClassName !== "note-dropdown" && getclassName !== "total-bayar"
+            //             && getClassName !== "btn-pesan" && getClassName !== "detail-paket-right"
+            //             && getClassName !== "detail-paket-biaya" && getClassName !== "sect-total") {
+            //             getList.style.display = "none"
+            //             console.log(e)
+            //         }
+            //     } else {
+            //         return;
+            //     }
+            // }
 
 
             function createActiveLeft() {
@@ -443,16 +458,7 @@
                 }
             }
 
-              const form = document.forms[0]
-                console.log(form)
-                form.addEventListener("submit", function (event) {
-                    event.preventDefault()
-                    const formData = new FormData(this)
-                    for (const formElement of formData) {
-                        console.log(formElement)
-                        console.log(typeof formElement[1])
-                    }
-                })
+              
         
     </script>
 
