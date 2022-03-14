@@ -22,7 +22,8 @@
         "_resetpass.scss",
         "_resetdone.scss",
         "_profile.scss",
-        "_konfirmasi.scss"
+        "_konfirmasi.scss",
+        "_tracking.scss"
     ],
     "names": [],
     "file": "style.css"
