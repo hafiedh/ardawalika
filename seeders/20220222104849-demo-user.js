@@ -9,12 +9,12 @@ module.exports = {
       [
         {
           email: "admin@ardawalika.com",
-          password: await encode("12345678"),
-          username: "admin",
+          password: encode("ardawalika2022"),
+          username: "Admin",
           fullname: "admin",
           phoneNumber: "081234567890",
           imgUrl: "",
-          address: "Perumahan Cibaduyut",
+          address: "Jalan Pegangsaan 1 No.56",
           role: "admin",
           status: "active",
           createdAt: new Date(),
@@ -23,24 +23,9 @@ module.exports = {
       ],
       {}
     );
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-     */
   },
 
   async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete("Users", null, {});
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
   },
 };
