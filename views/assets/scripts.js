@@ -39,18 +39,23 @@
             console.log(getParent, getList, getClassName)
             console.log(getList)
 
-        if(getParent && getList && getClassName !== "detail-paket-choices" 
-            && getClassName !== "info-keterangan" && getAnotherClassName !== "sect" && getclassName !== "btn-pesan"){
-            if (getList.style.display !== "block") {
+            if (getParent && getList  && getClassName !== "kustom-pesan"  && getClassName !== "detail-paket-choices" 
+            && getClassName !== "detail-paket-right" && getClassName !== "kustom-pesan" && getClassName !== "btn-kustomisasi"
+                && getClassName !== "info-keterangan" && getClassName !== "total-bayar" && getAnotherClassName !== "sect" 
+                && getClassName !== "btn-pesan" && getClassName !== "sect") {
+                if (getList.style.display !== "block") {
                     getList.style.display = "block"
-            } else {
+                } else if(getClassName !== "detail-paket-right" && getClassName !== "kustom-pesan" 
+                && getClassName !== "btn-kustomisasi" && getClassName !== "info-keterangan" && getClassName !== "total-bayar" 
+                && getAnotherClassName !== "sect" && getClassName !== "btn-pesan" && getClassName !== "sect") {
                     getList.style.display = "none"
                     console.log("none")
+                }
+            } else {
+                return;
             }
-        } else {
-               return;
-           }
         }
+
 
         kustomisasiChoices.onclick = (e) => {
             console.log("ini tes kustomisasi")
