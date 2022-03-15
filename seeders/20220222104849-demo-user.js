@@ -9,7 +9,7 @@ module.exports = {
       [
         {
           email: "admin@ardawalika.com",
-          password: encode("ardawalika2022"),
+          password: await encode("admin"),
           username: "Admin",
           fullname: "admin",
           phoneNumber: "081234567890",

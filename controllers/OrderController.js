@@ -66,7 +66,7 @@ class OrderController {
            }}
         );
         const user = req.session.user;
-        res.redirect("/orders/history", { user });
+        res.redirect("/orders/history");
       } else {
         throw { status: 400, message: "Charge failed" };
       }
@@ -131,7 +131,7 @@ class OrderController {
            }}
         );
         const user = req.session.user;
-        res.redirect("/orders/historycustom", { user });
+        res.redirect("/orders/historycustom");
       } else {
         throw { status: 400, message: "Charge failed" };
       }
