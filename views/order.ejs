@@ -167,7 +167,7 @@
 
                     <div class="detail-paket-right">
                         <div class="detail-paket-biaya">
-                            <h4>Total Bayar</h4>
+                            <h4 class="total-bayar" style="margin-left: 1rem">Total Bayar</h4>
                             <div class="sect">
                                 <h4>
                                     <%= new Intl.NumberFormat("id-ID", { style: "currency" , currency: "IDR" }).format(dekorasi.harga_dekorasi + catering.harga_catering + rias.harga_rias +
@@ -187,5 +187,67 @@
     </section>
 
     
+<script>
+     // SCRIPT TO SHOW DETAIL PAKET //
+        const detailPaket = document.querySelector(".detail-paket")
+        const detailPaketChoices = document.querySelector(".detail-paket-choices")
+        const kustomisasiChoices = document.querySelector(".kustomisasi-choices")
+        const kustomisasi = document.querySelector(".kustomisasi")
+        const boxOptions = document.querySelector(".box-options")
 
+        const boxDetailPaket = document.querySelector(".box-detail-paket")
+        const boxKustomisasi = document.querySelector(".box-kustomisasi")
+
+
+        detailPaketChoices.onclick = (e) => {
+            console.log("ini tes3")
+            const getClassName = e.target.className;
+            const getAnotherClassName = e.target.parentNode.className;
+            const getParent = e.target.parentNode.parentNode;
+            const getList = getParent.children[1];
+            console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+            console.log(getParent, getList, getClassName)
+            console.log(getList)
+
+            if (getParent && getList  && getClassName !== "kustom-pesan"  && getClassName !== "detail-paket-choices" 
+            && getClassName !== "detail-paket-right" && getClassName !== "kustom-pesan" && getClassName !== "btn-kustomisasi"
+                && getClassName !== "info-keterangan" && getClassName !== "total-bayar" && getAnotherClassName !== "sect" 
+                && getClassName !== "btn-pesan" && getClassName !== "sect") {
+                if (getList.style.display !== "block") {
+                    getList.style.display = "block"
+                } else if(getClassName !== "detail-paket-right" && getClassName !== "kustom-pesan" 
+                && getClassName !== "btn-kustomisasi" && getClassName !== "info-keterangan" && getClassName !== "total-bayar" 
+                && getAnotherClassName !== "sect" && getClassName !== "btn-pesan" && getClassName !== "sect") {
+                    getList.style.display = "none"
+                    console.log("none")
+                }
+            } else {
+                return;
+            }
+        }
+
+        // kustomisasiChoices.onclick = (e) => {
+        //     console.log("ini tes kustomisasi")
+        //     const getClassName = e.target.className;
+        //     const getTagName = e.target.tagName;
+        //     const getAnotherClassName = e.target.parentNode.className;
+        //     const getParent = e.target.parentNode.parentNode.parentNode;
+        //     const getList = getParent.children[1];
+        //     // console.log("className: ", getClassName, "e target: ", e.target, "tes: ");
+        //     // console.log("getParent: ",getParent, "getList: ", getList, "getClassName: ", getClassName)
+        //     // console.log("Tag Name: ", getTagName)
+
+        //     if (getParent && getList && getClassName !== "container" && getTagName !== "LI" && getTagName !== "UL"
+        //         && getClassName !== "info" && getClassName !== "info-keterangan" && getAnotherClassName !== "sect") {
+        //         if (getList.style.display !== "block") {
+        //             getList.style.display = "block"
+        //         } else {
+        //             getList.style.display = "none"
+        //             console.log("none")
+        //         }
+        //     } else {
+        //         return;
+        //     }
+        // }
+</script>
     <%- include('./partials/footer'); %>
