@@ -47,11 +47,7 @@
     "chart.js": "2.9.4",
     "datatables.net-bs4": "1.10.24",
     "jquery": "3.6.0",
-    "jquery.easing": "^1.4.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15",
-    "sequelize-cli": "^6.4.1",
+    "jquery.easing": "^1.4.1",
      "browser-sync": "2.26.14",
      "del": "6.0.0",
      "gulp": "4.0.2",
@@ -63,5 +59,9 @@
      "gulp-sass": "4.1.0",
      "gulp-uglify": "3.0.2",
      "merge-stream": "2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
   }
 }
