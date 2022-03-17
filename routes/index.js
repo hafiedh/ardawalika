@@ -8,10 +8,7 @@ const OrderRoute = require("./OrderRoute");
 const HomeRoute = require("./HomeRoute");
 
 const AdminRouter = require("./AdminRoute");
-const CategoryController = require("../controllers/CategoryController");
 const DetailController = require("../controllers/DetailController");
-const { route } = require("./OrderRoute");
-const { render } = require("ejs");
 
 router.use("/", HomeRoute);
 router.use("/users", UserRouter);
