@@ -20,4 +20,7 @@ Repository Gitlab = https://gitlab.com/ajisetiaji101/ardawalika
 
 
 ## Final Design
-(https://ik.imagekit.io/ardawalika/Pitch_Desk_FQ3lk_oGO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647507491685)
+![Pitch Desk](https://user-images.githubusercontent.com/73755395/158775103-17611842-e649-403c-80a4-775bcb50a99e.png)
+
+## Heroku Deploy
+https://ardawalika.herokuapp.com/
