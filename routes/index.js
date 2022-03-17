@@ -13,6 +13,7 @@ const DetailController = require("../controllers/DetailController");
 const { route } = require("./OrderRoute");
 const { render } = require("ejs");
 
+router.use("/", HomeRoute);
 router.use("/users", UserRouter);
 router.use("/products", ProductRouter);
 router.use("/categories", CategoryRouter);
@@ -23,7 +24,6 @@ router.use("/detail/:id", DetailController.getDetail);
 router.use("/customdetail/:id", DetailController.getPaketCustomDetail);
 router.use(errorHandler);
 
-router.use("/", HomeRoute);
 
 //LOGIN ROUTES
 router.get("/login", (req, res) => {
