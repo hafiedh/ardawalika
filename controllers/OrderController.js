@@ -6,8 +6,8 @@ const uuid = require("uuid")
 
 let coreApi = new midtransClient.CoreApi({
   isProduction: false,
-  serverKey: "SB-Mid-server-4pJKsKUlFxNBCuYEjg4yJ85w",
-  clientKey: "SB-Mid-client-IzpeIseynV_1r_km",
+  serverKey: process.env.IMAGEKIT_SERVERKEY,
+  clientKey: process.env.IMAGEKIT_CLIENTKEY,
 });
 
 class OrderController {
