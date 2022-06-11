@@ -1,6 +1,6 @@
 const FormData = require("form-data");
 const axios = require("axios");
-const IMGKIT_API = "IMAGEKIT_PRIVATEKEY";
+const IMGKIT_API = process.env.IMAGEKIT_PRIVATEKEY;
 
 function imgKit(req, res, next) {
   if (req.file) {
