@@ -3,6 +3,7 @@ const authentication = require("../middlewares/authentication");
 const upload = require("../middlewares/multer");
 const imgKit = require("../middlewares/imagekit");
 const updateDataUser = require("../middlewares/updatedatauser");
+const compressBuffer = require("../middlewares/compressBuffer");
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
@@ -25,6 +26,7 @@ router.post(
       next();
     });
   },
+  compressBuffer,
   updateDataUser,
   imgKit,
   UserController.updateUserPhoto
