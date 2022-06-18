@@ -401,4 +401,15 @@ module.exports = {
       order,
     });
   },
+
+    adminLogout: async (req, res, next) => {
+    try {
+      req.session.destroy((err) => {
+        if (err) throw err;
+        res.redirect("/login");
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
 };

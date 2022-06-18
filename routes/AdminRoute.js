@@ -43,4 +43,5 @@ router.delete("/paket/:id", AdminController.deletePaket);
 
 router.get("/user", AdminController.viewUser);
 router.get("/order", AdminController.viewOrder);
+router.get("/logout", AdminController.logout);
 module.exports = router;
