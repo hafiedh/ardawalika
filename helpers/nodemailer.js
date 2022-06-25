@@ -13,7 +13,7 @@ var transporter = nodemailer.createTransport({
 
 function sendEmail(email, fullname, url) {
   const options = {
-    from: "ardawalika@gmail.com",
+    from: "'Ardawalika' <no-reply@gmail.com> ",
     to: email,
     subject: "Verification Email",
     html: `<h1>Email Confirmation</h1>
