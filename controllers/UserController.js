@@ -24,7 +24,7 @@ class UserController {
       if (!result) res.redirect("/reigster?error=Register failed");
 
       const token = sign({ email, username, id: result.id, role });
-      const url = `http://localhost:3000/users/verify/${token}`;
+      const url = `https://ardawalika.herokuapp.com/users/verify/${token}`;
       sendEmail(email, username, url);
       res.redirect("/login?error=Register success, Sent a verification email to your email");
     } catch (err) {
