@@ -24,19 +24,13 @@ function imgKit(req, res, next) {
         next();
       })
       .catch((err) => {
-        next({
-          name: "Bad Request",
-          message: "Failed to upload image",
-        });
+        next();
       });
   } else {
     if (req.body.image) {
       next();
     } else {
-      next({
-        name: "Bad Request",
-        message: "Please upload image",
-      });
+      next();
     }
   }
 }

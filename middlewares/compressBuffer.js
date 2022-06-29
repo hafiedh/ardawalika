@@ -2,6 +2,7 @@ const sharp = require("sharp");
 const sizeof = require("object-sizeof");
 
 async function compressBuffer(req, res, next) {
+  if (req.file){
   const buffer = req.file.buffer;
   console.log("BUFFER SEBELUM DIPROSES : ", buffer);
   console.log(
@@ -35,6 +36,8 @@ async function compressBuffer(req, res, next) {
       next();
     })
     .catch((err) => next(err));
+} else {
+  next();
 }
-
+}
 module.exports = compressBuffer;

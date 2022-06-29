@@ -42,6 +42,7 @@ class UserController {
         return res.redirect("/login?error=Wrong Email or Password");
       }
       const isMatch = await decode(password, user.password);
+      console.log(isMatch);
       if (!isMatch) {
         return res.redirect("/login?error=Wrong Email or Password");
       }

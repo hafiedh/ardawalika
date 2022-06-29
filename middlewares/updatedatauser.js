@@ -8,8 +8,12 @@ async function updateDataUser(req, res, next) {
     const obj = JSON.parse(JSON.stringify(req.body));
     const { username, fullname, phoneNumber, address, password, confirm_password, confirm_new_password } = obj;
     const currentUser = await User.findOne({
-      [Op.or]: [{ id }, { email }]
+      where: {
+        [Op.or]: [{ id }, { email }],
+      },
     });
+
+    console.log(email)
     if (!currentUser) {
       throw { status: 400, message: "User not found" };
     }
@@ -17,12 +21,13 @@ async function updateDataUser(req, res, next) {
       throw { status: 400, message: "Confirm password and New password Not match" };
     }
     if(password){
-      const isPasswordMatch = await decode(password, currentUser.password);
-      if (!isPasswordMatch) {
+      const isMatch = await decode(password, currentUser.password);
+      console.log("isPasswordMatch :", isMatch);
+      if (!isMatch) {
         throw { status: 400, message: "Password is incorrect" };
       }
       const update = await User.update(
-        { username, fullname, phoneNumber, address, password: password },
+        { username, fullname, phoneNumber, address, password: confirm_password },
         {
           where: {
             [Op.or]: [{ id }, { email }],
