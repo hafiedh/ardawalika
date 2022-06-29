@@ -16,8 +16,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   session({
+    cookie : {
+    secure : true,
+    maxAge : 1000 * 60 * 60 * 24 * 7
+    },
     secret: "ardawalika",
-    resave: false,
+    store: new RedisStore(),
     saveUninitialized: true,
   })
 );
