@@ -6,6 +6,7 @@ const router = require("./routes/index");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const session = require("express-session");
+const MemoryStore = require('memorystore')(session)
 
 app.use(cors());
 app.use(express.static("views/assets"));
@@ -16,13 +17,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   session({
-    cookie : {
-    secure : true,
-    maxAge : 1000 * 60 * 60 * 24 * 7
-    },
+    cookie: { maxAge: 60000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
     secret: "ardawalika",
-    store: new RedisStore(),
     saveUninitialized: true,
+    resave: false
   })
 );
 app.use(methodOverride("_method"));
