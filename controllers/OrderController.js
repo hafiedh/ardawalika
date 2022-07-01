@@ -300,8 +300,7 @@ static async detail(req, res, next) {
   try {
       if(!req.session.user || !req.user){
         // you have to login first
-        res.redirect("/login?error=You have to login first to checkout");
-        return
+       res.redirect("/login?error=You have to login first to checkout");
       }
       const { paket_id, total_harga } = req.params;
       const data = {

@@ -16,6 +16,7 @@ async function authentication(req, res, next) {
       });
       if (!user) throw { status: 404, message: "User not found" };
       req.user = user;
+      req.session.user = user;
       next();
   } catch (err) {
     next(err);
