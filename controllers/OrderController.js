@@ -1,13 +1,14 @@
 const { Order, Paket, Dekorasi, Catering, Rias, Category, Dokumentasi, Entertainment, PaketCustom} = require("../models");
 const midtransClient = require("midtrans-client");
 const { Op } = require("sequelize");
-const uuid = require("uuid")
+const uuid = require("uuid");
+const { when } = require("jquery");
 
 
 let coreApi = new midtransClient.CoreApi({
   isProduction: false,
-  serverKey: process.env.IMAGEKIT_SERVERKEY,
-  clientKey: process.env.IMAGEKIT_CLIENTKEY,
+  serverKey: process.env.MIDTRANS_SERVER_KEY || "SB-Mid-server-4pJKsKUlFxNBCuYEjg4yJ85w" ,
+  clientKey: process.env.MIDTRANS_CLIENT_KEY || "SB-Mid-client-IzpeIseynV_1r_km",
 });
 
 class OrderController {
@@ -150,27 +151,21 @@ class OrderController {
   static async history(req, res, next) {
     try {
       const { id } = req.user;
-      const result = await Order.findAll({
+      // joint table order and paket to get image paket
+      const orders = await Order.findAll({
+        where: { user_id: id },
         attributes: { exclude: ["createdAt", "updateAt"] },
-        where: { [Op.and]: [{ user_id: id }, { paket_id: { [Op.ne]: null } }] },
+        include: [Paket],
       });
-      if (!result) throw { status: 404, message: "Order not found" };
-      const paketId = result.map((item) => item.paket_id);
-      const paket = await Paket.findAll({
-        attributes: ["img_url"],
-        where: {
-          id: {
-            [Op.in]: paketId,
-          },
-        },
-      });
-      const paketUrl = paket.map((item) => item.img_url);
-      const data = result.map((item) => {
+      if (!orders) throw { status: 404, message: "Orders not found" };
+      // iterate paket in order.paket to get image paket
+     
+      const data = orders.map((item) => {
         return {
           id: item.id,
           user_id: item.user_id,
           paket_id: item.paket_id,
-          img_url: paketUrl[paketId.indexOf(item.paket_id)],
+          img_url: item.Paket.img_url,
           name_order: item.name_order,
           tanggal_acara: item.tanggal_acara,
           riwayat_pesanan: item.riwayat_pesanan.toString().substring(0, 10),
