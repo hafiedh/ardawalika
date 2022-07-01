@@ -2,7 +2,6 @@ const { Order, Paket, Dekorasi, Catering, Rias, Category, Dokumentasi, Entertain
 const midtransClient = require("midtrans-client");
 const { Op } = require("sequelize");
 const uuid = require("uuid");
-const { when } = require("jquery");
 
 
 let coreApi = new midtransClient.CoreApi({
@@ -299,6 +298,11 @@ static async detail(req, res, next) {
 
   static async checkoutPage(req, res, next) {
   try {
+    const { id } = req.user;
+    if (!id) {
+       res.redirect("/login?error=Please login first");
+       return
+    }
       const { paket_id, total_harga } = req.params;
       const data = {
         paket_id,
