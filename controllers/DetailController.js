@@ -3,7 +3,7 @@ const { Category, Paket, PaketCustom } = require("../models");
 class DetailController {
   static async getDetail(req, res, next) {
     try {
-      if(!req.session.user){
+      if(!req.session.user || !req.user){
         // alert from backend
         res.redirect("/login?error=Please login first");
         return
