@@ -19,7 +19,7 @@ async function authentication(req, res, next) {
       req.session.user = user;
       next();
   } catch (err) {
-    next(err);
+    return res.redirect("/login?error= You are not logged in");
   }
 }
 
