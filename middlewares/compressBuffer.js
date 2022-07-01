@@ -10,19 +10,10 @@ async function compressBuffer(req, res, next) {
     buffer.toString("base64").length
   );
   console.log("BUFFER SIZE SEBELUM DIPROSES : ", sizeof(buffer));
+
+  // add algorithm 
   await sharp(buffer)
-    .resize(200, 200, {
-      fit: "cover",
-      position: "center",
-      background: { r: 255, g: 255, b: 255, alpha: 0 },
-      withoutEnlargement: true,
-      strip: true,
-      force: true,
-      progressive: true,
-      withMetadata: true,
-      withoutAdaptiveFiltering: true,
-      withoutChromaSubsampling: true,
-    })
+    .resize(200, 200)
     .jpeg({ quality: 50 })
     .toBuffer()
     .then((data) => {

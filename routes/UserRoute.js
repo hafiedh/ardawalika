@@ -5,6 +5,7 @@ const imgKit = require("../middlewares/imagekit");
 const updateDataUser = require("../middlewares/updatedatauser");
 const compressBuffer = require("../middlewares/compressBuffer");
 const router = require("express").Router();
+const resize = require("../helpers/jimp");
 
 router.get("/", (req, res) => {
   res.send("INI DI USER ROUTER");
