@@ -298,6 +298,11 @@ static async detail(req, res, next) {
 
   static async checkoutPage(req, res, next) {
   try {
+      if(!req.session.user || !req.user){
+        // you have to login first
+        res.redirect("/login?error=You have to login first to checkout");
+        return
+      }
       const { paket_id, total_harga } = req.params;
       const data = {
         paket_id,
