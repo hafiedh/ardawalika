@@ -14,6 +14,7 @@ async function updateDataUser(req, res, next) {
     });
 
     console.log(email)
+    console.log(currentUser.password)
     if (!currentUser) {
       throw { status: 400, message: "User not found" };
     }
@@ -21,10 +22,8 @@ async function updateDataUser(req, res, next) {
       throw { status: 400, message: "Confirm password and New password Not match" };
     }
     if(password){
-      const isMatch = await decode(password, currentUser.password);
-      console.log("isPasswordMatch :", isMatch);
-      if (!isMatch) {
-        throw { status: 400, message: "Password is incorrect" };
+      if (decode(password, currentUser.password) === false) {
+        throw { status: 400, message: "Wrong password" };
       }
       const update = await User.update(
         { username, fullname, phoneNumber, address, password: confirm_password },

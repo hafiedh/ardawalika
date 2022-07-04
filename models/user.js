@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
         beforeBulkUpdate: async (user) => {
           if (
             user.attributes.password &&
-            user.attributes.password.length < 25 &&
+            user.attributes.password.length < 25 && 
             user.attributes.password.length > 8
           ) {
             const hashPassword = await encode(user.attributes.password);
