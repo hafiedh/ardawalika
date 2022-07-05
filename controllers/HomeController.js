@@ -18,11 +18,11 @@ class HomeController {
   static async getDokumentasi(req, res, next) {
     try {
       let user
-      if (req.session.user || req.user) {
-         user = req.session.user || req.user
+      if (!req.session.user || !req.user) {
+         user = null;
          res.render("dokumentasi", { user });
       }else{
-        user = null
+        user = req.session.user || req.user;
         res.render("dokumentasi", { user });
       }
     } catch (error) {
@@ -37,7 +37,7 @@ class HomeController {
         res.render("dokumentasi-detail", { user });
       } else {
         const user = req.session.user || req.user;
-      res.render("dokumentasi_detail", { user });
+       res.render("dokumentasi_detail", { user });
       }
     } catch (error) {
       next(error);
@@ -51,7 +51,7 @@ class HomeController {
         user = null;
         res.render("tentang-kami", { user });
       } else {
-        user = req.session.user || req.user;
+      user = req.session.user || req.user;
       res.render("tentang-kami", { user });
       } 
     } catch (error) {
@@ -64,7 +64,7 @@ class HomeController {
       if (!req.session.user || !req.user) {
         user = null;
       } else {
-        user = req.session.user || req.user;
+      user = req.session.user || req.user;
       res.render("konfirmasi", { user });
       }
     } catch (error) {
