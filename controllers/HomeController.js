@@ -46,11 +46,12 @@ class HomeController {
 
   static async getAbout(req, res, next) {
     try {
+      let user
       if (!req.session.user || !req.user) {
-        const user = null;
+        user = null;
         res.render("about", { user });
       } else {
-        const user = req.session.user || req.user;
+        user = req.session.user || req.user;
       res.render("about", { user });
       } 
     } catch (error) {
