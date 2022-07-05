@@ -49,10 +49,10 @@ class HomeController {
       let user
       if (!req.session.user || !req.user) {
         user = null;
-        res.render("about", { user });
+        res.render("tentang-kami", { user });
       } else {
         user = req.session.user || req.user;
-      res.render("about", { user });
+      res.render("tentang-kami", { user });
       } 
     } catch (error) {
       next(error);
