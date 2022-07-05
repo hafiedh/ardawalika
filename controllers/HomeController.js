@@ -4,13 +4,8 @@ class HomeController {
   static async getHome(req, res, next) {
     try {
       const data = await Category.findAll();
-      if (!req.session.user || !req.user) {
-        const user = null;
-        res.render("index", { data, user });
-      } else {
-        const user = req.session.user || req.user;
-        res.render("index", { data, user });
-      }
+      const user = req.session.user || req.user;
+      res.render("index", { data, user });
     } catch (error) {
       next(error);
     }
