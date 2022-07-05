@@ -17,14 +17,8 @@ class HomeController {
   }
   static async getDokumentasi(req, res, next) {
     try {
-      let user
-      if (!req.session.user || !req.user) {
-         user = null;
-         res.render("dokumentasi", { user });
-      }else{
-        user = req.session.user || req.user;
-        res.render("dokumentasi", { user });
-      }
+      const user = req.session.user || req.user;
+      res.render("dokumentasi", { user });
     } catch (error) {
       next(error);
     }
