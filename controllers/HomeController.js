@@ -26,13 +26,8 @@ class HomeController {
 
   static async getDokumentasiDetail(req, res, next) {
     try {
-      if (!req.session.user || !req.user) {
-        const user = null;
-        res.render("dokumentasi-detail", { user });
-      } else {
-        const user = req.session.user || req.user;
+      const user = req.session.user || req.user;
        res.render("dokumentasi_detail", { user });
-      }
     } catch (error) {
       next(error);
     }
@@ -40,27 +35,16 @@ class HomeController {
 
   static async getAbout(req, res, next) {
     try {
-      let user
-      if (!req.session.user || !req.user) {
-        user = null;
-        res.render("tentang-kami", { user });
-      } else {
-      user = req.session.user || req.user;
-      res.render("tentang-kami", { user });
-      } 
+      const user = req.session.user || req.user;
+      res.render("tentang-kami", { user }); 
     } catch (error) {
       next(error);
     }
   }
   static async getKonfirmasi(req, res, next) {
     try {
-      let user
-      if (!req.session.user || !req.user) {
-        user = null;
-      } else {
-      user = req.session.user || req.user;
+     const user = req.session.user || req.user;
       res.render("konfirmasi", { user });
-      }
     } catch (error) {
       next(error);
     }
