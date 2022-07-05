@@ -36,6 +36,7 @@ class HomeController {
         const user = null;
         res.render("dokumentasi-detail", { user });
       } else {
+        const user = req.session.user || req.user;
       res.render("dokumentasi_detail", { user });
       }
     } catch (error) {
@@ -49,6 +50,7 @@ class HomeController {
         const user = null;
         res.render("about", { user });
       } else {
+        const user = req.session.user || req.user;
       res.render("about", { user });
       } 
     } catch (error) {
@@ -57,9 +59,11 @@ class HomeController {
   }
   static async getKonfirmasi(req, res, next) {
     try {
+      let user
       if (!req.session.user || !req.user) {
-        const user = null;
+        user = null;
       } else {
+        user = req.session.user || req.user;
       res.render("konfirmasi", { user });
       }
     } catch (error) {
