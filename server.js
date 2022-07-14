@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   session({
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 600000 },
     store: new MemoryStore({
       checkPeriod: 86400000 // prune expired entries every 24h
     }),
