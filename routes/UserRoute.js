@@ -27,7 +27,7 @@ router.post(
       next();
     });
   },
-  compressBuffer,
+  resize,
   updateDataUser,
   imgKit,
   UserController.updateUserPhoto
